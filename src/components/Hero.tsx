@@ -5,7 +5,7 @@ import { useState } from 'react';
 interface HeroProps {
   onSubmit: (domain: string) => void;
   loading: boolean;
-  variant?: 'default' | 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker';
+  variant?: 'default' | 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'xml-sitemap-generator' | 'free-seo-audit';
 }
 
 const COPY = {
