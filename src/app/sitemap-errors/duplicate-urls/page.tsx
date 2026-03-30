@@ -64,7 +64,7 @@ export default function Page() {
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>How to fix it</h2>
         <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
-          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>1. Remove all duplicate <url> entries from your sitemap.
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>1. Remove all duplicate &lt;url&gt; entries from your sitemap.
 2. Standardize all URLs: always use HTTPS, pick one trailing slash style and stick to it.
 3. Ensure your sitemap generator has deduplication enabled.
 4. Set a canonical URL structure and redirect all variants.</pre>

@@ -36,7 +36,7 @@ export default function Page() {
         </h1>
 
         <p style={{ fontSize: 17, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 40 }}>
-          The <priority> tag in XML sitemaps is one of the most misunderstood and misused elements in technical SEO. Setting all pages to priority 1.0 is not a trick to get more crawls — it's a signal that tells Google your priority system is meaningless.
+          The &lt;priority&gt; tag in XML sitemaps is one of the most misunderstood and misused elements in technical SEO. Setting all pages to priority 1.0 is not a trick to get more crawls — it's a signal that tells Google your priority system is meaningless.
         </p>
 
         {/* CTA Box */}
@@ -51,7 +51,7 @@ export default function Page() {
         </div>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>What is this error?</h2>
-        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>The <priority> tag indicates the relative importance of a URL compared to other URLs on your site. Valid values range from 0.0 to 1.0. The key word is "relative" — it's only meaningful when you differentiate between page types.</p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>The &lt;priority&gt; tag indicates the relative importance of a URL compared to other URLs on your site. Valid values range from 0.0 to 1.0. The key word is "relative" — it's only meaningful when you differentiate between page types.</p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Why does it happen?</h2>
         <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>Most CMS plugins default to 1.0 for all pages, or set priorities randomly without strategic logic. Many site owners never review or configure priority settings after initial setup.</p>

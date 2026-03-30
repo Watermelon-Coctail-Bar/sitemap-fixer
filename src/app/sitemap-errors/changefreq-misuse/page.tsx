@@ -51,7 +51,7 @@ export default function Page() {
         </div>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>What is this error?</h2>
-        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>The <changefreq> tag in XML sitemaps hints to search engines how often page content changes. Valid values are: always, hourly, daily, weekly, monthly, yearly, never. Google has confirmed it treats this as a hint, not a directive.</p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>The &lt;changefreq&gt; tag in XML sitemaps hints to search engines how often page content changes. Valid values are: always, hourly, daily, weekly, monthly, yearly, never. Google has confirmed it treats this as a hint, not a directive.</p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Why does it happen?</h2>
         <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>CMS plugins often default to "daily" for all content. Many site owners set high change frequencies hoping for more frequent crawling, without understanding that inaccurate signals reduce crawler trust.</p>
