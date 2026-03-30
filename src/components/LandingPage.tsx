@@ -5,7 +5,7 @@ import { Hero } from './Hero';
 import { Loading } from './Loading';
 import { Results } from './Results';
 
-type Variant = 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker';
+type Variant = 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'xml-sitemap-generator' | 'free-seo-audit';
 
 const FAQ: Record<Variant, Array<{ q: string; a: string }>> = {
   'sitemap-finder': [
@@ -17,6 +17,16 @@ const FAQ: Record<Variant, Array<{ q: string; a: string }>> = {
     { q: 'What issues do you detect?', a: 'Inconsistent URL patterns, stale pages (>1yr old), missing lastmod tags, depth anomalies, and isolated orphan-like pages.' },
     { q: 'Is this a crawler?', a: 'No. We analyze your sitemap only — no heavy crawling. That\'s why it\'s fast.' },
     { q: 'How is this different from Screaming Frog?', a: 'We focus on actionable recommendations, not raw data dumps. You get a ranked fix list, not a spreadsheet.' },
+  ],
+  'xml-sitemap-generator': [
+    { q: 'Do you generate a new sitemap file?', a: "We analyze your existing sitemap and tell you exactly what to fix — structure, stale pages, missing sections. We make your sitemap work better for SEO." },
+    { q: 'What XML sitemap formats do you support?', a: 'Standard urlset, sitemap index files, and nested child sitemaps. WordPress, Shopify, Next.js, and custom formats all work.' },
+    { q: 'How many URLs can you analyze?', a: 'Up to 500 URLs on the free tier, parsing across multiple child sitemaps automatically.' },
+  ],
+  'free-seo-audit': [
+    { q: 'Is it really free?', a: 'Yes. No email, no credit card, no signup required. Enter your domain and get the full analysis instantly.' },
+    { q: 'What does the audit cover?', a: 'Site structure, content gaps, missing high-value pages, internal linking opportunities, stale content, and URL pattern issues.' },
+    { q: "How is this different from other free SEO tools?", a: "Most tools give you generic scores. We give you specific pages to create, fix, and link — based on your actual site, not industry averages." },
   ],
   'website-seo-checker': [
     { q: 'What makes this different from Ahrefs or SEMrush?', a: 'We analyze your actual site structure and give domain-specific recommendations — not generic metrics and scores.' },
@@ -78,6 +88,8 @@ export function LandingPage({ variant }: LandingPageProps) {
           <a href="/sitemap-finder" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Finder</a>
           <a href="/sitemap-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Checker</a>
           <a href="/website-seo-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>SEO Checker</a>
+          <a href="/free-seo-audit" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Free Audit</a>
+          <a href="/xml-sitemap-generator" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>XML Generator</a>
         </div>
       </nav>
 

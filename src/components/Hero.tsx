@@ -30,6 +30,20 @@ const COPY = {
     cta: 'Check Sitemap',
     placeholder: 'yourdomain.com',
   },
+  'xml-sitemap-generator': {
+    eyebrow: 'XML Sitemap Generator',
+    headline: 'Analyze your sitemap.\nGet exact fixes.',
+    sub: 'Enter your domain — we find your XML sitemap, parse every URL, and generate an AI-powered action plan to fix structure, gaps, and freshness issues.',
+    cta: 'Analyze Sitemap',
+    placeholder: 'yourdomain.com',
+  },
+  'free-seo-audit': {
+    eyebrow: 'Free SEO Audit',
+    headline: 'Your free SEO audit\nin 60 seconds.',
+    sub: 'No forms. No email required. Just enter your domain and get a prioritized SEO fix list based on your actual site structure — powered by AI.',
+    cta: 'Run Free Audit',
+    placeholder: 'yourdomain.com',
+  },
   'website-seo-checker': {
     eyebrow: 'Website SEO Checker',
     headline: 'Your site has SEO\ngaps. Let\'s find them.',

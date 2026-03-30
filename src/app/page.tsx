@@ -91,6 +91,8 @@ export default function Home() {
             <a href="/sitemap-finder" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Finder</a>
             <a href="/sitemap-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Checker</a>
             <a href="/website-seo-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>SEO Checker</a>
+            <a href="/free-seo-audit" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Free Audit</a>
+            <a href="/xml-sitemap-generator" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>XML Generator</a>
           </div>
         </div>
       </nav>
