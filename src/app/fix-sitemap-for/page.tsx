@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Fix Sitemap by Platform — WordPress, Shopify, Next.js | SitemapFixer',
+  title: 'Fix Sitemap by Platform - WordPress, Shopify, Next.js | SitemapFixer',
   description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for' },
 };
@@ -25,7 +25,7 @@ export default function PlatformsIndex() {
         ))}
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '28px', textAlign: 'center' }}>
-        <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, display: 'inline-block' }}>Analyze My Sitemap Free →</a>
+        <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, display: 'inline-block' }}>Analyze My Sitemap Free </a>
       </div>
     </div>
   );

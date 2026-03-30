@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { LandingPage } from '@/components/LandingPage';
 
 export const metadata: Metadata = {
-  title: 'Sitemap Checker — Validate & Audit Your XML Sitemap',
+  title: 'Sitemap Checker - Validate & Audit Your XML Sitemap',
   description: 'Check your sitemap for issues: broken URLs, inconsistent patterns, stale pages, and missing sections. Get exact fixes powered by AI.',
   keywords: 'sitemap checker, sitemap validator, xml sitemap audit, sitemap errors',
 };

@@ -17,9 +17,9 @@ export default function Page() {
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
-        {' → '}
+        {'  '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>
-        {' → '}
+        {'  '}
         <span>What Is an XML Sitemap?</span>
       </nav>
 
@@ -28,14 +28,14 @@ export default function Page() {
       </h1>
 
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
-        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Analyze your sitemap for free →</span>
+        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Analyze your sitemap for free </span>
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>
           Try Sitemap Fixer
         </a>
       </div>
 
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.8 }}>
-        <p style={{ marginBottom: 20 }}>An XML sitemap is a structured file — formatted in XML — that lists the URLs on your website you want search engines to crawl and index. Think of it as a roadmap you hand directly to Google, Bing, and other search engines to help them discover all the important pages on your site.</p>
+        <p style={{ marginBottom: 20 }}>An XML sitemap is a structured file - formatted in XML - that lists the URLs on your website you want search engines to crawl and index. Think of it as a roadmap you hand directly to Google, Bing, and other search engines to help them discover all the important pages on your site.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Why XML Sitemaps Matter for SEO</h2>
         <p style={{ marginBottom: 20 }}>Search engines discover pages primarily through links. If a page has no links pointing to it, the crawler may never find it. Your sitemap solves this by explicitly listing every URL you want indexed, along with optional metadata:</p>
         <ul style={{ paddingLeft: 24, marginBottom: 16 }}><li style={{ marginBottom: 6 }}>**lastmod**: when the page was last modified</li><li style={{ marginBottom: 6 }}>**changefreq**: how often the page changes</li><li style={{ marginBottom: 6 }}>**priority**: the relative importance of the page</li></ul>
@@ -57,7 +57,7 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap now</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>
-          Analyze My Sitemap →
+          Analyze My Sitemap 
         </a>
       </div>
 

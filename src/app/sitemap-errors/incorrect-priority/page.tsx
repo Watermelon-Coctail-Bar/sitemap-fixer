@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Incorrect Priority Values in Sitemap – Fix, Examples & Best Practices | SitemapFixer',
+  title: 'Incorrect Priority Values in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
   description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects Googlebot's crawl decisions.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority' },
   openGraph: {
-    title: 'Incorrect Priority Values in Sitemap – Fix & Best Practices',
+    title: 'Incorrect Priority Values in Sitemap - Fix & Best Practices',
     description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects Googlebot's crawl decisions.',
     url: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority',
     type: 'article',
@@ -25,9 +25,9 @@ export default function Page() {
         {/* Breadcrumb */}
         <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
           <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
-          {' → '}
+          {'  '}
           <a href="/sitemap-errors" style={{ color: '#2d5be3', textDecoration: 'none' }}>Sitemap Errors</a>
-          {' → '}
+          {'  '}
           <span>Incorrect Priority Values in Sitemap</span>
         </nav>
 
@@ -36,22 +36,22 @@ export default function Page() {
         </h1>
 
         <p style={{ fontSize: 17, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 40 }}>
-          The &lt;priority&gt; tag in XML sitemaps is one of the most misunderstood and misused elements in technical SEO. Setting all pages to priority 1.0 is not a trick to get more crawls — it's a signal that tells Google your priority system is meaningless.
+          The &lt;priority&gt; tag in XML sitemaps is one of the most misunderstood and misused elements in technical SEO. Setting all pages to priority 1.0 is not a trick to get more crawls - it's a signal that tells Google your priority system is meaningless.
         </p>
 
         {/* CTA Box */}
         <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 4 }}>Find this error in your sitemap</div>
-            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free — get a full report in 60 seconds</div>
+            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free - get a full report in 60 seconds</div>
           </div>
           <a href="/" style={{ background: '#0a0a0f', color: 'white', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 14, whiteSpace: 'nowrap' }}>
-            Analyze My Sitemap →
+            Analyze My Sitemap 
           </a>
         </div>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>What is this error?</h2>
-        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>The &lt;priority&gt; tag indicates the relative importance of a URL compared to other URLs on your site. Valid values range from 0.0 to 1.0. The key word is "relative" — it's only meaningful when you differentiate between page types.</p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>The &lt;priority&gt; tag indicates the relative importance of a URL compared to other URLs on your site. Valid values range from 0.0 to 1.0. The key word is "relative" - it's only meaningful when you differentiate between page types.</p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Why does it happen?</h2>
         <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>Most CMS plugins default to 1.0 for all pages, or set priorities randomly without strategic logic. Many site owners never review or configure priority settings after initial setup.</p>
@@ -103,7 +103,7 @@ export default function Page() {
           <div style={{ fontSize: 22, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix this in your sitemap now</div>
           <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Enter your domain and get a full sitemap audit in 60 seconds</div>
           <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 32px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
-            Analyze My Sitemap Free →
+            Analyze My Sitemap Free 
           </a>
         </div>
 
@@ -116,7 +116,7 @@ export default function Page() {
             <li><a href="/sitemap-errors/duplicate-urls" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Duplicate Urls</a></li>
           </ul>
           <div style={{ marginTop: 16 }}>
-            <a href="/sitemap-errors" style={{ color: '#2d5be3', fontSize: 13 }}>← All sitemap errors</a>
+            <a href="/sitemap-errors" style={{ color: '#2d5be3', fontSize: 13 }}> All sitemap errors</a>
           </div>
         </div>
       </div>

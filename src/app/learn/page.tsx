@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Sitemap SEO Guides — Learn XML Sitemaps | SitemapFixer',
+  title: 'Sitemap SEO Guides - Learn XML Sitemaps | SitemapFixer',
   description: 'Free guides on XML sitemaps, crawl budget, indexing, and technical SEO. Learn everything about sitemaps from beginner to advanced.',
   alternates: { canonical: 'https://sitemapfixer.com/learn' },
 };
 const GUIDES = [
-  { slug: 'what-is-an-xml-sitemap', title: 'What Is an XML Sitemap?', desc: 'The complete beginner guide to XML sitemaps — what they are, how they work, and why they matter.' },
+  { slug: 'what-is-an-xml-sitemap', title: 'What Is an XML Sitemap?', desc: 'The complete beginner guide to XML sitemaps - what they are, how they work, and why they matter.' },
   { slug: 'sitemap-best-practices', title: 'XML Sitemap Best Practices', desc: 'Everything you need to create a clean, optimized sitemap that maximizes crawl efficiency.' },
-  { slug: 'sitemap-vs-robots-txt', title: 'Sitemap vs robots.txt', desc: 'The difference between sitemaps and robots.txt — and how they interact.' },
+  { slug: 'sitemap-vs-robots-txt', title: 'Sitemap vs robots.txt', desc: 'The difference between sitemaps and robots.txt - and how they interact.' },
   { slug: 'why-pages-not-indexed', title: 'Why Pages Not Indexed', desc: 'Every reason Google might not index your pages, and how to fix each one.' },
   { slug: 'how-to-create-a-sitemap', title: 'How to Create a Sitemap', desc: 'Step-by-step instructions for WordPress, Shopify, Next.js, and manual creation.' },
 ];
@@ -26,7 +26,7 @@ export default function LearnIndex() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '28px', textAlign: 'center' }}>
         <div style={{ fontSize: 18, fontWeight: 700, color: 'white', marginBottom: 8 }}>Put it into practice</div>
-        <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, display: 'inline-block', marginTop: 8 }}>Analyze My Sitemap Free →</a>
+        <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, display: 'inline-block', marginTop: 8 }}>Analyze My Sitemap Free </a>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Duplicate URLs in Sitemap – Fix, Examples & Best Practices | SitemapFixer',
+  title: 'Duplicate URLs in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
   description: 'Find and fix duplicate URLs in your XML sitemap. Duplicate entries waste crawl budget and confuse search engines. Detect and remove them in seconds.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/duplicate-urls' },
   openGraph: {
-    title: 'Duplicate URLs in Sitemap – Fix & Best Practices',
+    title: 'Duplicate URLs in Sitemap - Fix & Best Practices',
     description: 'Find and fix duplicate URLs in your XML sitemap. Duplicate entries waste crawl budget and confuse search engines. Detect and remove them in seconds.',
     url: 'https://sitemapfixer.com/sitemap-errors/duplicate-urls',
     type: 'article',
@@ -25,9 +25,9 @@ export default function Page() {
         {/* Breadcrumb */}
         <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
           <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
-          {' → '}
+          {'  '}
           <a href="/sitemap-errors" style={{ color: '#2d5be3', textDecoration: 'none' }}>Sitemap Errors</a>
-          {' → '}
+          {'  '}
           <span>Duplicate URLs in Sitemap</span>
         </nav>
 
@@ -36,17 +36,17 @@ export default function Page() {
         </h1>
 
         <p style={{ fontSize: 17, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 40 }}>
-          Duplicate URLs in your sitemap are one of the most common — and most damaging — sitemap errors. When Google crawls your sitemap and finds the same URL listed multiple times, it wastes precious crawl budget and sends confusing signals about which version of your content matters.
+          Duplicate URLs in your sitemap are one of the most common - and most damaging - sitemap errors. When Google crawls your sitemap and finds the same URL listed multiple times, it wastes precious crawl budget and sends confusing signals about which version of your content matters.
         </p>
 
         {/* CTA Box */}
         <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 4 }}>Find this error in your sitemap</div>
-            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free — get a full report in 60 seconds</div>
+            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free - get a full report in 60 seconds</div>
           </div>
           <a href="/" style={{ background: '#0a0a0f', color: 'white', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 14, whiteSpace: 'nowrap' }}>
-            Analyze My Sitemap →
+            Analyze My Sitemap 
           </a>
         </div>
 
@@ -60,7 +60,7 @@ export default function Page() {
         <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>Google has a limited crawl budget per site. When your sitemap lists URLs twice, you force Google to "waste" crawl requests on pages it has already processed. This means new or important pages get crawled less frequently.</p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>How to detect it</h2>
-        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>Upload your sitemap.xml to Sitemap Fixer — our analyzer counts every URL and flags any that appear more than once. We also detect near-duplicates caused by protocol or trailing slash inconsistencies.</p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>Upload your sitemap.xml to Sitemap Fixer - our analyzer counts every URL and flags any that appear more than once. We also detect near-duplicates caused by protocol or trailing slash inconsistencies.</p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>How to fix it</h2>
         <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
@@ -71,7 +71,7 @@ export default function Page() {
         </div>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Real-world example</h2>
-        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>A Shopify store had 12,000 URLs in their sitemap — but 3,200 were duplicates from product variants and collection pages. After deduplication, crawl coverage improved by 28% within 6 weeks.</p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>A Shopify store had 12,000 URLs in their sitemap - but 3,200 were duplicates from product variants and collection pages. After deduplication, crawl coverage improved by 28% within 6 weeks.</p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Common mistakes</h2>
         <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.8, marginBottom: 32 }}>
@@ -101,7 +101,7 @@ export default function Page() {
           <div style={{ fontSize: 22, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix this in your sitemap now</div>
           <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Enter your domain and get a full sitemap audit in 60 seconds</div>
           <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 32px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
-            Analyze My Sitemap Free →
+            Analyze My Sitemap Free 
           </a>
         </div>
 
@@ -114,7 +114,7 @@ export default function Page() {
             <li><a href="/sitemap-errors/orphan-pages" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Orphan Pages</a></li>
           </ul>
           <div style={{ marginTop: 16 }}>
-            <a href="/sitemap-errors" style={{ color: '#2d5be3', fontSize: 13 }}>← All sitemap errors</a>
+            <a href="/sitemap-errors" style={{ color: '#2d5be3', fontSize: 13 }}> All sitemap errors</a>
           </div>
         </div>
       </div>

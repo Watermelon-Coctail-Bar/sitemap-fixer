@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fix Sitemap for Large Sites (10k+ pages) — Complete Guide | SitemapFixer',
+  title: 'Fix Sitemap for Large Sites (10k+ pages) - Complete Guide | SitemapFixer',
   description: 'Sitemap strategy for enterprise sites: sitemap indexes, crawl budget optimization, priority tiers, and monitoring at scale.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for/large-sites' },
 };
@@ -11,9 +11,9 @@ export default function Page() {
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
-        {' → '}
+        {'  '}
         <a href="/fix-sitemap-for" style={{ color: '#2d5be3', textDecoration: 'none' }}>Platform Guides</a>
-        {' → '}
+        {'  '}
         <span>Large Sites (10k+ pages)</span>
       </nav>
 
@@ -25,7 +25,7 @@ export default function Page() {
       </p>
 
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
-        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Analyze your Large Sites (10k+ pages) sitemap now →</span>
+        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Analyze your Large Sites (10k+ pages) sitemap now </span>
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>
           Try Sitemap Fixer Free
         </a>
@@ -58,9 +58,9 @@ export default function Page() {
 
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Analyze your Large Sites (10k+ pages) sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Find all issues in your sitemap — free, no signup required</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Find all issues in your sitemap - free, no signup required</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>
-          Analyze My Sitemap Free →
+          Analyze My Sitemap Free 
         </a>
       </div>
 

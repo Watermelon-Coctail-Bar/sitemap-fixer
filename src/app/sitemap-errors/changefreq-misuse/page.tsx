@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'changefreq Misuse in Sitemap – Fix, Examples & Best Practices | SitemapFixer',
+  title: 'changefreq Misuse in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
   description: 'Is your sitemap using changefreq correctly? Setting everything to "daily" or "always" is a common mistake that hurts crawl efficiency. Learn the correct approach.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/changefreq-misuse' },
   openGraph: {
-    title: 'changefreq Misuse in Sitemap – Fix & Best Practices',
+    title: 'changefreq Misuse in Sitemap - Fix & Best Practices',
     description: 'Is your sitemap using changefreq correctly? Setting everything to "daily" or "always" is a common mistake that hurts crawl efficiency. Learn the correct approach.',
     url: 'https://sitemapfixer.com/sitemap-errors/changefreq-misuse',
     type: 'article',
@@ -25,9 +25,9 @@ export default function Page() {
         {/* Breadcrumb */}
         <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
           <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
-          {' → '}
+          {'  '}
           <a href="/sitemap-errors" style={{ color: '#2d5be3', textDecoration: 'none' }}>Sitemap Errors</a>
-          {' → '}
+          {'  '}
           <span>changefreq Misuse in Sitemap</span>
         </nav>
 
@@ -36,17 +36,17 @@ export default function Page() {
         </h1>
 
         <p style={{ fontSize: 17, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 40 }}>
-          Setting every page in your sitemap to changefreq="daily" might seem like a way to get Googlebot to crawl more frequently. In reality, it's a signal Google largely ignores — and setting it inaccurately can reduce your credibility with the crawler.
+          Setting every page in your sitemap to changefreq="daily" might seem like a way to get Googlebot to crawl more frequently. In reality, it's a signal Google largely ignores - and setting it inaccurately can reduce your credibility with the crawler.
         </p>
 
         {/* CTA Box */}
         <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 4 }}>Find this error in your sitemap</div>
-            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free — get a full report in 60 seconds</div>
+            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free - get a full report in 60 seconds</div>
           </div>
           <a href="/" style={{ background: '#0a0a0f', color: 'white', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 14, whiteSpace: 'nowrap' }}>
-            Analyze My Sitemap →
+            Analyze My Sitemap 
           </a>
         </div>
 
@@ -103,7 +103,7 @@ export default function Page() {
           <div style={{ fontSize: 22, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix this in your sitemap now</div>
           <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Enter your domain and get a full sitemap audit in 60 seconds</div>
           <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 32px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
-            Analyze My Sitemap Free →
+            Analyze My Sitemap Free 
           </a>
         </div>
 
@@ -116,7 +116,7 @@ export default function Page() {
             <li><a href="/sitemap-errors/duplicate-urls" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Duplicate Urls</a></li>
           </ul>
           <div style={{ marginTop: 16 }}>
-            <a href="/sitemap-errors" style={{ color: '#2d5be3', fontSize: 13 }}>← All sitemap errors</a>
+            <a href="/sitemap-errors" style={{ color: '#2d5be3', fontSize: 13 }}> All sitemap errors</a>
           </div>
         </div>
       </div>
