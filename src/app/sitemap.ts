@@ -48,5 +48,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/fix-sitemap-for`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
   ];
 
-  return [...core, ...indexes, ...errorPages, ...learnPages, ...platformPages];
+  return [...core, ...indexes, ...errorPages, ...learnPages, ...platformPages  { url: 'https://sitemapfixer.com/learn/sitemap-not-working', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/pages-not-indexed-google', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/submitted-url-not-indexed', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/crawled-currently-not-indexed', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/pages-in-sitemap-not-indexed', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/sitemap-errors-google-search-console', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/google-not-crawling-my-site', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/sitemap-checker', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/sitemap-validator', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+  { url: 'https://sitemapfixer.com/learn/google-search-console-sitemap', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+];
 }
