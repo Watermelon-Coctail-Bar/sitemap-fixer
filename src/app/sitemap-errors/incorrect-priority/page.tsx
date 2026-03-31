@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Incorrect Priority Values in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
-  description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects Googlebot's crawl decisions.',
+  description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects Googlebot crawl crawl decisions.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority' },
   openGraph: {
     title: 'Incorrect Priority Values in Sitemap - Fix & Best Practices',
-    description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects Googlebot's crawl decisions.',
+    description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects Googlebot crawl crawl decisions.',
     url: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority',
     type: 'article',
   },

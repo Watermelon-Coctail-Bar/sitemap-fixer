@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sitemap vs robots.txt - What's the Difference? | SitemapFixer',
+  title: 'Sitemap vs robots.txt - What is the Difference? | SitemapFixer',
   description: 'Confused about sitemap.xml vs robots.txt? Learn exactly what each file does, how they interact, and why you need both for effective technical SEO.',
   alternates: { canonical: 'https://sitemapfixer.com/learn/sitemap-vs-robots-txt' },
   openGraph: {
-    title: 'Sitemap vs robots.txt - What's the Difference?',
+    title: 'Sitemap vs robots.txt - What is the Difference?',
     description: 'Confused about sitemap.xml vs robots.txt? Learn exactly what each file does, how they interact, and why you need both for effective technical SEO.',
     url: 'https://sitemapfixer.com/learn/sitemap-vs-robots-txt',
     type: 'article',
@@ -20,11 +20,11 @@ export default function Page() {
         {'  '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>
         {'  '}
-        <span>Sitemap vs robots.txt - What's the Difference?</span>
+        <span>Sitemap vs robots.txt - What is the Difference?</span>
       </nav>
 
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>
-        Sitemap vs robots.txt - What's the Difference?
+        Sitemap vs robots.txt - What is the Difference?
       </h1>
 
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
