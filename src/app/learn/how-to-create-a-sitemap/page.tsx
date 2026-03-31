@@ -15,7 +15,54 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
-      <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'How to Create an XML Sitemap | SitemapFixer',
+    description: 'Learn how to create an XML sitemap for any type of website. Step-by-step instructions for WordPress, Shopify, Next.js, and manual creation.',
+      alternates: { canonical: 'https://sitemapfixer.com/learn/how-to-create-a-sitemap' },
+        openGraph: {
+            title: 'How to Create an XML Sitemap',
+                description: 'Learn how to create an XML sitemap for any website.',
+                    url: 'https://sitemapfixer.com/learn/how-to-create-a-sitemap',
+                        type: 'article',
+                          },
+                          };
+                          
+                          export default function Page() {
+                            return (
+                                <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
+                                      <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
+                                              <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
+                                                      {' / '}
+                                                              <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>
+                                                                      {' / '}
+                                                                              <span>How to Create an XML Sitemap</span>
+                                                                                    </nav>
+                                                                                          <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>
+                                                                                                  How to Create an XML Sitemap
+                                                                                                        </h1>
+                                                                                                              <p style={{ fontSize: 17, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 40 }}>
+                                                                                                                      An XML sitemap tells search engines which pages exist on your site and when they were last updated. It is one of the most important technical SEO steps for any website.
+                                                                                                                            </p>
+                                                                                                                                  <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Option 1: WordPress</h2>
+                                                                                                                                        <p style={{ marginBottom: 20, color: '#3d3d4f', lineHeight: 1.7 }}>Install Yoast SEO or Rank Math. Both generate sitemaps automatically at yoursite.com/sitemap.xml with no extra configuration needed.</p>
+                                                                                                                                              <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Option 2: Shopify</h2>
+                                                                                                                                                    <p style={{ marginBottom: 20, color: '#3d3d4f', lineHeight: 1.7 }}>Shopify generates a sitemap automatically at yourstore.com/sitemap.xml. No setup needed.</p>
+                                                                                                                                                          <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Option 3: Next.js</h2>
+                                                                                                                                                                <p style={{ marginBottom: 20, color: '#3d3d4f', lineHeight: 1.7 }}>Create a sitemap.ts file in your app directory and export a function that returns your URL list with lastModified and priority fields. Next.js will serve it automatically at /sitemap.xml.</p>
+                                                                                                                                                                      <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Option 4: Manual XML</h2>
+                                                                                                                                                                            <p style={{ marginBottom: 20, color: '#3d3d4f', lineHeight: 1.7 }}>For small sites, create sitemap.xml manually with the standard urlset XML structure, upload it to your root directory, then submit it in Google Search Console.</p>
+                                                                                                                                                                                  <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Submit to Google</h2>
+                                                                                                                                                                                        <p style={{ marginBottom: 20, color: '#3d3d4f', lineHeight: 1.7 }}>Once created, go to Google Search Console, click Sitemaps in the left menu, enter your sitemap URL, and click Submit. Google will start crawling within a few days.</p>
+                                                                                                                                                                                              <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}>
+                                                                                                                                                                                                      <div style={{ fontSize: 22, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your sitemap</div>
+                                                                                                                                                                                                              <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 32px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
+                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                          );
+                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
         {'  '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>
