@@ -4,29 +4,20 @@ import { Hero } from '@/components/Hero';
 import { Loading } from '@/components/Loading';
 import { Results } from '@/components/Results';
 type AppState = 'idle' | 'loading' | 'results' | 'error';
-function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center',gap:8,textDecoration:'none' }}><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg><span style={{ fontFamily:"'Instrument Serif',serif",fontSize:20,color:'var(--ink)' }}>SitemapAI</span></a>); }
+function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center',gap:8,textDecoration:'none' }}><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg><span style={{ fontFamily:"'Instrument Serif',serif",fontSize:20,color:'var(--ink)' }}>SitemapFixer</span></a>); }
 function Navbar() { return (<nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}><div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}><Logo /><div style={{ display:'flex',gap:24 }}><a href="/sitemap-finder" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Sitemap Finder</a><a href="/sitemap-checker" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Sitemap Checker</a><a href="/website-seo-checker" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>SEO Checker</a><a href="/free-seo-audit" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Free Audit</a><a href="/xml-sitemap-generator" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>XML Generator</a></div></div></nav>); }
 function Footer() {
   return (
     <footer style={{ borderTop:'1px solid var(--border)',background:'var(--paper)',padding:'56px 24px 40px' }}>
       <div style={{ maxWidth:960,margin:'0 auto' }}>
         <div style={{ display:'grid',gridTemplateColumns:'2fr 1fr 1fr 1fr',gap:40,marginBottom:48 }}>
-          <div><Logo /><p style={{ fontSize:13,color:'var(--muted)',lineHeight:1.7,marginTop:14 }}>AI-powered sitemap analysis. Fix your SEO.</p></div>
-          <div>
-            <div style={{ fontSize:11,fontWeight:700,color:'var(--muted-2)',textTransform:'uppercase',marginBottom:14 }}>Tools</div>
-            {[['Sitemap Finder','/sitemap-finder'],['Sitemap Checker','/sitemap-checker'],['SEO Checker','/website-seo-checker'],['Free SEO Audit','/free-seo-audit'],['XML Generator','/xml-sitemap-generator']].map(([l,h])=>(<a key={h} href={h} style={{ display:'block',fontSize:13,color:'var(--muted)',textDecoration:'none',marginBottom:10 }}>{l}</a>))}
-          </div>
-          <div>
-            <div style={{ fontSize:11,fontWeight:700,color:'var(--muted-2)',textTransform:'uppercase',marginBottom:14 }}>Learn</div>
-            {[['What is an XML Sitemap','/learn/what-is-an-xml-sitemap'],['Sitemap Best Practices','/learn/sitemap-best-practices'],['Sitemap vs robots.txt','/learn/sitemap-vs-robots-txt'],['Why Pages Not Indexed','/learn/why-pages-not-indexed'],['How to Create a Sitemap','/learn/how-to-create-a-sitemap']].map(([l,h])=>(<a key={h} href={h} style={{ display:'block',fontSize:13,color:'var(--muted)',textDecoration:'none',marginBottom:10 }}>{l}</a>))}
-          </div>
-          <div>
-            <div style={{ fontSize:11,fontWeight:700,color:'var(--muted-2)',textTransform:'uppercase',marginBottom:14 }}>Sitemap Errors</div>
-            {[['Duplicate URLs','/sitemap-errors/duplicate-urls'],['Invalid URLs','/sitemap-errors/invalid-urls'],['Too Many URLs','/sitemap-errors/too-many-urls'],['Incorrect Priority','/sitemap-errors/incorrect-priority'],['changefreq Misuse','/sitemap-errors/changefreq-misuse']].map(([l,h])=>(<a key={h} href={h} style={{ display:'block',fontSize:13,color:'var(--muted)',textDecoration:'none',marginBottom:10 }}>{l}</a>))}
-          </div>
+          <div><Logo /><p style={{ fontSize:13,color:'var(--muted)',lineHeight:1.7,marginTop:14 }}>AI-powered sitemap analysis. Find your sitemap, fix your SEO.</p></div>
+          <div><div style={{ fontSize:11,fontWeight:700,color:'var(--muted-2)',textTransform:'uppercase',marginBottom:14 }}>Tools</div>{[['Sitemap Finder','/sitemap-finder'],['Sitemap Checker','/sitemap-checker'],['SEO Checker','/website-seo-checker'],['Free SEO Audit','/free-seo-audit'],['XML Generator','/xml-sitemap-generator']].map(([l,h])=>(<a key={h} href={h} style={{ display:'block',fontSize:13,color:'var(--muted)',textDecoration:'none',marginBottom:10 }}>{l}</a>))}</div>
+          <div><div style={{ fontSize:11,fontWeight:700,color:'var(--muted-2)',textTransform:'uppercase',marginBottom:14 }}>Learn</div>{[['What is an XML Sitemap','/learn/what-is-an-xml-sitemap'],['Sitemap Best Practices','/learn/sitemap-best-practices'],['Sitemap vs robots.txt','/learn/sitemap-vs-robots-txt'],['Why Pages Not Indexed','/learn/why-pages-not-indexed'],['How to Create a Sitemap','/learn/how-to-create-a-sitemap']].map(([l,h])=>(<a key={h} href={h} style={{ display:'block',fontSize:13,color:'var(--muted)',textDecoration:'none',marginBottom:10 }}>{l}</a>))}</div>
+          <div><div style={{ fontSize:11,fontWeight:700,color:'var(--muted-2)',textTransform:'uppercase',marginBottom:14 }}>Sitemap Errors</div>{[['Duplicate URLs','/sitemap-errors/duplicate-urls'],['Invalid URLs','/sitemap-errors/invalid-urls'],['Too Many URLs','/sitemap-errors/too-many-urls'],['Incorrect Priority','/sitemap-errors/incorrect-priority'],['changefreq Misuse','/sitemap-errors/changefreq-misuse']].map(([l,h])=>(<a key={h} href={h} style={{ display:'block',fontSize:13,color:'var(--muted)',textDecoration:'none',marginBottom:10 }}>{l}</a>))}</div>
         </div>
         <div style={{ borderTop:'1px solid var(--border)',paddingTop:24,display:'flex',justifyContent:'space-between' }}>
-          <p style={{ fontSize:12,color:'var(--muted-2)' }}>2025 SitemapAI</p>
+          <p style={{ fontSize:12,color:'var(--muted-2)' }}>2025 SitemapFixer - Built for SEOs who want answers, not reports</p>
           <a href="/sitemap.xml" style={{ fontSize:12,color:'var(--muted-2)',textDecoration:'none' }}>Sitemap</a>
         </div>
       </div>
@@ -45,7 +36,7 @@ function Features() {
   return (
     <section style={{ maxWidth:960,margin:'0 auto',padding:'80px 24px' }}>
       <div style={{ textAlign:'center',marginBottom:56 }}>
-        <h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'var(--ink)',marginBottom:14 }}>Why SitemapAI?</h2>
+        <h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'var(--ink)',marginBottom:14 }}>Why SitemapFixer?</h2>
         <p style={{ fontSize:16,color:'var(--muted)',maxWidth:480,margin:'0 auto' }}>Most SEO tools give you scores. We give you a specific action plan.</p>
       </div>
       <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:24 }}>
