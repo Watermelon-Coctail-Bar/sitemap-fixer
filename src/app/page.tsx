@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero';
 import { Loading } from '@/components/Loading';
 import { Results } from '@/components/Results';
 import { PaywallModal } from '@/components/PaywallModal';
+import { PaywallModal } from '@/components/PaywallModal';
 type AppState = 'idle' | 'loading' | 'results' | 'error';
 function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center',gap:8,textDecoration:'none' }}><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg><span style={{ fontFamily:"'Instrument Serif',serif",fontSize:20,color:'var(--ink)' }}>SitemapFixer</span></a>); }
 function Navbar() { return (<nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}><div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}><Logo /><div style={{ display:'flex',gap:24 }}><a href="/sitemap-finder" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Sitemap Finder</a><a href="/sitemap-checker" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Sitemap Checker</a><a href="/website-seo-checker" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>SEO Checker</a><a href="/free-seo-audit" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Free Audit</a><a href="/xml-sitemap-generator" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>XML Generator</a></div></div></nav>); }
@@ -98,6 +99,8 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [showPaywall, setShowPaywall] = useState(false);
   const [paywallDomain, setPaywallDomain] = useState('');
+  const [showPaywall, setShowPaywall] = useState(false);
+  const [paywallDomain, setPaywallDomain] = useState('');
   async function handleAnalyze(inputDomain: string) {
     // Check if user has used their free analysis
     const analysisCount = parseInt(typeof window !== 'undefined' ? localStorage.getItem('sf_analysis_count') || '0' : '0');
@@ -106,12 +109,15 @@ export default function Home() {
       setShowPaywall(true);
       return;
     }
+    const count = parseInt(typeof window !== 'undefined' ? (localStorage.getItem('sf_count') || '0') : '0');
+    if (count >= 1) { setPaywallDomain(inputDomain); setShowPaywall(true); return; }
     setDomain(inputDomain); setState('loading'); setError(null); setResults(null);
     try {
       const res = await fetch('/api/analyze', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ domain:inputDomain }) });
       const data = await res.json();
       if (!res.ok) { setError(data.error === 'no_sitemap' ? data.message : (data.error || 'Something went wrong.')); setState('error'); return; }
       setResults(data); setState('results');
+      if (typeof window !== 'undefined') localStorage.setItem('sf_count', String(parseInt(localStorage.getItem('sf_count') || '0') + 1));
       if (typeof window !== 'undefined') { const c = parseInt(localStorage.getItem('sf_analysis_count') || '0'); localStorage.setItem('sf_analysis_count', String(c + 1)); }
     } catch { setError('Network error.'); setState('error'); }
   }
@@ -126,6 +132,7 @@ export default function Home() {
         {state === 'results' && results && (<Results data={results as any} onReset={reset} />)}
       </main>
       {state === 'idle' && <Footer />}
+      {showPaywall && <PaywallModal domain={paywallDomain} onClose={() => setShowPaywall(false)} />}
       {showPaywall && <PaywallModal domain={paywallDomain} onClose={() => setShowPaywall(false)} />}
     </div>
   );
