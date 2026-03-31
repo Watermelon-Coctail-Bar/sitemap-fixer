@@ -2,14 +2,31 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Sitemap Finder & AI SEO Fixer - Fix Your SEO in 60 Seconds',
-  description:
-    'Find your sitemap, analyze it with AI, and get exact actionable SEO fixes. Not generic advice - specific pages to create, fix, and link.',
-  keywords: 'sitemap finder, sitemap checker, seo checker, ai seo analysis, website seo audit',
+  title: {
+    default: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    template: '%s | SitemapFixer',
+  },
+  description: 'Free AI-powered sitemap checker. Find sitemap errors, fix indexing issues, and get exact actionable SEO improvements in 60 seconds.',
+  keywords: 'sitemap checker, sitemap validator, sitemap not working, pages not indexed, xml sitemap, seo checker',
+  metadataBase: new URL('https://sitemapfixer.com'),
+  alternates: { canonical: 'https://sitemapfixer.com' },
   openGraph: {
-    title: 'Sitemap Finder & AI SEO Fixer',
-    description: 'Get exact, actionable SEO improvements from your sitemap in 60 seconds.',
+    title: 'SitemapFixer - AI Sitemap Checker',
+    description: 'Free AI-powered sitemap checker. Find errors, fix indexing issues, get exact SEO improvements in 60 seconds.',
+    url: 'https://sitemapfixer.com',
+    siteName: 'SitemapFixer',
     type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SitemapFixer - AI Sitemap Checker',
+    description: 'Free AI-powered sitemap checker. Fix indexing issues in 60 seconds.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
 };
 
