@@ -65,12 +65,18 @@ function HowItWorks() {
 }
 function BlogSection() {
   const posts = [
-    { title:'What is an XML Sitemap?', desc:'Complete beginner guide to XML sitemaps.', href:'/learn/what-is-an-xml-sitemap', tag:'Guide' },
-    { title:'Sitemap Best Practices', desc:'Maximize crawl efficiency with a clean sitemap.', href:'/learn/sitemap-best-practices', tag:'Guide' },
-    { title:'Why Pages Not Indexed', desc:'Every reason and how to fix each one.', href:'/learn/why-pages-not-indexed', tag:'Guide' },
-    { title:'Sitemap vs robots.txt', desc:'The difference and how they interact.', href:'/learn/sitemap-vs-robots-txt', tag:'Guide' },
-    { title:'Incorrect Priority Values', desc:'Priority 1.0 everywhere is a mistake.', href:'/sitemap-errors/incorrect-priority', tag:'Error Fix' },
-    { title:'Too Many URLs', desc:'Bloated sitemaps dilute your crawl budget.', href:'/sitemap-errors/too-many-urls', tag:'Error Fix' },
+    { title:'Sitemap Not Working? 9 Common Fixes', desc:'The 9 most common reasons sitemaps fail and exactly how to fix each one.', href:'/learn/sitemap-not-working', tag:'Guide' },
+    { title:'Pages Not Indexed by Google', desc:'Every reason Google refuses to index your pages and step-by-step fixes.', href:'/learn/pages-not-indexed-google', tag:'Guide' },
+    { title:'Submitted URL Not Indexed', desc:'What this Search Console status means and the exact steps to fix it.', href:'/learn/submitted-url-not-indexed', tag:'Guide' },
+    { title:'Crawled Currently Not Indexed', desc:'Google crawled your page but chose not to index it. Here is why and how to fix it.', href:'/learn/crawled-currently-not-indexed', tag:'Guide' },
+    { title:'Pages in Sitemap But Not Indexed', desc:'Your sitemap is fine but Google still will not index those pages. Here is why.', href:'/learn/pages-in-sitemap-not-indexed', tag:'Guide' },
+    { title:'Sitemap Errors in Search Console', desc:'Every sitemap error type in Google Search Console and how to fix each one.', href:'/learn/sitemap-errors-google-search-console', tag:'Guide' },
+    { title:'Google Not Crawling My Site', desc:'All the reasons Googlebot stops crawling your site and how to fix each one.', href:'/learn/google-not-crawling-my-site', tag:'Guide' },
+    { title:'Sitemap Checker', desc:'How to check your XML sitemap for errors and validate it before submitting.', href:'/learn/sitemap-checker', tag:'Tool' },
+    { title:'Sitemap Validator', desc:'How to validate your XML sitemap meets Google standards. Common errors and fixes.', href:'/learn/sitemap-validator', tag:'Tool' },
+    { title:'What is an XML Sitemap?', desc:'The complete beginner guide to XML sitemaps and why they matter for SEO.', href:'/learn/what-is-an-xml-sitemap', tag:'Guide' },
+    { title:'Sitemap Best Practices', desc:'Create a clean, optimized sitemap that maximizes crawl efficiency.', href:'/learn/sitemap-best-practices', tag:'Guide' },
+    { title:'Incorrect Priority Values', desc:'Priority 1.0 everywhere is a mistake. Here is what to do instead.', href:'/sitemap-errors/incorrect-priority', tag:'Error Fix' },
   ];
   return (
     <section style={{ maxWidth:960,margin:'0 auto',padding:'80px 24px' }}>
