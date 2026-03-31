@@ -24,6 +24,150 @@ function Navbar() {
     <nav style={{ borderBottom: '1px solid var(--border)', background: 'rgba(250,250,249,0.85)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Logo />
+        <div style={{ display: 'flex', gap: 24 }}>
+          <a href="/sitemap-finder" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Finder</a>
+          <a href="/sitemap-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Checker</a>
+          <a href="/website-seo-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>SEO Checker</a>
+          <a href="/free-seo-audit" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Free Audit</a>
+          <a href="/xml-sitemap-generator" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>XML Generator</a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function Footer() {
+  return (
+    <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--paper)', padding: '56px 24px 40px' }}>
+      <div style={{ maxWidth: 960, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40, marginBottom: 48 }}>
+          <div><Logo /><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, marginTop: 14 }}>AI-powered sitemap analysis. Find your sitemap, fix your SEO.</p></div>
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted-2)', textTransform: 'uppercase', marginBottom: 14 }}>Tools</div>
+            {[['Sitemap Finder','/sitemap-finder'],['Sitemap Checker','/sitemap-checker'],['SEO Checker','/website-seo-checker'],['Free SEO Audit','/free-seo-audit'],['XML Generator','/xml-sitemap-generator']].map(([label,href]) => (<a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>))}
+          </div>
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted-2)', textTransform: 'uppercase', marginBottom: 14 }}>Learn</div>
+            {[['What is an XML Sitemap','/learn/what-is-an-xml-sitemap'],['Sitemap Best Practices','/learn/sitemap-best-practices'],['Sitemap vs robots.txt','/learn/sitemap-vs-robots-txt'],['Why Pages Not Indexed','/learn/why-pages-not-indexed'],['How to Create a Sitemap','/learn/how-to-create-a-sitemap']].map(([label,href]) => (<a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>))}
+          </div>
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted-2)', textTransform: 'uppercase', marginBottom: 14 }}>Sitemap Errors</div>
+            {[['Duplicate URLs','/sitemap-errors/duplicate-urls'],['Invalid URLs','/sitemap-errors/invalid-urls'],['Too Many URLs','/sitemap-errors/too-many-urls'],['Incorrect Priority','/sitemap-errors/incorrect-priority'],['changefreq Misuse','/sitemap-errors/changefreq-misuse']].map(([label,href]) => (<a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>))}
+          </div>
+        </div>
+        <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, display: 'flex', justifyContent: 'space-between' }}>
+          <p style={{ fontSize: 12, color: 'var(--muted-2)' }}>2025 SitemapAI - Built for SEOs who want answers, not reports</p>
+          <a href="/sitemap.xml" style={{ fontSize: 12, color: 'var(--muted-2)', textDecoration: 'none' }}>Sitemap</a>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function Features() {
+  const items = [
+    { icon: '🔍', title: 'Instant Sitemap Discovery', desc: 'We check 20+ common paths to find your sitemap in seconds.' },
+    { icon: '🤖', title: 'AI-Powered Analysis', desc: 'Claude AI generates specific recommendations for your site.' },
+    { icon: '📊', title: 'Prioritized Fix List', desc: 'Ranked list of exactly what to fix, create, and link.' },
+    { icon: '⚡', title: 'Under 60 Seconds', desc: 'Full AI report in under a minute, free, no signup.' },
+    { icon: '🗺️', title: 'Supports All Formats', desc: 'WordPress, Shopify, Next.js, and custom formats all work.' },
+    { icon: '🎯', title: 'Site-Specific Insights', desc: 'Every recommendation based on your actual URL patterns.' },
+  ];
+  return (
+    <section style={{ maxWidth: 960, margin: '0 auto', padding: '80px 24px' }}>
+      <div style={{ textAlign: 'center', marginBottom: 56 }}>
+        <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 36, color: 'var(--ink)', marginBottom: 14 }}>Why SitemapAI?</h2>
+        <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, margin: '0 auto' }}>Most SEO tools give scores. We give a specific action plan based on your actual site.</p>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        {items.map(item => (<div key={item.title} style={{ background: 'white', border: '1px solid var(--border)', borderRadius: 14, padding: '28px 24px' }}><div style={{ fontSize: 28, marginBottom: 14 }}>{item.icon}</div><div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{item.title}</div><div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{item.desc}</div></div>))}
+      </div>
+    </section>
+  );
+}
+
+function HowItWorks() {
+  const steps = [{ num: '1', title: 'Enter your domain', desc: 'Type any domain. No sitemap URL needed.' }, { num: '2', title: 'We find your sitemap', desc: 'We locate it, fetch every URL, and cluster them.' }, { num: '3', title: 'AI generates your plan', desc: 'Claude produces specific, ranked SEO recommendations.' }, { num: '4', title: 'Fix and grow', desc: 'Create missing pages, fix broken patterns, build links.' }];
+  return (
+    <section style={{ background: 'white', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+      <div style={{ maxWidth: 960, margin: '0 auto', padding: '80px 24px' }}>
+        <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 36, color: 'var(--ink)', marginBottom: 56, textAlign: 'center' }}>How it works</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
+          {steps.map(step => (<div key={step.num} style={{ textAlign: 'center' }}><div style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--ink)', color: 'white', fontSize: 18, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 18px' }}>{step.num}</div><div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{step.title}</div><div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{step.desc}</div></div>))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BlogSection() {
+  const posts = [{ title: 'What is an XML Sitemap?', desc: 'The complete beginner guide to XML sitemaps.', href: '/learn/what-is-an-xml-sitemap', tag: 'Guide' }, { title: 'Sitemap Best Practices', desc: 'Create a clean, optimized sitemap that maximizes crawl efficiency.', href: '/learn/sitemap-best-practices', tag: 'Guide' }, { title: 'Why Pages Are Not Being Indexed', desc: 'Every reason Google might not index your pages.', href: '/learn/why-pages-not-indexed', tag: 'Guide' }, { title: 'Sitemap vs robots.txt', desc: 'The difference and how they interact.', href: '/learn/sitemap-vs-robots-txt', tag: 'Guide' }, { title: 'Incorrect Priority Values', desc: 'Setting all pages to priority 1.0 is a common mistake.', href: '/sitemap-errors/incorrect-priority', tag: 'Error Fix' }, { title: 'Too Many URLs in Your Sitemap', desc: 'Bloated sitemaps dilute crawl budget.', href: '/sitemap-errors/too-many-urls', tag: 'Error Fix' }];
+  return (
+    <section style={{ maxWidth: 960, margin: '0 auto', padding: '80px 24px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40 }}>
+        <div><h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 36, color: 'var(--ink)', marginBottom: 8 }}>Learn SEO</h2><p style={{ fontSize: 15, color: 'var(--muted)' }}>Free guides on XML sitemaps, crawl budget, and technical SEO.</p></div>
+        <a href="/learn" style={{ fontSize: 13, color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>View all guides</a>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+        {posts.map(post => (<a key={post.href} href={post.href} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid var(--border)', borderRadius: 14, padding: '24px' }}><span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, color: 'var(--accent)', background: 'var(--accent-light)', borderRadius: 4, padding: '2px 8px', marginBottom: 12 }}>{post.tag}</span><div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{post.title}</div><div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6 }}>{post.desc}</div></a>))}
+      </div>
+    </section>
+  );
+}
+
+export default function Home() {
+  const [state, setState] = useState<AppState>('idle');
+  const [domain, setDomain] = useState('');
+  const [results, setResults] = useState<null | object>(null);
+  const [error, setError] = useState<string | null>(null);
+  async function handleAnalyze(inputDomain: string) {
+    setDomain(inputDomain); setState('loading'); setError(null); setResults(null);
+    try {
+      const res = await fetch('/api/analyze', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ domain: inputDomain }) });
+      const data = await res.json();
+      if (!res.ok) { setError(data.error === 'no_sitemap' ? data.message : (data.error || 'Something went wrong.')); setState('error'); return; }
+      setResults(data); setState('results');
+    } catch { setError('Network error.'); setState('error'); }
+  }
+  function reset() { setState('idle'); setResults(null); setError(null); }
+  return (
+    <div style={{ minHeight: '100vh', background: 'var(--paper)' }}>
+      <Navbar />
+      <main>
+        {state === 'idle' && (<><Hero onSubmit={handleAnalyze} loading={false} variant="default" /><Features /><HowItWorks /><BlogSection /></>)}
+        {state === 'loading' && <Loading domain={domain} />}
+        {state === 'error' && (<div style={{ maxWidth: 540, margin: '80px auto', padding: '0 24px', textAlign: 'center' }}><div style={{ fontSize: 40, marginBottom: 20 }}>🔍</div><h2 style={{ fontSize: 24, fontWeight: 700, color: 'var(--ink)', marginBottom: 12 }}>Sitemap not found</h2><p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 32 }}>{error}</p><button onClick={reset} className="cta-btn">Try another domain</button></div>)}
+        {state === 'results' && results && (<Results data={results as any} onReset={reset} />)}
+      </main>
+      {state === 'idle' && <Footer />}
+    </div>
+  );
+}'use client';
+import { useState } from 'react';
+import { Hero } from '@/components/Hero';
+import { Loading } from '@/components/Loading';
+import { Results } from '@/components/Results';
+
+type AppState = 'idle' | 'loading' | 'results' | 'error';
+
+function Logo() {
+  return (
+    <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="7" fill="#0a0a0f"/>
+        <path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="21" cy="19" r="3" fill="#2d5be3"/>
+      </svg>
+      <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: 'var(--ink)', letterSpacing: '-0.01em' }}>SitemapAI</span>
+    </a>
+  );
+}
+
+function Navbar() {
+  return (
+    <nav style={{ borderBottom: '1px solid var(--border)', background: 'rgba(250,250,249,0.85)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
+      <div style={{ maxWidth: 960, margin: '0 auto', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Logo />
         <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
           <a href="/sitemap-finder" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Finder</a>
           <a href="/sitemap-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Checker</a>
@@ -41,27 +185,18 @@ function Footer() {
     <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--paper)', padding: '56px 24px 40px' }}>
       <div style={{ maxWidth: 960, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40, marginBottom: 48 }}>
-          <div>
-            <Logo />
-            <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, marginTop: 14, maxWidth: 240 }}>AI-powered sitemap analysis. Find your sitemap, fix your SEO, grow your traffic.</p>
-          </div>
+          <div><Logo /><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, marginTop: 14, maxWidth: 240 }}>AI-powered sitemap analysis. Find your sitemap, fix your SEO, grow your traffic.</p></div>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted-2)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 14 }}>Tools</div>
-            {[['Sitemap Finder', '/sitemap-finder'], ['Sitemap Checker', '/sitemap-checker'], ['SEO Checker', '/website-seo-checker'], ['Free SEO Audit', '/free-seo-audit'], ['XML Generator', '/xml-sitemap-generator']].map(([label, href]) => (
-              <a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>
-            ))}
+            {[['Sitemap Finder','/sitemap-finder'],['Sitemap Checker','/sitemap-checker'],['SEO Checker','/website-seo-checker'],['Free SEO Audit','/free-seo-audit'],['XML Generator','/xml-sitemap-generator']].map(([label,href]) => (<a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>))}
           </div>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted-2)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 14 }}>Learn</div>
-            {[['What is an XML Sitemap', '/learn/what-is-an-xml-sitemap'], ['Sitemap Best Practices', '/learn/sitemap-best-practices'], ['Sitemap vs robots.txt', '/learn/sitemap-vs-robots-txt'], ['Why Pages Not Indexed', '/learn/why-pages-not-indexed'], ['How to Create a Sitemap', '/learn/how-to-create-a-sitemap']].map(([label, href]) => (
-              <a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>
-            ))}
+            {[['What is an XML Sitemap','/learn/what-is-an-xml-sitemap'],['Sitemap Best Practices','/learn/sitemap-best-practices'],['Sitemap vs robots.txt','/learn/sitemap-vs-robots-txt'],['Why Pages Not Indexed','/learn/why-pages-not-indexed'],['How to Create a Sitemap','/learn/how-to-create-a-sitemap']].map(([label,href]) => (<a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>))}
           </div>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted-2)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 14 }}>Sitemap Errors</div>
-            {[['Duplicate URLs', '/sitemap-errors/duplicate-urls'], ['Invalid URLs', '/sitemap-errors/invalid-urls'], ['Too Many URLs', '/sitemap-errors/too-many-urls'], ['Incorrect Priority', '/sitemap-errors/incorrect-priority'], ['changefreq Misuse', '/sitemap-errors/changefreq-misuse']].map(([label, href]) => (
-              <a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>
-            ))}
+            {[['Duplicate URLs','/sitemap-errors/duplicate-urls'],['Invalid URLs','/sitemap-errors/invalid-urls'],['Too Many URLs','/sitemap-errors/too-many-urls'],['Incorrect Priority','/sitemap-errors/incorrect-priority'],['changefreq Misuse','/sitemap-errors/changefreq-misuse']].map(([label,href]) => (<a key={href} href={href} style={{ display: 'block', fontSize: 13, color: 'var(--muted)', textDecoration: 'none', marginBottom: 10 }}>{label}</a>))}
           </div>
         </div>
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -75,27 +210,21 @@ function Footer() {
 
 function Features() {
   const items = [
-    { icon: '🔍', title: 'Instant Sitemap Discovery', desc: 'We check 20+ common paths and robots.txt to find your sitemap in seconds.' },
-    { icon: '🤖', title: 'AI-Powered Analysis', desc: 'Claude AI reads your URL structure and generates specific recommendations - not generic advice.' },
+    { icon: '🔍', title: 'Instant Sitemap Discovery', desc: 'We check 20+ common paths to find your sitemap in seconds.' },
+    { icon: '🤖', title: 'AI-Powered Analysis', desc: 'Claude AI reads your URL structure and generates specific recommendations.' },
     { icon: '📊', title: 'Prioritized Fix List', desc: 'Get a ranked list of exactly what to fix, what pages to create, and what to link.' },
-    { icon: '⚡', title: 'Under 60 Seconds', desc: 'No crawling. We analyze your sitemap directly. Full AI report in under a minute, free.' },
+    { icon: '⚡', title: 'Under 60 Seconds', desc: 'Full AI report in under a minute, free, no signup required.' },
     { icon: '🗺️', title: 'Supports All Formats', desc: 'Standard urlset, sitemap indexes, nested child sitemaps. WordPress, Shopify, Next.js all work.' },
-    { icon: '🎯', title: 'Site-Specific Insights', desc: 'Every recommendation is based on your actual URL patterns and content gaps.' },
+    { icon: '🎯', title: 'Site-Specific Insights', desc: 'Every recommendation is based on your actual URL patterns.' },
   ];
   return (
     <section style={{ maxWidth: 960, margin: '0 auto', padding: '80px 24px' }}>
       <div style={{ textAlign: 'center', marginBottom: 56 }}>
         <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 36, color: 'var(--ink)', marginBottom: 14 }}>Why SitemapAI?</h2>
-        <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, margin: '0 auto' }}>Most SEO tools give you scores. We give you a specific action plan based on your actual site.</p>
+        <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, margin: '0 auto' }}>Most SEO tools give you scores. We give you a specific action plan.</p>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
-        {items.map(item => (
-          <div key={item.title} style={{ background: 'white', border: '1px solid var(--border)', borderRadius: 14, padding: '28px 24px' }}>
-            <div style={{ fontSize: 28, marginBottom: 14 }}>{item.icon}</div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{item.title}</div>
-            <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{item.desc}</div>
-          </div>
-        ))}
+        {items.map(item => (<div key={item.title} style={{ background: 'white', border: '1px solid var(--border)', borderRadius: 14, padding: '28px 24px' }}><div style={{ fontSize: 28, marginBottom: 14 }}>{item.icon}</div><div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{item.title}</div><div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{item.desc}</div></div>))}
       </div>
     </section>
   );
@@ -104,269 +233,18 @@ function Features() {
 function HowItWorks() {
   const steps = [
     { num: '1', title: 'Enter your domain', desc: 'Type any domain. No sitemap URL needed.' },
-    { num: '2', title: 'We find your sitemap', desc: 'We locate it, fetch every URL, and cluster them by type and depth.' },
-    { num: '3', title: 'AI generates your plan', desc: 'Claude analyzes your structure and produces specific, ranked SEO recommendations.' },
-    { num: '4', title: 'Fix and grow', desc: 'Follow the prioritized list. Create missing pages, fix broken patterns, build links.' },
+    { num: '2', title: 'We find your sitemap', desc: 'We locate it, fetch every URL, and cluster them.' },
+    { num: '3', title: 'AI generates your plan', desc: 'Claude produces specific, ranked SEO recommendations.' },
+    { num: '4', title: 'Fix and grow', desc: 'Create missing pages, fix broken patterns, build links.' },
   ];
   return (
     <section style={{ background: 'white', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '80px 24px' }}>
         <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 36, color: 'var(--ink)', marginBottom: 56, textAlign: 'center' }}>How it works</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
-          {steps.map(step => (
-            <div key={step.num} style={{ textAlign: 'center' }}>
-              <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--ink)', color: 'white', fontSize: 18, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 18px' }}>{step.num}</div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{step.title}</div>
-              <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{step.desc}</div>
-            </div>
-          ))}
+          {steps.map(step => (<div key={step.num} style={{ textAlign: 'center' }}><div style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--ink)', color: 'white', fontSize: 18, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 18px' }}>{step.num}</div><div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{step.title}</div><div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.65 }}>{step.desc}</div></div>))}
         </div>
       </div>
     </section>
-  );
-}
-
-function BlogSection() {
-  const posts = [
-    { title: 'What is an XML Sitemap?', desc: 'The complete beginner guide - what sitemaps are, how they work, and why they matter.', href: '/learn/what-is-an-xml-sitemap', tag: 'Guide' },
-    { title: 'Sitemap Best Practices', desc: 'Everything you need to create a clean, optimized sitemap that maximizes crawl efficiency.', href: '/learn/sitemap-best-practices', tag: 'Guide' },
-    { title: 'Why Pages Are Not Being Indexed', desc: 'Every reason Google might not index your pages, and exactly how to fix each one.', href: '/learn/why-pages-not-indexed', tag: 'Guide' },
-    { title: 'Sitemap vs robots.txt', desc: 'The difference between sitemaps and robots.txt - and how they interact.', href: '/learn/sitemap-vs-robots-txt', tag: 'Guide' },
-    { title: 'Incorrect Priority Values', desc: 'Setting all pages to priority 1.0 is a common mistake. Here is what to do instead.', href: '/sitemap-errors/incorrect-priority', tag: 'Error Fix' },
-    { title: 'Too Many URLs in Your Sitemap', desc: 'Bloated sitemaps dilute crawl budget. Learn which pages to exclude and why.', href: '/sitemap-errors/too-many-urls', tag: 'Error Fix' },
-  ];
-  return (
-    <section style={{ maxWidth: 960, margin: '0 auto', padding: '80px 24px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40 }}>
-        <div>
-          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 36, color: 'var(--ink)', marginBottom: 8 }}>Learn SEO</h2>
-          <p style={{ fontSize: 15, color: 'var(--muted)' }}>Free guides on XML sitemaps, crawl budget, and technical SEO.</p>
-        </div>
-        <a href="/learn" style={{ fontSize: 13, color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>View all guides</a>
-      </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-        {posts.map(post => (
-          <a key={post.href} href={post.href} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid var(--border)', borderRadius: 14, padding: '24px' }}>
-            <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, color: 'var(--accent)', background: 'var(--accent-light)', borderRadius: 4, padding: '2px 8px', marginBottom: 12, letterSpacing: '0.04em' }}>{post.tag}</span>
-            <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 8, lineHeight: 1.4 }}>{post.title}</div>
-            <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6 }}>{post.desc}</div>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export default function Home() {
-  const [state, setState] = useState<AppState>('idle');
-  const [domain, setDomain] = useState('');
-  const [results, setResults] = useState<null | object>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  async function handleAnalyze(inputDomain: string) {
-    setDomain(inputDomain);
-    setState('loading');
-    setError(null);
-    setResults(null);
-    try {
-      const res = await fetch('/api/analyze', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ domain: inputDomain }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setError(data.error === 'no_sitemap' ? data.message : (data.error || 'Something went wrong.'));
-        setState('error');
-        return;
-      }
-      setResults(data);
-      setState('results');
-    } catch {
-      setError('Network error. Please check your connection and try again.');
-      setState('error');
-    }
-  }
-
-  function reset() {
-    setState('idle');
-    setResults(null);
-    setError(null);
-  }
-
-  return (
-    <div style={{ minHeight: '100vh', background: 'var(--paper)' }}>
-      <Navbar />
-      <main>
-        {state === 'idle' && (
-          <>
-            <Hero onSubmit={handleAnalyze} loading={false} variant="default" />
-            <Features />
-            <HowItWorks />
-            <BlogSection />
-          </>
-        )}
-        {state === 'loading' && <Loading domain={domain} />}
-        {state === 'error' && (
-          <div style={{ maxWidth: 540, margin: '80px auto', padding: '0 24px', textAlign: 'center' }}>
-            <div style={{ fontSize: 40, marginBottom: 20 }}>🔍</div>
-            <h2 style={{ fontSize: 24, fontWeight: 700, color: 'var(--ink)', marginBottom: 12 }}>Sitemap not found</h2>
-            <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 32 }}>{error}</p>
-            <button onClick={reset} className="cta-btn">Try another domain</button>
-          </div>
-        )}
-        {state === 'results' && results && (
-          <Results data={results as any} onReset={reset} />
-        )}
-      </main>
-      {state === 'idle' && <Footer />}
-    </div>
-  );
-}'use client';
-
-import { useState } from 'react';
-import { Hero } from '@/components/Hero';
-import { Loading } from '@/components/Loading';
-import { Results } from '@/components/Results';
-
-type AppState = 'idle' | 'loading' | 'results' | 'error';
-
-export default function Home() {
-  const [state, setState] = useState<AppState>('idle');
-  const [domain, setDomain] = useState('');
-  const [results, setResults] = useState<null | object>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  async function handleAnalyze(inputDomain: string) {
-    setDomain(inputDomain);
-    setState('loading');
-    setError(null);
-    setResults(null);
-
-    try {
-      const res = await fetch('/api/analyze', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ domain: inputDomain }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        if (data.error === 'no_sitemap') {
-          setError(data.message);
-        } else {
-          setError(data.error || 'Something went wrong. Please try again.');
-        }
-        setState('error');
-        return;
-      }
-
-      setResults(data);
-      setState('results');
-    } catch {
-      setError('Network error. Please check your connection and try again.');
-      setState('error');
-    }
-  }
-
-  function reset() {
-    setState('idle');
-    setResults(null);
-    setError(null);
-  }
-
-  return (
-    <div style={{ minHeight: '100vh', background: 'var(--paper)' }}>
-      {/* Nav */}
-      <nav
-        style={{
-          borderBottom: '1px solid var(--border)',
-          background: 'rgba(250,250,249,0.85)',
-          backdropFilter: 'blur(12px)',
-          position: 'sticky',
-          top: 0,
-          zIndex: 100,
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 960,
-            margin: '0 auto',
-            padding: '14px 24px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <a
-            href="/"
-            style={{
-              fontFamily: "'Instrument Serif', serif",
-              fontSize: 20,
-              color: 'var(--ink)',
-              textDecoration: 'none',
-              letterSpacing: '-0.01em',
-            }}
-          >
-            SitemapAI
-          </a>
-          <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
-            <a href="/sitemap-finder" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Finder</a>
-            <a href="/sitemap-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Checker</a>
-            <a href="/website-seo-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>SEO Checker</a>
-            <a href="/free-seo-audit" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Free Audit</a>
-            <a href="/xml-sitemap-generator" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>XML Generator</a>
-          </div>
-        </div>
-      </nav>
-
-      {/* Main content */}
-      <main>
-        {state === 'idle' && (
-          <Hero onSubmit={handleAnalyze} loading={false} variant="default" />
-        )}
-
-        {state === 'loading' && (
-          <Loading domain={domain} />
-        )}
-
-        {state === 'error' && (
-          <div style={{ maxWidth: 540, margin: '80px auto', padding: '0 24px', textAlign: 'center' }}>
-            <div style={{ fontSize: 40, marginBottom: 20 }}>🔍</div>
-            <h2 style={{ fontSize: 24, fontWeight: 700, color: 'var(--ink)', marginBottom: 12 }}>
-              Sitemap not found
-            </h2>
-            <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 32 }}>
-              {error}
-            </p>
-            <button onClick={reset} className="cta-btn">
-              Try another domain
-            </button>
-          </div>
-        )}
-
-        {state === 'results' && results && (
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          <Results data={results as any} onReset={reset} />
-        )}
-      </main>
-
-      {/* Footer */}
-      {state === 'idle' && (
-        <footer
-          style={{
-            borderTop: '1px solid var(--border)',
-            padding: '32px 24px',
-            textAlign: 'center',
-            marginTop: 60,
-          }}
-        >
-          <p style={{ fontSize: 13, color: 'var(--muted-2)' }}>
-            © 2025 SitemapAI · Built for SEOs who want answers, not reports
-          </p>
-        </footer>
-      )}
-    </div>
   );
 }
