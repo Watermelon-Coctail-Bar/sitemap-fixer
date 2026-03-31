@@ -1,0 +1,29 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Pages Not Indexed by Google? Here is How to Fix It | SitemapFixer', description: 'If your pages are not indexed by Google, here are the most common reasons and step-by-step fixes to get your content showing in search results.', alternates: { canonical: 'https://sitemapfixer.com/learn/pages-not-indexed-google' }, openGraph: { title: 'Pages Not Indexed by Google: Complete Fix Guide', description: 'If your pages are not indexed by Google, here are the most common reasons and step-by-step fixes to get your content showing in search results.', url: 'https://sitemapfixer.com/learn/pages-not-indexed-google', type: 'article' } };
+export default function Page() { return (
+    <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
+      <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}><a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}<a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}<span>Pages Not Indexed by Google: Complete Fix Guide</span></nav>
+      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>Pages Not Indexed by Google: Complete Fix Guide</h1>
+      <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}><span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Diagnose your sitemap free</span><a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze Free</a></div>
+      <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.8 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>The Page Is Blocked by robots.txt</h2>
+        <p style={{ marginBottom: 20 }}>Open your robots.txt file and check for Disallow rules that block Googlebot. Even Disallow: / blocks your entire site. Fix any overly broad disallow rules and re-submit your sitemap.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>The Page Has a noindex Tag</h2>
+        <p style={{ marginBottom: 20 }}>Check the page source for a meta robots tag containing noindex. If present, remove it. This is the most common cause of pages disappearing from Google after previously being indexed.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>The Page Has No Internal Links</h2>
+        <p style={{ marginBottom: 20 }}>Google discovers pages through links. If your page has zero internal links pointing to it, it is an orphan page. Add links from your homepage, navigation, or related content pages.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>The Page Is Thin or Duplicate Content</h2>
+        <p style={{ marginBottom: 20 }}>Pages under 300 words, pages that duplicate other content on your site, or pages stuffed with keywords but offering little value will often be crawled but not indexed. Add more unique, valuable content.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>The Page Requires JavaScript to Render</h2>
+        <p style={{ marginBottom: 20 }}>Google can render JavaScript, but does so in a second wave that can take weeks. If your page content only appears after JS executes, consider server-side rendering to speed up indexing.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Crawl Budget Is Being Wasted</h2>
+        <p style={{ marginBottom: 20 }}>If your site has thousands of low-value URLs like faceted navigation or session IDs, Google may deprioritize your important content. Use canonical tags and robots.txt to eliminate crawl waste.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Request Indexing in Google Search Console</h2>
+        <p style={{ marginBottom: 20 }}>Submit the URL directly in Search Console via the URL Inspection tool and click Request Indexing. Google will typically re-crawl within a few days after a quality fix.</p>
+      </div>
+      <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}><div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix your sitemap now</div><div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div><a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap</a></div>
+      <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}><div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 16 }}>Related guides</div><ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <li><a href="/learn/sitemap-not-working" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Sitemap Not Working</a></li>
+          <li><a href="/learn/submitted-url-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Submitted URL Not Indexed</a></li>
+          <li><a href="/learn/crawled-currently-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Crawled Currently Not Indexed</a></li>
+      </ul></div></div>); }
