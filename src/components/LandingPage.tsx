@@ -83,7 +83,7 @@ export function LandingPage({ variant }: LandingPageProps) {
     <div style={{ minHeight: '100vh', background: 'var(--paper)' }}>
       {/* Nav */}
       <nav style={{ borderBottom: '1px solid var(--border)', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: 960, margin: '0 auto' }}>
-        <a href="/" style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: 'var(--ink)', textDecoration: 'none' }}>SitemapAI</a>
+        <a href="/" style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: 'var(--ink)', textDecoration: 'none' }}>SitemapFixer</a>
         <div style={{ display: 'flex', gap: 24 }}>
           <a href="/sitemap-finder" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Finder</a>
           <a href="/sitemap-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Checker</a>
