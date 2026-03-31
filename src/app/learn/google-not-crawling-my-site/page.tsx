@@ -1,0 +1,28 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Google Not Crawling My Site? Here Are the Fixes | SitemapFixer', description: 'If Google is not crawling your site, your pages will not be indexed. Here are all the reasons Googlebot stops crawling and how to fix each one.', alternates: { canonical: 'https://sitemapfixer.com/learn/google-not-crawling-my-site' }, openGraph: { title: 'Google Not Crawling My Site: How to Fix It', description: 'If Google is not crawling your site, your pages will not be indexed. Here are all the reasons Googlebot stops crawling and how to fix each one.', url: 'https://sitemapfixer.com/learn/google-not-crawling-my-site', type: 'article' } };
+export default function Page() { return (
+  <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
+    <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}><a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}<a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}<span>Google Not Crawling My Site: How to Fix It</span></nav>
+    <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>Google Not Crawling My Site: How to Fix It</h1>
+    <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}><span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Diagnose your sitemap free</span><a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze Free</a></div>
+    <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.8 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Check Your robots.txt File First</h2>
+        <p style={{ marginBottom: 20 }}>The most common cause is an overly restrictive robots.txt. Navigate to yourdomain.com/robots.txt and look for Disallow: / which blocks all crawling. Fix any overly broad disallow rules immediately.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Verify Google Can Reach Your Site</h2>
+        <p style={{ marginBottom: 20 }}>Use the URL Inspection tool in Google Search Console to test if Google can fetch a page. If it returns an error, your server may be blocking Googlebot IP ranges or returning errors specifically for bot traffic.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Check for Server-Side Blocking</h2>
+        <p style={{ marginBottom: 20 }}>Some security tools, CDNs, and firewalls block Googlebot because its behavior resembles scraping. Check your Cloudflare or security settings to ensure Googlebot is whitelisted. Verify Googlebot using reverse DNS lookup.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Submit a Sitemap in Search Console</h2>
+        <p style={{ marginBottom: 20 }}>Without a sitemap, Googlebot discovers pages through links only. Submit your sitemap in Google Search Console under Sitemaps to give Google a direct list of your pages and accelerate crawling.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Fix Server Response Times</h2>
+        <p style={{ marginBottom: 20 }}>If your server is very slow, Googlebot will reduce crawl frequency. Improve server response time, enable caching, and use a CDN. Aim for under 200ms Time to First Byte to encourage more frequent crawling.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Build Inbound Links to Your Site</h2>
+        <p style={{ marginBottom: 20 }}>Sites with few or no external links get very little crawl budget allocated. Links from other sites signal that your site is worth crawling. Build backlinks through outreach, guest posting, and creating linkable content.</p>
+    </div>
+    <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}><div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix your sitemap now</div><div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div><a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap</a></div>
+    <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}><div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 16 }}>Related guides</div><ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <li><a href="/learn/sitemap-not-working" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Sitemap Not Working</a></li>
+          <li><a href="/learn/pages-not-indexed-google" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Pages Not Indexed Google</a></li>
+          <li><a href="/learn/sitemap-errors-google-search-console" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Sitemap Errors Search Console</a></li>
+    </ul></div>
+  </div>); }
