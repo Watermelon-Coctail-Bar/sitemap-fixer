@@ -11,36 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/website-seo-checker`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${base}/xml-sitemap-generator`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${base}/free-seo-audit`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${base}/pricing`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
   ];
-
-  const errorPages = [
-    'duplicate-urls', 'invalid-urls', 'too-many-urls',
-    'orphan-pages', 'incorrect-priority', 'changefreq-misuse',
-  ].map(slug => ({
-    url: `${base}/sitemap-errors/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
-  const learnPages = [
-    'what-is-an-xml-sitemap', 'sitemap-best-practices', 'sitemap-vs-robots-txt',
-    'why-pages-not-indexed', 'how-to-create-a-sitemap',
-  ].map(slug => ({
-    url: `${base}/learn/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }));
-
-  const platformPages = [
-    'wordpress', 'shopify', 'nextjs', 'ecommerce', 'large-sites',
-  ].map(slug => ({
-    url: `${base}/fix-sitemap-for/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
 
   const indexes = [
     { url: `${base}/sitemap-errors`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
@@ -48,15 +20,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/fix-sitemap-for`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
   ];
 
-  return [...core, ...indexes, ...errorPages, ...learnPages, ...platformPages  { url: 'https://sitemapfixer.com/learn/sitemap-not-working', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/pages-not-indexed-google', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/submitted-url-not-indexed', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/crawled-currently-not-indexed', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/pages-in-sitemap-not-indexed', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/sitemap-errors-google-search-console', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/google-not-crawling-my-site', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/sitemap-checker', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/sitemap-validator', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-  { url: 'https://sitemapfixer.com/learn/google-search-console-sitemap', lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-];
+  const errorPages = [
+    'duplicate-urls', 'invalid-urls', 'too-many-urls', 'orphan-pages', 'incorrect-priority', 'changefreq-misuse',
+  ].map(slug => ({ url: `${base}/sitemap-errors/${slug}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 }));
+
+  const learnPages = [
+    'what-is-an-xml-sitemap', 'sitemap-best-practices', 'sitemap-vs-robots-txt',
+    'why-pages-not-indexed', 'how-to-create-a-sitemap',
+    'sitemap-not-working', 'pages-not-indexed-google', 'submitted-url-not-indexed',
+    'crawled-currently-not-indexed', 'pages-in-sitemap-not-indexed',
+    'sitemap-errors-google-search-console', 'google-not-crawling-my-site',
+    'sitemap-checker', 'sitemap-validator', 'google-search-console-sitemap',
+  ].map(slug => ({ url: `${base}/learn/${slug}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 }));
+
+  const platformPages = [
+    'wordpress', 'shopify', 'nextjs', 'ecommerce', 'large-sites',
+  ].map(slug => ({ url: `${base}/fix-sitemap-for/${slug}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 }));
+
+  return [...core, ...indexes, ...errorPages, ...learnPages, ...platformPages];
 }
