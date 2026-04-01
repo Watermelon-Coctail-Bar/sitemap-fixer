@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'XML Sitemap Not Working? 9 Common Reasons and Fixes | SitemapFixer',
-  description: 'Your XML sitemap not working? Here are the 9 most common reasons — broken URLs, wrong content type, encoding errors, and more — with exact fixes.',
+  description: 'Your XML sitemap not working? Here are the 9 most common reasons -- broken URLs, wrong content type, encoding errors, and more -- with exact fixes.',
   alternates: { canonical: 'https://sitemapfixer.com/blog/xml-sitemap-not-working' },
   openGraph: { title: 'XML Sitemap Not Working? 9 Fixes', description: '9 common reasons your sitemap is broken and how to fix each one.', url: 'https://sitemapfixer.com/blog/xml-sitemap-not-working', type: 'article' },
 };
@@ -20,7 +20,7 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Check My Sitemap</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>
-        <p style={{ marginBottom: 24 }}>An XML sitemap that is not working will prevent Google from discovering and indexing your pages. These are the 9 most common reasons a sitemap fails — and exactly how to diagnose and fix each one.</p>
+        <p style={{ marginBottom: 24 }}>An XML sitemap that is not working will prevent Google from discovering and indexing your pages. These are the 9 most common reasons a sitemap fails -- and exactly how to diagnose and fix each one.</p>
         {[
           { n:'1', t:'Sitemap Returns a Non-200 Status Code', d:'Visit your sitemap URL directly. If you get a 404, 500, or any non-200 response, Google cannot access it. Check your server configuration, verify the sitemap file exists at that exact URL, and confirm there are no authentication requirements blocking access.' },
           { n:'2', t:'Wrong Content-Type Header', d:'Your server must return your sitemap with a content-type of application/xml or text/xml. Some servers return text/html which causes parsing failures. Check your server headers using a tool like curl or httpstatus.io. On Apache, add a .htaccess rule: AddType application/xml .xml. On Nginx, add the mime type to your nginx.conf.' },
@@ -40,7 +40,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your sitemap instantly</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL for errors</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free -- checks every URL for errors</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
       <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
