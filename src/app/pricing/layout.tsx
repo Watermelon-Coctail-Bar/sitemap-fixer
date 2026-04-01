@@ -1,3 +1,9 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Pricing Plans | SitemapFixer',
+  description: 'Simple, transparent pricing for SitemapFixer. Start free, upgrade for unlimited sitemap analyses and full SEO reports.',
+  alternates: { canonical: 'https://sitemapfixer.com/pricing' },
+};
 export default function PricingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
