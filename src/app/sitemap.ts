@@ -3,6 +3,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://sitemapfixer.com';
   const now = new Date().toISOString();
   const urls = [
+    { url: base, priority: 1.0, changeFrequency: 'daily' as const },
     // Core pages
     { url: base, priority: 1.0, changeFrequency: 'daily' as const },
     { url: base + '/pricing', priority: 0.9, changeFrequency: 'weekly' as const },
