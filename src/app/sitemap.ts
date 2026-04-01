@@ -1,43 +1,46 @@
-import { MetadataRoute } from 'next';
-
+import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://sitemapfixer.com';
-  const now = new Date();
-
-  const core = [
-    { url: base, lastModified: now, changeFrequency: 'daily' as const, priority: 1.0 },
-    { url: `${base}/sitemap-finder`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${base}/sitemap-checker`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${base}/website-seo-checker`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${base}/xml-sitemap-generator`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${base}/free-seo-audit`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${base}/pricing`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${base}/signup`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
+  const now = new Date().toISOString();
+  const urls = [
+    // Core pages
+    { url: base, priority: 1.0, changeFrequency: 'daily' as const },
+    { url: base + '/pricing', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: base + '/signup', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: base + '/blog', priority: 0.8, changeFrequency: 'daily' as const },
+    { url: base + '/learn', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: base + '/terms', priority: 0.3, changeFrequency: 'monthly' as const },
+    { url: base + '/privacy', priority: 0.3, changeFrequency: 'monthly' as const },
+    // Learn - Sitemaps
+    { url: base + '/learn/what-is-an-xml-sitemap', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/xml-sitemap-generator', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/sitemap-best-practices', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/how-to-create-a-sitemap', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/sitemap-checker', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/sitemap-validator', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/sitemap-not-working', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Learn - Indexing
+    { url: base + '/learn/pages-not-indexed-google', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/submitted-url-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/crawled-currently-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/pages-in-sitemap-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/why-pages-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/index-coverage-report', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/noindex-tag', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Learn - Crawling
+    { url: base + '/learn/robots-txt-guide', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/sitemap-vs-robots-txt', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/crawl-budget', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/google-not-crawling-my-site', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Learn - Technical SEO
+    { url: base + '/learn/technical-seo-checklist', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/canonical-tags', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/structured-data', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/core-web-vitals', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/page-speed-optimization', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/internal-linking', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/sitemap-errors-google-search-console', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/learn/google-search-console-sitemap', priority: 0.7, changeFrequency: 'monthly' as const },
   ];
-
-  const indexes = [
-    { url: `${base}/sitemap-errors`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${base}/learn`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${base}/fix-sitemap-for`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
-  ];
-
-  const errorPages = [
-    'duplicate-urls', 'invalid-urls', 'too-many-urls', 'orphan-pages', 'incorrect-priority', 'changefreq-misuse',
-  ].map(slug => ({ url: `${base}/sitemap-errors/${slug}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 }));
-
-  const learnPages = [
-    'what-is-an-xml-sitemap', 'sitemap-best-practices', 'sitemap-vs-robots-txt',
-    'why-pages-not-indexed', 'how-to-create-a-sitemap',
-    'sitemap-not-working', 'pages-not-indexed-google', 'submitted-url-not-indexed',
-    'crawled-currently-not-indexed', 'pages-in-sitemap-not-indexed',
-    'sitemap-errors-google-search-console', 'google-not-crawling-my-site',
-    'sitemap-checker', 'sitemap-validator', 'google-search-console-sitemap',
-  ].map(slug => ({ url: `${base}/learn/${slug}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 }));
-
-  const platformPages = [
-    'wordpress', 'shopify', 'nextjs', 'ecommerce', 'large-sites',
-  ].map(slug => ({ url: `${base}/fix-sitemap-for/${slug}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 }));
-
-  return [...core, ...indexes, ...errorPages, ...learnPages, ...platformPages];
+  return urls.map(u => ({ ...u, lastModified: now }));
 }
