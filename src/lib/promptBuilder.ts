@@ -2,75 +2,85 @@ import { StructuredAnalysis } from './urlAnalyzer';
 
 export function buildSEOPrompt(domain: string, analysis: StructuredAnalysis, sitemapSource: string): string {
   const clusterSummary = analysis.clusters
-    .map(c => `  - /${c.prefix}/ → ${c.count} pages`)
+    .map(c => ` - /${c.prefix}/ -> ${c.count} pages`)
     .join('\n');
-
   const sampleUrls = analysis.urlSamples.slice(0, 15).join('\n  ');
-
   const staleSample = analysis.stalePages.slice(0, 5).join('\n  ');
   const orphanSample = analysis.orphanLike.slice(0, 5).join('\n  ');
 
-  return `You are an elite SEO analyst. Analyze this sitemap data and return ONLY a JSON object — no markdown, no explanation, no preamble.
+  return `You are a senior SEO consultant who gives brutally honest, specific advice. Analyze this sitemap and return ONLY a JSON object. No markdown, no explanation, no preamble.
 
 DOMAIN: ${domain}
 SITEMAP: ${sitemapSource}
 TOTAL PAGES: ${analysis.totalPages}
 MAX DEPTH: ${analysis.maxDepth}
 PAGES WITHOUT LASTMOD: ${analysis.noLastmod}
+URL CLUSTERS: ${clusterSummary || '(no clusters detected)'}
+SAMPLE URLs: ${sampleUrls || '(none)'}
+STALE PAGES (>1yr): ${staleSample || '(none)'}
+ORPHAN-LIKE PAGES: ${orphanSample || '(none)'}
+URL ISSUES: ${analysis.inconsistentPatterns.join('\n  ') || '(none)'}
+DEPTH: ${JSON.stringify(analysis.depthDistribution)}
 
-URL CLUSTERS (section → page count):
-${clusterSummary || '  (no clear clusters detected)'}
+Rules:
+- Reference actual URLs/slugs from the data. Never give generic advice.
+- Every "fix" must be a specific action someone can do right now, ideally with example text to copy-paste.
+- issues array is the most important part — this is what users act on first.
 
-SAMPLE URLs:
-  ${sampleUrls || '(none)'}
-
-STALE PAGES (>1 year old, sample):
-  ${staleSample || '(none detected)'}
-
-ORPHAN-LIKE PAGES (isolated, no cluster):
-  ${orphanSample || '(none detected)'}
-
-URL ISSUES:
-  ${analysis.inconsistentPatterns.join('\n  ') || '(none detected)'}
-
-DEPTH DISTRIBUTION: ${JSON.stringify(analysis.depthDistribution)}
-
-Return EXACTLY this JSON structure, filled with domain-specific insights. Be precise and concrete — reference actual URL paths and sections from the data above. NO generic SEO advice.
-
+Return EXACTLY this JSON (no extra keys, no comments):
 {
-  "seoScore": <integer 0-100 based on actual data>,
-  "scoreReason": "<1 sentence why this score — cite specifics>",
+  "seoScore": <0-100 integer based on actual data>,
+  "scoreReason": "<1 sentence, cite specifics like URL count/depth/staleness>",
+  "summary": "<2-3 sentence honest assessment of their SEO health. What is broken, what is good. Specific.>",
+  "issues": [
+    {
+      "severity": "critical",
+      "problem": "<specific problem, cite URL or count>",
+      "fix": "<exact action to take — copy-paste ready where possible>",
+      "effort": "low"
+    },
+    {
+      "severity": "warning",
+      "problem": "<specific problem>",
+      "fix": "<specific fix>",
+      "effort": "medium"
+    }
+  ],
   "topActions": [
-    "<specific action #1 with exact page/URL context>",
-    "<specific action #2>",
-    "<specific action #3>",
-    "<specific action #4>",
-    "<specific action #5>"
+    "<action #1 — specific, with URL context>",
+    "<action #2>",
+    "<action #3>",
+    "<action #4>",
+    "<action #5>"
   ],
   "quickWins": [
-    { "action": "<concrete action>", "example": "<specific URL or page name from their site>" },
-    { "action": "<concrete action>", "example": "<specific URL or page name>" },
-    { "action": "<concrete action>", "example": "<specific URL or page name>" }
+    { "action": "<concrete, specific action>", "example": "<URL or code snippet>" },
+    { "action": "<action>", "example": "<example>" },
+    { "action": "<action>", "example": "<example>" }
   ],
   "missingPages": [
-    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact title>" },
-    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact title>" },
-    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact title>" },
-    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact title>" }
+    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact H1 title>" },
+    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact H1 title>" },
+    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact H1 title>" },
+    { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact H1 title>" }
   ],
   "internalLinkingFixes": [
-    { "from": "<URL from their sitemap>", "to": "<URL from their sitemap>", "reason": "<why>" },
+    { "from": "<their URL>", "to": "<their URL>", "reason": "<why — max 8 words>" },
     { "from": "<URL>", "to": "<URL>", "reason": "<why>" },
     { "from": "<URL>", "to": "<URL>", "reason": "<why>" }
   ],
   "contentRefresh": [
-    { "url": "<URL from stale pages>", "issue": "<specific issue>", "fix": "<exact action>" },
-    { "url": "<URL>", "issue": "<specific issue>", "fix": "<exact action>" },
-    { "url": "<URL>", "issue": "<specific issue>", "fix": "<exact action>" }
+    { "url": "<stale URL>", "issue": "<specific problem>", "fix": "<exact action>" },
+    { "url": "<URL>", "issue": "<issue>", "fix": "<fix>" },
+    { "url": "<URL>", "issue": "<issue>", "fix": "<fix>" }
   ],
   "structureIssues": [
-    "<specific structural issue #1 with path examples>",
-    "<specific structural issue #2>"
+    "<issue #1 with path examples>",
+    "<issue #2>"
   ]
-}`;
+}
+
+For issues severity: "critical" = blocking indexing or major ranking impact. "warning" = losing traffic. "opportunity" = easy wins. "info" = good to know.
+For effort: "low" = under 30 minutes, "medium" = 1-4 hours, "high" = days.
+Include 3-7 issues total covering the most important problems found.`;
 }
