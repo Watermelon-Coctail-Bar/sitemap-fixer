@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/xml-sitemap-generator`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${base}/free-seo-audit`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${base}/pricing`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${base}/signup`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
   ];
 
   const indexes = [
