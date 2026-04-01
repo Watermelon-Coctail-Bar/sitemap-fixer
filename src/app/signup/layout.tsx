@@ -1,3 +1,9 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Sign Up | SitemapFixer',
+  description: 'Create your free SitemapFixer account. Start analyzing your sitemap and fixing SEO issues in 60 seconds.',
+  alternates: { canonical: 'https://sitemapfixer.com/signup' },
+};
 export default function SignupLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
