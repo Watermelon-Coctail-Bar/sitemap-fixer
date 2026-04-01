@@ -1,0 +1,40 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Crawled - Currently Not Indexed: How to Fix It | SitemapFixer",
+  description: "The crawled currently not indexed status means Google visited your page but chose not to index it. Here is exactly why and how to fix it.",
+  alternates: { canonical: 'https://sitemapfixer.com/learn/crawled-currently-not-indexed' },
+};
+export default function Page() {
+  return (
+    <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
+      <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
+        <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
+        <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
+        <span>Crawled - Currently Not Indexed</span>
+      </nav>
+      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>Crawled - Currently Not Indexed: How to Fix It</h1>
+      <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
+        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Find indexing issues free in 60 seconds</span>
+        <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Try SitemapFixer Free</a>
+      </div>
+      <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.8 }}>
+        <p style={{ marginBottom: 20 }}>The status "Crawled - currently not indexed" in Google Search Console means Google successfully crawled your page but decided not to add it to its index. This is different from pages that have not been crawled at all. Google visited the page, read the content, and made an active decision not to index it.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Why Google Crawls But Does Not Index</h2>
+        <p style={{ marginBottom: 12 }}><strong>Thin content:</strong> The page does not have enough unique, valuable content. Google considers pages under 300-500 words, pages with boilerplate text, or pages that mostly repeat content from other pages on your site as low value.</p>
+        <p style={{ marginBottom: 12 }}><strong>Duplicate or near-duplicate content:</strong> The page is very similar to another page on your site or across the web. Google picks one version to index and excludes the rest.</p>
+        <p style={{ marginBottom: 12 }}><strong>Poor content quality:</strong> The content does not adequately serve user intent, lacks depth, or does not demonstrate expertise, authoritativeness, or trustworthiness on the topic.</p>
+        <p style={{ marginBottom: 20 }}><strong>Technical signals:</strong> Missing or incorrect structured data, slow load time, or high bounce rates may contribute. These are secondary signals.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>How to Fix Crawled Currently Not Indexed</h2>
+        <p style={{ marginBottom: 20 }}>The primary fix is improving content quality and depth. Expand the page with more detailed, unique information. Add relevant headings, examples, and specifics that go beyond what competitors cover. Aim for at least 600-800 words of unique, useful content. Once improved, use the URL Inspection tool in Search Console and click Request Indexing to prompt Google to recrawl.</p>
+        <p style={{ marginBottom: 20 }}>If the page is genuinely low-value and cannot be improved, consider using a noindex tag to tell Google to stop trying to index it, or consolidating it with a more comprehensive page using a canonical tag or redirect.</p>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>How Long Does It Take to Fix</h2>
+        <p style={{ marginBottom: 20 }}>After improving your content and requesting indexing, it typically takes 1-4 weeks for Google to recrawl and index the page. For pages that have been stuck in this status for a long time, the wait may be longer as Google deprioritizes pages it has repeatedly declined to index.</p>
+      </div>
+      <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}>
+        <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap for indexing issues</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
+        <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
+      </div>
+    </div>
+  );
+}
