@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: {
     default: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
-    template: '%s | SitemapFixer',
+    template: '%s',
   },
   description: 'Free AI-powered sitemap checker. Find sitemap errors, fix indexing issues, and get exact actionable SEO improvements in 60 seconds.',
   keywords: 'sitemap checker, sitemap validator, sitemap not working, pages not indexed, xml sitemap, seo checker',
