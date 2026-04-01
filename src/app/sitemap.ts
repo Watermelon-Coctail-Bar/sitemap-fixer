@@ -41,6 +41,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: base + '/learn/internal-linking', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: base + '/learn/sitemap-errors-google-search-console', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: base + '/learn/google-search-console-sitemap', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Blog posts
+    { url: base + '/blog/how-to-fix-sitemap-errors', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/blog/why-is-google-not-indexing-my-site', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: base + '/blog/xml-sitemap-not-working', priority: 0.7, changeFrequency: 'monthly' as const },
   ];
   return urls.map(u => ({ ...u, lastModified: now }));
 }
