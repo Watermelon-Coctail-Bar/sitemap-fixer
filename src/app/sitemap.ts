@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/', 1.0, 'daily'), m('/pricing', 0.9, 'weekly'), m('/signup', 0.8, 'monthly'),
     m('/blog', 0.8, 'daily'), m('/learn', 0.8, 'weekly'),
     m('/terms', 0.3, 'monthly'), m('/privacy', 0.3, 'monthly'),
-    // Blog
+    // Blog (12 posts)
     m('/blog/how-to-fix-sitemap-errors', 0.7, 'monthly'),
     m('/blog/why-is-google-not-indexing-my-site', 0.7, 'monthly'),
     m('/blog/xml-sitemap-not-working', 0.7, 'monthly'),
@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/learn/sitemap-index-file', 0.7, 'monthly'),
     m('/learn/image-sitemap', 0.7, 'monthly'),
     m('/learn/hreflang-sitemap', 0.7, 'monthly'),
+    m('/learn/news-sitemap', 0.7, 'monthly'),
     m('/learn/video-seo', 0.7, 'monthly'),
     // Learn - Platform sitemaps
     m('/learn/wordpress-sitemap', 0.7, 'monthly'),
@@ -73,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/learn/site-speed-seo', 0.7, 'monthly'),
     m('/learn/site-migration-seo', 0.7, 'monthly'),
     m('/learn/page-experience-ranking', 0.7, 'monthly'),
+    m('/learn/pagination-seo', 0.7, 'monthly'),
     // Learn - On-page & Content SEO
     m('/learn/technical-seo-checklist', 0.7, 'monthly'),
     m('/learn/canonical-tags', 0.7, 'monthly'),
@@ -92,6 +94,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/learn/featured-snippets', 0.7, 'monthly'),
     m('/learn/local-seo', 0.7, 'monthly'),
     m('/learn/seo-audit-checklist', 0.7, 'monthly'),
+    m('/learn/blog-seo', 0.7, 'monthly'),
+    m('/learn/seo-for-startups', 0.7, 'monthly'),
+    m('/learn/b2b-seo', 0.7, 'monthly'),
+    // Learn - Platform SEO
+    m('/learn/wordpress-seo', 0.7, 'monthly'),
+    m('/learn/shopify-seo', 0.7, 'monthly'),
+    m('/learn/woocommerce-seo', 0.7, 'monthly'),
+    m('/learn/magento-seo', 0.7, 'monthly'),
+    // Learn - Ecommerce SEO
+    m('/learn/product-page-seo', 0.7, 'monthly'),
+    m('/learn/category-page-seo', 0.7, 'monthly'),
+    // Learn - Penalties & Recovery
+    m('/learn/google-penalty', 0.7, 'monthly'),
     // Learn - GSC & Tools
     m('/learn/sitemap-errors-google-search-console', 0.7, 'monthly'),
     m('/learn/google-search-console-sitemap', 0.7, 'monthly'),
