@@ -2,17 +2,13 @@ import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://sitemapfixer.com';
   const now = new Date().toISOString();
-  const m = (url: string, priority: number, changeFrequency: 'daily'|'weekly'|'monthly') =>
-    ({ url: base + url, priority, changeFrequency, lastModified: now });
+  const m = (url: string, priority: number, cf: 'daily'|'weekly'|'monthly') =>
+    ({ url: base + url, priority, changeFrequency: cf, lastModified: now });
   return [
     // Core
-    m('/', 1.0, 'daily'),
-    m('/pricing', 0.9, 'weekly'),
-    m('/signup', 0.8, 'monthly'),
-    m('/blog', 0.8, 'daily'),
-    m('/learn', 0.8, 'weekly'),
-    m('/terms', 0.3, 'monthly'),
-    m('/privacy', 0.3, 'monthly'),
+    m('/', 1.0, 'daily'), m('/pricing', 0.9, 'weekly'), m('/signup', 0.8, 'monthly'),
+    m('/blog', 0.8, 'daily'), m('/learn', 0.8, 'weekly'),
+    m('/terms', 0.3, 'monthly'), m('/privacy', 0.3, 'monthly'),
     // Blog
     m('/blog/how-to-fix-sitemap-errors', 0.7, 'monthly'),
     m('/blog/why-is-google-not-indexing-my-site', 0.7, 'monthly'),
@@ -33,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/learn/sitemap-index-file', 0.7, 'monthly'),
     m('/learn/image-sitemap', 0.7, 'monthly'),
     m('/learn/hreflang-sitemap', 0.7, 'monthly'),
+    m('/learn/video-seo', 0.7, 'monthly'),
     // Learn - Platform sitemaps
     m('/learn/wordpress-sitemap', 0.7, 'monthly'),
     m('/learn/shopify-sitemap', 0.7, 'monthly'),
@@ -70,16 +67,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/learn/javascript-seo', 0.7, 'monthly'),
     m('/learn/duplicate-content-seo', 0.7, 'monthly'),
     m('/learn/url-structure-seo', 0.7, 'monthly'),
-    // Learn - SEO fundamentals
+    m('/learn/301-vs-302-redirects', 0.7, 'monthly'),
+    m('/learn/https-seo', 0.7, 'monthly'),
+    m('/learn/mobile-seo', 0.7, 'monthly'),
+    m('/learn/site-speed-seo', 0.7, 'monthly'),
+    m('/learn/site-migration-seo', 0.7, 'monthly'),
+    m('/learn/page-experience-ranking', 0.7, 'monthly'),
+    // Learn - On-page & Content SEO
     m('/learn/technical-seo-checklist', 0.7, 'monthly'),
     m('/learn/canonical-tags', 0.7, 'monthly'),
     m('/learn/structured-data', 0.7, 'monthly'),
     m('/learn/core-web-vitals', 0.7, 'monthly'),
     m('/learn/page-speed-optimization', 0.7, 'monthly'),
     m('/learn/internal-linking', 0.7, 'monthly'),
+    m('/learn/meta-description-seo', 0.7, 'monthly'),
+    m('/learn/title-tag-seo', 0.7, 'monthly'),
+    m('/learn/open-graph-tags', 0.7, 'monthly'),
+    m('/learn/schema-markup-for-seo', 0.7, 'monthly'),
+    m('/learn/content-seo', 0.7, 'monthly'),
+    m('/learn/keyword-research-seo', 0.7, 'monthly'),
+    m('/learn/eeat-seo', 0.7, 'monthly'),
+    m('/learn/link-building-seo', 0.7, 'monthly'),
+    m('/learn/anchor-text-seo', 0.7, 'monthly'),
+    m('/learn/featured-snippets', 0.7, 'monthly'),
+    m('/learn/local-seo', 0.7, 'monthly'),
+    m('/learn/seo-audit-checklist', 0.7, 'monthly'),
+    // Learn - GSC & Tools
     m('/learn/sitemap-errors-google-search-console', 0.7, 'monthly'),
     m('/learn/google-search-console-sitemap', 0.7, 'monthly'),
-    // Learn - Submit & tools
     m('/learn/submit-sitemap-bing', 0.7, 'monthly'),
   ];
 }
