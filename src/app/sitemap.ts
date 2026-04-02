@@ -2,50 +2,70 @@ import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://sitemapfixer.com';
   const now = new Date().toISOString();
-  const urls = [
-    { url: base, priority: 1.0, changeFrequency: 'daily' as const },
-    // Core pages
-    { url: base, priority: 1.0, changeFrequency: 'daily' as const },
-    { url: base + '/pricing', priority: 0.9, changeFrequency: 'weekly' as const },
-    { url: base + '/signup', priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: base + '/blog', priority: 0.8, changeFrequency: 'daily' as const },
-    { url: base + '/learn', priority: 0.8, changeFrequency: 'weekly' as const },
-    { url: base + '/terms', priority: 0.3, changeFrequency: 'monthly' as const },
-    { url: base + '/privacy', priority: 0.3, changeFrequency: 'monthly' as const },
-    // Learn - Sitemaps
-    { url: base + '/learn/what-is-an-xml-sitemap', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/xml-sitemap-generator', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/sitemap-best-practices', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/how-to-create-a-sitemap', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/sitemap-checker', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/sitemap-validator', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/sitemap-not-working', priority: 0.7, changeFrequency: 'monthly' as const },
+  const m = (url: string, priority: number, changeFrequency: 'daily'|'weekly'|'monthly') =>
+    ({ url: base + url, priority, changeFrequency, lastModified: now });
+  return [
+    // Core
+    m('/', 1.0, 'daily'),
+    m('/pricing', 0.9, 'weekly'),
+    m('/signup', 0.8, 'monthly'),
+    m('/blog', 0.8, 'daily'),
+    m('/learn', 0.8, 'weekly'),
+    m('/terms', 0.3, 'monthly'),
+    m('/privacy', 0.3, 'monthly'),
+    // Blog
+    m('/blog/how-to-fix-sitemap-errors', 0.7, 'monthly'),
+    m('/blog/why-is-google-not-indexing-my-site', 0.7, 'monthly'),
+    m('/blog/xml-sitemap-not-working', 0.7, 'monthly'),
+    // Learn - Sitemap basics
+    m('/learn/what-is-an-xml-sitemap', 0.7, 'monthly'),
+    m('/learn/xml-sitemap-generator', 0.7, 'monthly'),
+    m('/learn/sitemap-best-practices', 0.7, 'monthly'),
+    m('/learn/how-to-create-a-sitemap', 0.7, 'monthly'),
+    m('/learn/sitemap-checker', 0.7, 'monthly'),
+    m('/learn/sitemap-validator', 0.7, 'monthly'),
+    m('/learn/sitemap-not-working', 0.7, 'monthly'),
+    m('/learn/sitemap-index-file', 0.7, 'monthly'),
+    m('/learn/image-sitemap', 0.7, 'monthly'),
+    m('/learn/hreflang-sitemap', 0.7, 'monthly'),
+    // Learn - Platform sitemaps
+    m('/learn/wordpress-sitemap', 0.7, 'monthly'),
+    m('/learn/shopify-sitemap', 0.7, 'monthly'),
+    m('/learn/wix-sitemap', 0.7, 'monthly'),
+    m('/learn/squarespace-sitemap', 0.7, 'monthly'),
+    m('/learn/nextjs-sitemap', 0.7, 'monthly'),
+    m('/learn/webflow-sitemap', 0.7, 'monthly'),
+    m('/learn/ghost-sitemap', 0.7, 'monthly'),
+    m('/learn/ecommerce-sitemap', 0.7, 'monthly'),
     // Learn - Indexing
-    { url: base + '/learn/pages-not-indexed-google', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/submitted-url-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/crawled-currently-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/pages-in-sitemap-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/why-pages-not-indexed', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/index-coverage-report', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/noindex-tag', priority: 0.7, changeFrequency: 'monthly' as const },
-    // Learn - Crawling
-    { url: base + '/learn/robots-txt-guide', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/sitemap-vs-robots-txt', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/crawl-budget', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/google-not-crawling-my-site', priority: 0.7, changeFrequency: 'monthly' as const },
-    // Learn - Technical SEO
-    { url: base + '/learn/technical-seo-checklist', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/canonical-tags', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/structured-data', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/core-web-vitals', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/page-speed-optimization', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/internal-linking', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/sitemap-errors-google-search-console', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/learn/google-search-console-sitemap', priority: 0.7, changeFrequency: 'monthly' as const },
-    // Blog posts
-    { url: base + '/blog/how-to-fix-sitemap-errors', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/blog/why-is-google-not-indexing-my-site', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: base + '/blog/xml-sitemap-not-working', priority: 0.7, changeFrequency: 'monthly' as const },
+    m('/learn/pages-not-indexed-google', 0.7, 'monthly'),
+    m('/learn/submitted-url-not-indexed', 0.7, 'monthly'),
+    m('/learn/crawled-currently-not-indexed', 0.7, 'monthly'),
+    m('/learn/discovered-currently-not-indexed', 0.7, 'monthly'),
+    m('/learn/pages-in-sitemap-not-indexed', 0.7, 'monthly'),
+    m('/learn/why-pages-not-indexed', 0.7, 'monthly'),
+    m('/learn/index-coverage-report', 0.7, 'monthly'),
+    m('/learn/noindex-tag', 0.7, 'monthly'),
+    m('/learn/soft-404-errors', 0.7, 'monthly'),
+    // Learn - Crawling & Technical
+    m('/learn/robots-txt-guide', 0.7, 'monthly'),
+    m('/learn/sitemap-vs-robots-txt', 0.7, 'monthly'),
+    m('/learn/crawl-budget', 0.7, 'monthly'),
+    m('/learn/google-not-crawling-my-site', 0.7, 'monthly'),
+    m('/learn/redirect-chains', 0.7, 'monthly'),
+    m('/learn/javascript-seo', 0.7, 'monthly'),
+    m('/learn/duplicate-content-seo', 0.7, 'monthly'),
+    m('/learn/url-structure-seo', 0.7, 'monthly'),
+    // Learn - SEO fundamentals
+    m('/learn/technical-seo-checklist', 0.7, 'monthly'),
+    m('/learn/canonical-tags', 0.7, 'monthly'),
+    m('/learn/structured-data', 0.7, 'monthly'),
+    m('/learn/core-web-vitals', 0.7, 'monthly'),
+    m('/learn/page-speed-optimization', 0.7, 'monthly'),
+    m('/learn/internal-linking', 0.7, 'monthly'),
+    m('/learn/sitemap-errors-google-search-console', 0.7, 'monthly'),
+    m('/learn/google-search-console-sitemap', 0.7, 'monthly'),
+    // Learn - Submit & tools
+    m('/learn/submit-sitemap-bing', 0.7, 'monthly'),
   ];
-  return urls.map(u => ({ ...u, lastModified: now }));
 }
