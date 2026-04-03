@@ -40,7 +40,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your sitemap instantly</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL for errors</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks every URL for errors</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
       <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>

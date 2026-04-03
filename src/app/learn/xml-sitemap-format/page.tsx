@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/learn/xml-sitemap-format' },
 };
 const fields = [
-  { tag: 'loc', req: true, d: 'The URL of the page. Must be fully qualified with protocol (https://). No relative URLs. Use the canonical version consistently — same protocol and www/non-www convention as your canonical domain. Maximum 2,048 characters.' },
+  { tag: 'loc', req: true, d: 'The URL of the page. Must be fully qualified with protocol (https://). No relative URLs. Use the canonical version consistently - same protocol and www/non-www convention as your canonical domain. Maximum 2,048 characters.' },
   { tag: 'lastmod', req: false, d: 'The date the page was last significantly modified, in ISO 8601 format: YYYY-MM-DD. Google uses this to prioritize recrawling recently changed pages. Only include lastmod if it accurately reflects when content changed. Google ignores lastmod if it is always today for all URLs.' },
   { tag: 'changefreq', req: false, d: 'How frequently the page is likely to change. Values: always, hourly, daily, weekly, monthly, yearly, never. This is a hint to crawlers, not a directive. Inaccurate values train Google to distrust your sitemap. If you are unsure, omit this field entirely.' },
   { tag: 'priority', req: false, d: 'The priority of this URL relative to other URLs on your site. Value between 0.0 and 1.0, default 0.5. This is relative within your own site only. Google states it largely ignores priority. Only use it if you have a genuine reason to differentiate crawl priority.' },
@@ -84,7 +84,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your sitemap format</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks XML format, URLs, and field values</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks XML format, URLs, and field values</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </div>

@@ -108,7 +108,7 @@ export default function PricingPage() {
       {/* Urgency banner */}
       <div style={{ background: 'linear-gradient(90deg, #dc2626, #b91c1c)', color: 'white', textAlign: 'center', padding: '10px 24px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 14, fontWeight: 600 }}>🔥 Launch Sale — Discounts expire in:</span>
+          <span style={{ fontSize: 14, fontWeight: 600 }}>🔥 Launch Sale - Discounts expire in:</span>
           <CountdownTimer />
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function PricingPage() {
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <div style={{ display: 'inline-block', background: '#fef3c7', border: '1px solid #fbbf24', borderRadius: 99, padding: '4px 16px', fontSize: 13, fontWeight: 600, color: '#92400e', marginBottom: 20 }}>
-            Limited time — prices increase soon
+            Limited time - prices increase soon
           </div>
           <h1 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 48, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.1 }}>
             Simple, transparent pricing
@@ -131,7 +131,7 @@ export default function PricingPage() {
         {/* Free tier callout */}
         <div style={{ background: 'white', border: '1px solid #e4e4ed', borderRadius: 16, padding: '20px 28px', marginBottom: 32, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontWeight: 700, fontSize: 16, color: '#0a0a0f', marginBottom: 4 }}>Free tier — no credit card needed</div>
+            <div style={{ fontWeight: 700, fontSize: 16, color: '#0a0a0f', marginBottom: 4 }}>Free tier - no credit card needed</div>
             <div style={{ fontSize: 14, color: '#6b7280' }}>1 free sitemap analysis. See exactly what SitemapFixer does before paying anything.</div>
           </div>
           <a href="/" style={{ background: '#f3f4f6', color: '#0a0a0f', padding: '10px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 14, whiteSpace: 'nowrap' }}>Try Free First</a>
@@ -167,7 +167,7 @@ export default function PricingPage() {
 
                 {/* Discount badge */}
                 <div style={{ display: 'inline-block', background: isPopular ? 'rgba(255,255,255,0.15)' : '#fef3c7', color: isPopular ? '#fbbf24' : '#92400e', fontSize: 12, fontWeight: 700, padding: '3px 10px', borderRadius: 6, marginBottom: 20 }}>
-                  {plan.discount}% OFF — Launch Sale
+                  {plan.discount}% OFF - Launch Sale
                 </div>
 
                 <div style={{ fontSize: 18, fontWeight: 700, color: isPopular ? 'white' : '#0a0a0f', marginBottom: 8 }}>{plan.name}</div>

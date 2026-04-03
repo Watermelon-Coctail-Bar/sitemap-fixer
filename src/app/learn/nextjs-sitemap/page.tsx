@@ -42,7 +42,7 @@ export default function Page() {
           <div style={{ paddingLeft: 20 }}>];</div>
           <div>{"}"}</div>
         </div>
-        <p style={{ marginBottom: 24 }}>For dynamic routes — like blog posts fetched from a database — fetch your data inside the sitemap function and map the results to URL entries. The sitemap function can be async, so you can use fetch or query your database directly.</p>
+        <p style={{ marginBottom: 24 }}>For dynamic routes - like blog posts fetched from a database - fetch your data inside the sitemap function and map the results to URL entries. The sitemap function can be async, so you can use fetch or query your database directly.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Pages Router: next-sitemap Package</h2>
         <p style={{ marginBottom: 16 }}>Install with: npm install next-sitemap. Then create a next-sitemap.config.js at your project root.</p>
@@ -66,11 +66,11 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>If your sitemap contains http://localhost:3000 URLs, your NEXT_PUBLIC_SITE_URL or siteUrl config is missing or wrong. Set an environment variable in your deployment (SITE_URL=https://yoursite.com) and make sure your sitemap function uses that variable as the base URL. On Vercel, add SITE_URL to your project environment variables.</p>
 
         <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0a0a0f', marginTop: 32, marginBottom: 10 }}>Sitemap not updating after new content</h3>
-        <p style={{ marginBottom: 24 }}>In the App Router, the sitemap function runs at request time by default but can be cached. If new content is not appearing, check your revalidation settings. Add export const revalidate = 3600 to your sitemap.ts to revalidate every hour. For next-sitemap with the Pages Router, the sitemap is regenerated on every build — you need to trigger a new build to update it.</p>
+        <p style={{ marginBottom: 24 }}>In the App Router, the sitemap function runs at request time by default but can be cached. If new content is not appearing, check your revalidation settings. Add export const revalidate = 3600 to your sitemap.ts to revalidate every hour. For next-sitemap with the Pages Router, the sitemap is regenerated on every build - you need to trigger a new build to update it.</p>
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your Next.js sitemap is working</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — validates every URL in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - validates every URL in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </div>

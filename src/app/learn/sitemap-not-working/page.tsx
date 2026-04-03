@@ -35,7 +35,7 @@ export default function Page() {
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>7. Sitemap Contains Redirecting URLs</h2>
         <p style={{ marginBottom: 20 }}>Do not include URLs in your sitemap that redirect to other pages. Sitemaps should only contain final destination URLs. Redirected URLs waste crawl budget and confuse Google about which version of a page to index.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>8. Missing lastmod or Incorrect Dates</h2>
-        <p style={{ marginBottom: 20 }}>If your lastmod dates are wrong — all the same date, future dates, or dates that never update — Google will start ignoring your lastmod signals entirely. Only use lastmod when the page content genuinely changed, and use the actual date.</p>
+        <p style={{ marginBottom: 20 }}>If your lastmod dates are wrong - all the same date, future dates, or dates that never update - Google will start ignoring your lastmod signals entirely. Only use lastmod when the page content genuinely changed, and use the actual date.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>9. Sitemap Contains Noindex Pages</h2>
         <p style={{ marginBottom: 20 }}>Pages with a noindex meta tag or X-Robots-Tag header should never appear in your sitemap. Including them sends conflicting signals to Google: your sitemap says index this page, but the page itself says do not. Remove all noindex pages from your sitemap.</p>
       </div>

@@ -1,6 +1,6 @@
-# SitemapAI — Sitemap Finder + AI SEO Fixer
+# SitemapAI - Sitemap Finder + AI SEO Fixer
 
-A high-converting SaaS MVP that finds your sitemap, analyzes it with AI, and delivers specific, actionable SEO improvements — not generic advice.
+A high-converting SaaS MVP that finds your sitemap, analyzes it with AI, and delivers specific, actionable SEO improvements - not generic advice.
 
 ---
 
@@ -107,14 +107,14 @@ STALE PAGES: /blog/2019-payments-trends, ...
 ORPHAN PAGES: /legal/dpa-2018, ...
 ```
 
-The output is **enforced JSON** — no markdown, no preamble:
+The output is **enforced JSON** - no markdown, no preamble:
 
 ```json
 {
   "seoScore": 71,
   "scoreReason": "Strong docs structure but 34 blog posts untouched since 2020",
   "topActions": [
-    "Refresh 34 blog posts last modified before 2021 — start with /blog/payments-api-guide which likely ranks but has outdated examples",
+    "Refresh 34 blog posts last modified before 2021 - start with /blog/payments-api-guide which likely ranks but has outdated examples",
     ...
   ],
   "missingPages": [
@@ -146,7 +146,7 @@ The output is **enforced JSON** — no markdown, no preamble:
 
 | Route | Target Keyword | Monthly Volume (est.) |
 |-------|---------------|----------------------|
-| `/` | sitemap ai, ai seo tool | — |
+| `/` | sitemap ai, ai seo tool | - |
 | `/sitemap-finder/` | sitemap finder | 8,100/mo |
 | `/sitemap-checker/` | sitemap checker | 5,400/mo |
 | `/website-seo-checker/` | website seo checker | 12,100/mo |
@@ -168,7 +168,7 @@ Each page uses the same tool with variant-specific copy, metadata, and FAQs.
 - PDF export
 - Priority queue
 
-**Gating implementation:** Add a `paywallAfter` prop to Results — blur sections below the fold, show upgrade modal. Gate by session count or email capture.
+**Gating implementation:** Add a `paywallAfter` prop to Results - blur sections below the fold, show upgrade modal. Gate by session count or email capture.
 
 ---
 
@@ -250,10 +250,10 @@ if (!success) return NextResponse.json({ error: 'Rate limit exceeded' }, { statu
     "scoreReason": "Good content volume but 18 stale pages and 7 isolated URLs hurt crawl efficiency",
     "topActions": [
       "Consolidate the 7 orphan pages under /resources/ with proper internal links from /blog/",
-      "Add lastmod dates to 45 pages missing timestamps — Google deprioritizes undated content",
+      "Add lastmod dates to 45 pages missing timestamps - Google deprioritizes undated content",
       "Create a comparison page at /vs/competitor targeting high-intent buyers",
-      "Refresh the 8 blog posts from 2021 in /blog/tutorials/ — add 2024 examples and stats",
-      "Fix mixed trailing slash pattern: 112 URLs use /page/ but 89 use /page — pick one"
+      "Refresh the 8 blog posts from 2021 in /blog/tutorials/ - add 2024 examples and stats",
+      "Fix mixed trailing slash pattern: 112 URLs use /page/ but 89 use /page - pick one"
     ],
     "quickWins": [
       { "action": "Add lastmod to all product pages", "example": "/products/enterprise-plan" },
@@ -287,7 +287,7 @@ if (!success) return NextResponse.json({ error: 'Rate limit exceeded' }, { statu
       }
     ],
     "structureIssues": [
-      "Mixed trailing slash usage across 201 URLs — risks duplicate content",
+      "Mixed trailing slash usage across 201 URLs - risks duplicate content",
       "/legacy/ section (12 pages) not linked from anywhere in sitemap clusters"
     ]
   }

@@ -47,10 +47,10 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>Each item returned by items() must implement get_absolute_url(). Django calls this method on each object to generate the URL in the sitemap. If your model does not have get_absolute_url(), either add it or override the location() method in your sitemap class.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>The Sites Framework Requirement</h2>
-        <p style={{ marginBottom: 24 }}>Django sitemaps use the Sites framework to determine your domain name. You must have a Site record in your database with your correct production domain. Go to the Django admin, then Sites, and update the example.com entry to your actual domain. If the Sites framework is not configured correctly, all sitemap URLs will use example.com instead of your real domain — a common mistake that causes the sitemap to be rejected by Google.</p>
+        <p style={{ marginBottom: 24 }}>Django sitemaps use the Sites framework to determine your domain name. You must have a Site record in your database with your correct production domain. Go to the Django admin, then Sites, and update the example.com entry to your actual domain. If the Sites framework is not configured correctly, all sitemap URLs will use example.com instead of your real domain - a common mistake that causes the sitemap to be rejected by Google.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Caching Django Sitemaps</h2>
-        <p style={{ marginBottom: 24 }}>Django sitemaps are generated on every request by default. For large sites, this is expensive. Use Django cache_page decorator or the cached_sitemap view wrapper: from django.contrib.sitemaps.views import sitemap and wrap it with cache_page(60 * 60 * 24) to cache for 24 hours. Invalidate the cache when content changes using Django signals — send a cache clear signal on post_save for your content models.</p>
+        <p style={{ marginBottom: 24 }}>Django sitemaps are generated on every request by default. For large sites, this is expensive. Use Django cache_page decorator or the cached_sitemap view wrapper: from django.contrib.sitemaps.views import sitemap and wrap it with cache_page(60 * 60 * 24) to cache for 24 hours. Invalidate the cache when content changes using Django signals - send a cache clear signal on post_save for your content models.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Common Django Sitemap Issues</h2>
         <p style={{ marginBottom: 12 }}><strong>DisallowedHost error when generating sitemap:</strong> This happens if your ALLOWED_HOSTS setting does not include the domain being used to access the sitemap. Make sure your production domain is in ALLOWED_HOSTS.</p>
@@ -58,7 +58,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Django sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks every URL in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

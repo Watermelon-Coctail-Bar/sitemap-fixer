@@ -18,7 +18,7 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Check My Sitemap</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>
-        <p style={{ marginBottom: 24 }}>A Google News sitemap is a specialized XML sitemap extension that helps news publishers get articles crawled and indexed in Google News and Google Discover quickly — often within minutes of publication. Unlike standard sitemaps, news sitemaps only include articles published in the last 2 days. Google ignores older articles in news sitemaps.</p>
+        <p style={{ marginBottom: 24 }}>A Google News sitemap is a specialized XML sitemap extension that helps news publishers get articles crawled and indexed in Google News and Google Discover quickly - often within minutes of publication. Unlike standard sitemaps, news sitemaps only include articles published in the last 2 days. Google ignores older articles in news sitemaps.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>News Sitemap Format</h2>
         <div style={{ background: '#0a0a0f', borderRadius: 10, padding: '20px 24px', marginBottom: 24, fontFamily: 'monospace', fontSize: 12, color: '#e5e7eb', lineHeight: 1.8, overflowX: 'auto' }}>
@@ -40,20 +40,20 @@ export default function Page() {
         </div>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Key Requirements</h2>
-        <p style={{ marginBottom: 12 }}><strong>Only recent articles:</strong> Include only articles published within the last 48 hours. Google ignores anything older. Your news sitemap should be updated with new articles and old articles removed continuously — automate this in your CMS.</p>
-        <p style={{ marginBottom: 12 }}><strong>Publication name consistency:</strong> The news:name must exactly match the name registered in Google News. If your registered name is "The Daily Post" you cannot use "Daily Post" or "TDP" — it must be exact.</p>
+        <p style={{ marginBottom: 12 }}><strong>Only recent articles:</strong> Include only articles published within the last 48 hours. Google ignores anything older. Your news sitemap should be updated with new articles and old articles removed continuously - automate this in your CMS.</p>
+        <p style={{ marginBottom: 12 }}><strong>Publication name consistency:</strong> The news:name must exactly match the name registered in Google News. If your registered name is "The Daily Post" you cannot use "Daily Post" or "TDP" - it must be exact.</p>
         <p style={{ marginBottom: 12 }}><strong>Publication date accuracy:</strong> Use ISO 8601 format with timezone offset. Google uses this date to determine newsworthiness and recency. Incorrect dates can prevent Google News inclusion.</p>
         <p style={{ marginBottom: 24 }}><strong>Separate from main sitemap:</strong> Keep your news sitemap at a separate URL (e.g., /news-sitemap.xml) distinct from your main sitemap.xml. Submit both to Google Search Console separately.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Google News Publisher Center</h2>
-        <p style={{ marginBottom: 24 }}>To appear in Google News, submit your publication at publishercenter.google.com. This is separate from Search Console. You need to verify your site ownership, agree to Google News content policies, and submit your news sitemap URL. Google reviews new publications before including them — approval typically takes 1-4 weeks. Once approved, new articles in your news sitemap are usually crawled within 5-10 minutes of sitemap update.</p>
+        <p style={{ marginBottom: 24 }}>To appear in Google News, submit your publication at publishercenter.google.com. This is separate from Search Console. You need to verify your site ownership, agree to Google News content policies, and submit your news sitemap URL. Google reviews new publications before including them - approval typically takes 1-4 weeks. Once approved, new articles in your news sitemap are usually crawled within 5-10 minutes of sitemap update.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>CMS Implementation</h2>
-        <p style={{ marginBottom: 24 }}>WordPress users: Yoast SEO Premium and RankMath Pro both include automatic news sitemap generation. For Next.js, generate the news sitemap dynamically via a route handler that queries your CMS for articles published in the last 48 hours and outputs valid XML. Regenerate or serve fresh on every request — a stale news sitemap misses the indexing window for new articles.</p>
+        <p style={{ marginBottom: 24 }}>WordPress users: Yoast SEO Premium and RankMath Pro both include automatic news sitemap generation. For Next.js, generate the news sitemap dynamically via a route handler that queries your CMS for articles published in the last 48 hours and outputs valid XML. Regenerate or serve fresh on every request - a stale news sitemap misses the indexing window for new articles.</p>
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your news sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks format and URL validity</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks format and URL validity</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

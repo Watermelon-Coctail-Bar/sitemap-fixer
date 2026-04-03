@@ -12,7 +12,7 @@ const COPY = {
   default: {
     eyebrow: 'AI-powered SEO analysis',
     headline: 'Fix your SEO in\n60 seconds.',
-    sub: 'Enter your domain and get exact, actionable SEO improvements — not generic tips. We analyze your sitemap and tell you what to fix, what to create, and what to do next.',
+    sub: 'Enter your domain and get exact, actionable SEO improvements - not generic tips. We analyze your sitemap and tell you what to fix, what to create, and what to do next.',
     cta: 'Analyze My Site',
     placeholder: 'example.com',
   },
@@ -33,14 +33,14 @@ const COPY = {
   'xml-sitemap-generator': {
     eyebrow: 'XML Sitemap Generator',
     headline: 'Analyze your sitemap.\nGet exact fixes.',
-    sub: 'Enter your domain — we find your XML sitemap, parse every URL, and generate an AI-powered action plan to fix structure, gaps, and freshness issues.',
+    sub: 'Enter your domain - we find your XML sitemap, parse every URL, and generate an AI-powered action plan to fix structure, gaps, and freshness issues.',
     cta: 'Analyze Sitemap',
     placeholder: 'yourdomain.com',
   },
   'free-seo-audit': {
     eyebrow: 'Free SEO Audit',
     headline: 'Your free SEO audit\nin 60 seconds.',
-    sub: 'No forms. No email required. Just enter your domain and get a prioritized SEO fix list based on your actual site structure — powered by AI.',
+    sub: 'No forms. No email required. Just enter your domain and get a prioritized SEO fix list based on your actual site structure - powered by AI.',
     cta: 'Run Free Audit',
     placeholder: 'yourdomain.com',
   },

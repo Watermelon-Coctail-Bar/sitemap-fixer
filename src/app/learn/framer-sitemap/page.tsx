@@ -18,7 +18,7 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Check My Sitemap</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>
-        <p style={{ marginBottom: 24 }}>Framer generates your sitemap automatically and keeps it updated as you publish changes. Your sitemap is at yoursite.com/sitemap.xml. You do not need to configure anything for the sitemap to work — Framer handles it as part of its publishing infrastructure.</p>
+        <p style={{ marginBottom: 24 }}>Framer generates your sitemap automatically and keeps it updated as you publish changes. Your sitemap is at yoursite.com/sitemap.xml. You do not need to configure anything for the sitemap to work - Framer handles it as part of its publishing infrastructure.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>What Framer Includes in the Sitemap</h2>
         <p style={{ marginBottom: 24 }}>Framer includes all published pages in the sitemap by default. This includes your main pages, CMS collection pages (if you use Framer CMS), and any pages added through the Pages panel. Hidden pages in the navigation are still included if they are set to be indexed. Draft pages are excluded.</p>
@@ -27,7 +27,7 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>To exclude a page from the sitemap and search engines, open the page in Framer, go to Page Settings (click the gear icon on the page in the Pages panel), and scroll to the SEO section. Toggle off Search Engine Indexing. This adds a noindex tag to the page and removes it from the sitemap. For CMS collection items, you can set the indexing behavior in the CMS collection settings.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Submitting to Google Search Console</h2>
-        <p style={{ marginBottom: 24 }}>Framer has a built-in Google Search Console integration. Go to your Framer project settings, then the SEO tab, and connect your Google Search Console account. This verifies your site and lets Framer submit your sitemap automatically. Alternatively, verify your site manually using the HTML tag method — add the verification meta tag in Framer under Site Settings, then Custom Code, in the head section.</p>
+        <p style={{ marginBottom: 24 }}>Framer has a built-in Google Search Console integration. Go to your Framer project settings, then the SEO tab, and connect your Google Search Console account. This verifies your site and lets Framer submit your sitemap automatically. Alternatively, verify your site manually using the HTML tag method - add the verification meta tag in Framer under Site Settings, then Custom Code, in the head section.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Framer CMS and Sitemap</h2>
         <p style={{ marginBottom: 24 }}>If you use Framer CMS for blog posts or other content, each published CMS item gets its own URL and appears in the sitemap automatically. When you publish or unpublish a CMS item, the sitemap updates within a few minutes. The sitemap uses the canonical URL of each page, which respects any custom URL slugs you have set in the CMS.</p>
@@ -38,7 +38,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Framer sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks every URL in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

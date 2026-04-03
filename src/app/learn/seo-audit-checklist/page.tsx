@@ -9,26 +9,26 @@ const categories = [
     title: "Technical SEO",
     items: [
       "Site is fully on HTTPS with valid SSL certificate and HTTP redirects to HTTPS via 301",
-      "Canonical domain is consistent — www or non-www, not both accessible",
+      "Canonical domain is consistent - www or non-www, not both accessible",
       "Sitemap.xml exists, is valid XML, contains only canonical 200-status URLs, and is submitted to Google Search Console",
       "Robots.txt exists at /robots.txt, does not block Googlebot from important pages, and references sitemap URL",
-      "Site loads in under 2.5 seconds (LCP) on mobile — check PageSpeed Insights",
+      "Site loads in under 2.5 seconds (LCP) on mobile - check PageSpeed Insights",
       "Core Web Vitals pass in Google Search Console: LCP under 2.5s, INP under 200ms, CLS under 0.1",
-      "No redirect chains — all redirects go directly to final destination in one hop",
-      "No 404 errors for linked pages — check Search Console Crawl Stats",
-      "Site is mobile-friendly — viewport meta tag present, no tap targets too small",
+      "No redirect chains - all redirects go directly to final destination in one hop",
+      "No 404 errors for linked pages - check Search Console Crawl Stats",
+      "Site is mobile-friendly - viewport meta tag present, no tap targets too small",
       "Structured data (schema) present on key pages and passing Google Rich Results Test",
     ]
   },
   {
     title: "Indexing",
     items: [
-      "All important pages are indexed — check Search Console Indexing report",
+      "All important pages are indexed - check Search Console Indexing report",
       "No valuable pages have noindex tags accidentally",
       "No pages with noindex are also in the sitemap (contradiction)",
       "Duplicate content managed with canonical tags or 301 redirects",
       "Thin content pages (under 300 words) are either improved, consolidated, or noindexed",
-      "Pagination handled correctly — either paginated URLs or infinite scroll with discrete URLs",
+      "Pagination handled correctly - either paginated URLs or infinite scroll with discrete URLs",
     ]
   },
   {
@@ -61,11 +61,11 @@ export default function Page() {
       </nav>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>SEO Audit Checklist: 25 Checks for Any Website</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
-        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Run 12 of these checks automatically — free</span>
+        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Run 12 of these checks automatically - free</span>
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze My Site Free</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>
-        <p style={{ marginBottom: 32 }}>Use this checklist when auditing a new site, after a migration, or quarterly to catch regressions. Work through Technical SEO first — a site with broken crawling or indexing needs that fixed before on-page or content work has any impact.</p>
+        <p style={{ marginBottom: 32 }}>Use this checklist when auditing a new site, after a migration, or quarterly to catch regressions. Work through Technical SEO first - a site with broken crawling or indexing needs that fixed before on-page or content work has any impact.</p>
         {categories.map(({ title, items }) => (
           <div key={title} style={{ marginBottom: 40 }}>
             <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>{title}</h2>
@@ -82,7 +82,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Automate the technical checks</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>SitemapFixer runs 12 of these checks in 60 seconds — free</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>SitemapFixer runs 12 of these checks in 60 seconds - free</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
     </div>

@@ -21,7 +21,7 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>Hreflang is an HTML attribute that tells Google which language and regional audience a page is intended for. If your site has content in multiple languages or targets different countries with the same language (like US English vs UK English), hreflang prevents the wrong version from appearing in search results for users in each region.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Three Ways to Implement Hreflang</h2>
-        <p style={{ marginBottom: 24 }}>You can implement hreflang in three places: in the HTML head of each page, in the HTTP headers, or in your XML sitemap. The sitemap approach is often easiest for large sites since you manage it in one place rather than on every page. All three methods work equally well — choose one and be consistent.</p>
+        <p style={{ marginBottom: 24 }}>You can implement hreflang in three places: in the HTML head of each page, in the HTTP headers, or in your XML sitemap. The sitemap approach is often easiest for large sites since you manage it in one place rather than on every page. All three methods work equally well - choose one and be consistent.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Hreflang in Your XML Sitemap</h2>
         <p style={{ marginBottom: 16 }}>Add xhtml:link tags inside each url entry. Every language version of a page must include hreflang entries for all other language versions, including itself:</p>
@@ -44,7 +44,7 @@ export default function Page() {
         </div>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>The x-default Tag</h2>
-        <p style={{ marginBottom: 24 }}>The x-default hreflang value specifies the fallback page for users who do not match any of your specific language or region targets. Point it to your most general version — usually your English homepage or a language selection page. Every set of hreflang annotations should include x-default.</p>
+        <p style={{ marginBottom: 24 }}>The x-default hreflang value specifies the fallback page for users who do not match any of your specific language or region targets. Point it to your most general version - usually your English homepage or a language selection page. Every set of hreflang annotations should include x-default.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Common Hreflang Mistakes</h2>
         <p style={{ marginBottom: 12 }}><strong>Missing return tags:</strong> If your English page points to your German page but your German page does not point back to the English page, Google ignores the entire hreflang setup. Every page in a group must reference every other page in the group.</p>

@@ -27,12 +27,12 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>For individual pages: in the Pages panel, click the three dots next to any page, go to SEO, and toggle Hide Page from Search Results. This adds a noindex tag and removes the page from the sitemap. For blog posts, open the post and go to Options, then SEO, and disable indexing there. For entire page types, go to Settings, then SEO, where you can disable indexing for categories like galleries or events if you do not want them indexed.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Submitting Your Squarespace Sitemap to Google</h2>
-        <p style={{ marginBottom: 24 }}>Go to Google Search Console, select your property, and click Sitemaps. Enter sitemap.xml and submit. Squarespace also has a built-in Google Search Console connection — go to Marketing, then Google Search Keywords in Squarespace to connect your account and track impressions directly in the platform.</p>
+        <p style={{ marginBottom: 24 }}>Go to Google Search Console, select your property, and click Sitemaps. Enter sitemap.xml and submit. Squarespace also has a built-in Google Search Console connection - go to Marketing, then Google Search Keywords in Squarespace to connect your account and track impressions directly in the platform.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Common Squarespace Sitemap Problems</h2>
 
         <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0a0a0f', marginTop: 32, marginBottom: 10 }}>Pages not appearing in sitemap</h3>
-        <p style={{ marginBottom: 24 }}>If a published page is missing from your sitemap, check two things: first, that the page is not set to Hide Page from Search Results in its SEO settings; second, that it is not in a folder or navigation section that is hidden. Also check that the page URL is not a duplicate of another page — Squarespace will not add duplicate paths to the sitemap.</p>
+        <p style={{ marginBottom: 24 }}>If a published page is missing from your sitemap, check two things: first, that the page is not set to Hide Page from Search Results in its SEO settings; second, that it is not in a folder or navigation section that is hidden. Also check that the page URL is not a duplicate of another page - Squarespace will not add duplicate paths to the sitemap.</p>
 
         <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0a0a0f', marginTop: 32, marginBottom: 10 }}>Site under password protection</h3>
         <p style={{ marginBottom: 24 }}>If your Squarespace site has a site-wide password (Settings, then Site Availability), the entire site is blocked from Google. The sitemap will return a redirect to the password page. Remove the site-wide password before submitting to Google. This is separate from page-level passwords, which only affect individual pages.</p>
@@ -42,7 +42,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your Squarespace sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — finds errors in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - finds errors in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </div>

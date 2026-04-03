@@ -11,7 +11,7 @@ export default function Page() { return (
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Check the Page Quality</h2>
         <p style={{ marginBottom: 20 }}>The most common reason is low content quality. Pages with thin content, near-duplicate content, or little unique value will be crawled but skipped. Ensure the page has at least 500 words of original, useful content.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Look for a noindex Directive</h2>
-        <p style={{ marginBottom: 20 }}>Check the page source for meta name robots content noindex or X-Robots-Tag headers. If Google sees a noindex signal, it crawls but does not index — exactly matching this status.</p>
+        <p style={{ marginBottom: 20 }}>Check the page source for meta name robots content noindex or X-Robots-Tag headers. If Google sees a noindex signal, it crawls but does not index - exactly matching this status.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Fix Canonical Tag Issues</h2>
         <p style={{ marginBottom: 20 }}>If your page has a canonical tag pointing to a different URL, Google will index the canonical target instead. Confirm the canonical tag on your page points to itself.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Verify the Page Loads Correctly</h2>

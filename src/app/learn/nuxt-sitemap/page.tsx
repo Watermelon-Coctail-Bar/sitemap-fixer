@@ -41,16 +41,16 @@ export default function Page() {
           <div style={{ paddingLeft: 20 }}>sources: ["/api/__sitemap__/urls"],</div>
           <div>{"}"}</div>
         </div>
-        <p style={{ marginBottom: 24 }}>Then create a server route at server/routes/__sitemap__/urls.ts that returns an array of URL objects. The module fetches this endpoint at runtime to get dynamic URLs, merges them with static routes, and outputs the complete sitemap. This is more flexible than build-time generation — your sitemap updates without rebuilding when you add new blog posts or products.</p>
+        <p style={{ marginBottom: 24 }}>Then create a server route at server/routes/__sitemap__/urls.ts that returns an array of URL objects. The module fetches this endpoint at runtime to get dynamic URLs, merges them with static routes, and outputs the complete sitemap. This is more flexible than build-time generation - your sitemap updates without rebuilding when you add new blog posts or products.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Common Nuxt Sitemap Issues</h2>
         <p style={{ marginBottom: 12 }}><strong>Missing site.url:</strong> Without site.url configured, the module cannot generate absolute URLs. All URLs in the sitemap will be relative paths, which is invalid XML sitemap format and will fail Google validation. Always set site.url to your production domain.</p>
         <p style={{ marginBottom: 12 }}><strong>Dynamic routes not appearing:</strong> If CMS content is missing from the sitemap, verify your API endpoint is returning the correct URL format. Each URL object should have a loc property with the full path: {"{"} loc: '/blog/my-post' {"}"}.</p>
-        <p style={{ marginBottom: 24 }}><strong>Nuxt 2 vs Nuxt 3:</strong> The @nuxtjs/sitemap module for Nuxt 2 and Nuxt 3 are different packages with different APIs. If you migrated from Nuxt 2, reinstall the module fresh rather than just upgrading — the configuration structure changed significantly.</p>
+        <p style={{ marginBottom: 24 }}><strong>Nuxt 2 vs Nuxt 3:</strong> The @nuxtjs/sitemap module for Nuxt 2 and Nuxt 3 are different packages with different APIs. If you migrated from Nuxt 2, reinstall the module fresh rather than just upgrading - the configuration structure changed significantly.</p>
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Nuxt sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks all URLs in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

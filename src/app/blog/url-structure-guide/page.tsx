@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/blog/url-structure-guide' },
 };
 const rules = [
-  { t: "Keep URLs short and descriptive", d: "Shorter URLs with clear words outperform long strings of numbers and parameters in both click-through rate and rankings. Compare: sitemapfixer.com/blog/how-to-fix-a-sitemap vs sitemapfixer.com/blog/post?id=1247&category=seo&tag=sitemap. The first is readable, shareable, and self-explanatory. Target URLs under 5-7 words with hyphens between words (not underscores — Google treats underscores as word connectors, not separators)." },
-  { t: "Include the primary keyword", d: "Including the target keyword in your URL provides a relevance signal to Google and to users scanning search results. Do not keyword-stuff multiple variations — one natural keyword phrase in the URL is sufficient. The keyword should match your page title and H1 heading for maximum coherence across SEO signals." },
+  { t: "Keep URLs short and descriptive", d: "Shorter URLs with clear words outperform long strings of numbers and parameters in both click-through rate and rankings. Compare: sitemapfixer.com/blog/how-to-fix-a-sitemap vs sitemapfixer.com/blog/post?id=1247&category=seo&tag=sitemap. The first is readable, shareable, and self-explanatory. Target URLs under 5-7 words with hyphens between words (not underscores - Google treats underscores as word connectors, not separators)." },
+  { t: "Include the primary keyword", d: "Including the target keyword in your URL provides a relevance signal to Google and to users scanning search results. Do not keyword-stuff multiple variations - one natural keyword phrase in the URL is sufficient. The keyword should match your page title and H1 heading for maximum coherence across SEO signals." },
   { t: "Use a consistent hierarchy", d: "URL structure should reflect your site hierarchy: domain.com/category/subcategory/page. Consistent URL patterns help Google understand your site structure and content relationships. All blog posts at /blog/post-slug, all learn pages at /learn/topic-slug, all product pages at /products/product-slug. Inconsistent URL patterns (some posts at /blog/, some at /articles/, some at /news/) fragment topical signals." },
   { t: "Avoid parameters in indexable URLs", d: "URL parameters (yoursite.com/search?q=keyword&sort=price&page=2) create thousands of near-duplicate URLs that waste crawl budget. For important filtered or sorted pages that deserve indexing, use URL slugs instead of parameters. For tracking parameters (UTM tags), configure Google Search Console URL parameters to tell Google to ignore them, or use canonical tags on parameter-containing pages pointing to the clean URL." },
-  { t: "HTTPS and trailing slash consistency", d: "All URLs should consistently use HTTPS. All URLs should consistently either have or not have a trailing slash — pick one and stick to it. The URL yoursite.com/page and yoursite.com/page/ are treated as different URLs by Google. Use 301 redirects to enforce your chosen convention and use canonical tags to reinforce it. Your sitemap should only contain URLs in the canonical format." },
+  { t: "HTTPS and trailing slash consistency", d: "All URLs should consistently use HTTPS. All URLs should consistently either have or not have a trailing slash - pick one and stick to it. The URL yoursite.com/page and yoursite.com/page/ are treated as different URLs by Google. Use 301 redirects to enforce your chosen convention and use canonical tags to reinforce it. Your sitemap should only contain URLs in the canonical format." },
 ];
 export default function Page() {
   return (
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap URL patterns</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — detects inconsistencies and parameter URLs</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects inconsistencies and parameter URLs</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </article>

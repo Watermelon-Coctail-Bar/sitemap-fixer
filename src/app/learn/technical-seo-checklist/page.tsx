@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Technical SEO Checklist 2025 | SitemapFixer',
-  description: 'Complete technical SEO checklist for 2025. Sitemap, robots.txt, Core Web Vitals, indexing, canonicals, structured data — everything you need to audit.',
+  description: 'Complete technical SEO checklist for 2025. Sitemap, robots.txt, Core Web Vitals, indexing, canonicals, structured data - everything you need to audit.',
   alternates: { canonical: 'https://sitemapfixer.com/learn/technical-seo-checklist' },
   openGraph: { title: 'Technical SEO Checklist 2025', description: 'Everything you need for a technical SEO audit.', url: 'https://sitemapfixer.com/learn/technical-seo-checklist', type: 'article' },
 };

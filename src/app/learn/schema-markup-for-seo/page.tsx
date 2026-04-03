@@ -18,7 +18,7 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Try SitemapFixer Free</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>
-        <p style={{ marginBottom: 24 }}>Schema markup is structured data added to your HTML that helps Google understand the meaning of your content. When Google understands your content better, it can display it in enhanced "rich result" formats in search — star ratings for products, FAQ dropdowns, recipe details, event dates, and more. Rich results take up more visual space in search results, which typically improves click-through rate significantly.</p>
+        <p style={{ marginBottom: 24 }}>Schema markup is structured data added to your HTML that helps Google understand the meaning of your content. When Google understands your content better, it can display it in enhanced "rich result" formats in search - star ratings for products, FAQ dropdowns, recipe details, event dates, and more. Rich results take up more visual space in search results, which typically improves click-through rate significantly.</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>JSON-LD: The Recommended Format</h2>
         <p style={{ marginBottom: 16 }}>Google recommends JSON-LD (JavaScript Object Notation for Linked Data) as the format for structured data. Add it as a script tag in your page head:</p>
         <div style={{ background: '#0a0a0f', borderRadius: 10, padding: '20px 24px', marginBottom: 24, fontFamily: 'monospace', fontSize: 12, color: '#e5e7eb', lineHeight: 1.7, overflowX: 'auto' }}>

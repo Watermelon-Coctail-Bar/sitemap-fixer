@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/blog/pagination-seo-guide' },
 };
 const sections = [
-  { t: "The pagination problem for SEO", d: "Paginated pages (category/page/2, blog/page/3) create multiple pages with very similar content — each page shows the same type of content just at different offsets. This can dilute ranking signals across many pages instead of concentrating them. Google may choose to index paginated pages over your main category page if signals are mixed. Crawl budget is also spent on pagination pages that rarely receive meaningful organic traffic." },
-  { t: "The correct modern approach: self-referencing canonicals", d: "After Google deprecated rel=next/prev support in 2019, the recommended approach is: each paginated page (page/2, page/3) should have a self-referencing canonical pointing to itself — not to page/1. This tells Google each page is unique and the correct canonical for itself. Do NOT canonical all paginated pages to page/1 — this tells Google pages 2, 3, 4 are duplicates of page/1 and causes them to be deindexed." },
+  { t: "The pagination problem for SEO", d: "Paginated pages (category/page/2, blog/page/3) create multiple pages with very similar content - each page shows the same type of content just at different offsets. This can dilute ranking signals across many pages instead of concentrating them. Google may choose to index paginated pages over your main category page if signals are mixed. Crawl budget is also spent on pagination pages that rarely receive meaningful organic traffic." },
+  { t: "The correct modern approach: self-referencing canonicals", d: "After Google deprecated rel=next/prev support in 2019, the recommended approach is: each paginated page (page/2, page/3) should have a self-referencing canonical pointing to itself - not to page/1. This tells Google each page is unique and the correct canonical for itself. Do NOT canonical all paginated pages to page/1 - this tells Google pages 2, 3, 4 are duplicates of page/1 and causes them to be deindexed." },
   { t: "What to include in your sitemap", d: "Include paginated pages in your sitemap only if they receive organic traffic or have a legitimate reason to be indexed. For most blog or category pagination: only include page/1 (the main category) in your sitemap and let Google discover later pages through internal links. For large e-commerce catalogs where later pages have unique products: include all pages. Monitor in Search Console which paginated pages actually receive impressions before deciding." },
-  { t: "Infinite scroll SEO", d: "Infinite scroll (content loading as users scroll) makes content inaccessible to Googlebot unless implemented correctly. Googlebot does not scroll pages — it only sees the initial page load. To make infinite scroll SEO-friendly: provide a paginated version at numbered URLs that Googlebot can crawl, and use pushState to update the URL as the user scrolls. This is called progressive loading and ensures Googlebot sees all your content." },
+  { t: "Infinite scroll SEO", d: "Infinite scroll (content loading as users scroll) makes content inaccessible to Googlebot unless implemented correctly. Googlebot does not scroll pages - it only sees the initial page load. To make infinite scroll SEO-friendly: provide a paginated version at numbered URLs that Googlebot can crawl, and use pushState to update the URL as the user scrolls. This is called progressive loading and ensures Googlebot sees all your content." },
 ];
 export default function Page() {
   return (
@@ -34,7 +34,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap for pagination issues</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — detects /page/N patterns and URL duplicates</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects /page/N patterns and URL duplicates</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </article>

@@ -18,7 +18,7 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Check My Sitemap</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>
-        <p style={{ marginBottom: 24 }}>Hugo generates a sitemap.xml automatically when you run hugo to build your site. No plugins or additional packages are needed. The sitemap is placed in the root of your public/ directory and includes all pages and posts by default. The critical requirement is that your baseURL in hugo.toml (or config.toml) must be set to your production domain — without it, Hugo generates relative URLs which are invalid in sitemaps.</p>
+        <p style={{ marginBottom: 24 }}>Hugo generates a sitemap.xml automatically when you run hugo to build your site. No plugins or additional packages are needed. The sitemap is placed in the root of your public/ directory and includes all pages and posts by default. The critical requirement is that your baseURL in hugo.toml (or config.toml) must be set to your production domain - without it, Hugo generates relative URLs which are invalid in sitemaps.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Setting Your baseURL</h2>
         <div style={{ background: '#0a0a0f', borderRadius: 10, padding: '20px 24px', marginBottom: 24, fontFamily: 'monospace', fontSize: 13, color: '#e5e7eb', lineHeight: 1.7 }}>
@@ -27,7 +27,7 @@ export default function Page() {
           <div>languageCode = "en-us"</div>
           <div>title = "Your Site"</div>
         </div>
-        <p style={{ marginBottom: 24 }}>The trailing slash in baseURL is important — Hugo concatenates paths directly, so without it you get malformed URLs like https://yoursite.comsomepage instead of https://yoursite.com/somepage.</p>
+        <p style={{ marginBottom: 24 }}>The trailing slash in baseURL is important - Hugo concatenates paths directly, so without it you get malformed URLs like https://yoursite.comsomepage instead of https://yoursite.com/somepage.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Configuring Sitemap Options</h2>
         <div style={{ background: '#0a0a0f', borderRadius: 10, padding: '20px 24px', marginBottom: 24, fontFamily: 'monospace', fontSize: 13, color: '#e5e7eb', lineHeight: 1.7 }}>
@@ -48,7 +48,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Hugo sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks every URL in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

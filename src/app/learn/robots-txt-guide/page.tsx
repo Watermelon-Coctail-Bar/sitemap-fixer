@@ -18,11 +18,11 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Try SitemapFixer Free</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.8 }}>
-        <p style={{ marginBottom: 20 }}>The robots.txt file tells search engine crawlers which pages to access or skip. It lives at yoursite.com/robots.txt. Note: it controls crawling but not indexing — a page can still be indexed if other sites link to it even when robots.txt blocks crawling.</p>
+        <p style={{ marginBottom: 20 }}>The robots.txt file tells search engine crawlers which pages to access or skip. It lives at yoursite.com/robots.txt. Note: it controls crawling but not indexing - a page can still be indexed if other sites link to it even when robots.txt blocks crawling.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Basic Syntax</h2>
         <p style={{ marginBottom: 20 }}>User-agent: * applies to all crawlers. Disallow: /admin/ blocks that path. Allow: /admin/public/ allows a subdirectory within a blocked section. Sitemap: https://yoursite.com/sitemap.xml tells crawlers where your sitemap is. Every robots.txt should include a Sitemap directive.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>What to Block</h2>
-        <p style={{ marginBottom: 20 }}>Block admin pages, internal search results, shopping cart and checkout pages, duplicate content from URL parameters, and staging directories. Never block CSS or JavaScript — Googlebot needs them to render pages. Never block your sitemap.</p>
+        <p style={{ marginBottom: 20 }}>Block admin pages, internal search results, shopping cart and checkout pages, duplicate content from URL parameters, and staging directories. Never block CSS or JavaScript - Googlebot needs them to render pages. Never block your sitemap.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Robots.txt and Your Sitemap</h2>
         <p style={{ marginBottom: 20 }}>Never include URLs in your sitemap that are blocked by robots.txt. This is one of the most common technical SEO errors. SitemapFixer checks your sitemap against your robots.txt automatically and flags any conflicts.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Common Mistakes</h2>

@@ -123,7 +123,7 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
         </div>
       </div>
 
-      {/* ISSUES TABLE — the main feature */}
+      {/* ISSUES TABLE - the main feature */}
       {issues.length > 0 && (
         <div className="card anim-fade-up anim-fade-up-2" style={{ marginBottom: 20 }}>
           <div className="card-header">
@@ -135,7 +135,7 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--border)' }}>
-                  {['Severity', 'Problem', 'Fix — copy & apply', 'Effort'].map(h => (
+                  {['Severity', 'Problem', 'Fix - copy & apply', 'Effort'].map(h => (
                     <th key={h} style={{ textAlign: 'left', padding: '8px 14px', fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', whiteSpace: 'nowrap' }}>{h}</th>
                   ))}
                 </tr>
@@ -229,11 +229,11 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
         </div>
       </div>
 
-      {/* Missing Pages — full width table */}
+      {/* Missing Pages - full width table */}
       <div className="card anim-fade-up anim-fade-up-5" style={{ marginBottom: 20 }}>
         <div className="card-header">
           <span style={{ fontSize: 16 }}>📄</span>
-          <span style={{ fontWeight: 700, fontSize: 15 }}>Missing Pages — Create These</span>
+          <span style={{ fontWeight: 700, fontSize: 15 }}>Missing Pages - Create These</span>
           <span className="tag tag-blue" style={{ marginLeft: 'auto' }}>Traffic opportunity</span>
         </div>
         <div style={{ overflowX: 'auto' }}>
@@ -284,7 +284,7 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
                 <span style={{ fontSize: 10, color: 'var(--muted)', maxWidth: 90, textAlign: 'center', lineHeight: 1.3 }}>{fix.reason}</span>
               </div>
               <span className="url-chip" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }} title={fix.to}>{fix.to}</span>
-              <CopyButton text={`Add a link from ${fix.from} to ${fix.to} — ${fix.reason}`} />
+              <CopyButton text={`Add a link from ${fix.from} to ${fix.to} - ${fix.reason}`} />
             </div>
           ))}
         </div>

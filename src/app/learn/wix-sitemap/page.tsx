@@ -24,7 +24,7 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>Your sitemap is at yoursite.com/sitemap.xml. If you have a connected custom domain, use that domain, not the wixsite.com subdomain URL. You can also find it by going to your Wix dashboard, clicking Marketing and SEO, then SEO Tools, and looking for the sitemap section.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Controlling What Wix Includes in the Sitemap</h2>
-        <p style={{ marginBottom: 24 }}>In the Wix editor, you can control which individual pages appear in the sitemap. Click on any page in the Pages panel, then go to the SEO settings for that page. You will see a toggle for indexing — turning this off removes the page from the sitemap and adds a noindex tag. For blog posts, go to Blog in your dashboard and manage the SEO settings per post.</p>
+        <p style={{ marginBottom: 24 }}>In the Wix editor, you can control which individual pages appear in the sitemap. Click on any page in the Pages panel, then go to the SEO settings for that page. You will see a toggle for indexing - turning this off removes the page from the sitemap and adds a noindex tag. For blog posts, go to Blog in your dashboard and manage the SEO settings per post.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>How to Submit Your Wix Sitemap to Google</h2>
         <p style={{ marginBottom: 24 }}>The simplest way is to connect your site directly through Wix. Go to your Wix dashboard, click Marketing and SEO, then SEO Setup Checklist. Wix walks you through connecting to Google Search Console and submitting your sitemap automatically. If you prefer to do it manually, add yoursite.com/sitemap.xml in Google Search Console under Sitemaps.</p>
@@ -45,7 +45,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your Wix sitemap for errors</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — finds issues in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - finds issues in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </div>

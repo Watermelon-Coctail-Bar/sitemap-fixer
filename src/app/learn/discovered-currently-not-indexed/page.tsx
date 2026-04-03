@@ -18,7 +18,7 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze My Site</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>
-        <p style={{ marginBottom: 24 }}>In Google Search Console, "Discovered - currently not indexed" means Google found out your page exists — through your sitemap, an internal link, or another page linking to it — but has not crawled it yet. Unlike "Crawled - currently not indexed" where Google visited and decided not to index, here Google simply has not gotten around to visiting the page yet.</p>
+        <p style={{ marginBottom: 24 }}>In Google Search Console, "Discovered - currently not indexed" means Google found out your page exists - through your sitemap, an internal link, or another page linking to it - but has not crawled it yet. Unlike "Crawled - currently not indexed" where Google visited and decided not to index, here Google simply has not gotten around to visiting the page yet.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Why Google Discovers Pages Without Crawling Them</h2>
         <p style={{ marginBottom: 24 }}>Google has a finite crawl budget for each site. When Google discovers more URLs than it can crawl immediately, it queues them for future crawling. New pages on a new or low-authority site often sit in this queue for days or weeks. The same happens on large sites that publish content faster than Google can crawl it, or on sites with crawl budget issues from too many low-value URLs.</p>
@@ -26,7 +26,7 @@ export default function Page() {
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>How to Fix It: Speed Up Crawling</h2>
 
         <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0a0a0f', marginTop: 32, marginBottom: 10 }}>Request indexing in Google Search Console</h3>
-        <p style={{ marginBottom: 24 }}>For a handful of important pages, go to Google Search Console, use URL Inspection on each page, and click Request Indexing. This pushes the page to the front of the crawl queue. Google typically crawls requested pages within a few days. Note this only works for pages without technical issues — if the page has a noindex tag or robots.txt block, requesting indexing will not help.</p>
+        <p style={{ marginBottom: 24 }}>For a handful of important pages, go to Google Search Console, use URL Inspection on each page, and click Request Indexing. This pushes the page to the front of the crawl queue. Google typically crawls requested pages within a few days. Note this only works for pages without technical issues - if the page has a noindex tag or robots.txt block, requesting indexing will not help.</p>
 
         <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0a0a0f', marginTop: 32, marginBottom: 10 }}>Submit your sitemap with proper lastmod dates</h3>
         <p style={{ marginBottom: 24 }}>Make sure your sitemap includes accurate lastmod dates for all pages. Google prioritizes crawling pages with recent lastmod dates. If your sitemap uses fake or missing lastmod dates, Google stops trusting the signal and crawls less efficiently. Set lastmod to the actual last-modified date of the page content.</p>

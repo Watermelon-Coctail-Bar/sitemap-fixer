@@ -27,7 +27,7 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>For individual posts and pages: in the Ghost editor, open the Post Settings panel on the right side. Scroll down to find the Meta Data section. If you want to exclude a specific post from search engines, add a custom meta tag via Code Injection in the post header: meta name="robots" content="noindex". Ghost does not have a built-in noindex toggle in the admin UI for individual posts, so this requires code injection or a theme-level solution. For tag and author pages: if you want to prevent all tag pages from being indexed, you can add a noindex tag to your theme template files.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Submitting to Google Search Console</h2>
-        <p style={{ marginBottom: 24 }}>Go to Google Search Console and verify ownership of your Ghost site. The easiest verification method is the HTML tag — add it to your Ghost settings under Code Injection in the Site Header field. Once verified, go to Sitemaps and submit sitemap.xml. Google will discover all child sitemaps automatically from the index.</p>
+        <p style={{ marginBottom: 24 }}>Go to Google Search Console and verify ownership of your Ghost site. The easiest verification method is the HTML tag - add it to your Ghost settings under Code Injection in the Site Header field. Once verified, go to Sitemaps and submit sitemap.xml. Google will discover all child sitemaps automatically from the index.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Common Ghost Sitemap Problems</h2>
 
@@ -38,11 +38,11 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}>Ghost indexes author and tag pages by default. On smaller sites, these pages may have very little unique content, which can hurt your overall site quality score in Google. Consider whether you want author and tag pages indexed. If not, add a noindex directive to those template files in your Ghost theme, or use the Ghost Code Injection settings at the site level to add a canonical tag pointing to your homepage for these pages.</p>
 
         <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0a0a0f', marginTop: 32, marginBottom: 10 }}>Sitemap not updating after content changes</h3>
-        <p style={{ marginBottom: 24 }}>Ghost sitemaps update in real time — when you publish or update a post, the sitemap reflects this immediately. If your sitemap appears outdated, first check that your Ghost instance is running correctly with ghost status (self-hosted). On Ghost Pro, changes take effect immediately after publishing. If the issue persists, try restarting Ghost with ghost restart on self-hosted instances.</p>
+        <p style={{ marginBottom: 24 }}>Ghost sitemaps update in real time - when you publish or update a post, the sitemap reflects this immediately. If your sitemap appears outdated, first check that your Ghost instance is running correctly with ghost status (self-hosted). On Ghost Pro, changes take effect immediately after publishing. If the issue persists, try restarting Ghost with ghost restart on self-hosted instances.</p>
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Ghost sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks all URLs in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </div>

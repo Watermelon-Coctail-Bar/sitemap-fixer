@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'SEO Glossary: 50 Essential SEO Terms Defined | SitemapFixer',
-  description: "A plain-English glossary of essential SEO terms — from crawling and indexing to E-E-A-T and Core Web Vitals. Reference this when you encounter unfamiliar SEO terminology.",
+  description: "A plain-English glossary of essential SEO terms - from crawling and indexing to E-E-A-T and Core Web Vitals. Reference this when you encounter unfamiliar SEO terminology.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/seo-glossary' },
 };
 const terms = [
@@ -14,7 +14,7 @@ const terms = [
   { t: "CLS (Cumulative Layout Shift)", d: "A Core Web Vital measuring how much page content shifts visually during loading. Google requires a score under 0.1 for a Good rating." },
   { t: "Core Web Vitals", d: "Three Google ranking signals measuring user experience: LCP (loading), INP (interactivity), and CLS (visual stability)." },
   { t: "Crawling", d: "The process of Googlebot discovering and downloading web pages by following links and processing sitemaps." },
-  { t: "Domain Authority", d: "A third-party metric (Moz) predicting how likely a domain is to rank in search results. Not a Google metric — Google uses its own internal authority signals." },
+  { t: "Domain Authority", d: "A third-party metric (Moz) predicting how likely a domain is to rank in search results. Not a Google metric - Google uses its own internal authority signals." },
   { t: "E-E-A-T", d: "Experience, Expertise, Authoritativeness, and Trustworthiness. Google's quality framework for evaluating content quality, especially in YMYL (health, finance) topics." },
   { t: "Featured snippet", d: "A highlighted answer box appearing at the top of Google search results, above the regular organic results. Also called position zero." },
   { t: "Hreflang", d: "An HTML attribute telling Google which language and region a page is intended for, used for international sites with multiple language versions." },
@@ -29,12 +29,12 @@ const terms = [
   { t: "PageRank", d: "Google's original algorithm for measuring page authority based on the quantity and quality of inbound links. Now one of hundreds of ranking signals." },
   { t: "robots.txt", d: "A text file at the root of a domain telling crawlers which pages they are allowed or not allowed to crawl." },
   { t: "Schema markup", d: "Structured data code added to pages to help search engines understand content and generate rich results like star ratings and FAQs." },
-  { t: "SERP", d: "Search Engine Results Page — the page Google shows in response to a search query, containing organic results, ads, and various SERP features." },
+  { t: "SERP", d: "Search Engine Results Page - the page Google shows in response to a search query, containing organic results, ads, and various SERP features." },
   { t: "Sitemap", d: "An XML file listing URLs on a website to help search engines discover and index pages efficiently." },
-  { t: "Technical SEO", d: "The process of optimizing a website's infrastructure — crawlability, indexing, speed, structured data — to improve search engine visibility." },
+  { t: "Technical SEO", d: "The process of optimizing a website's infrastructure - crawlability, indexing, speed, structured data - to improve search engine visibility." },
   { t: "Title tag", d: "An HTML tag defining the title of a web page. Shown as the clickable headline in search results and is one of the most important on-page ranking signals." },
   { t: "XML sitemap", d: "A machine-readable file in XML format listing the URLs of a website, submitted to Google to aid in crawling and indexing." },
-  { t: "YMYL", d: "Your Money or Your Life — Google's category for content about topics that could significantly impact a person's health, finances, safety, or wellbeing. These pages face stricter E-E-A-T requirements." },
+  { t: "YMYL", d: "Your Money or Your Life - Google's category for content about topics that could significantly impact a person's health, finances, safety, or wellbeing. These pages face stricter E-E-A-T requirements." },
 ];
 export default function Page() {
   return (

@@ -35,10 +35,10 @@ export default function Page() {
           <div style={{ paddingLeft: 20 }}>end</div>
           <div>end</div>
         </div>
-        <p style={{ marginBottom: 24 }}>Generate the sitemap with rake sitemap:refresh. This creates public/sitemap.xml.gz (compressed by default). Add public/sitemap.xml.gz and public/sitemap.xml to your .gitignore — sitemaps should be generated as part of deployment, not committed to source control.</p>
+        <p style={{ marginBottom: 24 }}>Generate the sitemap with rake sitemap:refresh. This creates public/sitemap.xml.gz (compressed by default). Add public/sitemap.xml.gz and public/sitemap.xml to your .gitignore - sitemaps should be generated as part of deployment, not committed to source control.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Regenerating on Deploy</h2>
-        <p style={{ marginBottom: 24 }}>Add sitemap generation to your deployment pipeline. With Capistrano, add after "deploy:published", "sitemap:refresh" to your deploy.rb. With Heroku, add a Procfile release command or use the Heroku Scheduler add-on to run rake sitemap:refresh on a schedule. The gem can also ping Google and Bing automatically after generation — add SitemapGenerator::Sitemap.ping_search_engines after create to enable this.</p>
+        <p style={{ marginBottom: 24 }}>Add sitemap generation to your deployment pipeline. With Capistrano, add after "deploy:published", "sitemap:refresh" to your deploy.rb. With Heroku, add a Procfile release command or use the Heroku Scheduler add-on to run rake sitemap:refresh on a schedule. The gem can also ping Google and Bing automatically after generation - add SitemapGenerator::Sitemap.ping_search_engines after create to enable this.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Common Rails Sitemap Issues</h2>
         <p style={{ marginBottom: 12 }}><strong>default_host not set:</strong> Without default_host, the gem cannot generate absolute URLs and will raise a RuntimeError. Always set it to your production domain. Use ENV to manage this across environments: SitemapGenerator::Sitemap.default_host = ENV.fetch("SITE_URL", "https://yoursite.com").</p>
@@ -47,7 +47,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Rails sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks every URL in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

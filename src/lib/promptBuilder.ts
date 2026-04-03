@@ -25,7 +25,7 @@ DEPTH: ${JSON.stringify(analysis.depthDistribution)}
 Rules:
 - Reference actual URLs/slugs from the data. Never give generic advice.
 - Every "fix" must be a specific action someone can do right now, ideally with example text to copy-paste.
-- issues array is the most important part — this is what users act on first.
+- issues array is the most important part - this is what users act on first.
 
 Return EXACTLY this JSON (no extra keys, no comments):
 {
@@ -36,7 +36,7 @@ Return EXACTLY this JSON (no extra keys, no comments):
     {
       "severity": "critical",
       "problem": "<specific problem, cite URL or count>",
-      "fix": "<exact action to take — copy-paste ready where possible>",
+      "fix": "<exact action to take - copy-paste ready where possible>",
       "effort": "low"
     },
     {
@@ -47,7 +47,7 @@ Return EXACTLY this JSON (no extra keys, no comments):
     }
   ],
   "topActions": [
-    "<action #1 — specific, with URL context>",
+    "<action #1 - specific, with URL context>",
     "<action #2>",
     "<action #3>",
     "<action #4>",
@@ -65,7 +65,7 @@ Return EXACTLY this JSON (no extra keys, no comments):
     { "intent": "<search intent>", "suggestedUrl": "/<slug>", "suggestedTitle": "<exact H1 title>" }
   ],
   "internalLinkingFixes": [
-    { "from": "<their URL>", "to": "<their URL>", "reason": "<why — max 8 words>" },
+    { "from": "<their URL>", "to": "<their URL>", "reason": "<why - max 8 words>" },
     { "from": "<URL>", "to": "<URL>", "reason": "<why>" },
     { "from": "<URL>", "to": "<URL>", "reason": "<why>" }
   ],

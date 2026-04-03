@@ -9,27 +9,27 @@ type Variant = 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'x
 
 const FAQ: Record<Variant, Array<{ q: string; a: string }>> = {
   'sitemap-finder': [
-    { q: 'How do you find the sitemap?', a: 'We check /sitemap.xml, /sitemap_index.xml, robots.txt references, and a dozen common paths — automatically.' },
+    { q: 'How do you find the sitemap?', a: 'We check /sitemap.xml, /sitemap_index.xml, robots.txt references, and a dozen common paths - automatically.' },
     { q: 'What if my site has no sitemap?', a: "We'll tell you, and explain exactly how to create one based on your site type." },
     { q: 'Do you support sitemap index files?', a: 'Yes. We parse sitemap indexes and crawl child sitemaps to get a complete picture.' },
   ],
   'sitemap-checker': [
     { q: 'What issues do you detect?', a: 'Inconsistent URL patterns, stale pages (>1yr old), missing lastmod tags, depth anomalies, and isolated orphan-like pages.' },
-    { q: 'Is this a crawler?', a: 'No. We analyze your sitemap only — no heavy crawling. That\'s why it\'s fast.' },
+    { q: 'Is this a crawler?', a: 'No. We analyze your sitemap only - no heavy crawling. That\'s why it\'s fast.' },
     { q: 'How is this different from Screaming Frog?', a: 'We focus on actionable recommendations, not raw data dumps. You get a ranked fix list, not a spreadsheet.' },
   ],
   'xml-sitemap-generator': [
-    { q: 'Do you generate a new sitemap file?', a: "We analyze your existing sitemap and tell you exactly what to fix — structure, stale pages, missing sections. We make your sitemap work better for SEO." },
+    { q: 'Do you generate a new sitemap file?', a: "We analyze your existing sitemap and tell you exactly what to fix - structure, stale pages, missing sections. We make your sitemap work better for SEO." },
     { q: 'What XML sitemap formats do you support?', a: 'Standard urlset, sitemap index files, and nested child sitemaps. WordPress, Shopify, Next.js, and custom formats all work.' },
     { q: 'How many URLs can you analyze?', a: 'Up to 500 URLs on the free tier, parsing across multiple child sitemaps automatically.' },
   ],
   'free-seo-audit': [
     { q: 'Is it really free?', a: 'Yes. No email, no credit card, no signup required. Enter your domain and get the full analysis instantly.' },
     { q: 'What does the audit cover?', a: 'Site structure, content gaps, missing high-value pages, internal linking opportunities, stale content, and URL pattern issues.' },
-    { q: "How is this different from other free SEO tools?", a: "Most tools give you generic scores. We give you specific pages to create, fix, and link — based on your actual site, not industry averages." },
+    { q: "How is this different from other free SEO tools?", a: "Most tools give you generic scores. We give you specific pages to create, fix, and link - based on your actual site, not industry averages." },
   ],
   'website-seo-checker': [
-    { q: 'What makes this different from Ahrefs or SEMrush?', a: 'We analyze your actual site structure and give domain-specific recommendations — not generic metrics and scores.' },
+    { q: 'What makes this different from Ahrefs or SEMrush?', a: 'We analyze your actual site structure and give domain-specific recommendations - not generic metrics and scores.' },
     { q: 'How does the AI analysis work?', a: 'We pass your URL structure, clusters, and page dates to Claude AI, which generates recommendations specific to your site patterns.' },
     { q: 'Is it free?', a: 'The core analysis is free. Full reports, monitoring, and history are part of our Pro plan.' },
   ],

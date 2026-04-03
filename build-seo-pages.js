@@ -15,7 +15,7 @@ function write(p, content) {
 }
 
 // ============================================================
-// 1. SITEMAP ERRORS — /sitemap-errors/[error-type]
+// 1. SITEMAP ERRORS - /sitemap-errors/[error-type]
 // ============================================================
 
 const ERRORS = [
@@ -24,13 +24,13 @@ const ERRORS = [
     title: 'Duplicate URLs in Sitemap',
     meta: 'Find and fix duplicate URLs in your XML sitemap. Duplicate entries waste crawl budget and confuse search engines. Detect and remove them in seconds.',
     h1: 'Duplicate URLs in Your Sitemap',
-    intro: 'Duplicate URLs in your sitemap are one of the most common — and most damaging — sitemap errors. When Google crawls your sitemap and finds the same URL listed multiple times, it wastes precious crawl budget and sends confusing signals about which version of your content matters.',
+    intro: 'Duplicate URLs in your sitemap are one of the most common - and most damaging - sitemap errors. When Google crawls your sitemap and finds the same URL listed multiple times, it wastes precious crawl budget and sends confusing signals about which version of your content matters.',
     what: 'A duplicate URL error occurs when the same page appears more than once in your sitemap.xml file. This includes exact duplicates (same URL listed twice) and near-duplicates (HTTP vs HTTPS, trailing slash vs no trailing slash, www vs non-www).',
     why_happens: 'Duplicate URLs typically occur when sitemap generators merge multiple sources without deduplication, when CMS plugins auto-generate sitemaps from multiple content types, or when URL canonicalization issues exist across your site.',
     why_hurts: 'Google has a limited crawl budget per site. When your sitemap lists URLs twice, you force Google to "waste" crawl requests on pages it has already processed. This means new or important pages get crawled less frequently.',
-    how_detect: 'Upload your sitemap.xml to Sitemap Fixer — our analyzer counts every URL and flags any that appear more than once. We also detect near-duplicates caused by protocol or trailing slash inconsistencies.',
+    how_detect: 'Upload your sitemap.xml to Sitemap Fixer - our analyzer counts every URL and flags any that appear more than once. We also detect near-duplicates caused by protocol or trailing slash inconsistencies.',
     how_fix: '1. Remove all duplicate <url> entries from your sitemap.\n2. Standardize all URLs: always use HTTPS, pick one trailing slash style and stick to it.\n3. Ensure your sitemap generator has deduplication enabled.\n4. Set a canonical URL structure and redirect all variants.',
-    example: 'A Shopify store had 12,000 URLs in their sitemap — but 3,200 were duplicates from product variants and collection pages. After deduplication, crawl coverage improved by 28% within 6 weeks.',
+    example: 'A Shopify store had 12,000 URLs in their sitemap - but 3,200 were duplicates from product variants and collection pages. After deduplication, crawl coverage improved by 28% within 6 weeks.',
     mistakes: ['Keeping both HTTP and HTTPS versions of the same URL', 'Not removing paginated versions that should be canonicalized', 'Using sitemap plugins that aggregate without deduplication'],
     faqs: [
       { q: 'Do duplicate URLs hurt rankings directly?', a: 'Not directly, but they dilute crawl budget and can create canonicalization confusion that indirectly hurts rankings.' },
@@ -82,15 +82,15 @@ const ERRORS = [
   {
     slug: 'orphan-pages',
     title: 'Orphan Pages in Sitemap',
-    meta: 'Orphan pages have no internal links — they rely entirely on your sitemap for discovery. Learn how to detect orphan pages and fix your internal linking structure.',
+    meta: 'Orphan pages have no internal links - they rely entirely on your sitemap for discovery. Learn how to detect orphan pages and fix your internal linking structure.',
     h1: 'Orphan Pages Detected in Your Sitemap',
-    intro: 'Orphan pages — pages that exist in your sitemap but have no internal links pointing to them — are a hidden SEO problem. They get crawled once via the sitemap, but without internal links, they receive no PageRank, no contextual signals, and often no rankings.',
+    intro: 'Orphan pages - pages that exist in your sitemap but have no internal links pointing to them - are a hidden SEO problem. They get crawled once via the sitemap, but without internal links, they receive no PageRank, no contextual signals, and often no rankings.',
     what: 'An orphan page is a URL that appears in your sitemap but cannot be reached by following links from any other page on your site. These pages are invisible to users and receive no link equity from the rest of your site.',
     why_happens: 'Orphan pages are created when content is published without being linked from navigation, blog archives, or related content sections. They also appear after site redesigns when internal link structures change but old content remains.',
     why_hurts: 'Without internal links, orphan pages receive no PageRank distribution from your site. Google may discover them via the sitemap but assigns them low authority. They rarely rank for competitive terms and often get crawled infrequently.',
     how_detect: 'Sitemap Fixer cross-references your sitemap URLs against your site\'s link graph to identify pages that have zero internal links pointing to them.',
     how_fix: '1. Audit all orphan pages to determine if they should be kept, merged, or deleted.\n2. For pages worth keeping: add internal links from relevant hub pages, blog posts, and navigation.\n3. Create topic cluster structures where pillar pages link to related content.\n4. For thin orphan pages: consider consolidating into stronger existing pages.\n5. Update your content publishing workflow to require at least 2-3 internal links per new page.',
-    example: 'A SaaS blog had 89 orphan articles — published but never linked from anywhere. Adding contextual internal links to those pages from related articles increased their organic traffic by 156% over 3 months.',
+    example: 'A SaaS blog had 89 orphan articles - published but never linked from anywhere. Adding contextual internal links to those pages from related articles increased their organic traffic by 156% over 3 months.',
     mistakes: ['Publishing content without adding internal links at time of publication', 'Ignoring orphan pages after site redesigns', 'Treating sitemap inclusion as a substitute for internal linking'],
     faqs: [
       { q: 'If a page is in my sitemap, will Google index it?', a: 'Possibly, but without internal links it receives low crawl priority and no PageRank, making it unlikely to rank.' },
@@ -104,8 +104,8 @@ const ERRORS = [
     title: 'Incorrect Priority Values in Sitemap',
     meta: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects Googlebot\'s crawl decisions.',
     h1: 'Incorrect Priority Values in Your Sitemap',
-    intro: 'The <priority> tag in XML sitemaps is one of the most misunderstood and misused elements in technical SEO. Setting all pages to priority 1.0 is not a trick to get more crawls — it\'s a signal that tells Google your priority system is meaningless.',
-    what: 'The <priority> tag indicates the relative importance of a URL compared to other URLs on your site. Valid values range from 0.0 to 1.0. The key word is "relative" — it\'s only meaningful when you differentiate between page types.',
+    intro: 'The <priority> tag in XML sitemaps is one of the most misunderstood and misused elements in technical SEO. Setting all pages to priority 1.0 is not a trick to get more crawls - it\'s a signal that tells Google your priority system is meaningless.',
+    what: 'The <priority> tag indicates the relative importance of a URL compared to other URLs on your site. Valid values range from 0.0 to 1.0. The key word is "relative" - it\'s only meaningful when you differentiate between page types.',
     why_happens: 'Most CMS plugins default to 1.0 for all pages, or set priorities randomly without strategic logic. Many site owners never review or configure priority settings after initial setup.',
     why_hurts: 'When every page has the same priority, Google ignores the tag entirely. Worse, if you set all pages to 1.0, you miss the opportunity to signal that your homepage and core conversion pages are more important than blog posts or tag pages.',
     how_detect: 'Sitemap Fixer analyzes the distribution of priority values across your sitemap and flags sites where 90%+ of pages share the same priority value.',
@@ -124,7 +124,7 @@ const ERRORS = [
     title: 'changefreq Misuse in Sitemap',
     meta: 'Is your sitemap using changefreq correctly? Setting everything to "daily" or "always" is a common mistake that hurts crawl efficiency. Learn the correct approach.',
     h1: 'changefreq Misuse in Your Sitemap',
-    intro: 'Setting every page in your sitemap to changefreq="daily" might seem like a way to get Googlebot to crawl more frequently. In reality, it\'s a signal Google largely ignores — and setting it inaccurately can reduce your credibility with the crawler.',
+    intro: 'Setting every page in your sitemap to changefreq="daily" might seem like a way to get Googlebot to crawl more frequently. In reality, it\'s a signal Google largely ignores - and setting it inaccurately can reduce your credibility with the crawler.',
     what: 'The <changefreq> tag in XML sitemaps hints to search engines how often page content changes. Valid values are: always, hourly, daily, weekly, monthly, yearly, never. Google has confirmed it treats this as a hint, not a directive.',
     why_happens: 'CMS plugins often default to "daily" for all content. Many site owners set high change frequencies hoping for more frequent crawling, without understanding that inaccurate signals reduce crawler trust.',
     why_hurts: 'If your pages are set to "daily" but only change monthly, Googlebot learns your changefreq signals are unreliable and discounts them. This can result in less frequent crawling of pages that actually do change frequently.',
@@ -202,7 +202,7 @@ export default function Page() {
         <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 4 }}>Find this error in your sitemap</div>
-            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free — get a full report in 60 seconds</div>
+            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Analyze your sitemap for free - get a full report in 60 seconds</div>
           </div>
           <a href="/" style={{ background: '#0a0a0f', color: 'white', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 14, whiteSpace: 'nowrap' }}>
             Analyze My Sitemap →
@@ -279,18 +279,18 @@ console.log(`✓ ${ERRORS.length} error pages created`);
 const errorsIndexContent = `import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sitemap Errors — Complete Guide to XML Sitemap Issues | SitemapFixer',
+  title: 'Sitemap Errors - Complete Guide to XML Sitemap Issues | SitemapFixer',
   description: 'Browse all common XML sitemap errors: duplicate URLs, invalid URLs, orphan pages, incorrect priority, and more. Learn how to detect and fix each one.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors' },
 };
 
 const ERRORS = [
-  { slug: 'duplicate-urls', title: 'Duplicate URLs', desc: 'Same URL listed multiple times — wastes crawl budget and confuses search engines.' },
+  { slug: 'duplicate-urls', title: 'Duplicate URLs', desc: 'Same URL listed multiple times - wastes crawl budget and confuses search engines.' },
   { slug: 'invalid-urls', title: 'Invalid URLs', desc: 'Broken, deleted, or malformed URLs that return 4xx or 5xx status codes.' },
   { slug: 'too-many-urls', title: 'Too Many URLs', desc: 'Bloated sitemaps with low-value pages that dilute crawl budget.' },
-  { slug: 'orphan-pages', title: 'Orphan Pages', desc: 'Pages in your sitemap with zero internal links — invisible to PageRank.' },
-  { slug: 'incorrect-priority', title: 'Incorrect Priority', desc: 'All pages set to 1.0 — a meaningless signal Google ignores.' },
-  { slug: 'changefreq-misuse', title: 'changefreq Misuse', desc: 'Everything set to daily when pages rarely change — reduces crawler trust.' },
+  { slug: 'orphan-pages', title: 'Orphan Pages', desc: 'Pages in your sitemap with zero internal links - invisible to PageRank.' },
+  { slug: 'incorrect-priority', title: 'Incorrect Priority', desc: 'All pages set to 1.0 - a meaningless signal Google ignores.' },
+  { slug: 'changefreq-misuse', title: 'changefreq Misuse', desc: 'Everything set to daily when pages rarely change - reduces crawler trust.' },
 ];
 
 export default function SitemapErrorsIndex() {
@@ -304,7 +304,7 @@ export default function SitemapErrorsIndex() {
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>XML Sitemap Errors</h1>
       <p style={{ fontSize: 17, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 48 }}>
         Every sitemap error wastes crawl budget, reduces indexing efficiency, or sends confusing signals to search engines.
-        Browse all common errors below — each includes a full explanation, real examples, and exact fix instructions.
+        Browse all common errors below - each includes a full explanation, real examples, and exact fix instructions.
       </p>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: 16, marginBottom: 48 }}>
         {ERRORS.map(e => (
@@ -317,7 +317,7 @@ export default function SitemapErrorsIndex() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center' }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap for all these errors</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis — results in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis - results in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>
           Analyze My Sitemap →
         </a>
@@ -331,7 +331,7 @@ write('src/app/sitemap-errors/page.tsx', errorsIndexContent);
 console.log('✓ Sitemap errors index page created');
 
 // ============================================================
-// 3. LEARN GUIDES — /learn/[topic]
+// 3. LEARN GUIDES - /learn/[topic]
 // ============================================================
 
 const GUIDES = [
@@ -339,7 +339,7 @@ const GUIDES = [
     slug: 'what-is-an-xml-sitemap',
     title: 'What Is an XML Sitemap?',
     meta: 'An XML sitemap is a file that lists all important URLs on your website to help search engines discover and index your content. Learn what it is, how it works, and why it matters.',
-    content: `An XML sitemap is a structured file — formatted in XML — that lists the URLs on your website you want search engines to crawl and index. Think of it as a roadmap you hand directly to Google, Bing, and other search engines to help them discover all the important pages on your site.
+    content: `An XML sitemap is a structured file - formatted in XML - that lists the URLs on your website you want search engines to crawl and index. Think of it as a roadmap you hand directly to Google, Bing, and other search engines to help them discover all the important pages on your site.
 
 ## Why XML Sitemaps Matter for SEO
 
@@ -378,7 +378,7 @@ Submit your sitemap URL in Google Search Console under Sitemaps. Also reference 
 
 ## Include Only Canonical URLs
 
-Your sitemap should only contain the canonical version of each URL — the definitive URL you want indexed. Never include:
+Your sitemap should only contain the canonical version of each URL - the definitive URL you want indexed. Never include:
 - URLs that redirect to other pages
 - Non-canonical URLs (e.g., with UTM parameters)
 - Duplicate content URLs
@@ -390,7 +390,7 @@ Every URL in your sitemap must use HTTPS. If you have both HTTP and HTTPS versio
 
 ## Keep It Fresh
 
-Update your sitemap whenever you publish, update, or delete pages. Use accurate lastmod dates — inaccurate dates reduce Google's trust in your sitemap signals.
+Update your sitemap whenever you publish, update, or delete pages. Use accurate lastmod dates - inaccurate dates reduce Google's trust in your sitemap signals.
 
 ## Prioritize Strategically
 
@@ -406,13 +406,13 @@ If you have more than 10,000 URLs, use a sitemap index file to organize by conte
   },
   {
     slug: 'sitemap-vs-robots-txt',
-    title: 'Sitemap vs robots.txt — What\'s the Difference?',
+    title: 'Sitemap vs robots.txt - What\'s the Difference?',
     meta: 'Confused about sitemap.xml vs robots.txt? Learn exactly what each file does, how they interact, and why you need both for effective technical SEO.',
-    content: `Sitemaps and robots.txt files are both technical SEO essentials, but they serve opposite purposes. Understanding the difference — and how they interact — is fundamental to managing how search engines crawl your site.
+    content: `Sitemaps and robots.txt files are both technical SEO essentials, but they serve opposite purposes. Understanding the difference - and how they interact - is fundamental to managing how search engines crawl your site.
 
 ## What robots.txt Does
 
-robots.txt tells crawlers what they CANNOT access. It's a set of permissions — blocking crawlers from directories, file types, or specific URLs you don't want crawled. Example:
+robots.txt tells crawlers what they CANNOT access. It's a set of permissions - blocking crawlers from directories, file types, or specific URLs you don't want crawled. Example:
 
 \`\`\`
 User-agent: *
@@ -423,23 +423,23 @@ Allow: /
 
 ## What sitemap.xml Does
 
-Your sitemap tells crawlers what they SHOULD visit. It's a positive signal — a list of all the important URLs you want discovered and indexed.
+Your sitemap tells crawlers what they SHOULD visit. It's a positive signal - a list of all the important URLs you want discovered and indexed.
 
 ## The Critical Interaction
 
-Here's where many sites make a serious mistake: if a URL appears in your sitemap but is also blocked by robots.txt, Google faces a contradiction. The official behavior is that robots.txt wins — blocked URLs won't be crawled even if they're in the sitemap.
+Here's where many sites make a serious mistake: if a URL appears in your sitemap but is also blocked by robots.txt, Google faces a contradiction. The official behavior is that robots.txt wins - blocked URLs won't be crawled even if they're in the sitemap.
 
 **Always ensure**: URLs in your sitemap are NOT blocked by robots.txt.
 
 ## Do You Need Both?
 
-Yes. robots.txt controls crawl access. Sitemaps guide discovery. They work together — your robots.txt should reference your sitemap URL: \`Sitemap: https://yoursite.com/sitemap.xml\``,
+Yes. robots.txt controls crawl access. Sitemaps guide discovery. They work together - your robots.txt should reference your sitemap URL: \`Sitemap: https://yoursite.com/sitemap.xml\``,
   },
   {
     slug: 'why-pages-not-indexed',
     title: 'Why Are My Pages Not Indexed by Google?',
     meta: 'Pages not getting indexed? This comprehensive guide covers every reason Google might not index your pages and exactly how to fix each one.',
-    content: `Discovering that pages you care about aren't in Google's index is one of the most frustrating technical SEO problems. The cause is almost always one of a handful of issues — and your sitemap is a key diagnostic tool.
+    content: `Discovering that pages you care about aren't in Google's index is one of the most frustrating technical SEO problems. The cause is almost always one of a handful of issues - and your sitemap is a key diagnostic tool.
 
 ## Reason 1: Page Not in Sitemap
 
@@ -607,7 +607,7 @@ export default function Page() {
 console.log(`✓ ${GUIDES.length} learn guide pages created`);
 
 // ============================================================
-// 4. PLATFORM GUIDES — /fix-sitemap-for/[platform]
+// 4. PLATFORM GUIDES - /fix-sitemap-for/[platform]
 // ============================================================
 
 const PLATFORMS = [
@@ -622,7 +622,7 @@ PLATFORMS.forEach(platform => {
   const content = `import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fix Sitemap for ${platform.name} — Complete Guide | SitemapFixer',
+  title: 'Fix Sitemap for ${platform.name} - Complete Guide | SitemapFixer',
   description: '${platform.desc}',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for/${platform.slug}' },
 };
@@ -679,7 +679,7 @@ export default function Page() {
 
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Analyze your ${platform.name} sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Find all issues in your sitemap — free, no signup required</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Find all issues in your sitemap - free, no signup required</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>
           Analyze My Sitemap Free →
         </a>
@@ -707,14 +707,14 @@ console.log(`✓ ${PLATFORMS.length} platform guide pages created`);
 
 write('src/app/learn/page.tsx', `import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Sitemap SEO Guides — Learn XML Sitemaps | SitemapFixer',
+  title: 'Sitemap SEO Guides - Learn XML Sitemaps | SitemapFixer',
   description: 'Free guides on XML sitemaps, crawl budget, indexing, and technical SEO. Learn everything about sitemaps from beginner to advanced.',
   alternates: { canonical: 'https://sitemapfixer.com/learn' },
 };
 const GUIDES = [
-  { slug: 'what-is-an-xml-sitemap', title: 'What Is an XML Sitemap?', desc: 'The complete beginner guide to XML sitemaps — what they are, how they work, and why they matter.' },
+  { slug: 'what-is-an-xml-sitemap', title: 'What Is an XML Sitemap?', desc: 'The complete beginner guide to XML sitemaps - what they are, how they work, and why they matter.' },
   { slug: 'sitemap-best-practices', title: 'XML Sitemap Best Practices', desc: 'Everything you need to create a clean, optimized sitemap that maximizes crawl efficiency.' },
-  { slug: 'sitemap-vs-robots-txt', title: 'Sitemap vs robots.txt', desc: 'The difference between sitemaps and robots.txt — and how they interact.' },
+  { slug: 'sitemap-vs-robots-txt', title: 'Sitemap vs robots.txt', desc: 'The difference between sitemaps and robots.txt - and how they interact.' },
   { slug: 'why-pages-not-indexed', title: 'Why Pages Not Indexed', desc: 'Every reason Google might not index your pages, and how to fix each one.' },
   { slug: 'how-to-create-a-sitemap', title: 'How to Create a Sitemap', desc: 'Step-by-step instructions for WordPress, Shopify, Next.js, and manual creation.' },
 ];
@@ -741,7 +741,7 @@ export default function LearnIndex() {
 
 write('src/app/fix-sitemap-for/page.tsx', `import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Fix Sitemap by Platform — WordPress, Shopify, Next.js | SitemapFixer',
+  title: 'Fix Sitemap by Platform - WordPress, Shopify, Next.js | SitemapFixer',
   description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for' },
 };

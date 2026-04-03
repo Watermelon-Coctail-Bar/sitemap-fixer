@@ -41,7 +41,7 @@ export function PaywallModal({ onClose, domain }: PaywallModalProps) {
           Upgrade to analyze <strong style={{ color: '#0a0a0f' }}>{domain}</strong> and unlimited sites.
         </p>
         <p style={{ fontSize: 13, color: '#dc2626', marginBottom: 28, fontWeight: 500 }}>
-          🔥 Launch discount expires in <MiniCountdown /> — lock in your price now
+          🔥 Launch discount expires in <MiniCountdown /> - lock in your price now
         </p>
 
         {/* Plan selector */}

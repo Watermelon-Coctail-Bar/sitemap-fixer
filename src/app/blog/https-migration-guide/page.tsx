@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/blog/https-migration-guide' },
 };
 const steps = [
-  { t: "Get and install your SSL certificate", d: "Most hosting providers offer free SSL via Let's Encrypt — enable it in your hosting control panel with one click. After installation, verify your site loads correctly at https:// before making any other changes. Test on multiple pages and check Chrome's padlock icon shows secure." },
+  { t: "Get and install your SSL certificate", d: "Most hosting providers offer free SSL via Let's Encrypt - enable it in your hosting control panel with one click. After installation, verify your site loads correctly at https:// before making any other changes. Test on multiple pages and check Chrome's padlock icon shows secure." },
   { t: "Set up 301 redirects from HTTP to HTTPS", d: "Configure your server to 301 redirect all HTTP requests to HTTPS. In Apache: add RewriteEngine On, RewriteCond %{HTTPS} off, RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] to .htaccess. In Nginx: add a server block for port 80 that redirects to https://. In Next.js or Vercel: HTTPS is enforced automatically." },
-  { t: "Update all internal links and resources", d: "Change all hardcoded http:// internal links in your content, templates, and database to https://. Mixed content occurs when an HTTPS page loads HTTP resources — browsers block this and show security warnings. Find mixed content using Chrome DevTools Console or the Why No Padlock tool." },
+  { t: "Update all internal links and resources", d: "Change all hardcoded http:// internal links in your content, templates, and database to https://. Mixed content occurs when an HTTPS page loads HTTP resources - browsers block this and show security warnings. Find mixed content using Chrome DevTools Console or the Why No Padlock tool." },
   { t: "Update canonical tags and sitemap", d: "Update all canonical tags to use https:// URLs. Update your sitemap.xml to contain only https:// URLs. Submit the updated sitemap in Google Search Console. Your sitemap must not contain any http:// URLs after migration." },
-  { t: "Update Google Search Console and Analytics", d: "Add your HTTPS property to Google Search Console — it is treated as a separate property from HTTP. Set the preferred domain. In Google Analytics: update the default URL to https://. Update any external tools referencing your old HTTP domain." },
+  { t: "Update Google Search Console and Analytics", d: "Add your HTTPS property to Google Search Console - it is treated as a separate property from HTTP. Set the preferred domain. In Google Analytics: update the default URL to https://. Update any external tools referencing your old HTTP domain." },
   { t: "Monitor for issues post-migration", d: "Watch Google Search Console Coverage report for new crawl errors in the week after migration. Monitor organic traffic in Google Analytics for any drops. A small temporary fluctuation is normal during the migration period but should recover within 2-4 weeks as Google reindexes all your HTTPS URLs." },
 ];
 export default function Page() {
@@ -36,7 +36,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your HTTPS sitemap after migration</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks all URLs for HTTP vs HTTPS consistency</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs for HTTP vs HTTPS consistency</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </article>

@@ -33,7 +33,7 @@ export default function Page() {
           <div style={{ paddingLeft: 20 }}>],</div>
           <div>{"}"}</div>
         </div>
-        <p style={{ marginBottom: 24 }}>After adding the plugin and running gatsby build, your sitemap will be at yoursite.com/sitemap-index.xml. The siteUrl in siteMetadata is required — without it the plugin cannot construct absolute URLs and will fail silently or use relative paths.</p>
+        <p style={{ marginBottom: 24 }}>After adding the plugin and running gatsby build, your sitemap will be at yoursite.com/sitemap-index.xml. The siteUrl in siteMetadata is required - without it the plugin cannot construct absolute URLs and will fail silently or use relative paths.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Excluding Pages from the Sitemap</h2>
         <p style={{ marginBottom: 16 }}>To exclude specific pages, use the excludes option in the plugin config:</p>
@@ -52,11 +52,11 @@ export default function Page() {
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Common Gatsby Sitemap Problems</h2>
         <p style={{ marginBottom: 12 }}><strong>Sitemap only generated in production build:</strong> gatsby-plugin-sitemap only runs during gatsby build, not gatsby develop. You cannot test the sitemap locally in dev mode. Run gatsby build and gatsby serve to check the sitemap locally.</p>
         <p style={{ marginBottom: 12 }}><strong>Wrong siteUrl:</strong> If your siteUrl in gatsby-config.js points to localhost or a staging URL, your sitemap will contain the wrong base URL. Set it to your production domain and use environment variables for local development.</p>
-        <p style={{ marginBottom: 24 }}><strong>Plugin version mismatch:</strong> gatsby-plugin-sitemap v5+ (for Gatsby v4+) has a different API than earlier versions. If you upgraded Gatsby, check the plugin documentation for API changes — the output file changed from sitemap.xml to sitemap-index.xml in v5.</p>
+        <p style={{ marginBottom: 24 }}><strong>Plugin version mismatch:</strong> gatsby-plugin-sitemap v5+ (for Gatsby v4+) has a different API than earlier versions. If you upgraded Gatsby, check the plugin documentation for API changes - the output file changed from sitemap.xml to sitemap-index.xml in v5.</p>
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Gatsby sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks every URL in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

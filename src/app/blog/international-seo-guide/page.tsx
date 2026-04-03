@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/blog/international-seo-guide' },
 };
 const sections = [
-  { t: "URL structure choices for international sites", d: "Three options. ccTLDs (country-code top-level domains): yoursite.de for Germany, yoursite.fr for France — strongest geo-targeting signal, but requires separate domain authority for each country. Subdomains: de.yoursite.com — easier to set up than ccTLDs, moderate geo-targeting. Subdirectories: yoursite.com/de/ — recommended by Google for most sites; shares domain authority across all regions, easiest to manage. Unless you have specific reasons for ccTLDs (legal requirements, strong local brand trust), subdirectories are the practical choice for most sites." },
+  { t: "URL structure choices for international sites", d: "Three options. ccTLDs (country-code top-level domains): yoursite.de for Germany, yoursite.fr for France - strongest geo-targeting signal, but requires separate domain authority for each country. Subdomains: de.yoursite.com - easier to set up than ccTLDs, moderate geo-targeting. Subdirectories: yoursite.com/de/ - recommended by Google for most sites; shares domain authority across all regions, easiest to manage. Unless you have specific reasons for ccTLDs (legal requirements, strong local brand trust), subdirectories are the practical choice for most sites." },
   { t: "Implementing hreflang correctly", d: "Hreflang tells Google which language/region version to show which users. Add link rel=alternate hreflang=language-code href=URL to the head of every page in your international set. Every page must reference every other language version AND itself. Include an x-default tag pointing to your fallback page. The most common mistake: one-directional tags (only some pages reference others). All pages must form a complete closed loop of references." },
   { t: "Geo-targeting in Google Search Console", d: "If you are using subdirectories or subdomains (not ccTLDs), set geographic targeting in Google Search Console. Go to Legacy Tools and Reports then International Targeting then Country. Set your target country for each subdirectory or subdomain property. This gives Google an additional signal beyond hreflang and URL structure. Monitor the Hreflang tab in the same report for implementation errors Google has detected." },
 ];
@@ -33,7 +33,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your international sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks hreflang patterns and URL consistency</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks hreflang patterns and URL consistency</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
     </article>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Ecommerce Sitemap: How to Structure It for Maximum Indexing | SitemapFixer',
-  description: "Ecommerce sites have unique sitemap challenges — faceted navigation, variants, seasonal products, and large catalogs. Here is how to handle each one correctly.",
+  description: "Ecommerce sites have unique sitemap challenges - faceted navigation, variants, seasonal products, and large catalogs. Here is how to handle each one correctly.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/ecommerce-sitemap' },
 };
 export default function Page() {
@@ -25,20 +25,20 @@ export default function Page() {
         <p style={{ marginBottom: 24 }}><strong>Exclude:</strong> Faceted navigation URLs (filters like /shoes?color=red&size=10). Cart, checkout, account, and order pages. Search results pages. Duplicate product URLs from multiple category paths (use canonical tags on those pages instead). Out-of-stock products that are permanently discontinued (redirect these to alternatives before removing from sitemap).</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>The Faceted Navigation Problem</h2>
-        <p style={{ marginBottom: 24 }}>Faceted navigation is the single biggest source of URL bloat and crawl waste for ecommerce sites. A catalog of 1,000 products with color, size, material, and price filters can generate millions of URLs. The solution is to block faceted URLs via robots.txt (Disallow: /*?*) or noindex them, keeping only canonical category URLs and product URLs in your sitemap. For very popular filter combinations that drive significant search traffic — like "red running shoes size 10" — create dedicated landing pages with their own canonical URLs instead.</p>
+        <p style={{ marginBottom: 24 }}>Faceted navigation is the single biggest source of URL bloat and crawl waste for ecommerce sites. A catalog of 1,000 products with color, size, material, and price filters can generate millions of URLs. The solution is to block faceted URLs via robots.txt (Disallow: /*?*) or noindex them, keeping only canonical category URLs and product URLs in your sitemap. For very popular filter combinations that drive significant search traffic - like "red running shoes size 10" - create dedicated landing pages with their own canonical URLs instead.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Managing Product Variants</h2>
         <p style={{ marginBottom: 24 }}>Product variants (size, color, material) can be handled two ways: as a single product page with all variants, or as separate URLs per variant. For most stores, a single product page with a canonical URL and variant selection via JavaScript is correct. Only create separate URLs for variants when: the variants are genuinely distinct products searched for independently (e.g., "red widget" vs "blue widget" have separate search demand), and you have enough unique content to justify each page.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Handling Seasonal and Out-of-Stock Products</h2>
-        <p style={{ marginBottom: 24 }}>For temporarily out-of-stock products: keep the page indexed with current inventory status and availability date if known. For permanently discontinued products: create a 301 redirect to the most relevant replacement or parent category, then remove from your sitemap. Never just delete a product page without a redirect if it had any backlinks or search traffic — you lose all that equity.</p>
+        <p style={{ marginBottom: 24 }}>For temporarily out-of-stock products: keep the page indexed with current inventory status and availability date if known. For permanently discontinued products: create a 301 redirect to the most relevant replacement or parent category, then remove from your sitemap. Never just delete a product page without a redirect if it had any backlinks or search traffic - you lose all that equity.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Sitemap Index Structure for Large Catalogs</h2>
         <p style={{ marginBottom: 24 }}>If you have more than 50,000 URLs, use a sitemap index with separate child sitemaps by category: sitemap-products.xml, sitemap-categories.xml, sitemap-blog.xml. This makes it easy to monitor crawl stats in Google Search Console by content type. It also lets you update specific sitemaps without regenerating the entire index. Set the lastmod date on each child sitemap to the most recent change date for any URL in that file.</p>
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your ecommerce sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — finds crawl waste and indexing issues</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - finds crawl waste and indexing issues</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

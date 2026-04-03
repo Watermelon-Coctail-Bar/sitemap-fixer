@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/blog/on-page-seo-checklist' },
 };
 const items = [
-  { cat: "Title tag", checks: ["Contains the primary keyword near the start", "Under 60 characters", "Unique — not duplicated on any other page", "Accurately describes the page content", "Includes a compelling reason to click"] },
-  { cat: "Meta description", checks: ["Contains the primary keyword naturally", "Between 120-155 characters", "Summarizes what the page delivers", "Includes a call to action or unique value", "Unique — not copied from page body"] },
+  { cat: "Title tag", checks: ["Contains the primary keyword near the start", "Under 60 characters", "Unique - not duplicated on any other page", "Accurately describes the page content", "Includes a compelling reason to click"] },
+  { cat: "Meta description", checks: ["Contains the primary keyword naturally", "Between 120-155 characters", "Summarizes what the page delivers", "Includes a call to action or unique value", "Unique - not copied from page body"] },
   { cat: "Headings", checks: ["One H1 per page matching the primary keyword", "H2s break content into logical sections", "H3s used for sub-sections where needed", "Keywords appear naturally in headings without stuffing", "Heading hierarchy is logical (H2s under H1, H3s under H2s)"] },
-  { cat: "Content", checks: ["Fully answers the search intent for the target keyword", "At least 300 words for any indexed page", "First paragraph addresses the topic directly", "No keyword stuffing — keywords appear naturally", "LSI/semantic keywords used throughout", "Content is original and not copied from other pages"] },
+  { cat: "Content", checks: ["Fully answers the search intent for the target keyword", "At least 300 words for any indexed page", "First paragraph addresses the topic directly", "No keyword stuffing - keywords appear naturally", "LSI/semantic keywords used throughout", "Content is original and not copied from other pages"] },
   { cat: "Images", checks: ["All images have descriptive alt text", "Images are compressed (under 100KB ideally)", "Image filenames are descriptive (not img1234.jpg)", "Width and height attributes set on all images"] },
   { cat: "Internal links", checks: ["At least 2-3 internal links to related pages", "Descriptive anchor text (not click here)", "No broken internal links"] },
   { cat: "URL and technical", checks: ["URL is short and descriptive", "URL contains primary keyword", "Canonical tag is self-referencing", "Page loads under 2.5 seconds on mobile"] },

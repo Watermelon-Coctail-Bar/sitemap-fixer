@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Pages Not Indexed by Google: Causes and Fixes | SitemapFixer',
-  description: "Why Google is not indexing your pages and how to fix each cause — robots.txt blocks, noindex tags, crawl budget issues, and more.",
+  description: "Why Google is not indexing your pages and how to fix each cause - robots.txt blocks, noindex tags, crawl budget issues, and more.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/pages-not-indexed-google' },
 };
 export default function Page() {
@@ -18,7 +18,7 @@ export default function Page() {
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Try SitemapFixer Free</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.8 }}>
-        <p style={{ marginBottom: 20 }}>When Google is not indexing your pages, it means they will not appear in search results. There are several distinct reasons this happens — and each has a specific fix. The first step is to check Google Search Console under Index, then Pages to see exactly which pages are excluded and why.</p>
+        <p style={{ marginBottom: 20 }}>When Google is not indexing your pages, it means they will not appear in search results. There are several distinct reasons this happens - and each has a specific fix. The first step is to check Google Search Console under Index, then Pages to see exactly which pages are excluded and why.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Check Google Search Console First</h2>
         <p style={{ marginBottom: 20 }}>Open Google Search Console and navigate to Indexing, then Pages. You will see a breakdown of pages by status: Indexed, Not indexed, and Excluded. Click on each status to see the affected URLs and the reason Google gives. This is your primary diagnostic tool and tells you exactly which of the following causes applies to your site.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Common Reasons Pages Are Not Indexed</h2>

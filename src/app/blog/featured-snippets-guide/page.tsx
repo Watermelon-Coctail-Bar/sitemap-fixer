@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/blog/featured-snippets-guide' },
 };
 const types = [
-  { t: "Paragraph snippets", d: "The most common snippet type — a concise paragraph answering a question directly. Google pulls this when the query starts with what is, who is, why does, or how does. To target paragraph snippets: write a direct 40-60 word answer immediately following the question as an H2 heading. The answer should start with the subject of the question. Example: If the H2 is What is a sitemap? write the answer starting with A sitemap is an XML file that..." },
+  { t: "Paragraph snippets", d: "The most common snippet type - a concise paragraph answering a question directly. Google pulls this when the query starts with what is, who is, why does, or how does. To target paragraph snippets: write a direct 40-60 word answer immediately following the question as an H2 heading. The answer should start with the subject of the question. Example: If the H2 is What is a sitemap? write the answer starting with A sitemap is an XML file that..." },
   { t: "List snippets (numbered and bulleted)", d: "Google shows numbered lists for step-by-step processes (how to queries) and bulleted lists for collections (best X, types of Y). To target list snippets: use proper H2 or H3 headings for each step or item, keep list items concise (under 50 words each), and structure your content as a genuine ordered or unordered list in HTML. Google typically shows 8 items and truncates longer lists with a more items link." },
   { t: "Table snippets", d: "Google pulls tables for comparison queries and data that is naturally tabular. To target table snippets: use proper HTML table elements (not CSS-created table layouts), include clear column headers, keep the table under 3-4 columns for best snippet display, and target queries phrased as comparison of X vs Y or list of X with Y attribute." },
-  { t: "How to check if you already have snippets", d: "In Google Search Console Performance report, add a filter for Position with Max = 3. Pages ranking 1-3 are your most likely candidates to appear in featured snippets. Cross-reference with a search for your exact queries — if you see a featured snippet from a competitor for a query you rank in the top 3 for, that is your highest-priority optimization target." },
+  { t: "How to check if you already have snippets", d: "In Google Search Console Performance report, add a filter for Position with Max = 3. Pages ranking 1-3 are your most likely candidates to appear in featured snippets. Cross-reference with a search for your exact queries - if you see a featured snippet from a competitor for a query you rank in the top 3 for, that is your highest-priority optimization target." },
 ];
 export default function Page() {
   return (
@@ -21,7 +21,7 @@ export default function Page() {
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>April 2025 · 6 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Featured Snippets Guide: Win Position Zero in Google</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
-        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Ensure your site is indexable for snippets — free</span>
+        <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Ensure your site is indexable for snippets - free</span>
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze My Site Free</a>
       </div>
       <div style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.85 }}>

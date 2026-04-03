@@ -31,7 +31,7 @@ export default function Page() {
           <div style={{ paddingLeft: 20 }}>integrations: [sitemap()],</div>
           <div>{"}"});</div>
         </div>
-        <p style={{ marginBottom: 24 }}>The site option is required — without it the integration cannot build absolute URLs and will throw an error. Run npm run build and your sitemap will appear in the dist/ folder as sitemap-index.xml.</p>
+        <p style={{ marginBottom: 24 }}>The site option is required - without it the integration cannot build absolute URLs and will throw an error. Run npm run build and your sitemap will appear in the dist/ folder as sitemap-index.xml.</p>
 
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>Excluding Pages</h2>
         <div style={{ background: '#0a0a0f', borderRadius: 10, padding: '20px 24px', marginBottom: 24, fontFamily: 'monospace', fontSize: 13, color: '#e5e7eb', lineHeight: 1.7, overflowX: 'auto' }}>
@@ -53,7 +53,7 @@ export default function Page() {
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your Astro sitemap</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free — checks every URL in 60 seconds</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks every URL in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
     </div>

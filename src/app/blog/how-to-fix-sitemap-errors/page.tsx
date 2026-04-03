@@ -30,15 +30,15 @@ export default function Page() {
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>4. Submitted URL Returns 404</h2>
         <p style={{ marginBottom: 24 }}>A URL in your sitemap no longer exists. Fix it by either restoring the page, redirecting the URL to its replacement, or removing it from the sitemap. Stale 404 URLs in your sitemap waste crawl budget and create errors in Search Console.</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>5. Submitted URL Marked Noindex</h2>
-        <p style={{ marginBottom: 24 }}>A URL in your sitemap has a noindex tag. This is a contradiction — your sitemap tells Google to index the page but the noindex tag tells Google not to. Fix it by either removing the noindex tag if you want the page indexed, or removing the URL from the sitemap if you intentionally do not want it indexed.</p>
+        <p style={{ marginBottom: 24 }}>A URL in your sitemap has a noindex tag. This is a contradiction - your sitemap tells Google to index the page but the noindex tag tells Google not to. Fix it by either removing the noindex tag if you want the page indexed, or removing the URL from the sitemap if you intentionally do not want it indexed.</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>6. Sitemap Could Not Be Read (Parse Error)</h2>
         <p style={{ marginBottom: 24 }}>Your sitemap XML is malformed. Common causes: special characters not properly encoded (use &amp;amp; not &amp;), incorrect XML structure, or a PHP/server error printing before the XML. Validate your sitemap using the XML Sitemap Validator or paste it into an XML validator. Fix any encoding errors or structural issues.</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#0a0a0f', marginTop: 48, marginBottom: 16 }}>How to Fix Sitemap Errors Faster</h2>
-        <p style={{ marginBottom: 24 }}>SitemapFixer automatically detects all of these errors — it fetches your sitemap, checks every URL for status codes, redirect chains, noindex tags, and robots.txt conflicts, and gives you a prioritized fix list. Try it free at sitemapfixer.com.</p>
+        <p style={{ marginBottom: 24 }}>SitemapFixer automatically detects all of these errors - it fetches your sitemap, checks every URL for status codes, redirect chains, noindex tags, and robots.txt conflicts, and gives you a prioritized fix list. Try it free at sitemapfixer.com.</p>
       </div>
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 56 }}>
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix all your sitemap errors automatically</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis — no account needed</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis - no account needed</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
       <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
