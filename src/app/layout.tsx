@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://sitemapfixer.com/og-image.png',
+        url: 'https://sitemapfixer.com/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
     description: 'Free AI-powered sitemap checker. Fix indexing issues in 60 seconds.',
-    images: ['https://sitemapfixer.com/og-image.png'],
+    images: ['https://sitemapfixer.com/og-image.svg'],
   },
   robots: {
     index: true,
