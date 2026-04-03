@@ -3,8 +3,6 @@ import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2024-06-20' });
 
-export const config = { api: { bodyParser: false } };
-
 async function supabaseUpsert(url: string, key: string, table: string, data: object, matchCol?: string, matchVal?: string) {
   const endpoint = matchCol && matchVal
     ? `${url}/rest/v1/${table}?${matchCol}=eq.${matchVal}`
