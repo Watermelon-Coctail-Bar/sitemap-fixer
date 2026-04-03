@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const PRICE_IDS: Record<string, string | undefined> = {
+  weekly: process.env.STRIPE_WEEKLY_PRICE_ID,
   monthly: process.env.STRIPE_MONTHLY_PRICE_ID,
   yearly: process.env.STRIPE_YEARLY_PRICE_ID,
 };
