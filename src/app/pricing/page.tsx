@@ -1,128 +1,25 @@
-'use client';
-import { useState, useEffect } from 'react';
-
-// Prices after discount
-// Weekly: $7.50 * 0.75 = $5.62 (25% off)
-// Monthly: $13.50 * 0.70 = $9.45 (30% off)
-// Yearly: $70 * 0.60 = $42 (40% off)
-
-const PLANS = [
-  {
-    id: 'weekly',
-    name: 'Weekly',
-    originalPrice: 7.50,
-    price: 5.62,
-    discount: 25,
-    period: 'week',
-    badge: null,
-    color: '#6366f1',
-    features: [
-      '10 sitemap analyses per week',
-      'AI-powered fix recommendations',
-      'Export reports as PDF',
-      'Email support',
-    ],
-  },
-  {
-    id: 'monthly',
-    name: 'Monthly',
-    originalPrice: 13.50,
-    price: 9.45,
-    discount: 30,
-    period: 'month',
-    badge: 'MOST POPULAR',
-    color: '#2d5be3',
-    features: [
-      'Unlimited sitemap analyses',
-      'AI-powered fix recommendations',
-      'Export reports as PDF',
-      'Priority email support',
-      'Historical analysis tracking',
-      'Multi-site monitoring',
-    ],
-  },
-  {
-    id: 'yearly',
-    name: 'Yearly',
-    originalPrice: 70,
-    price: 42,
-    discount: 40,
-    period: 'year',
-    badge: 'BEST VALUE',
-    color: '#059669',
-    features: [
-      'Everything in Monthly',
-      'Unlimited sitemap analyses',
-      'API access',
-      'Dedicated support',
-      'Team seats (up to 5)',
-      'White-label reports',
-    ],
-  },
-];
-
-function CountdownTimer() {
-  const [time, setTime] = useState({ h: 23, m: 47, s: 33 });
-  useEffect(() => {
-    const t = setInterval(() => {
-      setTime(prev => {
-        let { h, m, s } = prev;
-        s--;
-        if (s < 0) { s = 59; m--; }
-        if (m < 0) { m = 59; h--; }
-        if (h < 0) { h = 23; m = 59; s = 59; }
-        return { h, m, s };
-      });
-    }, 1000);
-    return () => clearInterval(t);
-  }, []);
-  const pad = (n: number) => String(n).padStart(2, '0');
-  return (
-    <div style={{ display: 'flex', gap: 8, alignItems: 'center', justifyContent: 'center' }}>
-      {[['h', time.h], ['m', time.m], ['s', time.s]].map(([label, val]) => (
-        <div key={label as string} style={{ textAlign: 'center' }}>
-          <div style={{ background: '#0a0a0f', color: 'white', borderRadius: 8, padding: '8px 12px', fontSize: 24, fontWeight: 700, fontFamily: 'monospace', minWidth: 52 }}>{pad(val as number)}</div>
-          <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 4, textTransform: 'uppercase' }}>{label}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default function PricingPage() {
-  const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
-  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
-
-  async function handleCheckout(planId: string) {
-    setLoadingPlan(planId);
-    try {
-      const res = await fetch('/api/stripe/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan: planId }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert(data.error || 'Something went wrong. Please try again.');
-        setLoadingPlan(null);
-      }
-    } catch {
-      alert('Network error. Please try again.');
-      setLoadingPlan(null);
-    }
-  }
-
-  return (
-    <div style={{ minHeight: '100vh', background: '#fafaf9' }}>
-      {/* Nav */}
-      <nav style={{ borderBottom: '1px solid #e4e4ed', background: 'rgba(250,250,249,0.9)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <div style={{ maxWidth: 960, margin: '0 auto', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg>
-            <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: '#0a0a0f' }}>SitemapFixer</span>
-          </a>
+<button
+                  onClick={() => handleCheckout(plan.id)}
+                  disabled={loadingPlan === plan.id}
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    textAlign: 'center',
+                    padding: '14px',
+                    borderRadius: 10,
+                    border: 'none',
+                    cursor: loadingPlan === plan.id ? 'wait' : 'pointer',
+                    fontWeight: 700,
+                    fontSize: 15,
+                    marginBottom: 28,
+                    background: isPopular ? '#2d5be3' : '#0a0a0f',
+                    color: 'white',
+                    opacity: loadingPlan === plan.id ? 0.7 : 1,
+                    transition: 'opacity 0.15s',
+                  }}
+                >
+                  {loadingPlan === plan.id ? 'Redirecting...' : `Get ${plan.name} Access`}
+                </button>
           <a href="/" style={{ fontSize: 13, color: '#6b7280', textDecoration: 'none' }}>Back to tool</a>
         </div>
       </nav>
