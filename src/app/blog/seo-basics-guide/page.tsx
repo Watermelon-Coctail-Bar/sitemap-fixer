@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'SEO Basics: A Beginner's Guide to Search Engine Optimization | SitemapFixer',
+  title: "SEO Basics: A Beginner's Guide to Search Engine Optimization | SitemapFixer",
   description: "SEO basics explained simply - what it is, how it works, and the fundamental concepts every website owner needs to understand before diving into tactics.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-basics-guide' },
 };
