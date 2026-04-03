@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description: 'Free AI-powered sitemap checker. Fix indexing issues in 60 seconds.',
     images: ['https://sitemapfixer.com/og-image.svg'],
   },
+  verification: {
+    google: '1_bEeXT1am94lZ5MABuAJZ3hRpQjUy1KaU8LC7D5qF0',
+  },
   robots: {
     index: true,
     follow: true,
