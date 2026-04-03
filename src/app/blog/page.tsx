@@ -55,7 +55,7 @@ export default function BlogIndex() {
           <p style={{ fontSize: 18, color: '#6b7280', maxWidth: 560 }}>Expert guides on XML sitemaps, Google indexing, crawl budget, and technical SEO. Written by the SitemapFixer team.</p>
         </div>
         {/* Featured post */}
-        <a href={'/learn/' + POSTS[0].slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 20, padding: '40px', marginBottom: 32, position: 'relative', overflow: 'hidden' }}>
+        <a href={'/blog/' + POSTS[0].slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 20, padding: '40px', marginBottom: 32, position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'linear-gradient(90deg, #2d5be3, #7c3aed)' }} />
           <div style={{ display: 'inline-block', background: CAT_COLORS[POSTS[0].cat], color: CAT_TEXT[POSTS[0].cat], fontSize: 12, fontWeight: 700, padding: '3px 10px', borderRadius: 6, marginBottom: 16 }}>{POSTS[0].cat}</div>
           <div style={{ fontSize: 11, color: '#9ca3af', marginBottom: 8 }}>FEATURED</div>
@@ -70,7 +70,7 @@ export default function BlogIndex() {
         {/* Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
           {POSTS.slice(1).map(post => (
-            <a key={post.slug} href={'/learn/' + post.slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 16, padding: '28px', transition: 'border-color 0.15s, box-shadow 0.15s' }}>
+            <a key={post.slug} href={'/blog/' + post.slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 16, padding: '28px', transition: 'border-color 0.15s, box-shadow 0.15s' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14 }}>
                 <span style={{ display: 'inline-block', background: CAT_COLORS[post.cat], color: CAT_TEXT[post.cat], fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 4 }}>{post.cat}</span>
                 <span style={{ fontSize: 12, color: '#9ca3af' }}>{post.min}m</span>
