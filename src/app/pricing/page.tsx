@@ -18,7 +18,7 @@
                     transition: 'opacity 0.15s',
                   }}
                 >
-                  {loadingPlan === plan.id ? 'Redirecting...' : `Get ${plan.name} Access`}
+                  {loadingPlan === plan.id ? 'Redirecting...' : 'Get ' + plan.name + ' Access'}
                 </button>
           <a href="/" style={{ fontSize: 13, color: '#6b7280', textDecoration: 'none' }}>Back to tool</a>
         </div>
