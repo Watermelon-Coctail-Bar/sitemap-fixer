@@ -91,6 +91,28 @@ function CountdownTimer() {
 
 export default function PricingPage() {
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
+  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
+
+  async function handleCheckout(planId: string) {
+    setLoadingPlan(planId);
+    try {
+      const res = await fetch('/api/stripe/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ plan: planId }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert(data.error || 'Something went wrong. Please try again.');
+        setLoadingPlan(null);
+      }
+    } catch {
+      alert('Network error. Please try again.');
+      setLoadingPlan(null);
+    }
+  }
 
   return (
     <div style={{ minHeight: '100vh', background: '#fafaf9' }}>
