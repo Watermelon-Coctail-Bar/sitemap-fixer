@@ -7,6 +7,46 @@ const breadcrumbSchema = {
   ],
 };
 
+function BlogNav() {
+  return (
+    <nav style={{ borderBottom: '1px solid #e4e4ed', background: 'rgba(250,250,249,0.95)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
+      <div style={{ maxWidth: 860, margin: '0 auto', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg>
+          <span style={{ fontFamily: "'Instrument Serif',serif", fontSize: 20, color: '#0a0a0f' }}>SitemapFixer</span>
+        </a>
+        <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+          <a href="/learn" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Learn</a>
+          <a href="/blog" style={{ fontSize: 14, color: '#2d5be3', fontWeight: 600, textDecoration: 'none' }}>Blog</a>
+          <a href="/pricing" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Pricing</a>
+          <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '8px 18px', borderRadius: 8, fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>Free Audit</a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function BlogFooter() {
+  return (
+    <footer style={{ borderTop: '1px solid #e4e4ed', background: '#fafaf9', marginTop: 80, padding: '40px 24px 24px' }}>
+      <div style={{ maxWidth: 860, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg>
+          <span style={{ fontWeight: 600, fontSize: 14, color: '#0a0a0f' }}>SitemapFixer</span>
+        </div>
+        <div style={{ display: 'flex', gap: 24 }}>
+          <a href="/blog" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Blog</a>
+          <a href="/learn" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Learn</a>
+          <a href="/terms" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Terms</a>
+          <a href="/privacy" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Privacy</a>
+          <a href="/sitemap.xml" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Sitemap</a>
+        </div>
+        <span style={{ fontSize: 12, color: '#9ca3af' }}>© 2025 SitemapFixer</span>
+      </div>
+    </footer>
+  );
+}
+
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
@@ -14,7 +54,9 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {children}
+      <BlogNav />
+      <main>{children}</main>
+      <BlogFooter />
     </>
   );
 }
