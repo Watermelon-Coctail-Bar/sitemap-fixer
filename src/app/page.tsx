@@ -50,24 +50,51 @@ function Testimonials() {
                                                                                                                                                                                                                                             );
                                                                                                                                                                                                                                             }
 
-                                                                                                                                                                                                                                            function EmailCapture() {
-                                                                                                                                                                                                                                              return (
-                                                                                                                                                                                                                                                  <section style={{ background:'linear-gradient(135deg,#0a0a0f 0%,#1a1a2e 100%)',padding:'80px 24px' }}>
-                                                                                                                                                                                                                                                        <div style={{ maxWidth:640,margin:'0 auto',textAlign:'center' }}>
-                                                                                                                                                                                                                                                                <div style={{ display:'inline-flex',alignItems:'center',gap:6,background:'rgba(45,91,227,0.2)',border:'1px solid rgba(45,91,227,0.4)',borderRadius:99,padding:'5px 14px',fontSize:12,fontWeight:600,color:'#93c5fd',letterSpacing:'0.04em',textTransform:'uppercase',marginBottom:24 }}>
-                                                                                                                                                                                                                                                                          <span style={{ fontSize:10 }}>●</span> Free Resource
-                                                                                                                                                                                                                                                                                  </div>
-                                                                                                                                                                                                                                                                                          <h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'white',marginBottom:16,lineHeight:1.15 }}>Get the Sitemap Audit Checklist</h2>
-                                                                                                                                                                                                                                                                                                  <p style={{ fontSize:16,color:'#9ca3af',lineHeight:1.65,marginBottom:36,maxWidth:480,margin:'0 auto 36px' }}>The exact 23-point checklist our AI uses to audit sitemaps. Find crawl budget leaks, indexing blocks, and structural gaps -- free PDF, no spam.</p>
-                                                                                                                                                                                                                                                                                                          <div style={{ display:'flex',gap:10,maxWidth:480,margin:'0 auto',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.15)',borderRadius:12,padding:'6px 6px 6px 18px' }}>
-                                                                                                                                                                                                                                                                                                                    <input type="email" placeholder="your@email.com" style={{ flex:1,background:'transparent',border:'none',outline:'none',fontSize:15,color:'white',fontFamily:'inherit' }} />
-                                                                                                                                                                                                                                                                                                                              <button style={{ background:'#2d5be3',color:'white',border:'none',borderRadius:8,padding:'10px 20px',fontSize:14,fontWeight:600,cursor:'pointer',whiteSpace:'nowrap',flexShrink:0 }}>Send me the checklist</button>
-                                                                                                                                                                                                                                                                                                                                      </div>
-                                                                                                                                                                                                                                                                                                                                              <p style={{ fontSize:12,color:'#6b7280',marginTop:14 }}>No spam. Unsubscribe anytime. Sent instantly.</p>
-                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                        </section>
-                                                                                                                                                                                                                                                                                                                                                          );
-                                                                                                                                                                                                                                                                                                                                                          }
+function EmailCapture() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email || !email.includes('@')) return;
+    setStatus('sending');
+    try {
+      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) });
+      if (!res.ok) throw new Error();
+      setStatus('done');
+    } catch { setStatus('error'); }
+  }
+
+  return (
+    <section style={{ background:'linear-gradient(135deg,#0a0a0f 0%,#1a1a2e 100%)',padding:'80px 24px' }}>
+      <div style={{ maxWidth:640,margin:'0 auto',textAlign:'center' }}>
+        <div style={{ display:'inline-flex',alignItems:'center',gap:6,background:'rgba(45,91,227,0.2)',border:'1px solid rgba(45,91,227,0.4)',borderRadius:99,padding:'5px 14px',fontSize:12,fontWeight:600,color:'#93c5fd',letterSpacing:'0.04em',textTransform:'uppercase',marginBottom:24 }}>
+          <span style={{ fontSize:10 }}>●</span> Free Resource
+        </div>
+        <h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'white',marginBottom:16,lineHeight:1.15 }}>Get the Sitemap Audit Checklist</h2>
+        <p style={{ fontSize:16,color:'#9ca3af',lineHeight:1.65,maxWidth:480,margin:'0 auto 36px' }}>The exact 23-point checklist our AI uses to audit sitemaps. Find crawl budget leaks, indexing blocks, and structural gaps -- free PDF, no spam.</p>
+        {status === 'done' ? (
+          <div style={{ background:'rgba(34,197,94,0.1)',border:'1px solid rgba(34,197,94,0.3)',borderRadius:12,padding:'24px',maxWidth:480,margin:'0 auto' }}>
+            <div style={{ fontSize:24,marginBottom:12 }}>&#9989;</div>
+            <p style={{ fontSize:16,color:'#22c55e',fontWeight:600,marginBottom:8 }}>You're on the list!</p>
+            <p style={{ fontSize:14,color:'#9ca3af',lineHeight:1.6 }}>We're preparing the newest version of the checklist. We'll send it to <span style={{ color:'white' }}>{email}</span> as soon as it's ready.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <div style={{ display:'flex',gap:10,maxWidth:480,margin:'0 auto',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.15)',borderRadius:12,padding:'6px 6px 6px 18px' }}>
+              <input type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} required style={{ flex:1,background:'transparent',border:'none',outline:'none',fontSize:15,color:'white',fontFamily:'inherit' }} />
+              <button type="submit" disabled={status === 'sending'} style={{ background:'#2d5be3',color:'white',border:'none',borderRadius:8,padding:'10px 20px',fontSize:14,fontWeight:600,cursor:'pointer',whiteSpace:'nowrap',flexShrink:0,opacity:status === 'sending' ? 0.6 : 1 }}>
+                {status === 'sending' ? 'Sending...' : 'Notify me when ready'}
+              </button>
+            </div>
+            {status === 'error' && <p style={{ fontSize:13,color:'#ef4444',marginTop:12 }}>Something went wrong. Please try again.</p>}
+            <p style={{ fontSize:12,color:'#6b7280',marginTop:14 }}>No spam. Unsubscribe anytime.</p>
+          </form>
+        )}
+      </div>
+    </section>
+  );
+}
 
                                                                                                                                                                                                                                                                                                                                                           function BlogSection() { const posts = [{ title:'Sitemap Not Working? 9 Common Fixes',desc:'The most common reasons sitemaps fail.',href:'/learn/sitemap-not-working',tag:'Guide' },{ title:'Pages Not Indexed by Google',desc:'Every reason and step-by-step fixes.',href:'/learn/pages-not-indexed-google',tag:'Guide' },{ title:'Submitted URL Not Indexed',desc:'What this Search Console status means.',href:'/learn/submitted-url-not-indexed',tag:'Guide' },{ title:'Crawled Currently Not Indexed',desc:'Google crawled but chose not to index.',href:'/learn/crawled-currently-not-indexed',tag:'Guide' },{ title:'Sitemap Errors in Search Console',desc:'Every error type and how to fix each one.',href:'/learn/sitemap-errors-google-search-console',tag:'Guide' },{ title:'Google Not Crawling My Site',desc:'All reasons Googlebot stops crawling.',href:'/learn/google-not-crawling-my-site',tag:'Guide' }]; return (<section style={{ maxWidth:960,margin:'0 auto',padding:'80px 24px' }}><div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:40 }}><div><h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'var(--ink)',marginBottom:8 }}>Learn SEO</h2><p style={{ fontSize:15,color:'var(--muted)' }}>Free guides on sitemaps, crawl budget, and technical SEO.</p></div><a href="/learn" style={{ fontSize:13,color:'var(--accent)',textDecoration:'none',fontWeight:600 }}>View all</a></div><div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:20 }}>{posts.map(p=>(<a key={p.href} href={p.href} style={{ display:'block',textDecoration:'none',background:'white',border:'1px solid var(--border)',borderRadius:14,padding:'24px' }}><span style={{ display:'inline-block',fontSize:11,fontWeight:700,color:'var(--accent)',background:'var(--accent-light)',borderRadius:4,padding:'2px 8px',marginBottom:12 }}>{p.tag}</span><div style={{ fontSize:15,fontWeight:700,color:'var(--ink)',marginBottom:8 }}>{p.title}</div><div style={{ fontSize:13,color:'var(--muted)',lineHeight:1.6 }}>{p.desc}</div></a>))}</div></section>); }
 
