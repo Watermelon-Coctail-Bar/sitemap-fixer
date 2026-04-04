@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react';
 
 const STEPS = [
-  { label: 'Fetching robots.txt', detail: 'Checking for sitemap references…' },
-  { label: 'Discovering sitemap', detail: 'Probing common sitemap paths…' },
-  { label: 'Parsing URLs', detail: 'Extracting pages, dates, structure…' },
-  { label: 'Clustering sections', detail: 'Grouping pages into site sections…' },
-  { label: 'Running AI analysis', detail: 'Generating actionable recommendations…' },
+  { label: 'Fetching robots.txt', detail: 'Checking for sitemap references...' },
+  { label: 'Discovering sitemap', detail: 'Probing common sitemap paths...' },
+  { label: 'Parsing URLs', detail: 'Extracting pages, dates, structure...' },
+  { label: 'Clustering sections', detail: 'Grouping pages into site sections...' },
+  { label: 'Running AI analysis', detail: 'Generating actionable recommendations...' },
 ];
 
 interface LoadingProps {
