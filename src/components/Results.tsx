@@ -7,6 +7,7 @@ interface Issue {
   fix: string;
   effort: 'low' | 'medium' | 'high';
   affectedUrls?: string[];
+  fixedUrls?: string[];
 }
 
 interface AnalysisResult {
@@ -99,6 +100,7 @@ function IssueRow({ issue }: { issue: Issue }) {
   const [expanded, setExpanded] = useState(false);
   const sev = SEV_CONFIG[issue.severity] || SEV_CONFIG.info;
   const urls = issue.affectedUrls || [];
+  const fixes = issue.fixedUrls || [];
 
   return (
     <div style={{ borderBottom: '1px solid var(--border-2)' }}>
@@ -130,16 +132,26 @@ function IssueRow({ issue }: { issue: Issue }) {
           </span>
         </div>
       </div>
-      {/* Expanded URLs */}
+      {/* Expanded URLs: old -> new pairs */}
       {expanded && urls.length > 0 && (
-        <div style={{ background: 'var(--border-2)', padding: '10px 16px', display: 'flex', flexDirection: 'column', gap: 6 }}>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 2 }}>
+        <div style={{ background: 'var(--border-2)', padding: '12px 16px' }}>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginBottom: 8 }}>
             <CopyButton text={urls.join('\n')} label={`Copy all ${urls.length} URLs`} />
+            {fixes.length > 0 && <CopyButton text={urls.map((u, i) => `${u} -> ${fixes[i] || ''}`).join('\n')} label="Copy all pairs" />}
+          </div>
+          {/* Column headers */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr auto', gap: 8, marginBottom: 6, padding: '0 0 6px', borderBottom: '1px solid var(--border)' }}>
+            <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Current URL</span>
+            <span />
+            <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Fixed URL / Action</span>
+            <span />
           </div>
           {urls.map((u, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <span style={{ fontSize: 12, color: 'var(--muted)', fontFamily: "'DM Mono', monospace", flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{u}</span>
+            <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr auto', gap: 8, alignItems: 'center', padding: '5px 0', borderBottom: i < urls.length - 1 ? '1px solid rgba(0,0,0,0.04)' : 'none' }}>
+              <span style={{ fontSize: 12, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={u}>{u}</span>
               <CopyButton text={u} />
+              <span style={{ fontSize: 12, color: '#16a34a', fontFamily: "'DM Mono', monospace", overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={fixes[i] || ''}>{fixes[i] || '--'}</span>
+              {fixes[i] && <CopyButton text={fixes[i]} />}
             </div>
           ))}
         </div>
