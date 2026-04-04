@@ -26,6 +26,7 @@ Rules:
 - Reference actual URLs/slugs from the data. Never give generic advice.
 - Every "fix" must be a specific action someone can do right now, ideally with example text to copy-paste.
 - issues array is the most important part - this is what users act on first.
+- For each issue, include affectedUrls (actual URLs from the sitemap data that have this problem) and fixedUrls (the corrected version of each URL, same order). Include up to 20 affected URLs per issue. If the fix is not a URL change (e.g. add a meta tag), fixedUrls should contain the action for each URL (e.g. "add noindex tag").
 
 Return EXACTLY this JSON (no extra keys, no comments):
 {
@@ -37,13 +38,17 @@ Return EXACTLY this JSON (no extra keys, no comments):
       "severity": "critical",
       "problem": "<specific problem, cite URL or count>",
       "fix": "<exact action to take - copy-paste ready where possible>",
-      "effort": "low"
+      "effort": "low",
+      "affectedUrls": ["<actual broken/problematic URL from sitemap>", "<another URL>"],
+      "fixedUrls": ["<corrected version of first URL>", "<corrected version of second URL>"]
     },
     {
       "severity": "warning",
       "problem": "<specific problem>",
       "fix": "<specific fix>",
-      "effort": "medium"
+      "effort": "medium",
+      "affectedUrls": ["<actual URL from sitemap>"],
+      "fixedUrls": ["<corrected URL>"]
     }
   ],
   "topActions": [
