@@ -39,7 +39,7 @@ export default function SignupPage() {
           {mode === 'signup' ? 'Create your account' : 'Welcome back'}
         </h1>
         <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 28 }}>
-          {mode === 'signup' ? 'Start with 1 free analysis. No credit card required.' : 'Sign in to access your analyses.'}
+          {mode === 'signup' ? 'Start with 3 free analyses. No credit card required.' : 'Sign in to access your analyses.'}
         </p>
 
         {/* Google OAuth placeholder */}
