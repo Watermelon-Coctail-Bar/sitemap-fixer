@@ -9,7 +9,7 @@ type AppState = 'idle' | 'loading' | 'results' | 'error';
 
 function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center',gap:8,textDecoration:'none' }}><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg><span style={{ fontFamily:"'Instrument Serif',serif",fontSize:20,color:'var(--ink)' }}>SitemapFixer</span></a>); }
 
-function Navbar() { return (<nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}><div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}><Logo /><div style={{ display:'flex',gap:24,alignItems:'center' }}><a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a><a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a><a href="/pricing" style={{ fontSize:13,color:'white',background:'#2d5be3',padding:'6px 14px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Pricing</a></div></div></nav>); }
+function Navbar() { return (<nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}><div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}><Logo /><div style={{ display:'flex',gap:24,alignItems:'center' }}><a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a><a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a><a href="/signin" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a><a href="/pricing" style={{ fontSize:13,color:'white',background:'#2d5be3',padding:'6px 14px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Pricing</a></div></div></nav>); }
 
 function Footer() {
   return (
@@ -41,7 +41,7 @@ function Footer() {
           </div>
         </div>
         <div style={{ borderTop:'1px solid var(--border)',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center' }}>
-          <p style={{ fontSize:12,color:'var(--muted-2)' }}>2025 SitemapFixer. All rights reserved.</p>
+          <p style={{ fontSize:12,color:'var(--muted-2)' }}>2026 SitemapFixer. All rights reserved.</p>
           <div style={{ display:'flex',gap:20 }}>
             <a href="/sitemap.xml" style={{ fontSize:12,color:'var(--muted-2)',textDecoration:'none' }}>Sitemap</a>
             <a href="mailto:support@sitemapfixer.com" style={{ fontSize:12,color:'var(--muted-2)',textDecoration:'none' }}>Contact</a>
@@ -89,6 +89,33 @@ function Testimonials() {
                                                                                                                                                                                                                                             );
                                                                                                                                                                                                                                             }
 
+const FAQ_ITEMS = [
+  { q: 'Is SitemapFixer really free?', a: 'Yes. You get 3 full AI-powered sitemap analyses for free, no credit card required. Upgrade only when you need unlimited analyses.' },
+  { q: 'How does SitemapFixer find my sitemap?', a: 'We check 20+ common sitemap locations including /sitemap.xml, /sitemap_index.xml, and references in your robots.txt. Works with WordPress, Shopify, Next.js, and any platform.' },
+  { q: 'What does the AI analysis include?', a: 'A prioritized list of SEO issues with specific fixes, missing page suggestions, a priority action plan, and affected URLs you can copy-paste directly.' },
+  { q: 'Why are my pages not indexed by Google?', a: 'Common reasons include broken sitemaps, noindex tags, crawl budget issues, duplicate content, and orphan pages. Our tool identifies the exact cause for your site.' },
+  { q: 'How is this different from Screaming Frog or Ahrefs?', a: 'Those tools require setup and expertise to interpret. SitemapFixer gives you a specific, ranked action plan in 60 seconds -- no crawling, no configuration.' },
+];
+
+function FAQ() {
+  return (
+    <section style={{ maxWidth:960,margin:'0 auto',padding:'80px 24px' }}>
+      <div style={{ textAlign:'center',marginBottom:48 }}>
+        <h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'var(--ink)',marginBottom:14 }}>Frequently asked questions</h2>
+        <p style={{ fontSize:16,color:'var(--muted)',maxWidth:480,margin:'0 auto' }}>Everything you need to know about SitemapFixer.</p>
+      </div>
+      <div style={{ maxWidth:720,margin:'0 auto',display:'flex',flexDirection:'column',gap:0 }}>
+        {FAQ_ITEMS.map((item, i) => (
+          <div key={i} style={{ borderBottom:'1px solid var(--border)',padding:'20px 0' }}>
+            <div style={{ fontSize:16,fontWeight:600,color:'var(--ink)',marginBottom:10 }}>{item.q}</div>
+            <div style={{ fontSize:14,color:'var(--muted)',lineHeight:1.7 }}>{item.a}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ContactCTA() {
   return (
     <section style={{ background:'linear-gradient(135deg,#0a0a0f 0%,#1a1a2e 50%,#0f1b3d 100%)',padding:'80px 24px',position:'relative',overflow:'hidden' }}>
@@ -119,7 +146,7 @@ function ContactCTA() {
 
                                                                                                                                                                                                                                                                                                                                                                           async function handleAnalyze(inputDomain: string) {
                                                                                                                                                                                                                                                                                                                                                                                 const count = parseInt(typeof window !== 'undefined' ? (localStorage.getItem('sf_count') || '0') : '0');
-                                                                                                                                                                                                                                                                                                                                                                                    if (count >= 1) { setPaywallDomain(inputDomain); setShowPaywall(true); return; }
+                                                                                                                                                                                                                                                                                                                                                                                    if (count >= 3) { setPaywallDomain(inputDomain); setShowPaywall(true); return; }
                                                                                                                                                                                                                                                                                                                                                                                         setDomain(inputDomain); setState('loading'); setError(null); setResults(null);
                                                                                                                                                                                                                                                                                                                                                                                             try {
                                                                                                                                                                                                                                                                                                                                                                                                     const res = await fetch('/api/analyze', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ domain:inputDomain }) });
@@ -136,7 +163,7 @@ function ContactCTA() {
                                                                                                                                                                                                                                                                                                                                                                                                         <div style={{ minHeight:'100vh',background:'var(--paper)' }}>
                                                                                                                                                                                                                                                                                                                                                                                                                 <Navbar />
                                                                                                                                                                                                                                                                                                                                                                                                                       <main>
-                                                                                                                                                                                                                                                                                                                                                                                                                                {state === 'idle' && (<><Hero onSubmit={handleAnalyze} loading={false} variant="default" /><Features /><HowItWorks /><Testimonials /><ContactCTA /><BlogSection /></>)}
+                                                                                                                                                                                                                                                                                                                                                                                                                                {state === 'idle' && (<><Hero onSubmit={handleAnalyze} loading={false} variant="default" /><Features /><HowItWorks /><Testimonials /><FAQ /><ContactCTA /><BlogSection /></>)}
                                                                                                                                                                                                                                                                                                                                                                                                                                         {state === 'loading' && <Loading domain={domain} />}
                                                                                                                                                                                                                                                                                                                                                                                                                                                 {state === 'error' && (<div style={{ maxWidth:540,margin:'80px auto',padding:'0 24px',textAlign:'center' }}><div style={{ fontSize:40,marginBottom:20 }}>🔍</div><h2 style={{ fontSize:24,fontWeight:700,color:'var(--ink)',marginBottom:12 }}>Sitemap not found</h2><p style={{ fontSize:15,color:'var(--muted)',lineHeight:1.6,marginBottom:32 }}>{error}</p><button onClick={reset} className="cta-btn">Try another domain</button></div>)}
                                                                                                                                                                                                                                                                                                                                                                                                                                                         {state === 'results' && results && (<Results data={results as any} onReset={reset} />)}

@@ -73,7 +73,7 @@ function BlogFooter() {
           </div>
         </div>
         <div style={{ borderTop:'1px solid #e4e4ed',paddingTop:24,display:'flex',justifyContent:'space-between',alignItems:'center' }}>
-          <p style={{ fontSize:12,color:'#9999aa' }}>2025 SitemapFixer. All rights reserved.</p>
+          <p style={{ fontSize:12,color:'#9999aa' }}>2026 SitemapFixer. All rights reserved.</p>
           <div style={{ display:'flex',gap:20 }}>
             <a href="/sitemap.xml" style={{ fontSize:12,color:'#9999aa',textDecoration:'none' }}>Sitemap</a>
             <a href="mailto:support@sitemapfixer.com" style={{ fontSize:12,color:'#9999aa',textDecoration:'none' }}>Contact</a>

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://sitemapfixer.com/og-image.svg',
+        url: 'https://sitemapfixer.com/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
     description: 'Free AI-powered sitemap checker. Fix indexing issues in 60 seconds.',
-    images: ['https://sitemapfixer.com/og-image.svg'],
+    images: ['https://sitemapfixer.com/opengraph-image'],
   },
   verification: {
     google: '1_bEeXT1am94lZ5MABuAJZ3hRpQjUy1KaU8LC7D5qF0',
@@ -81,6 +81,18 @@ const softwareSchema = {
   },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Is SitemapFixer really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You get 3 full AI-powered sitemap analyses for free, no credit card required. Upgrade only when you need unlimited analyses.' } },
+    { '@type': 'Question', name: 'How does SitemapFixer find my sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'We check 20+ common sitemap locations including /sitemap.xml, /sitemap_index.xml, and references in your robots.txt. Works with WordPress, Shopify, Next.js, and any platform.' } },
+    { '@type': 'Question', name: 'What does the AI analysis include?', acceptedAnswer: { '@type': 'Answer', text: 'A prioritized list of SEO issues with specific fixes, missing page suggestions, a priority action plan, and affected URLs you can copy-paste directly.' } },
+    { '@type': 'Question', name: 'Why are my pages not indexed by Google?', acceptedAnswer: { '@type': 'Answer', text: 'Common reasons include broken sitemaps, noindex tags, crawl budget issues, duplicate content, and orphan pages. Our tool identifies the exact cause for your site.' } },
+    { '@type': 'Question', name: 'How is this different from Screaming Frog or Ahrefs?', acceptedAnswer: { '@type': 'Answer', text: 'Those tools require setup and expertise to interpret. SitemapFixer gives you a specific, ranked action plan in 60 seconds -- no crawling, no configuration.' } },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -92,6 +104,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className="grain">{children}</body>
