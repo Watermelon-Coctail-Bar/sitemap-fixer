@@ -12,6 +12,7 @@ const guides = [
     category: 'Sitemaps',
     items: [
       { href: '/learn/what-is-an-xml-sitemap', title: 'What is an XML Sitemap?' },
+      { href: '/learn/xml-sitemap-format', title: 'XML Sitemap Format' },
       { href: '/learn/xml-sitemap-generator', title: 'XML Sitemap Generator' },
       { href: '/learn/sitemap-best-practices', title: 'Sitemap Best Practices' },
       { href: '/learn/how-to-create-a-sitemap', title: 'How to Create a Sitemap' },
@@ -72,6 +73,7 @@ const guides = [
       { href: '/learn/url-structure-seo', title: 'URL Structure SEO' },
       { href: '/learn/duplicate-content-seo', title: 'Duplicate Content SEO' },
       { href: '/learn/redirect-chains', title: 'Redirect Chains' },
+      { href: '/learn/site-migration-seo', title: 'Site Migration SEO' },
       { href: '/learn/site-structure-seo', title: 'Site Structure SEO' },
       { href: '/learn/site-speed-seo', title: 'Site Speed SEO' },
       { href: '/learn/301-vs-302-redirects', title: '301 vs 302 Redirects' },

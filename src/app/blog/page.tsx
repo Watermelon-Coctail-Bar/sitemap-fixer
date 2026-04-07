@@ -5,11 +5,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sitemapfixer.com/blog' },
 };
 
-const POSTS = [
-  { slug: 'sitemap-not-working', title: 'Sitemap Not Working? 9 Common Causes and Fixes', desc: 'The most common reasons XML sitemaps fail in Google Search Console and exactly how to fix each one.', cat: 'Troubleshooting', min: 8 },
-  { slug: 'pages-not-indexed-google', title: 'Pages Not Indexed by Google: Complete Fix Guide', desc: 'Every reason Google refuses to index your pages and step-by-step fixes to get your content showing in search.', cat: 'Indexing', min: 7 },
-  { slug: 'submitted-url-not-indexed', title: '"Submitted URL Not Indexed" - What It Means and How to Fix It', desc: 'Seeing this in Search Console? Here is exactly what it means and the proven steps to resolve it.', cat: 'Indexing', min: 6 },
-  { slug: 'crawled-currently-not-indexed', title: '"Crawled - Currently Not Indexed": Causes and Fixes', desc: 'Google crawled your page but chose not to index it. Here is why and how to fix it.', cat: 'Indexing', min: 6 },
+type Post = { slug: string; title: string; desc: string; cat: string; min: number; base?: string };
+const POSTS: Post[] = [
+  { slug: 'sitemap-not-working', base: '/learn', title: 'Sitemap Not Working? 9 Common Causes and Fixes', desc: 'The most common reasons XML sitemaps fail in Google Search Console and exactly how to fix each one.', cat: 'Troubleshooting', min: 8 },
+  { slug: 'pages-not-indexed-google', base: '/learn', title: 'Pages Not Indexed by Google: Complete Fix Guide', desc: 'Every reason Google refuses to index your pages and step-by-step fixes to get your content showing in search.', cat: 'Indexing', min: 7 },
+  { slug: 'submitted-url-not-indexed', base: '/learn', title: '"Submitted URL Not Indexed" - What It Means and How to Fix It', desc: 'Seeing this in Search Console? Here is exactly what it means and the proven steps to resolve it.', cat: 'Indexing', min: 6 },
+  { slug: 'crawled-currently-not-indexed', base: '/learn', title: '"Crawled - Currently Not Indexed": Causes and Fixes', desc: 'Google crawled your page but chose not to index it. Here is why and how to fix it.', cat: 'Indexing', min: 6 },
+  { slug: 'long-tail-keywords-guide', title: 'Long-Tail Keywords Guide: Find and Rank for Specific Queries', desc: 'How to find high-intent long-tail keywords your competitors miss and rank for them faster.', cat: 'SEO', min: 7 },
+  { slug: 'technical-seo-for-beginners', title: 'Technical SEO for Beginners: The 10 Things That Actually Matter', desc: 'A beginner-friendly walk-through of the technical SEO fundamentals that move the needle.', cat: 'Technical SEO', min: 8 },
   { slug: 'technical-seo-audit-guide', title: 'Technical SEO Audit Guide: Find Every Issue', desc: 'A complete framework for auditing your site technically - from crawlability to Core Web Vitals.', cat: 'Technical SEO', min: 10 },
   { slug: 'core-web-vitals-fix-guide', title: 'Core Web Vitals Fix Guide: LCP, INP, CLS', desc: 'How to diagnose and fix every Core Web Vitals issue. With specific code-level fixes for each metric.', cat: 'Technical SEO', min: 9 },
   { slug: 'https-migration-guide', title: 'HTTPS Migration Guide: Move Without Losing Rankings', desc: 'The complete checklist for migrating from HTTP to HTTPS without losing SEO equity.', cat: 'Technical SEO', min: 8 },
@@ -105,7 +108,7 @@ export default function BlogIndex() {
           <h1 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 48, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.1 }}>SEO guides that get results</h1>
           <p style={{ fontSize: 18, color: '#6b7280', maxWidth: 560 }}>Technical SEO, sitemaps, indexing, and content strategy. Practical guides from the SitemapFixer team.</p>
         </div>
-        <a href={'/blog/' + featured.slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 20, padding: '40px', marginBottom: 32, position: 'relative', overflow: 'hidden' }}>
+        <a href={(featured.base || '/blog') + '/' + featured.slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 20, padding: '40px', marginBottom: 32, position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'linear-gradient(90deg, #2d5be3, #7c3aed)' }} />
           <div style={{ display: 'inline-block', background: CAT_COLORS[featured.cat] || '#f3f4f6', color: CAT_TEXT[featured.cat] || '#374151', fontSize: 12, fontWeight: 700, padding: '3px 10px', borderRadius: 6, marginBottom: 16 }}>{featured.cat}</div>
           <div style={{ fontSize: 11, color: '#9ca3af', marginBottom: 8 }}>FEATURED</div>
@@ -115,7 +118,7 @@ export default function BlogIndex() {
         </a>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
           {rest.map(post => (
-            <a key={post.slug} href={'/blog/' + post.slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 16, padding: '24px' }}>
+            <a key={post.slug} href={(post.base || '/blog') + '/' + post.slug} style={{ display: 'block', textDecoration: 'none', background: 'white', border: '1px solid #e4e4ed', borderRadius: 16, padding: '24px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14 }}>
                 <span style={{ display: 'inline-block', background: CAT_COLORS[post.cat] || '#f3f4f6', color: CAT_TEXT[post.cat] || '#374151', fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 4 }}>{post.cat}</span>
                 <span style={{ fontSize: 12, color: '#9ca3af' }}>{post.min}m</span>
