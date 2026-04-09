@@ -12,6 +12,7 @@ export interface ParsedSitemap {
   sitemapSource: string;
   isSitemapIndex: boolean;
   childSitemaps: string[];
+  robotsTxt: string;
 }
 
 const HEADERS = {
@@ -102,8 +103,11 @@ export async function discoverAndParseSitemap(domain: string): Promise<ParsedSit
     `${base}/news-sitemap.xml`,
   ];
 
-  // First check robots.txt
-  const robotsSitemaps = await extractSitemapFromRobots(base);
+  // First check robots.txt (also store raw text for URL health checks)
+  const robotsTxtRaw = await fetchWithTimeout(`${base}/robots.txt`) || '';
+  const robotsSitemaps = robotsTxtRaw
+    ? (robotsTxtRaw.match(/^Sitemap:\s*(.+)$/gim) || []).map(m => m.replace(/^Sitemap:\s*/i, '').trim()).filter(u => u.startsWith('http'))
+    : await extractSitemapFromRobots(base);
   const seen = new Set<string>();
   const allCandidates: string[] = [];
   for (const u of [...robotsSitemaps, ...candidates]) {
@@ -123,7 +127,7 @@ export async function discoverAndParseSitemap(domain: string): Promise<ParsedSit
   }
 
   if (!xml) {
-    return { urls: [], sitemapSource: 'not_found', isSitemapIndex: false, childSitemaps: [] };
+    return { urls: [], sitemapSource: 'not_found', isSitemapIndex: false, childSitemaps: [], robotsTxt: robotsTxtRaw };
   }
 
   const parsed = await parseSitemapXml(xml);
@@ -144,6 +148,7 @@ export async function discoverAndParseSitemap(domain: string): Promise<ParsedSit
       sitemapSource,
       isSitemapIndex: true,
       childSitemaps: parsed.childSitemaps,
+      robotsTxt: robotsTxtRaw,
     };
   }
 
@@ -152,5 +157,6 @@ export async function discoverAndParseSitemap(domain: string): Promise<ParsedSit
     sitemapSource,
     isSitemapIndex: parsed.isSitemapIndex,
     childSitemaps: parsed.childSitemaps,
+    robotsTxt: robotsTxtRaw,
   };
 }

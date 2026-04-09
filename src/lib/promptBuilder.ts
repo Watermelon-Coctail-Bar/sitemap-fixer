@@ -1,6 +1,7 @@
 import { StructuredAnalysis } from './urlAnalyzer';
+import { HealthSummary } from './urlChecker';
 
-export function buildSEOPrompt(domain: string, analysis: StructuredAnalysis, sitemapSource: string): string {
+export function buildSEOPrompt(domain: string, analysis: StructuredAnalysis, sitemapSource: string, health?: HealthSummary | null): string {
   const clusterSummary = analysis.clusters
     .map(c => ` - /${c.prefix}/ -> ${c.count} pages`)
     .join('\n');
@@ -21,6 +22,16 @@ STALE PAGES (>1yr): ${staleSample || '(none)'}
 ORPHAN-LIKE PAGES: ${orphanSample || '(none)'}
 URL ISSUES: ${analysis.inconsistentPatterns.join('\n  ') || '(none)'}
 DEPTH: ${JSON.stringify(analysis.depthDistribution)}
+${health ? `
+URL HEALTH CHECK (${health.checked} URLs sampled):
+- Healthy: ${health.healthy}/${health.checked}
+- 404 Not Found: ${health.issues.notFound.length > 0 ? health.issues.notFound.join(', ') : '(none)'}
+- Redirects: ${health.issues.redirects.length > 0 ? health.issues.redirects.map(r => `${r.url} -> ${r.redirectsTo}`).join(', ') : '(none)'}
+- Server Errors: ${health.issues.serverErrors.length > 0 ? health.issues.serverErrors.join(', ') : '(none)'}
+- noindex but in sitemap: ${health.issues.noindexConflict.length > 0 ? health.issues.noindexConflict.join(', ') : '(none)'}
+- Canonical mismatch: ${health.issues.canonicalMismatch.length > 0 ? health.issues.canonicalMismatch.map(c => `${c.url} canonical=${c.canonical}`).join(', ') : '(none)'}
+- Blocked by robots.txt: ${health.issues.blockedByRobots.length > 0 ? health.issues.blockedByRobots.join(', ') : '(none)'}
+- Slow (>3s): ${health.issues.slow.length > 0 ? health.issues.slow.map(s => `${s.url} (${(s.ms/1000).toFixed(1)}s)`).join(', ') : '(none)'}` : ''}
 
 Rules:
 - Reference actual URLs/slugs from the data. Never give generic advice.

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { discoverAndParseSitemap } from '@/lib/sitemapParser';
 import { analyzeUrls } from '@/lib/urlAnalyzer';
 import { buildSEOPrompt } from '@/lib/promptBuilder';
+import { checkUrlHealth, HealthSummary } from '@/lib/urlChecker';
 
 export const maxDuration = 60;
 
@@ -66,8 +67,17 @@ export async function POST(req: NextRequest) {
     // Step 2: Analyze URLs
     const analysis = analyzeUrls(sitemap.urls);
 
-    // Step 3: Build prompt and call Claude API
-    const prompt = buildSEOPrompt(domain, analysis, sitemap.sitemapSource);
+    // Step 2.5: Run URL health checks (parallel with prompt building)
+    const allUrls = sitemap.urls.map(u => u.loc);
+    let healthSummary: HealthSummary | null = null;
+    try {
+      healthSummary = await checkUrlHealth(allUrls, sitemap.robotsTxt, 30);
+    } catch (err) {
+      console.error('URL health check failed:', err);
+    }
+
+    // Step 3: Build prompt and call Claude API (include health data)
+    const prompt = buildSEOPrompt(domain, analysis, sitemap.sitemapSource, healthSummary);
 
     const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -117,6 +127,12 @@ export async function POST(req: NextRequest) {
       orphanCount: analysis.orphanLike.length,
       noLastmodCount: analysis.noLastmod,
       report: seoReport,
+      urlHealth: healthSummary ? {
+        checked: healthSummary.checked,
+        healthy: healthSummary.healthy,
+        issues: healthSummary.issues,
+        results: healthSummary.results.filter(r => r.issue), // only send URLs with issues
+      } : null,
     });
   } catch (err) {
     console.error('Analyze error:', err);

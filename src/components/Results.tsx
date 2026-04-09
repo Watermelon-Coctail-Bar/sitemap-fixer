@@ -19,6 +19,20 @@ interface AnalysisResult {
   orphanCount: number;
   noLastmodCount: number;
   clusters: Array<{ label: string; prefix: string; count: number; urls?: string[] }>;
+  urlHealth?: {
+    checked: number;
+    healthy: number;
+    issues: {
+      notFound: string[];
+      redirects: { url: string; redirectsTo: string }[];
+      serverErrors: string[];
+      noindexConflict: string[];
+      canonicalMismatch: { url: string; canonical: string }[];
+      blockedByRobots: string[];
+      slow: { url: string; ms: number }[];
+    };
+    results: Array<{ url: string; status: number; issue?: string; hasNoindex: boolean; canonicalMismatch: boolean; responseTimeMs: number; redirectUrl?: string; canonicalUrl?: string; blockedByRobots: boolean }>;
+  } | null;
   report: {
     seoScore: number;
     scoreReason: string;
@@ -212,6 +226,39 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
           </div>
           {clusters.map((cluster, i) => (
             <ClusterGroup key={i} cluster={cluster} urlIssues={urlIssues} />
+          ))}
+        </div>
+      )}
+
+      {/* ─── URL Health Check ─── */}
+      {data.urlHealth && data.urlHealth.results.length > 0 && (
+        <div className="card anim-fade-up anim-fade-up-2" style={{ marginBottom: 24 }}>
+          <div className="card-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <span style={{ fontWeight: 700, fontSize: 15 }}>URL Health Check</span>
+            <span style={{ fontSize: 12, color: 'var(--muted)' }}>{data.urlHealth.healthy}/{data.urlHealth.checked} healthy</span>
+          </div>
+          {/* Summary pills */}
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', padding: '12px 16px', borderBottom: '1px solid var(--border-2)' }}>
+            {data.urlHealth.issues.notFound.length > 0 && <span style={{ fontSize: 12, fontWeight: 600, color: '#dc2626', background: '#fef2f2', borderRadius: 99, padding: '3px 10px' }}>404: {data.urlHealth.issues.notFound.length}</span>}
+            {data.urlHealth.issues.redirects.length > 0 && <span style={{ fontSize: 12, fontWeight: 600, color: '#d97706', background: '#fffbeb', borderRadius: 99, padding: '3px 10px' }}>Redirects: {data.urlHealth.issues.redirects.length}</span>}
+            {data.urlHealth.issues.noindexConflict.length > 0 && <span style={{ fontSize: 12, fontWeight: 600, color: '#dc2626', background: '#fef2f2', borderRadius: 99, padding: '3px 10px' }}>noindex: {data.urlHealth.issues.noindexConflict.length}</span>}
+            {data.urlHealth.issues.canonicalMismatch.length > 0 && <span style={{ fontSize: 12, fontWeight: 600, color: '#d97706', background: '#fffbeb', borderRadius: 99, padding: '3px 10px' }}>Canonical mismatch: {data.urlHealth.issues.canonicalMismatch.length}</span>}
+            {data.urlHealth.issues.blockedByRobots.length > 0 && <span style={{ fontSize: 12, fontWeight: 600, color: '#dc2626', background: '#fef2f2', borderRadius: 99, padding: '3px 10px' }}>Blocked by robots.txt: {data.urlHealth.issues.blockedByRobots.length}</span>}
+            {data.urlHealth.issues.slow.length > 0 && <span style={{ fontSize: 12, fontWeight: 600, color: '#d97706', background: '#fffbeb', borderRadius: 99, padding: '3px 10px' }}>Slow: {data.urlHealth.issues.slow.length}</span>}
+            {data.urlHealth.results.length === 0 && <span style={{ fontSize: 12, color: '#16a34a' }}>All checked URLs are healthy</span>}
+          </div>
+          {/* Issue rows */}
+          {data.urlHealth.results.map((r, i) => (
+            <div key={i} style={{ display: 'flex', alignItems: 'center', padding: '8px 16px', borderBottom: i < data.urlHealth!.results.length - 1 ? '1px solid var(--border-2)' : 'none', gap: 8 }}>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: r.status === 404 || r.hasNoindex || r.blockedByRobots ? '#dc2626' : r.status >= 300 || r.canonicalMismatch ? '#d97706' : '#6b7280', flexShrink: 0 }} />
+              <span style={{ fontSize: 12, fontFamily: "'DM Mono', monospace", color: 'var(--ink)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flex: 1, minWidth: 0 }} title={r.url}>
+                {r.url.replace(/^https?:\/\/[^/]+/, '')}
+              </span>
+              <span style={{ fontSize: 12, color: r.status === 404 || r.hasNoindex ? '#dc2626' : '#d97706', whiteSpace: 'nowrap', flexShrink: 0 }}>
+                {r.issue}
+              </span>
+              <Cp text={r.url} />
+            </div>
           ))}
         </div>
       )}
