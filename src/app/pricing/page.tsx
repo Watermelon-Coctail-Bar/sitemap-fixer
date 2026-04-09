@@ -67,11 +67,14 @@ const MONTHLY: Plan[] = [
                                                                                                                                   setLoading(planId); setCheckoutError(null);
                                                                                                                                       try {
                                                                                                                                             const coupon = discountApplied ? (process.env.NEXT_PUBLIC_STRIPE_20_COUPON || '') : '';
-                                                                                                                                            const res = await fetch('/api/stripe/checkout', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({plan:planId, coupon: coupon || undefined}) });
+                                                                                                                                            const controller = new AbortController();
+                                                                                                                                            const timeout = setTimeout(() => controller.abort(), 10000);
+                                                                                                                                            const res = await fetch('/api/stripe/checkout', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({plan:planId, coupon: coupon || undefined}), signal: controller.signal });
+                                                                                                                                            clearTimeout(timeout);
                                                                                                                                                   const data = await res.json();
                                                                                                                                                         if (data.url) { window.location.href = data.url; }
                                                                                                                                                               else { setCheckoutError(data.error || 'Checkout failed. Please try again.'); setLoading(null); }
-                                                                                                                                                                  } catch { setCheckoutError('Network error. Please try again.'); setLoading(null); }
+                                                                                                                                                                  } catch (e) { setCheckoutError(e instanceof Error && e.name === 'AbortError' ? 'Request timed out. Please try again.' : 'Network error. Please try again.'); setLoading(null); }
                                                                                                                                                                     }
 
                                                                                                                                                                       return (
