@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Blog - SEO Guides and Technical Tips | SitemapFixer',
+  title: 'Blog - SEO Guides and Technical Tips',
   description: 'Expert guides on XML sitemaps, Google indexing, crawl budget, Core Web Vitals, and technical SEO. Free articles from the SitemapFixer team.',
   alternates: { canonical: 'https://sitemapfixer.com/blog' },
+  openGraph: {
+    title: 'Blog - SEO Guides and Technical Tips',
+    description: 'Expert guides on XML sitemaps, Google indexing, crawl budget, Core Web Vitals, and technical SEO. Free articles from the SitemapFixer team.',
+    url: 'https://sitemapfixer.com/blog',
+    type: 'website',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 type Post = { slug: string; title: string; desc: string; cat: string; min: number; base?: string };

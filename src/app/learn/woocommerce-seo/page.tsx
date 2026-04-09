@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'WooCommerce SEO: Optimize Your WooCommerce Store for Google | SitemapFixer',
+  title: 'WooCommerce SEO: Optimize Your Store',
   description: "WooCommerce gives you full control over your store SEO. Here is how to configure your sitemap, product schema, faceted navigation, and common WooCommerce SEO issues.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/woocommerce-seo' },
+  openGraph: {
+    title: 'WooCommerce SEO: Optimize Your Store',
+    description: 'WooCommerce gives you full control over your store SEO. Here is how to configure your sitemap, product schema, faceted navigation, and common WooCommerce SEO issues.',
+    url: 'https://sitemapfixer.com/learn/woocommerce-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "WooCommerce + Yoast or RankMath", d: "WooCommerce on its own has no SEO management features - you need an SEO plugin. Both Yoast SEO and RankMath have dedicated WooCommerce integrations that handle: automatic sitemap generation including products, categories, and tags; product schema markup (Product, Review, AggregateRating); breadcrumb schema; open graph tags for product sharing. Install one of these plugins before any other SEO work." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - finds crawl waste and indexing issues in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/wordpress-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>WordPress SEO: Complete Optimization Guide for 2025</a></li>
+            <li><a href="/learn/shopify-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Shopify SEO: Optimize Your Store for Google</a></li>
+            <li><a href="/learn/wix-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Wix SEO: How to Optimize Your Wix Website for Google</a></li>
+            <li><a href="/learn/squarespace-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Squarespace SEO: Optimize for Google</a></li>
+            <li><a href="/learn/webflow-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Webflow SEO: Optimize for Google</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

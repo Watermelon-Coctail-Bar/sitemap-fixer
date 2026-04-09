@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Terms of Service | SitemapFixer',
-  description: 'SitemapFixer terms of service. Read our terms before using our sitemap analysis and SEO tools.',
+  title: 'Terms of Service',
+  description: 'SitemapFixer terms of service. Read our terms and conditions before using our AI-powered sitemap analysis, SEO auditing, and website optimization tools.',
   alternates: { canonical: 'https://sitemapfixer.com/terms' },
+  openGraph: {
+    title: 'Terms of Service',
+    description: 'SitemapFixer terms of service. Read our terms and conditions before using our AI-powered sitemap analysis, SEO auditing, and website optimization tools.',
+    url: 'https://sitemapfixer.com/terms',
+    type: 'website',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (<div style={{ marginBottom: 40 }}><h2 style={{ fontSize: 22, fontWeight: 700, color: '#0a0a0f', marginBottom: 12 }}>{title}</h2><div style={{ fontSize: 15, color: '#3d3d4f', lineHeight: 1.8 }}>{children}</div></div>);

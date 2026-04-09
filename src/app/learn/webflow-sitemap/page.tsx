@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Webflow Sitemap: How It Works and How to Submit It | SitemapFixer',
+  title: 'Webflow Sitemap: How It Works and How to Submit It',
   description: "Webflow automatically generates your sitemap. Learn where to find it, how to exclude pages, and how to submit it to Google Search Console.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/webflow-sitemap' },
+  openGraph: {
+    title: 'Webflow Sitemap: How It Works and How to Submit It',
+    description: 'Webflow automatically generates your sitemap. Learn where to find it, how to exclude pages, and how to submit it to Google Search Console.',
+    url: 'https://sitemapfixer.com/learn/webflow-sitemap',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function Page() {
   return (
@@ -45,6 +59,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - finds errors in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/wordpress-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>WordPress Sitemap: Setup, Fix, and Submit Guide</a></li>
+            <li><a href="/learn/shopify-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Shopify Sitemap: Location, Errors, and How to Submit It</a></li>
+            <li><a href="/learn/wix-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Wix Sitemap: How It Works and How to Submit It</a></li>
+            <li><a href="/learn/squarespace-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Squarespace Sitemap: How It Works and Common Fixes</a></li>
+            <li><a href="/learn/nextjs-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Next.js Sitemap: App Router and Pages Router</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

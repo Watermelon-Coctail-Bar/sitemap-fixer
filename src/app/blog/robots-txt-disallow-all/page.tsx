@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Robots.txt Disallow All: The Mistake That Blocks Your Entire Site | SitemapFixer',
+  title: 'Robots.txt Disallow All: Avoid Blocking Your Site',
   description: "Disallow: / in robots.txt blocks Google from crawling your entire site. Here is how to detect it, what causes it, and how to fix it in under 5 minutes.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/robots-txt-disallow-all' },
+  openGraph: {
+    title: 'Robots.txt Disallow All: Avoid Blocking Your Site',
+    description: 'Disallow: / in robots.txt blocks Google from crawling your entire site. Here is how to detect it, what causes it, and how to fix it in under 5 minutes.',
+    url: 'https://sitemapfixer.com/blog/robots-txt-disallow-all',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What Disallow: / Does", d: "A robots.txt file containing User-agent: * followed by Disallow: / tells every crawler including Googlebot that it is not allowed to crawl any page on your site. No pages get indexed. No organic traffic arrives. The site exists but is completely invisible to search engines. This is intentional during development but catastrophic if left in place after launch." },
@@ -40,7 +54,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your robots.txt and sitemap</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects blocking issues in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/javascript-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>JavaScript SEO: Make JS Sites Crawlable</a></li>
+            <li><a href="/blog/https-migration-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>HTTPS Migration: Switch Without Losing Rankings</a></li>
+            <li><a href="/blog/redirect-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Redirect SEO: 301 vs 302 & Best Practices</a></li>
+            <li><a href="/blog/crawl-budget-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget SEO: Stop Wasting Crawls on Bad Pages</a></li>
+            <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

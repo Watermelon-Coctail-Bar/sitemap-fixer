@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'International SEO: How to Target Multiple Countries and Languages | SitemapFixer',
+  title: 'International SEO: Target Multiple Countries',
   description: "International SEO ensures Google shows the right version of your site to users in different countries. Here is how hreflang, ccTLDs, subdirectories, and subdomains each work.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/international-seo' },
+  openGraph: {
+    title: 'International SEO: Target Multiple Countries',
+    description: 'International SEO ensures Google shows the right version of your site to users in different countries. Here is how hreflang, ccTLDs, subdirectories, and subdomains each work.',
+    url: 'https://sitemapfixer.com/learn/international-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "Choosing Your International URL Structure", d: "There are three options for multi-country sites. Country-code top-level domains (ccTLDs) like example.fr and example.de send the strongest geographic signal to Google but require separate sites and link building for each domain. Subdirectories (example.com/fr/, example.com/de/) are the most practical choice for most businesses - they share domain authority and are easier to manage. Subdomains (fr.example.com, de.example.com) are a middle ground but Google treats them more like separate sites than subdirectories. For most companies, subdirectories with hreflang tags is the correct approach." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks hreflang and URL patterns</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'LCP Optimization: How to Fix Largest Contentful Paint | SitemapFixer',
+  title: 'LCP Optimization: How to Fix Largest Contentful Paint',
   description: "LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. Here is how to diagnose your LCP element and the most effective fixes.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/lcp-optimization' },
+  openGraph: {
+    title: 'LCP Optimization: How to Fix Largest Contentful Paint',
+    description: 'LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. Here is how to diagnose your LCP element and the most effective fixes.',
+    url: 'https://sitemapfixer.com/learn/lcp-optimization',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const steps = [
   { n: "1", t: "Find your LCP element", d: "In Chrome DevTools, open the Performance tab and run a recording. Look for the LCP marker in the timeline. Or use PageSpeed Insights - it shows the LCP element in the Opportunities section. Common LCP elements: hero image, above-fold heading text (H1), large background image, video poster frame. On mobile and desktop, the LCP element may be different." },
@@ -43,6 +57,16 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/inp-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>INP Optimization: How to Fix Interaction to Next Paint</a></li>
+            <li><a href="/learn/cls-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>CLS Fix: How to Eliminate Cumulative Layout Shift</a></li>
+            <li><a href="/blog/core-web-vitals-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals Fix: How to Pass LCP, INP, CLS</a></li>
+            <li><a href="/blog/page-speed-improvement" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed: 10 Quick Wins That Make a Difference</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

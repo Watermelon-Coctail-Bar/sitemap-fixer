@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Page Speed Improvement: 10 Quick Wins That Actually Make a Difference | SitemapFixer',
+  title: 'Page Speed: 10 Quick Wins That Make a Difference',
   description: "Most page speed guides suggest everything. Here are the 10 changes that have the highest impact for the least effort, ranked by ROI.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/page-speed-improvement' },
-  openGraph: { title: 'Page Speed Improvement: 10 High-Impact Quick Wins', url: 'https://sitemapfixer.com/blog/page-speed-improvement', type: 'article' },
+  openGraph: { title: 'Page Speed Improvement: 10 High-Impact Quick Wins', url: 'https://sitemapfixer.com/blog/page-speed-improvement', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const wins = [
   { n: "1", t: "Add explicit width and height to all images", d: "Zero performance benefit but eliminates CLS (layout shift) on almost every site. Add width and height attributes to every img tag. Takes 30 minutes. Fixes a Core Web Vital immediately." },
@@ -43,7 +52,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your site speed and SEO</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/core-web-vitals-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals Fix: How to Pass LCP, INP, CLS</a></li>
+            <li><a href="/blog/website-speed-test-tools" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Website Speed Test: Best Free Performance Tools</a></li>
+            <li><a href="/blog/site-speed-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Site Speed SEO: How Speed Affects Rankings</a></li>
+            <li><a href="/learn/core-web-vitals" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals: LCP, INP, CLS Explained</a></li>
+            <li><a href="/learn/page-speed-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed Optimization: Make Your Site Faster</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

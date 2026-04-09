@@ -1,8 +1,23 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: "Crawled - Currently Not Indexed: How to Fix It | SitemapFixer",
-  description: "The crawled currently not indexed status means Google visited your page but chose not to index it. Here is exactly why and how to fix it.",
+  title: "Crawled - Currently Not Indexed: How to Fix",
+  description: "How to fix crawled - currently not indexed in Google Search Console. Learn why Google crawled but did not index your page and the exact steps to fix it.",
+  keywords: 'crawled currently not indexed, crawled - currently not indexed, crawled but not indexed, crawled not indexed, how to fix crawled currently not indexed, google crawled but not indexed, crawled currently not indexed fix',
   alternates: { canonical: 'https://sitemapfixer.com/learn/crawled-currently-not-indexed' },
+  openGraph: {
+    title: 'Crawled - Currently Not Indexed: How to Fix',
+    description: 'How to fix crawled - currently not indexed in Google Search Console. Google crawled your page but chose not to index it. Learn why and how to fix it.',
+    url: 'https://sitemapfixer.com/learn/crawled-currently-not-indexed',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function Page() {
   return (
@@ -35,6 +50,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/pages-not-indexed-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pages Not Indexed by Google: Causes and Fixes</a></li>
+            <li><a href="/learn/submitted-url-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Submitted URL Not Indexed: How to Fix in GSC</a></li>
+            <li><a href="/learn/discovered-currently-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Discovered Not Indexed: Why It Happens & Fixes | SitemapFixer</a></li>
+            <li><a href="/learn/why-pages-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Why Are My Pages Not Indexed by Google?</a></li>
+            <li><a href="/learn/index-coverage-report" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Index Coverage Report in Google Search Console</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

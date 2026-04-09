@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Invalid URLs in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
+  title: 'Invalid URLs in Sitemap: Fix Guide',
   description: 'Detect and remove invalid URLs from your XML sitemap. Broken or malformed URLs waste crawl budget and hurt your SEO. Fix them instantly with Sitemap Fixer.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/invalid-urls' },
   openGraph: {
@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     description: 'Detect and remove invalid URLs from your XML sitemap. Broken or malformed URLs waste crawl budget and hurt your SEO. Fix them instantly with Sitemap Fixer.',
     url: 'https://sitemapfixer.com/sitemap-errors/invalid-urls',
     type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 

@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'SSL and HTTPS SEO: Impact on Rankings and Migration Guide | SitemapFixer',
+  title: 'SSL and HTTPS SEO: Impact on Rankings',
   description: "SSL certificates and HTTPS are required for competitive SEO in 2025. Here is how SSL affects rankings, how to migrate correctly, and how to fix mixed content issues.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/ssl-seo' },
+  openGraph: {
+    title: 'SSL and HTTPS SEO: Impact on Rankings',
+    description: 'SSL certificates and HTTPS are required for competitive SEO in 2025. Here is how SSL affects rankings, how to migrate correctly, and how to fix mixed content issues.',
+    url: 'https://sitemapfixer.com/learn/ssl-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "SSL as a Ranking Signal", d: "Google confirmed HTTPS as a ranking signal in 2014 and has steadily increased its weight. Today, an HTTP site without SSL is at a competitive disadvantage in nearly all niches. Chrome marks HTTP pages as Not Secure, which reduces user trust and CTR from search results. For ecommerce and any site collecting user data, SSL is also a legal and compliance requirement beyond SEO. Free SSL certificates via Let's Encrypt are available from most hosting providers, eliminating cost as a barrier." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs for HTTP vs HTTPS issues</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+            <li><a href="/learn/canonical-tags" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical Tags: How to Use Them Correctly for SEO</a></li>
+            <li><a href="/learn/structured-data" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Structured Data & Schema Markup: Complete Guide</a></li>
+            <li><a href="/learn/core-web-vitals" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals: LCP, INP, CLS Explained</a></li>
+            <li><a href="/learn/page-speed-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed Optimization: Make Your Site Faster</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

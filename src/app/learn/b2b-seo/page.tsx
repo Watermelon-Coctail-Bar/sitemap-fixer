@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'B2B SEO: How to Generate Leads from Organic Search | SitemapFixer',
+  title: 'B2B SEO: How to Generate Leads from Organic Search',
   description: "B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords mean your content and keyword strategy must be different.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/b2b-seo' },
+  openGraph: {
+    title: 'B2B SEO: How to Generate Leads from Organic Search',
+    description: 'B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords mean your content and keyword strategy must be different.',
+    url: 'https://sitemapfixer.com/learn/b2b-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "B2B vs B2C SEO: The Key Differences", d: "B2B buyers research extensively before purchasing - often 6-12 months for enterprise software. The keyword volumes are much lower (hundreds not thousands of searches per month) but conversion value is vastly higher. A single B2B customer may be worth $10,000-$100,000+ in lifetime value, so even one conversion per month from a low-volume keyword justifies the content investment. B2B also has longer consideration cycles where buyers consume many pieces of content from the same vendor before converting - this means content depth and breadth matters more than in B2C." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

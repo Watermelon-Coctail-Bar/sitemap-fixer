@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'XML Sitemap Not Working? 9 Common Reasons and Fixes | SitemapFixer',
-  description: 'Your XML sitemap not working? Here are the 9 most common reasons and exact fixes for each one.',
+  title: 'XML Sitemap Not Working? 9 Common Reasons and Fixes',
+  description: 'Your XML sitemap not working? Here are the 9 most common reasons sitemaps fail in Google Search Console and the exact step-by-step fixes for each one.',
   alternates: { canonical: 'https://sitemapfixer.com/blog/xml-sitemap-not-working' },
+  openGraph: {
+    title: 'XML Sitemap Not Working? 9 Common Reasons and Fixes',
+    description: 'Your XML sitemap not working? Here are the 9 most common reasons sitemaps fail in Google Search Console and the exact step-by-step fixes for each one.',
+    url: 'https://sitemapfixer.com/blog/xml-sitemap-not-working',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const reasons = [
   { n: '1', t: 'Sitemap Returns a Non-200 Status Code', d: "Visit your sitemap URL directly. If you get a 404, 500, or any non-200 response, Google cannot access it. Check your server configuration, verify the sitemap file exists at that exact URL, and confirm there are no authentication requirements blocking access." },
@@ -50,7 +64,18 @@ export default function Page() {
           <li><a href="/blog/how-to-fix-sitemap-errors" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Fix Sitemap Errors in GSC</a></li>
           <li><a href="/learn/sitemap-best-practices" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Sitemap Best Practices</a></li>
         </ul>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/how-to-fix-sitemap-errors" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Fix Sitemap Errors in Google Search Console</a></li>
+            <li><a href="/blog/submit-sitemap-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Submit a Sitemap to Google: Step-by-Step Guide</a></li>
+            <li><a href="/blog/xml-sitemap-submission" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Submission: Submit to Google & Bing</a></li>
+            <li><a href="/blog/sitemap-blocked-robots-txt" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Sitemap Blocked by Robots.txt: How to Find and Fix It</a></li>
+            <li><a href="/blog/sitemap-vs-robots-txt" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Sitemap vs Robots.txt: How They Work Together</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

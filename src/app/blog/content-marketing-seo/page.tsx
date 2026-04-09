@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Content Marketing SEO: How Content Strategy Drives Organic Growth | SitemapFixer',
+  title: 'Content Marketing SEO: Drive Organic Growth',
   description: "Content marketing and SEO work together when content is built around search demand. Here is how to align your content strategy with keyword research for compounding organic growth.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/content-marketing-seo' },
+  openGraph: {
+    title: 'Content Marketing SEO: Drive Organic Growth',
+    description: 'Content marketing and SEO work together when content is built around search demand. Here is how to align your content strategy with keyword research for compounding organic growth.',
+    url: 'https://sitemapfixer.com/blog/content-marketing-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "Why most content marketing fails at SEO", d: "Content that does not target specific search queries does not generate organic traffic, regardless of quality. Many content marketing programs produce brand-driven content - company news, thought leadership, product announcements - that nobody searches for. Effective SEO content starts with keyword research: find what your audience searches for, then create the best answer to those queries. Quality matters, but discoverability comes first." },
@@ -36,7 +50,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Make sure your content is technically sound</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing check in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/content-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content Audit: How to Audit Your Site for SEO</a></li>
+            <li><a href="/blog/thin-content-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Thin Content: Find It, Fix It, Recover Rankings</a></li>
+            <li><a href="/blog/thin-content-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Thin Content: What It Is and How to Fix It</a></li>
+            <li><a href="/blog/keyword-cannibalization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Cannibalization: How to Find and Fix It</a></li>
+            <li><a href="/blog/duplicate-content-seo-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Duplicate Content SEO: How to Find and Fix It</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

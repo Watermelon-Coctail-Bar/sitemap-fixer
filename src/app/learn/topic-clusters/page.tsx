@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Topic Clusters: How to Build Topical Authority for SEO | SitemapFixer',
+  title: 'Topic Clusters: How to Build Topical Authority for SEO',
   description: "Topic clusters help you build topical authority - the quality that makes Google trust your site as an expert source. Here is how to build them and why they outperform isolated posts.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/topic-clusters' },
+  openGraph: {
+    title: 'Topic Clusters: How to Build Topical Authority for SEO',
+    description: 'Topic clusters help you build topical authority - the quality that makes Google trust your site as an expert source. Here is how to build them and why they outperform isolated posts.',
+    url: 'https://sitemapfixer.com/learn/topic-clusters',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Topic Clusters Are", d: "A topic cluster is a content structure built around one pillar page (a comprehensive guide to a broad topic) surrounded by multiple cluster pages (each covering a specific subtopic in depth), all connected by internal links. The pillar page links to every cluster page; every cluster page links back to the pillar. The result: Google sees your site as covering a topic comprehensively from multiple angles, which builds topical authority - the signal that you are an expert source, not just a one-off post publisher." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

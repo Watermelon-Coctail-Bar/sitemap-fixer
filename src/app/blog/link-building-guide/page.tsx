@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Link Building Guide: How to Earn Backlinks That Actually Move Rankings | SitemapFixer',
+  title: 'Link Building: Earn Backlinks That Move Rankings',
   description: "Backlinks remain the strongest off-page ranking signal. Here are the link building strategies that work in 2025 - focused on earning links rather than buying or manipulating them.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/link-building-guide' },
+  openGraph: {
+    title: 'Link Building: Earn Backlinks That Move Rankings',
+    description: 'Backlinks remain the strongest off-page ranking signal. Here are the link building strategies that work in 2025 - focused on earning links rather than buying or manipulating them.',
+    url: 'https://sitemapfixer.com/blog/link-building-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const tactics = [
   { t: "Create genuinely link-worthy content", d: "The most sustainable link building strategy is publishing content that people naturally want to cite. Original research and data studies get linked to because they are primary sources. Comprehensive guides become the definitive reference that writers link to instead of explaining something themselves. Free tools and calculators attract links from every post that recommends them. Before pursuing active outreach, audit whether your content actually deserves links. If the answer is no, start there." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Make sure your site is ready for links</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free technical SEO check in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/internal-linking-strategy" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Internal Linking Strategy: Build Site Authority</a></li>
+            <li><a href="/blog/link-equity-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Equity Guide: How PageRank Flows Through Your Site</a></li>
+            <li><a href="/blog/anchor-text-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text Guide: How to Use Link Anchor Text for SEO</a></li>
+            <li><a href="/blog/broken-links-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Broken Links SEO: How They Hurt Rankings & Fixes</a></li>
+            <li><a href="/blog/backlink-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Backlink Audit: Evaluate and Clean Your Links</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

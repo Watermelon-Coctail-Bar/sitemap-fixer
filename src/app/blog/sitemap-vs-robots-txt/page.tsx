@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Sitemap vs Robots.txt: What Each Does and How to Use Both | SitemapFixer',
+  title: 'Sitemap vs Robots.txt: How They Work Together',
   description: "Sitemaps and robots.txt serve opposite purposes. One tells Google what to crawl. The other tells it what not to. Here is how each works and how to use both correctly.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/sitemap-vs-robots-txt' },
-  openGraph: { title: 'Sitemap vs Robots.txt Explained', description: 'Two critical SEO files, opposite purposes. Here is how each one works.', url: 'https://sitemapfixer.com/blog/sitemap-vs-robots-txt', type: 'article' },
+  openGraph: { title: 'Sitemap vs Robots.txt Explained', description: 'Two critical SEO files, opposite purposes. Here is how each one works.', url: 'https://sitemapfixer.com/blog/sitemap-vs-robots-txt', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function Page() {
   return (
@@ -14,7 +23,7 @@ export default function Page() {
         <span>Sitemap vs Robots.txt</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>April 2025 · 7 min read</div>
-      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Sitemap vs Robots.txt: What Each Does and How to Use Both</h1>
+      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Sitemap vs Robots.txt: How They Work Together</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check both files for conflicts</span>
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze My Site Free</a>
@@ -44,7 +53,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check for sitemap and robots.txt conflicts</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/how-to-fix-sitemap-errors" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Fix Sitemap Errors in Google Search Console</a></li>
+            <li><a href="/blog/xml-sitemap-not-working" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Not Working? 9 Common Reasons and Fixes</a></li>
+            <li><a href="/blog/submit-sitemap-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Submit a Sitemap to Google: Step-by-Step Guide</a></li>
+            <li><a href="/blog/xml-sitemap-submission" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Submission: Submit to Google & Bing</a></li>
+            <li><a href="/blog/sitemap-blocked-robots-txt" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Sitemap Blocked by Robots.txt: How to Find and Fix It</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

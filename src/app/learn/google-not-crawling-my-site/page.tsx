@@ -1,5 +1,14 @@
 import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Google Not Crawling My Site? Here Are the Fixes | SitemapFixer', description: 'If Google is not crawling your site, your pages will not be indexed. Here are all the reasons Googlebot stops crawling and how to fix each one.', alternates: { canonical: 'https://sitemapfixer.com/learn/google-not-crawling-my-site' }, openGraph: { title: 'Google Not Crawling My Site: How to Fix It', description: 'If Google is not crawling your site, your pages will not be indexed. Here are all the reasons Googlebot stops crawling and how to fix each one.', url: 'https://sitemapfixer.com/learn/google-not-crawling-my-site', type: 'article' } };
+export const metadata: Metadata = { title: 'Google Not Crawling My Site? Here Are the Fixes', description: 'If Google is not crawling your site, your pages will not be indexed. Here are all the reasons Googlebot stops crawling and how to fix each one.', alternates: { canonical: 'https://sitemapfixer.com/learn/google-not-crawling-my-site' }, openGraph: { title: 'Google Not Crawling My Site: How to Fix It', description: 'If Google is not crawling your site, your pages will not be indexed. Here are all the reasons Googlebot stops crawling and how to fix each one.', url: 'https://sitemapfixer.com/learn/google-not-crawling-my-site', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  } };
 export default function Page() { return (
   <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
     <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}><a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}<a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}<span>Google Not Crawling My Site: How to Fix It</span></nav>
@@ -18,6 +27,17 @@ export default function Page() { return (
         <p style={{ marginBottom: 20 }}>If your server is very slow, Googlebot will reduce crawl frequency. Improve server response time, enable caching, and use a CDN. Aim for under 200ms Time to First Byte to encourage more frequent crawling.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Build Inbound Links to Your Site</h2>
         <p style={{ marginBottom: 20 }}>Sites with few or no external links get very little crawl budget allocated. Links from other sites signal that your site is worth crawling. Build backlinks through outreach, guest posting, and creating linkable content.</p>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/robots-txt-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Robots.txt Guide: How to Write and Test Your Robots.txt</a></li>
+            <li><a href="/learn/robots-txt-examples" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Robots.txt Examples: WordPress, Shopify & More</a></li>
+            <li><a href="/learn/crawl-budget" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget: What It Is and How to Optimize It</a></li>
+            <li><a href="/learn/crawl-errors-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Errors: Types, Causes, and How to Fix Each One</a></li>
+            <li><a href="/learn/mobile-first-indexing-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile-First Indexing: How to Prepare Your Site</a></li>
+          </ul>
+        </div>
     </div>
     <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}><div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix your sitemap now</div><div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div><a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap</a></div>
     <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}><div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 16 }}>Related guides</div><ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: 12, flexWrap: 'wrap' }}>

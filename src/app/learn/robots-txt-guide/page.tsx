@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Robots.txt Guide: How to Write and Test Your Robots.txt | SitemapFixer',
+  title: 'Robots.txt Guide: How to Write and Test Your Robots.txt',
   description: 'Complete guide to robots.txt. Learn the correct syntax, how to block crawlers, and avoid mistakes that hurt indexing.',
   alternates: { canonical: 'https://sitemapfixer.com/learn/robots-txt-guide' },
+  openGraph: {
+    title: 'Robots.txt Guide: How to Write and Test Your Robots.txt',
+    description: 'Complete guide to robots.txt. Learn the correct syntax, how to block crawlers, and avoid mistakes that hurt indexing.',
+    url: 'https://sitemapfixer.com/learn/robots-txt-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function Page() {
   return (
@@ -33,6 +47,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and robots.txt analysis</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/robots-txt-examples" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Robots.txt Examples: WordPress, Shopify & More</a></li>
+            <li><a href="/learn/crawl-budget" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget: What It Is and How to Optimize It</a></li>
+            <li><a href="/learn/google-not-crawling-my-site" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Not Crawling My Site? Here Are the Fixes</a></li>
+            <li><a href="/learn/crawl-errors-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Errors: Types, Causes, and How to Fix Each One</a></li>
+            <li><a href="/learn/mobile-first-indexing-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile-First Indexing: How to Prepare Your Site</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

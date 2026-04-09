@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Internal Linking Strategy: How to Build Authority Across Your Site | SitemapFixer',
+  title: 'Internal Linking Strategy: Build Site Authority',
   description: "Internal links pass authority, help Google discover content, and guide users to conversion pages. Here is the exact internal linking strategy that maximizes all three.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/internal-linking-strategy' },
-  openGraph: { title: 'Internal Linking Strategy Guide', description: 'Build authority with strategic internal links across your site.', url: 'https://sitemapfixer.com/blog/internal-linking-strategy', type: 'article' },
+  openGraph: { title: 'Internal Linking Strategy Guide', description: 'Build authority with strategic internal links across your site.', url: 'https://sitemapfixer.com/blog/internal-linking-strategy', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "Why Internal Links Are Underrated", d: "External backlinks get all the attention in SEO, but internal links are fully within your control and deliver compounding results. Every internal link you add passes PageRank from one page to another, creates crawl paths for Google to follow, and establishes topical relationships between your content. A well-linked site distributes authority efficiently - your best-linked pages rank better because their authority flows to important pages rather than sitting isolated." },
@@ -38,7 +47,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Find orphan pages and linking gaps</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/link-building-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building: Earn Backlinks That Move Rankings</a></li>
+            <li><a href="/blog/link-equity-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Equity Guide: How PageRank Flows Through Your Site</a></li>
+            <li><a href="/blog/anchor-text-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text Guide: How to Use Link Anchor Text for SEO</a></li>
+            <li><a href="/blog/broken-links-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Broken Links SEO: How They Hurt Rankings & Fixes</a></li>
+            <li><a href="/blog/backlink-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Backlink Audit: Evaluate and Clean Your Links</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

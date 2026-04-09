@@ -4,15 +4,15 @@ import './globals.css';
 export const metadata: Metadata = {
   title: {
     default: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
-    template: '%s',
+    template: '%s | SitemapFixer',
   },
-  description: 'Free AI-powered sitemap checker. Find sitemap errors, fix indexing issues, and get exact actionable SEO improvements in 60 seconds.',
-  keywords: 'sitemap checker, sitemap validator, sitemap not working, pages not indexed, xml sitemap, seo checker',
+  description: 'Free AI-powered sitemap checker and validator. Fix crawled but not indexed pages, find all pages on a website, and check your sitemap for errors. Get actionable SEO fixes in 60 seconds.',
+  keywords: 'sitemap checker, xml sitemap checker, sitemap validator, sitemap finder, find sitemap of a website, how to find sitemap of a website, crawled currently not indexed, crawled but not indexed, how to fix crawled currently not indexed, find all pages on a website, how to check sitemap, pages not indexed, sitemap not working, seo checker',
   metadataBase: new URL('https://sitemapfixer.com'),
   alternates: { canonical: 'https://sitemapfixer.com' },
   openGraph: {
     title: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
-    description: 'Free AI-powered sitemap checker. Find sitemap errors, fix indexing issues, and get exact actionable SEO improvements in 60 seconds.',
+    description: 'Free AI-powered sitemap checker and validator. Fix crawled but not indexed pages, find all pages on a website, and check your sitemap for errors.',
     url: 'https://sitemapfixer.com',
     siteName: 'SitemapFixer',
     type: 'website',
@@ -86,10 +86,11 @@ const faqSchema = {
   '@type': 'FAQPage',
   mainEntity: [
     { '@type': 'Question', name: 'Is SitemapFixer really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You get 3 full AI-powered sitemap analyses for free, no credit card required. Upgrade only when you need unlimited analyses.' } },
-    { '@type': 'Question', name: 'How does SitemapFixer find my sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'We check 20+ common sitemap locations including /sitemap.xml, /sitemap_index.xml, and references in your robots.txt. Works with WordPress, Shopify, Next.js, and any platform.' } },
+    { '@type': 'Question', name: 'How do I find the sitemap of a website?', acceptedAnswer: { '@type': 'Answer', text: 'Enter any domain in SitemapFixer. We check 20+ common sitemap locations including /sitemap.xml, /sitemap_index.xml, and references in robots.txt to find all pages on a website. Works with WordPress, Shopify, Next.js, and any platform.' } },
     { '@type': 'Question', name: 'What does the AI analysis include?', acceptedAnswer: { '@type': 'Answer', text: 'A prioritized list of SEO issues with specific fixes, missing page suggestions, a priority action plan, and affected URLs you can copy-paste directly.' } },
     { '@type': 'Question', name: 'Why are my pages not indexed by Google?', acceptedAnswer: { '@type': 'Answer', text: 'Common reasons include broken sitemaps, noindex tags, crawl budget issues, duplicate content, and orphan pages. Our tool identifies the exact cause for your site.' } },
     { '@type': 'Question', name: 'How is this different from Screaming Frog or Ahrefs?', acceptedAnswer: { '@type': 'Answer', text: 'Those tools require setup and expertise to interpret. SitemapFixer gives you a specific, ranked action plan in 60 seconds -- no crawling, no configuration.' } },
+    { '@type': 'Question', name: 'How do I fix Crawled - Currently Not Indexed?', acceptedAnswer: { '@type': 'Answer', text: 'This Google Search Console status means Google crawled your page but chose not to index it. Common fixes include improving content quality, fixing thin content, removing duplicate pages, and strengthening internal links. SitemapFixer identifies the specific cause for each affected URL.' } },
   ],
 };
 

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/blog', 0.8, 'daily'), m('/learn', 0.8, 'weekly'),
     m('/terms', 0.3, 'monthly'), m('/privacy', 0.3, 'monthly'),
     // Tools
+    m('/sitemap-finder', 0.9, 'weekly'),
     m('/sitemap-checker', 0.9, 'weekly'),
     m('/website-seo-checker', 0.9, 'weekly'),
     m('/xml-sitemap-generator', 0.9, 'weekly'),

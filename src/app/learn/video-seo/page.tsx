@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Video SEO: How to Get Your Videos to Rank in Google Search | SitemapFixer',
+  title: 'Video SEO: Get Videos to Rank in Google',
   description: "Video can rank in Google Search, Google Video, and YouTube. Here is how to optimize hosted and embedded videos for search, including schema markup and video sitemaps.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/video-seo' },
+  openGraph: {
+    title: 'Video SEO: Get Videos to Rank in Google',
+    description: 'Video can rank in Google Search, Google Video, and YouTube. Here is how to optimize hosted and embedded videos for search, including schema markup and video sitemaps.',
+    url: 'https://sitemapfixer.com/learn/video-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "How Google Indexes Video", d: "Google indexes videos it can find, understand, and access. A video hosted on your site or embedded from YouTube can appear in Google Search results as a video rich result, in the Google Video tab, and in Google Discover. For Google to index a video, it needs to be able to crawl the page it is on, find the video file URL, and read metadata about the video (title, description, thumbnail, duration). Videos blocked by robots.txt or behind authentication are excluded." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/image-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image SEO: Optimize Images for Google Search</a></li>
+            <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
+            <li><a href="/learn/breadcrumbs-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Breadcrumbs SEO: How They Help Rankings</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

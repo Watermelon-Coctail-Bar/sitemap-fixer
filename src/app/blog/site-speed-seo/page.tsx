@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Site Speed SEO: How Page Speed Affects Your Google Rankings | SitemapFixer',
+  title: 'Site Speed SEO: How Speed Affects Rankings',
   description: "Page speed is a confirmed Google ranking factor and affects both rankings and conversion rates. Here is how site speed impacts SEO and the most impactful fixes.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/site-speed-seo' },
+  openGraph: {
+    title: 'Site Speed SEO: How Speed Affects Rankings',
+    description: 'Page speed is a confirmed Google ranking factor and affects both rankings and conversion rates. Here is how site speed impacts SEO and the most impactful fixes.',
+    url: 'https://sitemapfixer.com/blog/site-speed-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "How site speed affects rankings", d: "Google confirmed speed as a ranking signal in 2010 for desktop and 2018 for mobile. In 2021 Core Web Vitals became ranking signals - specifically LCP (loading speed), INP (interactivity), and CLS (visual stability). Pages with Poor CWV scores face a ranking disadvantage versus comparable pages with Good scores. The effect is most significant in competitive queries where multiple pages have similar content quality - speed becomes a tiebreaker. Check your CWV status in Google Search Console under Experience then Core Web Vitals." },
@@ -35,7 +49,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your site speed and Core Web Vitals</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/page-speed-improvement" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed: 10 Quick Wins That Make a Difference</a></li>
+            <li><a href="/blog/core-web-vitals-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals Fix: How to Pass LCP, INP, CLS</a></li>
+            <li><a href="/blog/website-speed-test-tools" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Website Speed Test: Best Free Performance Tools</a></li>
+            <li><a href="/learn/core-web-vitals" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals: LCP, INP, CLS Explained</a></li>
+            <li><a href="/learn/page-speed-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed Optimization: Make Your Site Faster</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

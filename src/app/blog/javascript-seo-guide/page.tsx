@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'JavaScript SEO Guide: How to Make JS-Heavy Sites Crawlable | SitemapFixer',
+  title: 'JavaScript SEO: Make JS Sites Crawlable',
   description: "JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. Here is how JavaScript SEO works and how to fix common rendering problems.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/javascript-seo-guide' },
+  openGraph: {
+    title: 'JavaScript SEO: Make JS Sites Crawlable',
+    description: 'JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. Here is how JavaScript SEO works and how to fix common rendering problems.',
+    url: 'https://sitemapfixer.com/blog/javascript-seo-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "How Googlebot handles JavaScript", d: "Googlebot crawls pages in two waves. First crawl: downloads the raw HTML immediately. Second crawl: processes JavaScript and renders the page fully - this can happen hours or days later. Content only visible after JavaScript execution may not be indexed promptly. Critical SEO elements - title, meta description, canonical tag, and key page content - should be present in the initial HTML, not only after JavaScript runs." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your JS site is fully indexable</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and crawlability analysis</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/https-migration-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>HTTPS Migration: Switch Without Losing Rankings</a></li>
+            <li><a href="/blog/redirect-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Redirect SEO: 301 vs 302 & Best Practices</a></li>
+            <li><a href="/blog/crawl-budget-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget SEO: Stop Wasting Crawls on Bad Pages</a></li>
+            <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
+            <li><a href="/blog/pagination-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pagination SEO: Handle Page 2, 3, 4 Right</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

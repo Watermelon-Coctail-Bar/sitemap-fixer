@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Site Migration SEO: How to Move Your Website Without Losing Rankings | SitemapFixer',
+  title: 'Site Migration SEO: Move Without Losing Rankings',
   description: "Site migrations - domain changes, URL restructures, CMS switches - are one of the riskiest SEO operations. Here is the step-by-step process to migrate without losing traffic.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/site-migration-seo' },
+  openGraph: {
+    title: 'Site Migration SEO: Move Without Losing Rankings',
+    description: 'Site migrations - domain changes, URL restructures, CMS switches - are one of the riskiest SEO operations. Here is the step-by-step process to migrate without losing traffic.',
+    url: 'https://sitemapfixer.com/learn/site-migration-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const steps = [
   { n: "1", t: "Crawl the current site before touching anything", d: "Use Screaming Frog or a similar crawler to generate a complete list of all current URLs, their titles, meta descriptions, H1s, and canonical tags. Export your full sitemap. Check Google Search Console for your top-performing pages by clicks and impressions. This baseline is essential - you cannot confirm a successful migration without it." },
@@ -42,6 +56,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks for redirect issues and missing URLs</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+            <li><a href="/learn/canonical-tags" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical Tags: How to Use Them Correctly for SEO</a></li>
+            <li><a href="/learn/structured-data" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Structured Data & Schema Markup: Complete Guide</a></li>
+            <li><a href="/learn/core-web-vitals" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals: LCP, INP, CLS Explained</a></li>
+            <li><a href="/learn/page-speed-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed Optimization: Make Your Site Faster</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'HTTPS Migration Guide: Move from HTTP to HTTPS Without Losing Rankings | SitemapFixer',
+  title: 'HTTPS Migration: Switch Without Losing Rankings',
   description: "Migrating from HTTP to HTTPS is an SEO-critical change. Do it wrong and you lose rankings. Here is the step-by-step HTTPS migration process that preserves your organic traffic.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/https-migration-guide' },
+  openGraph: {
+    title: 'HTTPS Migration: Switch Without Losing Rankings',
+    description: 'Migrating from HTTP to HTTPS is an SEO-critical change. Do it wrong and you lose rankings. Here is the step-by-step HTTPS migration process that preserves your organic traffic.',
+    url: 'https://sitemapfixer.com/blog/https-migration-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const steps = [
   { t: "Get and install your SSL certificate", d: "Most hosting providers offer free SSL via Let's Encrypt - enable it in your hosting control panel with one click. After installation, verify your site loads correctly at https:// before making any other changes. Test on multiple pages and check Chrome's padlock icon shows secure." },
@@ -38,7 +52,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Validate your HTTPS sitemap after migration</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs for HTTP vs HTTPS consistency</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/javascript-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>JavaScript SEO: Make JS Sites Crawlable</a></li>
+            <li><a href="/blog/redirect-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Redirect SEO: 301 vs 302 & Best Practices</a></li>
+            <li><a href="/blog/crawl-budget-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget SEO: Stop Wasting Crawls on Bad Pages</a></li>
+            <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
+            <li><a href="/blog/pagination-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pagination SEO: Handle Page 2, 3, 4 Right</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

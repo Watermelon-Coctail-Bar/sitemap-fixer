@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Google Search Console Errors: What Each One Means and How to Fix It | SitemapFixer',
+  title: 'Google Search Console Errors: Meanings & Fixes',
   description: "Every error in Google Search Console means something specific. This guide explains the most common GSC errors and the exact steps to fix each one.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/google-search-console-errors-guide' },
-  openGraph: { title: 'Google Search Console Errors: Complete Fix Guide', description: 'What every GSC error means and exactly how to fix it.', url: 'https://sitemapfixer.com/blog/google-search-console-errors-guide', type: 'article' },
+  openGraph: { title: 'Google Search Console Errors: Complete Fix Guide', description: 'What every GSC error means and exactly how to fix it.', url: 'https://sitemapfixer.com/blog/google-search-console-errors-guide', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const errors = [
   { e: "Submitted URL blocked by robots.txt", fix: "Your sitemap contains a URL that robots.txt prevents Googlebot from crawling. Either remove the URL from your sitemap (if the block is intentional) or update robots.txt to allow the URL (if it should be indexed). Check your robots.txt at yoursite.com/robots.txt and look for Disallow rules matching the affected URLs." },
@@ -25,7 +34,7 @@ export default function Page() {
         <span>Google Search Console Errors Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>April 2025 · 10 min read</div>
-      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Google Search Console Errors: What Each One Means and How to Fix It</h1>
+      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Google Search Console Errors: Meanings & Fixes</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Auto-detect sitemap errors free</span>
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze My Sitemap Free</a>
@@ -45,7 +54,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix your sitemap errors automatically</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis - detects all sitemap and indexing errors</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/schema-markup-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Schema Markup: Add Structured Data to Your Site</a></li>
+            <li><a href="/blog/structured-data-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Structured Data: Add Schema Markup</a></li>
+            <li><a href="/blog/google-search-console-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Search Console: Fix Your SEO</a></li>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+            <li><a href="/learn/seo-audit-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Checklist: 25 Checks to Run on Any Website</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

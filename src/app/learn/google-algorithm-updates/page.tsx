@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Google Algorithm Updates: Key Updates and What Each Targeted | SitemapFixer',
+  title: 'Google Algorithm Updates: History & Impact',
   description: "Google runs thousands of algorithm updates per year. Here are the major named updates, what each targeted, and how to build a site that survives future updates.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/google-algorithm-updates' },
+  openGraph: {
+    title: 'Google Algorithm Updates: History & Impact',
+    description: 'Google runs thousands of algorithm updates per year. Here are the major named updates, what each targeted, and how to build a site that survives future updates.',
+    url: 'https://sitemapfixer.com/learn/google-algorithm-updates',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const updates = [
   { name: "Panda (2011, now core)", target: "Thin, low-quality, and duplicate content.", impact: "Sites with many pages of low-quality content - content farms, sites that copied content, sites with very thin pages - saw dramatic traffic losses. Google now evaluates site quality holistically rather than just page by page." },
@@ -47,6 +61,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free technical SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Google Discover SEO: How to Get Your Content Into Google Discover | SitemapFixer',
+  title: 'Google Discover SEO: Get Into Discover Feed',
   description: "Google Discover shows content to users based on their interests, not search queries. Here is how to optimize for Discover, what content performs well, and how to track it.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/google-discover-seo' },
+  openGraph: {
+    title: 'Google Discover SEO: Get Into Discover Feed',
+    description: 'Google Discover shows content to users based on their interests, not search queries. Here is how to optimize for Discover, what content performs well, and how to track it.',
+    url: 'https://sitemapfixer.com/learn/google-discover-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Is Google Discover", d: "Google Discover is a personalized content feed shown on the Google app, Chrome on mobile, and the Google homepage on Android. It surfaces content to users based on their browsing history, interests, and search patterns - without them searching for it. Discover can drive substantial traffic to publishers and content sites, often surpassing regular search traffic for news and lifestyle content. Unlike search, you cannot target specific Discover queries - you optimize for content quality and Google decides who sees it." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

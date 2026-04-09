@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'How to Fix Sitemap Errors in Google Search Console | SitemapFixer',
+  title: 'How to Fix Sitemap Errors in Google Search Console',
   description: 'Step-by-step guide to fixing every sitemap error in Google Search Console: couldn\'t fetch, submitted URL blocked by robots.txt, redirect errors, and more.',
   alternates: { canonical: 'https://sitemapfixer.com/blog/how-to-fix-sitemap-errors' },
-  openGraph: { title: 'How to Fix Sitemap Errors in Google Search Console', description: 'Fix every sitemap error in Google Search Console with this step-by-step guide.', url: 'https://sitemapfixer.com/blog/how-to-fix-sitemap-errors', type: 'article' },
+  openGraph: { title: 'How to Fix Sitemap Errors in Google Search Console', description: 'Fix every sitemap error in Google Search Console with this step-by-step guide.', url: 'https://sitemapfixer.com/blog/how-to-fix-sitemap-errors', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function Page() {
   return (
@@ -48,7 +57,18 @@ export default function Page() {
           <li><a href="/learn/submitted-url-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Submitted URL Not Indexed</a></li>
           <li><a href="/learn/robots-txt-guide" style={{ color: '#2d5be3', textDecoration: 'none', background: '#eef1ff', padding: '6px 14px', borderRadius: 6, fontSize: 13 }}>Robots.txt Guide</a></li>
         </ul>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/xml-sitemap-not-working" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Not Working? 9 Common Reasons and Fixes</a></li>
+            <li><a href="/blog/submit-sitemap-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Submit a Sitemap to Google: Step-by-Step Guide</a></li>
+            <li><a href="/blog/xml-sitemap-submission" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Submission: Submit to Google & Bing</a></li>
+            <li><a href="/blog/sitemap-blocked-robots-txt" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Sitemap Blocked by Robots.txt: How to Find and Fix It</a></li>
+            <li><a href="/blog/sitemap-vs-robots-txt" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Sitemap vs Robots.txt: How They Work Together</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

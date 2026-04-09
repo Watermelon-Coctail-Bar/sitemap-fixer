@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Featured Snippets Guide: How to Win Position Zero in Google | SitemapFixer',
+  title: 'Featured Snippets: Win Position Zero in Google',
   description: "Featured snippets appear above all organic results and drive significant click-through rates. Here is how to structure content to win featured snippet positions.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/featured-snippets-guide' },
+  openGraph: {
+    title: 'Featured Snippets: Win Position Zero in Google',
+    description: 'Featured snippets appear above all organic results and drive significant click-through rates. Here is how to structure content to win featured snippet positions.',
+    url: 'https://sitemapfixer.com/blog/featured-snippets-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const types = [
   { t: "Paragraph snippets", d: "The most common snippet type - a concise paragraph answering a question directly. Google pulls this when the query starts with what is, who is, why does, or how does. To target paragraph snippets: write a direct 40-60 word answer immediately following the question as an H2 heading. The answer should start with the subject of the question. Example: If the H2 is What is a sitemap? write the answer starting with A sitemap is an XML file that..." },
@@ -36,7 +50,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Make sure your pages are indexable for snippets</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/keyword-research-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords That Drive Traffic</a></li>
+            <li><a href="/blog/long-tail-keywords-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Long-Tail Keywords: Find and Rank for Queries</a></li>
+            <li><a href="/blog/eeat-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>E-E-A-T Guide: Build Expertise, Authority, and Trust</a></li>
+            <li><a href="/blog/seo-for-bloggers" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Bloggers: Get Your Posts Ranked on Google</a></li>
+            <li><a href="/blog/seo-basics-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Basics: A Beginner</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

@@ -1,8 +1,17 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Pricing Plans | SitemapFixer',
+  title: 'Pricing Plans',
   description: 'Simple, transparent pricing for SitemapFixer. Start free, upgrade for unlimited sitemap analyses and full SEO reports.',
   alternates: { canonical: 'https://sitemapfixer.com/pricing' },
+  openGraph: {
+    title: 'Pricing Plans',
+    description: 'Simple, transparent pricing for SitemapFixer. Start free, upgrade for unlimited sitemap analyses and full SEO reports.',
+    url: 'https://sitemapfixer.com/pricing',
+    type: 'website',
+    images: [{ url: 'https://sitemapfixer.com/opengraph-image', width: 1200, height: 630, alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool' }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function PricingLayout({ children }: { children: React.ReactNode }) {
   return (

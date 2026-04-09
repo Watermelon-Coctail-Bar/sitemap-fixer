@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Video SEO Guide: How to Get Your Videos Ranked on Google and YouTube | SitemapFixer',
+  title: 'Video SEO: Rank Videos on Google and YouTube',
   description: "Video content appears in Google Search, Google Images, and YouTube. Here is how to optimize videos for maximum discoverability across all three platforms.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/video-seo-guide' },
+  openGraph: {
+    title: 'Video SEO: Rank Videos on Google and YouTube',
+    description: 'Video content appears in Google Search, Google Images, and YouTube. Here is how to optimize videos for maximum discoverability across all three platforms.',
+    url: 'https://sitemapfixer.com/blog/video-seo-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "YouTube vs hosted video: which is better for SEO", d: "Hosting on YouTube gives your video access to YouTube search (the world's second largest search engine) and earns video rich results in Google Search. Self-hosting on your site keeps users on your domain and is better for Core Web Vitals (YouTube embeds can hurt page speed). Best approach: host on YouTube AND embed on your site. The YouTube video appears in YouTube search and video rich results; the page embedding it appears in regular web search and benefits from the video content signals." },
@@ -36,7 +50,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your video pages are discoverable</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing check in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/ecommerce-seo-tips" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ecommerce SEO: Get Product Pages to Rank</a></li>
+            <li><a href="/blog/social-media-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Social Media SEO: Do Social Signals Matter?</a></li>
+            <li><a href="/blog/mobile-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO Guide: Optimize Your Site for Mobile Search</a></li>
+            <li><a href="/blog/canonical-url-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical URL: What It Is and How to Set It Correctly</a></li>
+            <li><a href="/blog/url-structure-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>URL Structure SEO: How to Create SEO-Friendly URLs</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

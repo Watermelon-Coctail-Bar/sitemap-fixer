@@ -1,9 +1,23 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fix Sitemap for E-commerce Sites - Complete Guide | SitemapFixer',
+  title: 'Fix Sitemap for E-commerce Sites - Complete Guide',
   description: 'E-commerce sitemap best practices: handling product variants, out-of-stock pages, faceted navigation, and seasonal content.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for/ecommerce' },
+  openGraph: {
+    title: 'Fix Sitemap for E-commerce Sites - Complete Guide',
+    description: 'E-commerce sitemap best practices: handling product variants, out-of-stock pages, faceted navigation, and seasonal content.',
+    url: 'https://sitemapfixer.com/fix-sitemap-for/ecommerce',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 export default function Page() {

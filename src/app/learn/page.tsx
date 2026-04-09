@@ -1,10 +1,19 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SEO Learning Center: Technical SEO Guides | SitemapFixer',
+  title: 'Technical SEO Guides',
   description: 'Free technical SEO guides covering sitemaps, indexing, Core Web Vitals, robots.txt, canonical tags, and more. Learn SEO from the experts.',
   alternates: { canonical: 'https://sitemapfixer.com/learn' },
-  openGraph: { title: 'SEO Learning Center | SitemapFixer', description: 'Free technical SEO guides.', url: 'https://sitemapfixer.com/learn', type: 'website' },
+  openGraph: { title: 'SEO Learning Center', description: 'Free technical SEO guides.', url: 'https://sitemapfixer.com/learn', type: 'website',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 const guides = [
@@ -101,6 +110,7 @@ const guides = [
       { href: '/learn/django-sitemap', title: 'Django Sitemap' },
       { href: '/learn/drupal-sitemap', title: 'Drupal Sitemap' },
       { href: '/learn/laravel-sitemap', title: 'Laravel Sitemap' },
+      { href: '/learn/rails-sitemap', title: 'Rails Sitemap' },
       { href: '/learn/magento-seo', title: 'Magento SEO' },
     ],
   },
@@ -167,6 +177,7 @@ const guides = [
       { href: '/learn/webflow-seo', title: 'Webflow SEO' },
       { href: '/learn/ghost-seo', title: 'Ghost SEO' },
       { href: '/learn/woocommerce-seo', title: 'WooCommerce SEO' },
+      { href: '/learn/shopify-seo', title: 'Shopify SEO' },
     ],
   },
 ];

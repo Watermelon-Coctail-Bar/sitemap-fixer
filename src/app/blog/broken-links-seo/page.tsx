@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Broken Links SEO: How Broken Links Hurt Rankings and How to Fix Them | SitemapFixer',
+  title: 'Broken Links SEO: How They Hurt Rankings & Fixes',
   description: "Broken links waste crawl budget, leak PageRank, and damage user experience. Here is how to find all broken links on your site and fix them efficiently.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/broken-links-seo' },
-  openGraph: { title: 'Broken Links SEO: Find and Fix Guide', url: 'https://sitemapfixer.com/blog/broken-links-seo', type: 'article' },
+  openGraph: { title: 'Broken Links SEO: Find and Fix Guide', url: 'https://sitemapfixer.com/blog/broken-links-seo', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "How Broken Links Hurt SEO", d: "A broken link (one pointing to a 404 or other error page) wastes one of your internal link equity hops on a dead end. When Googlebot follows a broken internal link and gets a 404, it wastes crawl budget and receives no PageRank to pass on. On large sites with many broken links, this can meaningfully reduce the crawl efficiency and authority flow across your site. Broken external links also signal site quality issues - sites that do not maintain their links look poorly maintained to both users and search engines." },
@@ -38,7 +47,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Find broken URLs in your sitemap</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs for 4xx errors</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/internal-linking-strategy" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Internal Linking Strategy: Build Site Authority</a></li>
+            <li><a href="/blog/link-building-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building: Earn Backlinks That Move Rankings</a></li>
+            <li><a href="/blog/link-equity-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Equity Guide: How PageRank Flows Through Your Site</a></li>
+            <li><a href="/blog/anchor-text-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text Guide: How to Use Link Anchor Text for SEO</a></li>
+            <li><a href="/blog/backlink-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Backlink Audit: Evaluate and Clean Your Links</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

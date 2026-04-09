@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Backlink Audit Guide: How to Evaluate and Clean Your Link Profile | SitemapFixer',
+  title: 'Backlink Audit: Evaluate and Clean Your Links',
   description: "A backlink audit identifies your valuable links and harmful ones. Here is how to audit your link profile, disavow toxic links, and use link data to improve your SEO.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/backlink-audit-guide' },
+  openGraph: {
+    title: 'Backlink Audit: Evaluate and Clean Your Links',
+    description: 'A backlink audit identifies your valuable links and harmful ones. Here is how to audit your link profile, disavow toxic links, and use link data to improve your SEO.',
+    url: 'https://sitemapfixer.com/blog/backlink-audit-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "Why backlink audits matter", d: "Your backlink profile is one of the strongest ranking signals in Google's algorithm. A healthy profile with authoritative, relevant links in diverse natural patterns helps rankings. A profile with spammy links from link farms, irrelevant directories, or purchased link networks can trigger Penguin penalties or manual actions. Regular audits catch problems early and reveal your most valuable link assets for protection and replication." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Build a strong technical foundation for your links</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/internal-linking-strategy" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Internal Linking Strategy: Build Site Authority</a></li>
+            <li><a href="/blog/link-building-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building: Earn Backlinks That Move Rankings</a></li>
+            <li><a href="/blog/link-equity-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Equity Guide: How PageRank Flows Through Your Site</a></li>
+            <li><a href="/blog/anchor-text-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text Guide: How to Use Link Anchor Text for SEO</a></li>
+            <li><a href="/blog/broken-links-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Broken Links SEO: How They Hurt Rankings & Fixes</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

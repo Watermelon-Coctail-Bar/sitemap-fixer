@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Squarespace SEO: Optimize Your Squarespace Site for Google | SitemapFixer',
+  title: 'Squarespace SEO: Optimize for Google',
   description: "Squarespace handles some SEO automatically but leaves others to you. Here is how to configure titles, meta descriptions, sitemap, and get the most from Squarespace SEO.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/squarespace-seo' },
+  openGraph: {
+    title: 'Squarespace SEO: Optimize for Google',
+    description: 'Squarespace handles some SEO automatically but leaves others to you. Here is how to configure titles, meta descriptions, sitemap, and get the most from Squarespace SEO.',
+    url: 'https://sitemapfixer.com/learn/squarespace-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Squarespace Handles Automatically", d: "Squarespace generates a sitemap at yoursite.com/sitemap.xml automatically, including all pages, posts, products, and gallery items. It adds canonical tags, SSL is included on all plans, and pages are server-rendered (no JavaScript rendering delay). Open Graph tags are added automatically. The sitemap updates when you publish or delete content - you do not need to manually regenerate it." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/wordpress-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>WordPress SEO: Complete Optimization Guide for 2025</a></li>
+            <li><a href="/learn/shopify-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Shopify SEO: Optimize Your Store for Google</a></li>
+            <li><a href="/learn/wix-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Wix SEO: How to Optimize Your Wix Website for Google</a></li>
+            <li><a href="/learn/webflow-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Webflow SEO: Optimize for Google</a></li>
+            <li><a href="/learn/ghost-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ghost SEO: Optimize Your Publication</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

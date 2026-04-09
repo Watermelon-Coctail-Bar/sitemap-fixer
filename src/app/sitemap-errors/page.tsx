@@ -1,9 +1,23 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sitemap Errors - Complete Guide to XML Sitemap Issues | SitemapFixer',
+  title: 'Sitemap Errors: Complete Fix Guide',
   description: 'Browse all common XML sitemap errors: duplicate URLs, invalid URLs, orphan pages, incorrect priority, and more. Learn how to detect and fix each one.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors' },
+  openGraph: {
+    title: 'Sitemap Errors: Complete Fix Guide',
+    description: 'Browse all common XML sitemap errors: duplicate URLs, invalid URLs, orphan pages, incorrect priority, and more. Learn how to detect and fix each one.',
+    url: 'https://sitemapfixer.com/sitemap-errors',
+    type: 'website',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 const ERRORS = [

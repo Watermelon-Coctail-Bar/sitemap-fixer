@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Local Citations Guide: How to Build NAP Consistency for Local SEO | SitemapFixer',
+  title: 'Local Citations: Build NAP Consistency for SEO',
   description: "Local citations are mentions of your business name, address, and phone number across the web. Here is how to build and audit citations for local SEO rankings.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/local-citations-guide' },
+  openGraph: {
+    title: 'Local Citations: Build NAP Consistency for SEO',
+    description: 'Local citations are mentions of your business name, address, and phone number across the web. Here is how to build and audit citations for local SEO rankings.',
+    url: 'https://sitemapfixer.com/blog/local-citations-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What local citations are", d: "A local citation is any online mention of your business's NAP - Name, Address, and Phone number. Citations appear on directories like Yelp, Yellow Pages, Apple Maps, Bing Places, Facebook, and hundreds of industry-specific directories. Google uses citation consistency as a local ranking signal: consistent NAP across many authoritative sources confirms your business is legitimate and located where you say it is." },
@@ -35,7 +49,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Audit your local site technical SEO</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/local-seo-basics" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO Basics: How to Rank in Google Local Search</a></li>
+            <li><a href="/blog/international-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>International SEO: Target Multiple Countries</a></li>
+            <li><a href="/blog/hreflang-common-mistakes" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Hreflang Mistakes: Fix International SEO</a></li>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+            <li><a href="/learn/seo-audit-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Checklist: 25 Checks to Run on Any Website</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

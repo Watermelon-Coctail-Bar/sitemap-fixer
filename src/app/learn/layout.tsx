@@ -20,8 +20,8 @@ export default function LearnLayout({ children }: { children: React.ReactNode })
           <span style={{ fontWeight: 600, fontSize: 17, color: '#0a0a0f', letterSpacing: '-0.02em' }}>SitemapFixer</span>
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
-          <a href="/#finder" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sitemap Finder</a>
-          <a href="/#checker" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sitemap Checker</a>
+          <a href="/sitemap-finder" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sitemap Finder</a>
+          <a href="/sitemap-checker" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sitemap Checker</a>
           <a href="/learn" style={{ fontSize: 14, color: '#2d5be3', fontWeight: 600, textDecoration: 'none' }}>Learn</a>
           <a href="/pricing" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Pricing</a>
           <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '8px 18px', borderRadius: 8, fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>Free Audit</a>
@@ -39,8 +39,8 @@ export default function LearnLayout({ children }: { children: React.ReactNode })
           </div>
           <div>
             <div style={{ fontWeight: 600, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#9ca3af', marginBottom: 16 }}>Tools</div>
-            {['Sitemap Finder', 'Sitemap Checker', 'SEO Checker', 'Free SEO Audit', 'XML Generator'].map(t => (
-              <a key={t} href="/" style={{ display: 'block', fontSize: 13, color: '#3d3d4f', textDecoration: 'none', marginBottom: 10 }}>{t}</a>
+            {[['Sitemap Finder', '/sitemap-finder'], ['Sitemap Checker', '/sitemap-checker'], ['SEO Checker', '/website-seo-checker'], ['Free SEO Audit', '/free-seo-audit'], ['XML Generator', '/xml-sitemap-generator']].map(([t, h]) => (
+              <a key={h as string} href={h as string} style={{ display: 'block', fontSize: 13, color: '#3d3d4f', textDecoration: 'none', marginBottom: 10 }}>{t}</a>
             ))}
           </div>
           <div>

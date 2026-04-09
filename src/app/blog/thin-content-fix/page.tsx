@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Thin Content: How to Find It, Fix It, and Recover Your Rankings | SitemapFixer',
+  title: 'Thin Content: Find It, Fix It, Recover Rankings',
   description: "Thin content pages drag down your entire site in Google's quality assessment. Here is how to identify thin pages, which ones to fix vs remove, and how to recover.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/thin-content-fix' },
-  openGraph: { title: 'Thin Content Fix: Identify, Remove, and Recover', url: 'https://sitemapfixer.com/blog/thin-content-fix', type: 'article' },
+  openGraph: { title: 'Thin Content Fix: Identify, Remove, and Recover', url: 'https://sitemapfixer.com/blog/thin-content-fix', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What thin content is", d: "Thin content is pages that provide little or no unique value to users. This includes pages with very few words (under 200-300), pages with text copied from other sources, auto-generated pages with templated content and no unique data, doorway pages designed only to rank for a keyword, and pages where the content does not match what the user searching for it would want. Google's Helpful Content system evaluates thin content site-wide - too many thin pages can demote your entire domain, not just the individual pages." },
@@ -38,7 +47,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Find thin content in your sitemap</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - analyzes URL patterns and indexing status</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/content-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content Audit: How to Audit Your Site for SEO</a></li>
+            <li><a href="/blog/content-marketing-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content Marketing SEO: Drive Organic Growth</a></li>
+            <li><a href="/blog/thin-content-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Thin Content: What It Is and How to Fix It</a></li>
+            <li><a href="/blog/keyword-cannibalization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Cannibalization: How to Find and Fix It</a></li>
+            <li><a href="/blog/duplicate-content-seo-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Duplicate Content SEO: How to Find and Fix It</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

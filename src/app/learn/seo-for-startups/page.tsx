@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'SEO for Startups: Where to Focus When You Have Limited Time | SitemapFixer',
+  title: 'SEO for Startups: Where to Focus First',
   description: "Startups cannot do everything. Here is a ruthlessly prioritized SEO checklist for early-stage companies - what to do first, what to ignore, and how to build compounding traffic.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/seo-for-startups' },
+  openGraph: {
+    title: 'SEO for Startups: Where to Focus First',
+    description: 'Startups cannot do everything. Here is a ruthlessly prioritized SEO checklist for early-stage companies - what to do first, what to ignore, and how to build compounding traffic.',
+    url: 'https://sitemapfixer.com/learn/seo-for-startups',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const items = [
   { n: "1", h: "Get the technical foundation right before anything else", d: "Before writing a single blog post, ensure: your site is on HTTPS, Googlebot can access all your pages (no accidental robots.txt blocks), you have a working sitemap.xml submitted to Google Search Console, there are no noindex tags on pages you want ranked, and your site loads in under 3 seconds on mobile. Technical errors silently kill all other SEO efforts. This takes one day to audit and fix and pays dividends forever." },
@@ -39,6 +53,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

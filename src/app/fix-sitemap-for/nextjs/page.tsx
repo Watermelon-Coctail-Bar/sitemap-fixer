@@ -1,9 +1,23 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fix Sitemap for Next.js - Complete Guide | SitemapFixer',
+  title: 'Fix Sitemap for Next.js - Complete Guide',
   description: 'Build a perfect Next.js sitemap: static generation, dynamic routes, App Router sitemap.ts, and programmatic SEO at scale.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for/nextjs' },
+  openGraph: {
+    title: 'Fix Sitemap for Next.js - Complete Guide',
+    description: 'Build a perfect Next.js sitemap: static generation, dynamic routes, App Router sitemap.ts, and programmatic SEO at scale.',
+    url: 'https://sitemapfixer.com/fix-sitemap-for/nextjs',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 export default function Page() {

@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Pagination SEO Guide: How to Handle Page 2, 3, 4 for Google | SitemapFixer',
+  title: 'Pagination SEO: Handle Page 2, 3, 4 Right',
   description: "Pagination creates duplicate content risks and crawl budget waste. Here is how to correctly handle paginated content with canonical tags, rel=next/prev, and sitemap strategy.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/pagination-seo-guide' },
+  openGraph: {
+    title: 'Pagination SEO: Handle Page 2, 3, 4 Right',
+    description: 'Pagination creates duplicate content risks and crawl budget waste. Here is how to correctly handle paginated content with canonical tags, rel=next/prev, and sitemap strategy.',
+    url: 'https://sitemapfixer.com/blog/pagination-seo-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "The pagination problem for SEO", d: "Paginated pages (category/page/2, blog/page/3) create multiple pages with very similar content - each page shows the same type of content just at different offsets. This can dilute ranking signals across many pages instead of concentrating them. Google may choose to index paginated pages over your main category page if signals are mixed. Crawl budget is also spent on pagination pages that rarely receive meaningful organic traffic." },
@@ -36,7 +50,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap for pagination issues</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects /page/N patterns and URL duplicates</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/javascript-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>JavaScript SEO: Make JS Sites Crawlable</a></li>
+            <li><a href="/blog/https-migration-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>HTTPS Migration: Switch Without Losing Rankings</a></li>
+            <li><a href="/blog/redirect-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Redirect SEO: 301 vs 302 & Best Practices</a></li>
+            <li><a href="/blog/crawl-budget-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget SEO: Stop Wasting Crawls on Bad Pages</a></li>
+            <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

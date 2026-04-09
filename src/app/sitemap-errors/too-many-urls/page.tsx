@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Too Many URLs in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
+  title: 'Too Many URLs in Sitemap: Fix Guide',
   description: 'Is your sitemap too large? Google recommends a maximum of 50,000 URLs per sitemap file. Learn how to split, optimize, and prioritize your sitemap correctly.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/too-many-urls' },
   openGraph: {
@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     description: 'Is your sitemap too large? Google recommends a maximum of 50,000 URLs per sitemap file. Learn how to split, optimize, and prioritize your sitemap correctly.',
     url: 'https://sitemapfixer.com/sitemap-errors/too-many-urls',
     type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 

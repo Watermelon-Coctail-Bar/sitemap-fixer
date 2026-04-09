@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Duplicate URLs in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
+  title: 'Duplicate URLs in Sitemap: Fix Guide',
   description: 'Find and fix duplicate URLs in your XML sitemap. Duplicate entries waste crawl budget and confuse search engines. Detect and remove them in seconds.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/duplicate-urls' },
   openGraph: {
@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     description: 'Find and fix duplicate URLs in your XML sitemap. Duplicate entries waste crawl budget and confuse search engines. Detect and remove them in seconds.',
     url: 'https://sitemapfixer.com/sitemap-errors/duplicate-urls',
     type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 

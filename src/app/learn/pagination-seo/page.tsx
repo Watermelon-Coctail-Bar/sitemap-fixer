@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Pagination SEO: How to Handle Paginated Content Without Losing Rankings | SitemapFixer',
+  title: 'Pagination SEO: Handle Paginated Content Right',
   description: "Pagination creates multiple pages for the same content - blog archives, product listings, search results. Here is the correct SEO approach and what to avoid.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/pagination-seo' },
+  openGraph: {
+    title: 'Pagination SEO: Handle Paginated Content Right',
+    description: 'Pagination creates multiple pages for the same content - blog archives, product listings, search results. Here is the correct SEO approach and what to avoid.',
+    url: 'https://sitemapfixer.com/learn/pagination-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "The Pagination SEO Problem", d: "When content is split across multiple pages (/page/1, /page/2, /page/3), each page is a separate URL with a small portion of the full content. Google needs to understand these are all part of the same series. The main risks: thin content on individual pages, crawl budget spent on low-value pages, and link equity diluted across page variants instead of concentrated on the main URL." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects paginated URLs and crawl waste</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/image-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image SEO: Optimize Images for Google Search</a></li>
+            <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
+            <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

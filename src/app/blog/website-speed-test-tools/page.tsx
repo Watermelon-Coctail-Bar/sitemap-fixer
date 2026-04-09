@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Website Speed Test Tools: Best Free Tools to Measure Page Performance | SitemapFixer',
+  title: 'Website Speed Test: Best Free Performance Tools',
   description: "These are the best free tools to test your website speed and Core Web Vitals. Each tool measures different things - here is which to use and what each result means.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/website-speed-test-tools' },
+  openGraph: {
+    title: 'Website Speed Test: Best Free Performance Tools',
+    description: 'These are the best free tools to test your website speed and Core Web Vitals. Each tool measures different things - here is which to use and what each result means.',
+    url: 'https://sitemapfixer.com/blog/website-speed-test-tools',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const tools = [
   { name: "PageSpeed Insights", url: "pagespeed.web.dev", d: "Google's own tool that shows both Lab data (Lighthouse scores run by the tool) and Field data (real user measurements from Chrome users via CrUX). Always check the Field data tab - this is what Google actually uses for rankings. Lab scores are useful for debugging but field data is the ground truth. Enter any URL and get LCP, INP, CLS scores and specific improvement recommendations." },
@@ -40,7 +54,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your site speed alongside your sitemap</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free technical SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/page-speed-improvement" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed: 10 Quick Wins That Make a Difference</a></li>
+            <li><a href="/blog/core-web-vitals-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals Fix: How to Pass LCP, INP, CLS</a></li>
+            <li><a href="/blog/site-speed-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Site Speed SEO: How Speed Affects Rankings</a></li>
+            <li><a href="/learn/core-web-vitals" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals: LCP, INP, CLS Explained</a></li>
+            <li><a href="/learn/page-speed-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed Optimization: Make Your Site Faster</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

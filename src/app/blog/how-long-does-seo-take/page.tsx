@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'How Long Does SEO Take? An Honest Timeline | SitemapFixer',
+  title: 'How Long Does SEO Take? An Honest Timeline',
   description: "SEO results take time but not all tasks take equally long. Here is an honest breakdown of when to expect results from different types of SEO work.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/how-long-does-seo-take' },
-  openGraph: { title: 'How Long Does SEO Take? An Honest Timeline', description: 'An honest, specific breakdown of when SEO results happen.', url: 'https://sitemapfixer.com/blog/how-long-does-seo-take', type: 'article' },
+  openGraph: { title: 'How Long Does SEO Take? An Honest Timeline', description: 'An honest, specific breakdown of when SEO results happen.', url: 'https://sitemapfixer.com/blog/how-long-does-seo-take', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const items = [
   { t: "Technical fixes: days to weeks", d: "If you fix a noindex tag, submit a corrected sitemap, or remove a robots.txt block that was preventing crawling, you can see results within days. Use Google Search Console URL Inspection to request indexing immediately after a fix. Google typically recrawls requested pages within 1-3 days. Fixing a redirect chain or adding missing canonical tags may take 1-2 weeks to fully propagate as Google recrawls your pages on its own schedule." },
@@ -41,7 +50,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Start with technical SEO - the fastest wins</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/ecommerce-seo-tips" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ecommerce SEO: Get Product Pages to Rank</a></li>
+            <li><a href="/blog/social-media-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Social Media SEO: Do Social Signals Matter?</a></li>
+            <li><a href="/blog/mobile-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO Guide: Optimize Your Site for Mobile Search</a></li>
+            <li><a href="/blog/video-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Rank Videos on Google and YouTube</a></li>
+            <li><a href="/blog/canonical-url-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical URL: What It Is and How to Set It Correctly</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

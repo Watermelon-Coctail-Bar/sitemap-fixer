@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Anchor Text SEO: Types, Best Practices, and Over-Optimization Risks | SitemapFixer',
+  title: 'Anchor Text SEO: Types & Best Practices',
   description: "Anchor text tells Google what the linked page is about. Here is how to use exact match, partial match, branded, and generic anchors in the right proportions - and what to avoid.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/anchor-text-seo' },
+  openGraph: {
+    title: 'Anchor Text SEO: Types & Best Practices',
+    description: 'Anchor text tells Google what the linked page is about. Here is how to use exact match, partial match, branded, and generic anchors in the right proportions - and what to avoid.',
+    url: 'https://sitemapfixer.com/learn/anchor-text-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Anchor Text Tells Google", d: "Anchor text is the visible, clickable text in a hyperlink. When sites link to you with anchor text, Google uses that text as a signal about what your linked page covers. A link with anchor text 'best sitemap checker' signals to Google that the destination page is relevant to sitemap checking. This is one of the reasons anchor text is a key part of how backlinks pass topical relevance, not just authority." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/image-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image SEO: Optimize Images for Google Search</a></li>
+            <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
+            <li><a href="/learn/breadcrumbs-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Breadcrumbs SEO: How They Help Rankings</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

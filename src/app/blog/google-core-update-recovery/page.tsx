@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Google Core Update Recovery: How to Recover Lost Rankings | SitemapFixer',
+  title: 'Google Core Update Recovery: Recover Rankings',
   description: "A Google core update dropped your rankings. Here is how to diagnose exactly what was targeted, fix it, and recover - plus realistic timelines for what to expect.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/google-core-update-recovery' },
+  openGraph: {
+    title: 'Google Core Update Recovery: Recover Rankings',
+    description: 'A Google core update dropped your rankings. Here is how to diagnose exactly what was targeted, fix it, and recover - plus realistic timelines for what to expect.',
+    url: 'https://sitemapfixer.com/blog/google-core-update-recovery',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const steps = [
   { t: "Step 1: Confirm it was a core update", d: "Check the date of your traffic drop against Google's confirmed algorithm update calendar. Google announces confirmed core updates on the Google Search Central blog and on their @googlesearchc Twitter/X account. If your drop coincides with a confirmed update within a few days, you were affected. If it does not correlate with any update, the cause is more likely technical - check Search Console for new coverage errors or manual actions." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Start with a technical SEO audit</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/google-ranking-drop" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Ranking Drop: Diagnose and Recover</a></li>
+            <li><a href="/blog/orphan-pages-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Orphan Pages: What They Are and How to Fix Them</a></li>
+            <li><a href="/blog/site-migration-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Site Migration SEO: Move Without Losing Rankings</a></li>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+            <li><a href="/learn/seo-audit-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Checklist: 25 Checks to Run on Any Website</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

@@ -1,9 +1,23 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fix Sitemap for WordPress - Complete Guide | SitemapFixer',
+  title: 'Fix Sitemap for WordPress - Complete Guide',
   description: 'Fix your WordPress sitemap: configure Yoast or Rank Math correctly, exclude low-value pages, and optimize for crawl efficiency.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for/wordpress' },
+  openGraph: {
+    title: 'Fix Sitemap for WordPress - Complete Guide',
+    description: 'Fix your WordPress sitemap: configure Yoast or Rank Math correctly, exclude low-value pages, and optimize for crawl efficiency.',
+    url: 'https://sitemapfixer.com/fix-sitemap-for/wordpress',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 export default function Page() {

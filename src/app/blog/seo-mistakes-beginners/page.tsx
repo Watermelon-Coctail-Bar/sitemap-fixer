@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: '10 SEO Mistakes Beginners Make (and How to Fix Them) | SitemapFixer',
+  title: '10 SEO Mistakes Beginners Make (and How to Fix Them)',
   description: "These 10 SEO mistakes are responsible for most beginner failures to rank. Here is what they are, why they hurt, and the exact fix for each one.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-mistakes-beginners' },
-  openGraph: { title: '10 SEO Mistakes Beginners Make', description: 'The most common beginner SEO mistakes and how to fix each one fast.', url: 'https://sitemapfixer.com/blog/seo-mistakes-beginners', type: 'article' },
+  openGraph: { title: '10 SEO Mistakes Beginners Make', description: 'The most common beginner SEO mistakes and how to fix each one fast.', url: 'https://sitemapfixer.com/blog/seo-mistakes-beginners', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const mistakes = [
   { n: "1", t: "Targeting keywords that are too competitive", d: "New sites have no domain authority. Writing about 'SEO tips' or 'weight loss' means competing against sites with thousands of backlinks. Fix: use Google Search Console Performance data to find queries where you already rank position 11-30 - these are your fastest wins. For new content, target long-tail keywords with under 30 keyword difficulty in Ahrefs or Semrush." },
@@ -43,7 +52,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Fix the technical mistakes automatically</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and SEO audit in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/technical-seo-for-beginners" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO for Beginners: 10 Things That Matter</a></li>
+            <li><a href="/blog/technical-seo-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Audit: Find and Fix Every Issue</a></li>
+            <li><a href="/blog/seo-checklist-2025" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Checklist 2025: Complete Technical & Content Audit</a></li>
+            <li><a href="/blog/seo-audit-tools" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Tools: Best Tools for a Complete SEO Audit</a></li>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

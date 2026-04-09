@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Orphan Pages: What They Are and How to Fix Them | SitemapFixer',
+  title: 'Orphan Pages: What They Are and How to Fix Them',
   description: "Orphan pages have no internal links pointing to them, making them nearly invisible to Google. Here is how to find every orphan page on your site and fix them efficiently.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/orphan-pages' },
+  openGraph: {
+    title: 'Orphan Pages: What They Are and How to Fix Them',
+    description: 'Orphan pages have no internal links pointing to them, making them nearly invisible to Google. Here is how to find every orphan page on your site and fix them efficiently.',
+    url: 'https://sitemapfixer.com/learn/orphan-pages',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Orphan Pages Are", d: "An orphan page is a page on your site that has no internal links pointing to it from any other page. Google discovers most pages by following links from other pages. When a page has no internal links, Google may still find it via your sitemap, but it accumulates no internal PageRank and receives far less crawl frequency than linked pages. Even great content on an orphan page ranks poorly because Google has no context for how it fits into your site structure." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/image-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image SEO: Optimize Images for Google Search</a></li>
+            <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
+            <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

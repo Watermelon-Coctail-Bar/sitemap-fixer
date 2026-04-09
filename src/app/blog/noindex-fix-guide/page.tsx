@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Noindex Fix Guide: How to Remove Noindex from Pages That Should Rank | SitemapFixer',
+  title: 'Noindex Fix: Remove Noindex from Pages That Should Rank',
   description: "A noindex tag blocks Google from indexing your page. Here is how to find accidental noindex tags, why they happen, and how to fix them to restore indexing.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/noindex-fix-guide' },
-  openGraph: { title: 'Noindex Fix Guide: Restore Indexing to Your Pages', url: 'https://sitemapfixer.com/blog/noindex-fix-guide', type: 'article' },
+  openGraph: { title: 'Noindex Fix Guide: Restore Indexing to Your Pages', url: 'https://sitemapfixer.com/blog/noindex-fix-guide', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const items = [
   { t: "What a noindex tag does", d: "A noindex meta tag (meta name=robots content=noindex) tells Google not to include the page in its search index. The page can still be crawled, but it will not appear in search results. This is useful for admin pages, checkout pages, and duplicate content - but catastrophic when applied accidentally to pages you want to rank." },
@@ -38,7 +47,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap for noindex conflicts</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects noindex + sitemap contradictions instantly</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/why-is-google-not-indexing-my-site" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Why Is Google Not Indexing My Site? 11 Causes and Fixes</a></li>
+            <li><a href="/blog/how-to-check-if-site-is-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Check If Your Website Is Indexed by Google</a></li>
+            <li><a href="/blog/website-not-showing-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Website Not Showing in Google: 8 Fixes</a></li>
+            <li><a href="/blog/indexing-speed-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Indexing Speed: Get Pages Indexed Faster</a></li>
+            <li><a href="/learn/pages-not-indexed-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pages Not Indexed by Google: Causes and Fixes</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

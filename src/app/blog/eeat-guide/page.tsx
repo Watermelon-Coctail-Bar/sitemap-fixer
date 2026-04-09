@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'E-E-A-T Guide: How to Build Experience, Expertise, Authority, and Trust | SitemapFixer',
+  title: 'E-E-A-T Guide: Build Expertise, Authority, and Trust',
   description: "E-E-A-T is Google's framework for evaluating content quality. Here is what each component means, why it matters for rankings, and how to demonstrate it on your site.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/eeat-guide' },
+  openGraph: {
+    title: 'E-E-A-T Guide: Build Expertise, Authority, and Trust',
+    description: 'E-E-A-T is Google',
+    url: 'https://sitemapfixer.com/blog/eeat-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const components = [
   { t: "Experience", d: "The first E was added in 2022. Experience means demonstrating first-hand, real-world experience with the topic. For product reviews: show you actually used the product with original photos and specific observations. For health content: show clinical experience or direct patient interaction. For financial content: show lived experience with the financial situation being described. Experience is what distinguishes content written by someone who has actually done something from content assembled from other sources." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Build E-E-A-T on a solid technical foundation</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/keyword-research-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords That Drive Traffic</a></li>
+            <li><a href="/blog/long-tail-keywords-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Long-Tail Keywords: Find and Rank for Queries</a></li>
+            <li><a href="/blog/featured-snippets-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Featured Snippets: Win Position Zero in Google</a></li>
+            <li><a href="/blog/seo-for-bloggers" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Bloggers: Get Your Posts Ranked on Google</a></li>
+            <li><a href="/blog/seo-basics-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Basics: A Beginner</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

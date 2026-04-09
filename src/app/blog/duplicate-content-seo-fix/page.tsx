@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Duplicate Content SEO: How to Find and Fix It | SitemapFixer',
+  title: 'Duplicate Content SEO: How to Find and Fix It',
   description: "Duplicate content confuses Google about which page to rank and dilutes your authority. Here is how to find it, which fixes to use (canonical vs 301 vs noindex), and when each applies.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/duplicate-content-seo-fix' },
-  openGraph: { title: 'Duplicate Content SEO: Find and Fix Guide', description: 'How to identify duplicate content and choose the right fix: canonical, 301, or noindex.', url: 'https://sitemapfixer.com/blog/duplicate-content-seo-fix', type: 'article' },
+  openGraph: { title: 'Duplicate Content SEO: Find and Fix Guide', description: 'How to identify duplicate content and choose the right fix: canonical, 301, or noindex.', url: 'https://sitemapfixer.com/blog/duplicate-content-seo-fix', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const items = [
   { t: "What duplicate content actually costs you", d: "When Google finds multiple pages with identical or very similar content, it has to choose which one to show in search results. It often chooses the wrong one. Your preferred page may be demoted in favor of a parameter-based URL, a printer-friendly version, or a category path variant. Link equity from backlinks pointing to either version is split rather than consolidated. The result: neither page ranks as well as it would if the duplicate issue were resolved." },
@@ -39,7 +48,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap for duplicate URL patterns</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects duplicates and canonical issues</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/content-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content Audit: How to Audit Your Site for SEO</a></li>
+            <li><a href="/blog/content-marketing-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content Marketing SEO: Drive Organic Growth</a></li>
+            <li><a href="/blog/thin-content-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Thin Content: Find It, Fix It, Recover Rankings</a></li>
+            <li><a href="/blog/thin-content-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Thin Content: What It Is and How to Fix It</a></li>
+            <li><a href="/blog/keyword-cannibalization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Cannibalization: How to Find and Fix It</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

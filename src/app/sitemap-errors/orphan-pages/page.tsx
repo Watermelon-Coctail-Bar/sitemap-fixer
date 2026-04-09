@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Orphan Pages in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
+  title: 'Orphan Pages in Sitemap: Fix Guide',
   description: 'Orphan pages have no internal links - they rely entirely on your sitemap for discovery. Learn how to detect orphan pages and fix your internal linking structure.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/orphan-pages' },
   openGraph: {
@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     description: 'Orphan pages have no internal links - they rely entirely on your sitemap for discovery. Learn how to detect orphan pages and fix your internal linking structure.',
     url: 'https://sitemapfixer.com/sitemap-errors/orphan-pages',
     type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 

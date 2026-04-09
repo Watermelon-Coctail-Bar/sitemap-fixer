@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'INP Optimization: How to Fix Interaction to Next Paint | SitemapFixer',
+  title: 'INP Optimization: How to Fix Interaction to Next Paint',
   description: "INP replaced FID as a Core Web Vital in 2024. It measures how fast your page responds to clicks, taps, and key presses. Here is how to diagnose and fix poor INP.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/inp-optimization' },
+  openGraph: {
+    title: 'INP Optimization: How to Fix Interaction to Next Paint',
+    description: 'INP replaced FID as a Core Web Vital in 2024. It measures how fast your page responds to clicks, taps, and key presses. Here is how to diagnose and fix poor INP.',
+    url: 'https://sitemapfixer.com/learn/inp-optimization',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What INP Measures", d: "INP (Interaction to Next Paint) measures the delay between a user interaction (click, tap, keyboard input) and the next visual update on screen. Unlike FID which only measured input delay, INP measures the full interaction: input delay, processing time, and presentation delay. Google requires INP under 200ms for a Good score. Between 200-500ms is Needs Improvement. Over 500ms is Poor. INP captures the worst interaction on the page during the user's visit, making it sensitive to any slow event handlers." },
@@ -43,6 +57,16 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free SEO and performance analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/lcp-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>LCP Optimization: How to Fix Largest Contentful Paint</a></li>
+            <li><a href="/learn/cls-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>CLS Fix: How to Eliminate Cumulative Layout Shift</a></li>
+            <li><a href="/blog/core-web-vitals-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals Fix: How to Pass LCP, INP, CLS</a></li>
+            <li><a href="/blog/page-speed-improvement" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed: 10 Quick Wins That Make a Difference</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

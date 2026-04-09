@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Voice Search SEO: How to Optimize for Conversational Queries | SitemapFixer',
+  title: 'Voice Search SEO: Optimize for Voice Queries',
   description: "Voice search queries are longer, conversational, and question-based. Here is how to optimize your content to appear in voice search results and featured snippets.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/voice-search-seo' },
+  openGraph: {
+    title: 'Voice Search SEO: Optimize for Voice Queries',
+    description: 'Voice search queries are longer, conversational, and question-based. Here is how to optimize your content to appear in voice search results and featured snippets.',
+    url: 'https://sitemapfixer.com/learn/voice-search-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "How Voice Search Differs from Text Search", d: "Voice queries are 3-5x longer than text queries on average and are phrased as natural language questions rather than keywords. Instead of 'best italian restaurant london', a voice query is 'what is the best italian restaurant near me in london?'. Voice assistants (Google Assistant, Siri, Alexa) typically read one answer aloud - the featured snippet or a direct answer from Google's Knowledge Graph. This means voice SEO is really about winning the featured snippet position." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free technical SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

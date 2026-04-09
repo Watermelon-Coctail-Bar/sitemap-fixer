@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Why Is Google Not Indexing My Site? 11 Causes and Fixes | SitemapFixer',
+  title: 'Why Is Google Not Indexing My Site? 11 Causes and Fixes',
   description: 'Google not indexing your website? Here are the 11 most common reasons and exactly how to fix each one.',
   alternates: { canonical: 'https://sitemapfixer.com/blog/why-is-google-not-indexing-my-site' },
+  openGraph: {
+    title: 'Why Is Google Not Indexing My Site? 11 Causes and Fixes',
+    description: 'Google not indexing your website? Here are the 11 most common reasons and exactly how to fix each one.',
+    url: 'https://sitemapfixer.com/blog/why-is-google-not-indexing-my-site',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const reasons = [
   { n: '1', t: 'Site Blocked by Robots.txt', d: "Check your robots.txt at yourdomain.com/robots.txt. If it contains Disallow: / under User-agent: *, Googlebot cannot crawl any page. This is often enabled during development and forgotten. Remove the blanket disallow and verify crawlability in Google Search Console." },
@@ -44,7 +58,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Find all your indexing issues in 60 seconds</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/how-to-check-if-site-is-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Check If Your Website Is Indexed by Google</a></li>
+            <li><a href="/blog/website-not-showing-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Website Not Showing in Google: 8 Fixes</a></li>
+            <li><a href="/blog/indexing-speed-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Indexing Speed: Get Pages Indexed Faster</a></li>
+            <li><a href="/blog/noindex-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Noindex Fix: Remove Noindex from Pages That Should Rank</a></li>
+            <li><a href="/learn/pages-not-indexed-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pages Not Indexed by Google: Causes and Fixes</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

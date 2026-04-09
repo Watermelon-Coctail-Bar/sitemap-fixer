@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Schema Markup Guide: How to Add Structured Data to Your Website | SitemapFixer',
+  title: 'Schema Markup: Add Structured Data to Your Site',
   description: "Schema markup helps Google understand your content and generate rich results. Here is how to add schema to your site, which types to prioritize, and how to validate it.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/schema-markup-guide' },
+  openGraph: {
+    title: 'Schema Markup: Add Structured Data to Your Site',
+    description: 'Schema markup helps Google understand your content and generate rich results. Here is how to add schema to your site, which types to prioritize, and how to validate it.',
+    url: 'https://sitemapfixer.com/blog/schema-markup-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What schema markup is and why it matters", d: "Schema markup is structured data code - usually JSON-LD - added to your pages that explicitly tells search engines what your content is about. Without schema, Google infers content type from context. With schema, you declare it directly: this is a Product, this is a Recipe, this is a FAQ, this is a LocalBusiness. Correct schema unlocks rich results - enhanced SERP features that show star ratings, prices, recipe details, or FAQ dropdowns directly in search results, significantly increasing click-through rates." },
@@ -35,7 +49,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Ensure your pages are fully indexable</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and technical SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/structured-data-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Structured Data: Add Schema Markup</a></li>
+            <li><a href="/blog/google-search-console-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Search Console: Fix Your SEO</a></li>
+            <li><a href="/blog/google-search-console-errors-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Search Console Errors: Meanings & Fixes</a></li>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+            <li><a href="/learn/seo-audit-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Checklist: 25 Checks to Run on Any Website</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

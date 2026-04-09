@@ -1,8 +1,17 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Sign Up | SitemapFixer',
+  title: 'Sign Up',
   description: 'Create your free SitemapFixer account. Start analyzing your sitemap and fixing SEO issues in 60 seconds.',
   alternates: { canonical: 'https://sitemapfixer.com/signup' },
+  openGraph: {
+    title: 'Sign Up',
+    description: 'Create your free SitemapFixer account. Start analyzing your sitemap and fixing SEO issues in 60 seconds.',
+    url: 'https://sitemapfixer.com/signup',
+    type: 'website',
+    images: [{ url: 'https://sitemapfixer.com/opengraph-image', width: 1200, height: 630, alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool' }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function SignupLayout({ children }: { children: React.ReactNode }) {
   return (

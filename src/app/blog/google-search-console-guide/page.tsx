@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Google Search Console Guide: How to Use It to Fix Your SEO | SitemapFixer',
+  title: 'Google Search Console: Fix Your SEO',
   description: "Google Search Console is free and shows you exactly what Google sees on your site. Here is how to use each section to find and fix real SEO problems.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/google-search-console-guide' },
-  openGraph: { title: 'Google Search Console Guide', description: 'How to use every section of Google Search Console to improve your SEO.', url: 'https://sitemapfixer.com/blog/google-search-console-guide', type: 'article' },
+  openGraph: { title: 'Google Search Console Guide', description: 'How to use every section of Google Search Console to improve your SEO.', url: 'https://sitemapfixer.com/blog/google-search-console-guide', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "Setting Up Google Search Console", d: "Go to search.google.com/search-console and add your site as a property. Choose Domain property (covers all subdomains, HTTP and HTTPS) over URL prefix if possible. Verify ownership using your DNS provider - add the TXT record Google gives you to your domain registrar. Once verified, Google starts collecting data. It takes 24-48 hours for data to start appearing and a few days for Search Console to run its first crawl of your submitted sitemap." },
@@ -23,7 +32,7 @@ export default function Page() {
         <span>Google Search Console Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>April 2025 · 11 min read</div>
-      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Google Search Console Guide: How to Use It to Fix Your SEO</h1>
+      <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Google Search Console: Fix Your SEO</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Get a full site analysis in 60 seconds</span>
         <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '10px 20px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>Analyze My Site Free</a>
@@ -41,7 +50,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Complement Search Console with sitemap analysis</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - finds sitemap errors and indexing issues in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/schema-markup-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Schema Markup: Add Structured Data to Your Site</a></li>
+            <li><a href="/blog/structured-data-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Structured Data: Add Schema Markup</a></li>
+            <li><a href="/blog/google-search-console-errors-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Search Console Errors: Meanings & Fixes</a></li>
+            <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
+            <li><a href="/learn/seo-audit-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Checklist: 25 Checks to Run on Any Website</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

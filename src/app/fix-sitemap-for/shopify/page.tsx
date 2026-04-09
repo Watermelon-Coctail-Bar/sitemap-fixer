@@ -1,9 +1,23 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fix Sitemap for Shopify - Complete Guide | SitemapFixer',
+  title: 'Fix Sitemap for Shopify - Complete Guide',
   description: 'Optimize your Shopify sitemap: manage product variants, fix duplicate URLs from collections, and improve indexing of your store pages.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for/shopify' },
+  openGraph: {
+    title: 'Fix Sitemap for Shopify - Complete Guide',
+    description: 'Optimize your Shopify sitemap: manage product variants, fix duplicate URLs from collections, and improve indexing of your store pages.',
+    url: 'https://sitemapfixer.com/fix-sitemap-for/shopify',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 export default function Page() {

@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Image SEO: How to Optimize Images for Google Search and Discovery | SitemapFixer',
+  title: 'Image SEO: Optimize Images for Google Search',
   description: "Images appear in Google Image search, Google Discover, and regular web search. Here is how to optimize filenames, alt text, compression, and structured data for image SEO.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/image-seo' },
+  openGraph: {
+    title: 'Image SEO: Optimize Images for Google Search',
+    description: 'Images appear in Google Image search, Google Discover, and regular web search. Here is how to optimize filenames, alt text, compression, and structured data for image SEO.',
+    url: 'https://sitemapfixer.com/learn/image-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "Why Image SEO Matters", d: "Google Image Search drives significant traffic for visual industries - ecommerce, food, travel, design, and fashion. Google Discover shows images prominently and rewards pages with high-quality, large images. Within regular web search, pages with optimized images often earn image carousels and visual enhancements that increase click-through rate. For ecommerce specifically, product images in Google Shopping require clean product images with proper schema markup." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all image URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
+            <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
+            <li><a href="/learn/breadcrumbs-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Breadcrumbs SEO: How They Help Rankings</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

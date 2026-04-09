@@ -160,14 +160,17 @@ ERRORS.forEach(error => {
   const content = `import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '${error.title} – Fix, Examples & Best Practices | SitemapFixer',
+  title: '${error.title}: Fix Guide',
   description: '${error.meta}',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/${error.slug}' },
   openGraph: {
-    title: '${error.title} – Fix & Best Practices',
+    title: '${error.title}: Fix Guide',
     description: '${error.meta}',
     url: 'https://sitemapfixer.com/sitemap-errors/${error.slug}',
     type: 'article',
+    images: [{ url: 'https://sitemapfixer.com/opengraph-image', width: 1200, height: 630, alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool' }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 
@@ -527,7 +530,7 @@ GUIDES.forEach(guide => {
   const content = `import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '${guide.title} | SitemapFixer',
+  title: '${guide.title}',
   description: '${guide.meta}',
   alternates: { canonical: 'https://sitemapfixer.com/learn/${guide.slug}' },
   openGraph: {
@@ -535,6 +538,9 @@ export const metadata: Metadata = {
     description: '${guide.meta}',
     url: 'https://sitemapfixer.com/learn/${guide.slug}',
     type: 'article',
+    images: [{ url: 'https://sitemapfixer.com/opengraph-image', width: 1200, height: 630, alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool' }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 

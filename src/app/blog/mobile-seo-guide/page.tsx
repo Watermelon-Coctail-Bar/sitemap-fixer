@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Mobile SEO Guide: Optimize Your Site for Mobile Search | SitemapFixer',
+  title: 'Mobile SEO Guide: Optimize Your Site for Mobile Search',
   description: "Google uses the mobile version of your site for ranking. Here is how to optimize for mobile SEO including viewport, speed, usability, and mobile-first indexing.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/mobile-seo-guide' },
+  openGraph: {
+    title: 'Mobile SEO Guide: Optimize Your Site for Mobile Search',
+    description: 'Google uses the mobile version of your site for ranking. Here is how to optimize for mobile SEO including viewport, speed, usability, and mobile-first indexing.',
+    url: 'https://sitemapfixer.com/blog/mobile-seo-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const tips = [
   { t: "Responsive design is the standard", d: "Use a single responsive website that adapts to all screen sizes using CSS media queries - not a separate m.yoursite.com. Responsive design means one URL serves all devices, eliminating duplicate content issues, consolidating link equity, and ensuring Googlebot only needs to crawl one version of your content." },
@@ -36,7 +50,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your site for mobile SEO issues</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/ecommerce-seo-tips" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ecommerce SEO: Get Product Pages to Rank</a></li>
+            <li><a href="/blog/social-media-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Social Media SEO: Do Social Signals Matter?</a></li>
+            <li><a href="/blog/video-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Rank Videos on Google and YouTube</a></li>
+            <li><a href="/blog/canonical-url-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical URL: What It Is and How to Set It Correctly</a></li>
+            <li><a href="/blog/url-structure-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>URL Structure SEO: How to Create SEO-Friendly URLs</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'How to Check If Your Website Is Indexed by Google | SitemapFixer',
+  title: 'How to Check If Your Website Is Indexed by Google',
   description: "There are 5 ways to check if Google has indexed your pages. Here is each method, what it tells you, and what to do if important pages are missing from Google's index.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/how-to-check-if-site-is-indexed' },
-  openGraph: { title: 'How to Check If Your Website Is Indexed by Google', description: '5 methods to check Google indexing status and what to do about missing pages.', url: 'https://sitemapfixer.com/blog/how-to-check-if-site-is-indexed', type: 'article' },
+  openGraph: { title: 'How to Check If Your Website Is Indexed by Google', description: '5 methods to check Google indexing status and what to do about missing pages.', url: 'https://sitemapfixer.com/blog/how-to-check-if-site-is-indexed', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const methods = [
   { n: "Method 1", t: "Google Search Console (most accurate)", d: "Go to search.google.com/search-console, select your property, then Indexing, then Pages. This shows the definitive list of what Google has and has not indexed on your site, with specific reasons for any non-indexed pages. For individual pages, use URL Inspection - type any URL and see its exact indexing status, last crawl date, and whether there are any issues. This is the gold standard for indexing checks." },
@@ -43,7 +52,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check all your sitemap URLs at once</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - finds indexing issues across your entire sitemap</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/why-is-google-not-indexing-my-site" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Why Is Google Not Indexing My Site? 11 Causes and Fixes</a></li>
+            <li><a href="/blog/website-not-showing-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Website Not Showing in Google: 8 Fixes</a></li>
+            <li><a href="/blog/indexing-speed-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Indexing Speed: Get Pages Indexed Faster</a></li>
+            <li><a href="/blog/noindex-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Noindex Fix: Remove Noindex from Pages That Should Rank</a></li>
+            <li><a href="/learn/pages-not-indexed-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pages Not Indexed by Google: Causes and Fixes</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

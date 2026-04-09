@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Content Freshness SEO: Does Updating Old Content Improve Rankings? | SitemapFixer',
+  title: 'Content Freshness: Does Updating Content Help Rankings?',
   description: "Fresh content can recover declining rankings. Here is how Google uses freshness as a ranking signal, which content benefits most from updates, and how to update effectively.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/content-freshness-seo' },
+  openGraph: {
+    title: 'Content Freshness: Does Updating Content Help Rankings?',
+    description: 'Fresh content can recover declining rankings. Here is how Google uses freshness as a ranking signal, which content benefits most from updates, and how to update effectively.',
+    url: 'https://sitemapfixer.com/learn/content-freshness-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "How Google Uses Freshness", d: "Google has a query-dependent freshness algorithm called QDF (Query Deserves Freshness). For queries where recency matters - breaking news, recent events, product launches - Google heavily weights recently published or updated content. For evergreen queries where the best answer does not change (how to tie a bowline knot), freshness matters much less. Understanding whether your target queries are freshness-sensitive determines how aggressively you should update existing content." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/image-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image SEO: Optimize Images for Google Search</a></li>
+            <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
+            <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

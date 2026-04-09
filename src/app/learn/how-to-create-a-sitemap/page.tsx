@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'How to Create a Sitemap: Step-by-Step for WordPress, Shopify, and Next.js | SitemapFixer',
+  title: 'How to Create a Sitemap: WordPress, Shopify, Next.js',
   description: "How to create an XML sitemap for any website - step-by-step instructions for WordPress, Shopify, Next.js, and manual creation.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/how-to-create-a-sitemap' },
+  openGraph: {
+    title: 'How to Create a Sitemap: WordPress, Shopify, Next.js',
+    description: 'How to create an XML sitemap for any website - step-by-step instructions for WordPress, Shopify, Next.js, and manual creation.',
+    url: 'https://sitemapfixer.com/learn/how-to-create-a-sitemap',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const methods = [
   { t: "WordPress", d: "Install the Yoast SEO or Rank Math plugin. Both automatically generate a sitemap at yoursite.com/sitemap_index.xml and keep it updated as you publish content. In Yoast: go to SEO then General then Features and enable XML sitemaps. In Rank Math: go to Rank Math then Sitemap settings. Submit the sitemap URL to Google Search Console after setup." },
@@ -41,6 +55,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/what-is-an-xml-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>What Is an XML Sitemap?</a></li>
+            <li><a href="/learn/xml-sitemap-format" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Format: Complete Reference with Examples</a></li>
+            <li><a href="/learn/xml-sitemap-generator" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Generator: Create Your Sitemap Free</a></li>
+            <li><a href="/learn/sitemap-best-practices" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Best Practices</a></li>
+            <li><a href="/learn/sitemap-checker" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Sitemap Checker: Validate and Fix Your XML Sitemap</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

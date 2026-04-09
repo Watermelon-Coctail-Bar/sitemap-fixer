@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Ghost SEO: How to Optimize Your Ghost Publication for Google | SitemapFixer',
+  title: 'Ghost SEO: Optimize Your Publication',
   description: "Ghost is built with SEO in mind. Here is how to configure Ghost meta tags, use its automatic sitemap, set up structured data, and optimize for Google rankings.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/ghost-seo' },
+  openGraph: {
+    title: 'Ghost SEO: Optimize Your Publication',
+    description: 'Ghost is built with SEO in mind. Here is how to configure Ghost meta tags, use its automatic sitemap, set up structured data, and optimize for Google rankings.',
+    url: 'https://sitemapfixer.com/learn/ghost-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "Ghost SEO Defaults", d: "Ghost comes with strong SEO defaults out of the box. It generates a sitemap.xml automatically at yourpublication.com/sitemap.xml (and sitemap-authors.xml, sitemap-tags.xml, sitemap-pages.xml as sub-sitemaps). It adds canonical tags, Article schema for posts, structured data for the publication, and Open Graph tags on every page. Ghost uses a sitemap index file that references all child sitemaps - submit the index at /sitemap.xml to Google Search Console." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Check My Sitemap Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/wordpress-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>WordPress SEO: Complete Optimization Guide for 2025</a></li>
+            <li><a href="/learn/shopify-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Shopify SEO: Optimize Your Store for Google</a></li>
+            <li><a href="/learn/wix-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Wix SEO: How to Optimize Your Wix Website for Google</a></li>
+            <li><a href="/learn/squarespace-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Squarespace SEO: Optimize for Google</a></li>
+            <li><a href="/learn/webflow-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Webflow SEO: Optimize for Google</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

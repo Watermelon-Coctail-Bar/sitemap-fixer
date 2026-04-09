@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Breadcrumbs SEO: How Breadcrumbs Help Rankings and How to Implement Them | SitemapFixer',
+  title: 'Breadcrumbs SEO: How They Help Rankings',
   description: "Breadcrumbs improve site structure signals, appear in Google search results, and help with internal linking. Here is how to implement breadcrumbs and BreadcrumbList schema correctly.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/breadcrumbs-seo' },
+  openGraph: {
+    title: 'Breadcrumbs SEO: How They Help Rankings',
+    description: 'Breadcrumbs improve site structure signals, appear in Google search results, and help with internal linking. Here is how to implement breadcrumbs and BreadcrumbList schema correctly.',
+    url: 'https://sitemapfixer.com/learn/breadcrumbs-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Breadcrumbs Do for SEO", d: "Breadcrumb navigation shows users where they are in your site hierarchy - Home / Category / Subcategory / Page. For SEO, breadcrumbs do three things: they add internal links from every page up to parent pages (passing link authority upward), they signal your site structure to Google (helping it understand topic hierarchy), and with BreadcrumbList schema they appear directly in Google search results, replacing the URL with a cleaner path that can improve click-through rate." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/image-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image SEO: Optimize Images for Google Search</a></li>
+            <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
+            <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

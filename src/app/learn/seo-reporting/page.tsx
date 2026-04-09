@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'SEO Reporting: KPIs, Dashboards, and How to Report to Stakeholders | SitemapFixer',
+  title: 'SEO Reporting: KPIs and Dashboards That Work',
   description: "Good SEO reporting shows progress and business impact, not just traffic numbers. Here are the KPIs that matter, how to structure reports, and how to communicate SEO value.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/seo-reporting' },
+  openGraph: {
+    title: 'SEO Reporting: KPIs and Dashboards That Work',
+    description: 'Good SEO reporting shows progress and business impact, not just traffic numbers. Here are the KPIs that matter, how to structure reports, and how to communicate SEO value.',
+    url: 'https://sitemapfixer.com/learn/seo-reporting',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "The Right KPIs to Track", d: "Track KPIs in three tiers. Tier 1 - Business outcomes: organic revenue, organic leads, organic conversions. These directly show business value and are what executives care about. Tier 2 - Traffic performance: organic sessions, organic click-through rate, organic impressions. These show how your visibility is translating to traffic. Tier 3 - Technical health: indexed pages, crawl errors, Core Web Vitals scores, sitemap submission status. These are leading indicators that predict future Tier 1 and 2 performance." },
@@ -37,6 +51,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/keyword-research-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords Worth Targeting</a></li>
+            <li><a href="/learn/content-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content SEO: Write Content That Ranks</a></li>
+            <li><a href="/learn/link-building-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building SEO: Strategies That Work in 2025</a></li>
+            <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
+            <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

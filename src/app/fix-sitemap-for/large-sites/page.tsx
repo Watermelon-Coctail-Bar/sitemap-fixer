@@ -1,9 +1,23 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fix Sitemap for Large Sites (10k+ pages) - Complete Guide | SitemapFixer',
+  title: 'Fix Sitemap for Large Sites (10k+ Pages)',
   description: 'Sitemap strategy for enterprise sites: sitemap indexes, crawl budget optimization, priority tiers, and monitoring at scale.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for/large-sites' },
+  openGraph: {
+    title: 'Fix Sitemap for Large Sites (10k+ Pages)',
+    description: 'Sitemap strategy for enterprise sites: sitemap indexes, crawl budget optimization, priority tiers, and monitoring at scale.',
+    url: 'https://sitemapfixer.com/fix-sitemap-for/large-sites',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 
 export default function Page() {

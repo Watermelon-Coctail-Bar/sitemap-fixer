@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Sitemap Blocked by Robots.txt: How to Find and Fix It | SitemapFixer',
+  title: 'Sitemap Blocked by Robots.txt: How to Find and Fix It',
   description: "If your sitemap contains URLs blocked by robots.txt, Google reports errors and may not index those pages. Here is how to find the conflict and fix it in 10 minutes.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/sitemap-blocked-robots-txt' },
-  openGraph: { title: 'Sitemap Blocked by Robots.txt: Fix It Fast', description: 'Find and fix the robots.txt conflict causing sitemap errors in Google Search Console.', url: 'https://sitemapfixer.com/blog/sitemap-blocked-robots-txt', type: 'article' },
+  openGraph: { title: 'Sitemap Blocked by Robots.txt: Fix It Fast', description: 'Find and fix the robots.txt conflict causing sitemap errors in Google Search Console.', url: 'https://sitemapfixer.com/blog/sitemap-blocked-robots-txt', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What the Error Means", d: "When Google Search Console reports 'Blocked by robots.txt' for URLs in your sitemap, it means your sitemap is telling Google to index a page that your robots.txt is simultaneously telling it not to crawl. This is a direct contradiction. Google cannot index a page it cannot read - so these URLs will not appear in search results regardless of their content quality. The error is common and easy to fix once you know where to look." },
@@ -39,7 +48,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap for robots.txt conflicts</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects all conflicts in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/how-to-fix-sitemap-errors" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Fix Sitemap Errors in Google Search Console</a></li>
+            <li><a href="/blog/xml-sitemap-not-working" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Not Working? 9 Common Reasons and Fixes</a></li>
+            <li><a href="/blog/submit-sitemap-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Submit a Sitemap to Google: Step-by-Step Guide</a></li>
+            <li><a href="/blog/xml-sitemap-submission" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>XML Sitemap Submission: Submit to Google & Bing</a></li>
+            <li><a href="/blog/sitemap-vs-robots-txt" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Sitemap vs Robots.txt: How They Work Together</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

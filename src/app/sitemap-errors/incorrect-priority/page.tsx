@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Incorrect Priority Values in Sitemap - Fix, Examples and Best Practices | SitemapFixer',
+  title: 'Incorrect Priority in Sitemap: Fix Guide',
   description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects crawl decisions.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority' },
   openGraph: {
@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects crawl decisions.',
     url: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority',
     type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 

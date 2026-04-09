@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Indexing Speed Guide: How to Get Pages Indexed by Google Faster | SitemapFixer',
+  title: 'Indexing Speed: Get Pages Indexed Faster',
   description: "New pages can take days or weeks to appear in Google. Here is how to speed up indexing using sitemaps, URL inspection, internal links, and crawl budget optimization.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/indexing-speed-guide' },
+  openGraph: {
+    title: 'Indexing Speed: Get Pages Indexed Faster',
+    description: 'New pages can take days or weeks to appear in Google. Here is how to speed up indexing using sitemaps, URL inspection, internal links, and crawl budget optimization.',
+    url: 'https://sitemapfixer.com/blog/indexing-speed-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "How Google Discovers and Indexes Pages", d: "Google indexes pages through two channels: crawling links it finds on other pages, and processing sitemaps you submit. New pages with no internal links and no sitemap entry may never be discovered at all. Pages in sitemaps are typically discovered faster but still require Googlebot to crawl and process them before they appear in search results. The full indexing pipeline - discovery, crawl, render, index - can take anywhere from hours to weeks depending on your site's crawl budget and authority." },
@@ -38,7 +52,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Analyze your sitemap indexing coverage</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks which pages are and are not indexed</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/why-is-google-not-indexing-my-site" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Why Is Google Not Indexing My Site? 11 Causes and Fixes</a></li>
+            <li><a href="/blog/how-to-check-if-site-is-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Check If Your Website Is Indexed by Google</a></li>
+            <li><a href="/blog/website-not-showing-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Website Not Showing in Google: 8 Fixes</a></li>
+            <li><a href="/blog/noindex-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Noindex Fix: Remove Noindex from Pages That Should Rank</a></li>
+            <li><a href="/learn/pages-not-indexed-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pages Not Indexed by Google: Causes and Fixes</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

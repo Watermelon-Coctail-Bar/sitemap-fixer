@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Heading Tags SEO: How H1, H2, H3 Tags Affect Your Rankings | SitemapFixer',
+  title: 'Heading Tags SEO: How H1-H3 Affect Rankings',
   description: "Heading tags structure your content for both users and search engines. Here is how to use H1, H2, and H3 tags correctly to improve your page rankings.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/heading-tags-seo' },
+  openGraph: {
+    title: 'Heading Tags SEO: How H1-H3 Affect Rankings',
+    description: 'Heading tags structure your content for both users and search engines. Here is how to use H1, H2, and H3 tags correctly to improve your page rankings.',
+    url: 'https://sitemapfixer.com/blog/heading-tags-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const rules = [
   { t: "One H1 per page, always", d: "Your H1 is the primary heading - it tells Google and users what the page is about. Use exactly one H1 per page. It should contain your primary keyword and match (or closely reflect) your title tag. In most CMS systems, the page or post title automatically becomes the H1. If your theme renders the title as a different heading level, fix it - an H1-less page wastes its strongest on-page keyword signal." },
@@ -35,7 +49,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Analyze your site structure free</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and SEO analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/page-title-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Title Optimization: Write Tags That Rank</a></li>
+            <li><a href="/blog/meta-description-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Description Optimization: Write Click-Worthy Copy</a></li>
+            <li><a href="/blog/meta-tags-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Tags Guide: Title, Description & Robots Tags</a></li>
+            <li><a href="/blog/image-alt-text-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image Alt Text: How to Write Alt Text for SEO</a></li>
+            <li><a href="/blog/on-page-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>On-Page SEO Checklist: Optimize Before Publishing</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

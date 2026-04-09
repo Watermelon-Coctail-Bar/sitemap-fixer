@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Link Equity Guide: How PageRank Flows Through Your Site | SitemapFixer',
+  title: 'Link Equity Guide: How PageRank Flows Through Your Site',
   description: "Link equity (PageRank) flows through internal and external links. Here is how to maximize authority distribution across your site to boost rankings for important pages.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/link-equity-guide' },
+  openGraph: {
+    title: 'Link Equity Guide: How PageRank Flows Through Your Site',
+    description: 'Link equity (PageRank) flows through internal and external links. Here is how to maximize authority distribution across your site to boost rankings for important pages.',
+    url: 'https://sitemapfixer.com/blog/link-equity-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What link equity is", d: "Link equity (also called PageRank or link juice) is the authority value that flows from one page to another through hyperlinks. A link from an authoritative page passes more equity than a link from a low-authority page. When an external site links to your homepage, that link equity flows to the homepage - and then distributes to other pages through your internal links. Understanding this flow helps you make smart internal linking decisions." },
@@ -35,7 +49,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Audit your site structure and internal links</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/internal-linking-strategy" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Internal Linking Strategy: Build Site Authority</a></li>
+            <li><a href="/blog/link-building-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Link Building: Earn Backlinks That Move Rankings</a></li>
+            <li><a href="/blog/anchor-text-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text Guide: How to Use Link Anchor Text for SEO</a></li>
+            <li><a href="/blog/broken-links-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Broken Links SEO: How They Hurt Rankings & Fixes</a></li>
+            <li><a href="/blog/backlink-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Backlink Audit: Evaluate and Clean Your Links</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

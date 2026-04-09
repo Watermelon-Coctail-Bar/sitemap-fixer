@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'WordPress SEO: Complete Optimization Guide for 2025 | SitemapFixer',
+  title: 'WordPress SEO: Complete Optimization Guide for 2025',
   description: "Everything you need to optimize a WordPress site for SEO - the right plugins, permalink structure, image optimization, speed, and common mistakes to avoid.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/wordpress-seo' },
+  openGraph: {
+    title: 'WordPress SEO: Complete Optimization Guide for 2025',
+    description: 'Everything you need to optimize a WordPress site for SEO - the right plugins, permalink structure, image optimization, speed, and common mistakes to avoid.',
+    url: 'https://sitemapfixer.com/learn/wordpress-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "Choose One SEO Plugin and Stick With It", d: "WordPress SEO is heavily plugin-dependent. Yoast SEO and RankMath are the two dominant options - both are excellent and either will handle sitemap generation, meta tags, canonical URLs, schema markup, and breadcrumbs. Do not install both. Having two active SEO plugins creates conflicts and duplicate meta tags. Yoast is more established with a larger support community; RankMath is newer with a more generous free tier that includes keyword tracking and schema support without a premium upgrade." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/shopify-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Shopify SEO: Optimize Your Store for Google</a></li>
+            <li><a href="/learn/wix-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Wix SEO: How to Optimize Your Wix Website for Google</a></li>
+            <li><a href="/learn/squarespace-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Squarespace SEO: Optimize for Google</a></li>
+            <li><a href="/learn/webflow-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Webflow SEO: Optimize for Google</a></li>
+            <li><a href="/learn/ghost-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ghost SEO: Optimize Your Publication</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

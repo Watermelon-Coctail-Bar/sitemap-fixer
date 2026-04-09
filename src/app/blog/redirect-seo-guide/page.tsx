@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Redirect SEO Guide: 301 vs 302, Redirect Chains, and Best Practices | SitemapFixer',
+  title: 'Redirect SEO: 301 vs 302 & Best Practices',
   description: "Redirects affect crawl budget, link equity, and indexing. Here is how 301 and 302 redirects work for SEO, how to avoid redirect chains, and common redirect mistakes.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/redirect-seo-guide' },
+  openGraph: {
+    title: 'Redirect SEO: 301 vs 302 & Best Practices',
+    description: 'Redirects affect crawl budget, link equity, and indexing. Here is how 301 and 302 redirects work for SEO, how to avoid redirect chains, and common redirect mistakes.',
+    url: 'https://sitemapfixer.com/blog/redirect-seo-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "301 vs 302: which to use when", d: "A 301 redirect is permanent - it tells search engines the old URL is gone forever and passes nearly all link equity to the new URL. Use 301 for: content you have permanently moved, URL restructuring, HTTPS migration, domain migrations, and consolidating duplicate pages. A 302 redirect is temporary - it tells search engines the old URL still exists and to return later. Use 302 only when you genuinely intend to restore the original URL, such as during temporary maintenance. In practice, most SEO redirects should be 301." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Find redirect URLs in your sitemap</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects 3xx URLs in your sitemap instantly</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/javascript-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>JavaScript SEO: Make JS Sites Crawlable</a></li>
+            <li><a href="/blog/https-migration-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>HTTPS Migration: Switch Without Losing Rankings</a></li>
+            <li><a href="/blog/crawl-budget-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget SEO: Stop Wasting Crawls on Bad Pages</a></li>
+            <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
+            <li><a href="/blog/pagination-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pagination SEO: Handle Page 2, 3, 4 Right</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

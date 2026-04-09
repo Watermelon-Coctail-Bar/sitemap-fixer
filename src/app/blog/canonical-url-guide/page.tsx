@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Canonical URL: What It Is and How to Set It Correctly | SitemapFixer',
+  title: 'Canonical URL: What It Is and How to Set It Correctly',
   description: "Canonical URLs tell Google which version of a page to index. Misusing them is one of the most common causes of duplicate content. Here is exactly how they work and how to use them.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/canonical-url-guide' },
-  openGraph: { title: 'Canonical URL Guide: How to Use rel=canonical Correctly', url: 'https://sitemapfixer.com/blog/canonical-url-guide', type: 'article' },
+  openGraph: { title: 'Canonical URL Guide: How to Use rel=canonical Correctly', url: 'https://sitemapfixer.com/blog/canonical-url-guide', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What a Canonical Tag Does", d: "A canonical tag is an HTML element in a page's head section that tells search engines which URL is the 'preferred' or 'master' version of that page. When Google sees link rel=canonical href=https://example.com/page, it treats that URL as the one to index and rank, even if it crawled the page from a different URL. Canonical tags are the primary tool for managing duplicate content without 301 redirects." },
@@ -38,7 +47,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your canonical configuration</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/ecommerce-seo-tips" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ecommerce SEO: Get Product Pages to Rank</a></li>
+            <li><a href="/blog/social-media-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Social Media SEO: Do Social Signals Matter?</a></li>
+            <li><a href="/blog/mobile-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO Guide: Optimize Your Site for Mobile Search</a></li>
+            <li><a href="/blog/video-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Rank Videos on Google and YouTube</a></li>
+            <li><a href="/blog/url-structure-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>URL Structure SEO: How to Create SEO-Friendly URLs</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

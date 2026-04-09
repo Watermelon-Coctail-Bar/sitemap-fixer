@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Keyword Research Guide: How to Find Keywords That Drive Real Traffic | SitemapFixer',
+  title: 'Keyword Research: Find Keywords That Drive Traffic',
   description: "Effective keyword research finds queries with genuine search volume, manageable competition, and clear search intent. Here is a step-by-step keyword research process.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/keyword-research-guide' },
+  openGraph: {
+    title: 'Keyword Research: Find Keywords That Drive Traffic',
+    description: 'Effective keyword research finds queries with genuine search volume, manageable competition, and clear search intent. Here is a step-by-step keyword research process.',
+    url: 'https://sitemapfixer.com/blog/keyword-research-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const steps = [
   { t: "Start with seed keywords", d: "Seed keywords are the broad topics at the core of your business. For an SEO tool, seeds are: sitemap, keyword research, technical SEO, crawl errors, Google rankings. Do not try to rank for these seeds directly - they are too competitive. Instead, use them as starting points to discover thousands of specific long-tail variations your target audience actually searches for." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Make sure your site is technically ready to rank</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/long-tail-keywords-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Long-Tail Keywords: Find and Rank for Queries</a></li>
+            <li><a href="/blog/featured-snippets-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Featured Snippets: Win Position Zero in Google</a></li>
+            <li><a href="/blog/eeat-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>E-E-A-T Guide: Build Expertise, Authority, and Trust</a></li>
+            <li><a href="/blog/seo-for-bloggers" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Bloggers: Get Your Posts Ranked on Google</a></li>
+            <li><a href="/blog/seo-basics-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Basics: A Beginner</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

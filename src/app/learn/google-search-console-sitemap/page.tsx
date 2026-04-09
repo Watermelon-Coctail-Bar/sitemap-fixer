@@ -1,5 +1,14 @@
 import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Google Search Console Sitemap: Submit, Monitor, and Fix | SitemapFixer', description: 'Learn how to submit your sitemap in Google Search Console, monitor indexing status, and fix common sitemap errors that prevent pages from being indexed.', alternates: { canonical: 'https://sitemapfixer.com/learn/google-search-console-sitemap' }, openGraph: { title: 'Google Search Console Sitemap: Submit and Fix Issues', description: 'Learn how to submit your sitemap in Google Search Console, monitor indexing status, and fix common sitemap errors that prevent pages from being indexed.', url: 'https://sitemapfixer.com/learn/google-search-console-sitemap', type: 'article' } };
+export const metadata: Metadata = { title: 'Google Search Console Sitemap: Submit, Monitor, and Fix', description: 'Learn how to submit your sitemap in Google Search Console, monitor indexing status, and fix common sitemap errors that prevent pages from being indexed.', alternates: { canonical: 'https://sitemapfixer.com/learn/google-search-console-sitemap' }, openGraph: { title: 'Google Search Console Sitemap: Submit and Fix Issues', description: 'Learn how to submit your sitemap in Google Search Console, monitor indexing status, and fix common sitemap errors that prevent pages from being indexed.', url: 'https://sitemapfixer.com/learn/google-search-console-sitemap', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  } };
 export default function Page() { return (
   <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
     <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}><a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}<a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}<span>Google Search Console Sitemap: Submit and Fix Issues</span></nav>
@@ -18,6 +27,17 @@ export default function Page() { return (
         <p style={{ marginBottom: 20 }}>For individual pages with indexing problems, use the URL Inspection tool. Paste the URL and Google shows its exact crawl status, last crawl date, canonical URL, page rendering, and any specific indexing issues.</p>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginTop: 40, marginBottom: 12 }}>Monitoring Sitemap Health Over Time</h2>
         <p style={{ marginBottom: 20 }}>Check your sitemap report weekly, especially after site changes. Sudden drops in indexed pages, new errors, or a spike in discovered-but-not-indexed pages are early warning signs of technical SEO problems.</p>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/pages-not-indexed-google" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pages Not Indexed by Google: Causes and Fixes</a></li>
+            <li><a href="/learn/submitted-url-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Submitted URL Not Indexed: How to Fix in GSC</a></li>
+            <li><a href="/learn/crawled-currently-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawled Not Indexed: How to Fix It | SitemapFixer</a></li>
+            <li><a href="/learn/discovered-currently-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Discovered Not Indexed: Why It Happens & Fixes | SitemapFixer</a></li>
+            <li><a href="/learn/why-pages-not-indexed" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Why Are My Pages Not Indexed by Google?</a></li>
+          </ul>
+        </div>
     </div>
     <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}><div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Analyze your sitemap now</div><div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free analysis in 60 seconds</div><a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap</a></div>
     <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}><div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 16 }}>Related guides</div><ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: 12, flexWrap: 'wrap' }}>

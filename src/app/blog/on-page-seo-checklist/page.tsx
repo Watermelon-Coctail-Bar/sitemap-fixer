@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'On-Page SEO Checklist: Every Element to Optimize Before Publishing | SitemapFixer',
+  title: 'On-Page SEO Checklist: Optimize Before Publishing',
   description: "On-page SEO covers everything you control on the page itself. This checklist ensures every element is optimized before you publish any new content.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/on-page-seo-checklist' },
+  openGraph: {
+    title: 'On-Page SEO Checklist: Optimize Before Publishing',
+    description: 'On-page SEO covers everything you control on the page itself. This checklist ensures every element is optimized before you publish any new content.',
+    url: 'https://sitemapfixer.com/blog/on-page-seo-checklist',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const items = [
   { cat: "Title tag", checks: ["Contains the primary keyword near the start", "Under 60 characters", "Unique - not duplicated on any other page", "Accurately describes the page content", "Includes a compelling reason to click"] },
@@ -44,7 +58,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your technical SEO automatically</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/page-title-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Title Optimization: Write Tags That Rank</a></li>
+            <li><a href="/blog/meta-description-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Description Optimization: Write Click-Worthy Copy</a></li>
+            <li><a href="/blog/meta-tags-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Tags Guide: Title, Description & Robots Tags</a></li>
+            <li><a href="/blog/heading-tags-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Heading Tags SEO: How H1-H3 Affect Rankings</a></li>
+            <li><a href="/blog/image-alt-text-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image Alt Text: How to Write Alt Text for SEO</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

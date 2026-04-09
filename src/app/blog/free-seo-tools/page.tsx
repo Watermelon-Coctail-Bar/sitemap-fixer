@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Free SEO Tools: The Best Free Tools for Every SEO Task | SitemapFixer',
+  title: 'Free SEO Tools: The Best Free Tools for Every SEO Task',
   description: "You do not need to pay for SEO tools to get started. Here are the best free SEO tools for keyword research, technical auditing, rank tracking, and link analysis.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/free-seo-tools' },
+  openGraph: {
+    title: 'Free SEO Tools: The Best Free Tools for Every SEO Task',
+    description: 'You do not need to pay for SEO tools to get started. Here are the best free SEO tools for keyword research, technical auditing, rank tracking, and link analysis.',
+    url: 'https://sitemapfixer.com/blog/free-seo-tools',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const tools = [
   { cat: "Technical SEO", items: ["Google Search Console - the most important free tool; shows indexing, crawl errors, CWV, and keyword data directly from Google", "SitemapFixer - free sitemap analysis, checks all URLs for errors and conflicts", "PageSpeed Insights - free Core Web Vitals analysis with specific recommendations", "Screaming Frog SEO Spider - free for up to 500 URLs; finds broken links, redirects, and on-page issues"] },
@@ -38,7 +52,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Start with SitemapFixer - free</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and technical SEO analysis</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/ecommerce-seo-tips" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ecommerce SEO: Get Product Pages to Rank</a></li>
+            <li><a href="/blog/social-media-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Social Media SEO: Do Social Signals Matter?</a></li>
+            <li><a href="/blog/mobile-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO Guide: Optimize Your Site for Mobile Search</a></li>
+            <li><a href="/blog/video-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Rank Videos on Google and YouTube</a></li>
+            <li><a href="/blog/canonical-url-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical URL: What It Is and How to Set It Correctly</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

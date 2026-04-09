@@ -3,6 +3,20 @@ export const metadata: Metadata = {
   title: "SEO Basics: A Beginner's Guide to Search Engine Optimization | SitemapFixer",
   description: "SEO basics explained simply - what it is, how it works, and the fundamental concepts every website owner needs to understand before diving into tactics.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-basics-guide' },
+  openGraph: {
+    title: 'SEO Basics: A Beginner',
+    description: 'SEO basics explained simply - what it is, how it works, and the fundamental concepts every website owner needs to understand before diving into tactics.',
+    url: 'https://sitemapfixer.com/blog/seo-basics-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const basics = [
   { t: "What SEO is", d: "Search Engine Optimization is the practice of improving your website so it appears higher in Google's organic (non-paid) search results for queries your target audience searches for. Higher rankings mean more traffic. Unlike paid ads, organic rankings require no ongoing payment per click - but they do require investment in content, technical quality, and credibility building over time." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Start with the technical foundation</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing check in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/keyword-research-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Keyword Research: Find Keywords That Drive Traffic</a></li>
+            <li><a href="/blog/long-tail-keywords-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Long-Tail Keywords: Find and Rank for Queries</a></li>
+            <li><a href="/blog/featured-snippets-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Featured Snippets: Win Position Zero in Google</a></li>
+            <li><a href="/blog/eeat-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>E-E-A-T Guide: Build Expertise, Authority, and Trust</a></li>
+            <li><a href="/blog/seo-for-bloggers" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Bloggers: Get Your Posts Ranked on Google</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Shopify SEO: How to Optimize Your Shopify Store for Google | SitemapFixer',
+  title: 'Shopify SEO: Optimize Your Store for Google',
   description: "Shopify has SEO limitations built in. Here is what you can control, what you cannot, and the highest-impact optimizations for ranking your Shopify store in Google.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/shopify-seo' },
+  openGraph: {
+    title: 'Shopify SEO: Optimize Your Store for Google',
+    description: 'Shopify has SEO limitations built in. Here is what you can control, what you cannot, and the highest-impact optimizations for ranking your Shopify store in Google.',
+    url: 'https://sitemapfixer.com/learn/shopify-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Shopify Controls Automatically", d: "Shopify handles canonical tags (preventing collection-path duplicate URLs), sitemap generation at /sitemap.xml, robots.txt (with limited customization), 301 redirects when you change a product URL, and basic SSL. These defaults are correct and you should not fight them. The canonical tag pointing /collections/shoes/products/sneaker to /products/sneaker is intentional - Shopify handles product URL duplication correctly." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/wordpress-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>WordPress SEO: Complete Optimization Guide for 2025</a></li>
+            <li><a href="/learn/wix-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Wix SEO: How to Optimize Your Wix Website for Google</a></li>
+            <li><a href="/learn/squarespace-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Squarespace SEO: Optimize for Google</a></li>
+            <li><a href="/learn/webflow-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Webflow SEO: Optimize for Google</a></li>
+            <li><a href="/learn/ghost-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ghost SEO: Optimize Your Publication</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

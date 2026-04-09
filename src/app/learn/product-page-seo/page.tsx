@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Product Page SEO: How to Rank Ecommerce Product Pages in Google | SitemapFixer',
+  title: 'Product Page SEO: Rank Ecommerce Pages in Google',
   description: "Product pages are the highest-value SEO real estate on ecommerce sites. Here is how to write titles, descriptions, structured data, and content that ranks and converts.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/product-page-seo' },
+  openGraph: {
+    title: 'Product Page SEO: Rank Ecommerce Pages in Google',
+    description: 'Product pages are the highest-value SEO real estate on ecommerce sites. Here is how to write titles, descriptions, structured data, and content that ranks and converts.',
+    url: 'https://sitemapfixer.com/learn/product-page-seo',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "Title Tags for Product Pages", d: "The best-performing product page title format: [Product Name] - [Key Attribute] | [Brand]. For example: 'Merino Wool Running Socks - Cushioned, Odor-Resistant | BrandName'. Include the product name first (most important), then the most searched attribute, then your brand. Keep under 60 characters. Include the primary keyword users search - usually the product type and key feature. Check what your top competitors use for title structure and differentiate." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - checks all product URLs in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/title-tag-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Title Tag SEO: Write Titles That Rank</a></li>
+            <li><a href="/learn/meta-description-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Descriptions: How to Write Them for SEO</a></li>
+            <li><a href="/learn/image-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Image SEO: Optimize Images for Google Search</a></li>
+            <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
+            <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

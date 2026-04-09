@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Mobile-First Indexing: What It Means and How to Prepare Your Site | SitemapFixer',
+  title: 'Mobile-First Indexing: How to Prepare Your Site',
   description: "Google uses the mobile version of your site for indexing and ranking. Here is what mobile-first indexing means for your SEO and the exact checks to run on your site.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/mobile-first-indexing-guide' },
+  openGraph: {
+    title: 'Mobile-First Indexing: How to Prepare Your Site',
+    description: 'Google uses the mobile version of your site for indexing and ranking. Here is what mobile-first indexing means for your SEO and the exact checks to run on your site.',
+    url: 'https://sitemapfixer.com/learn/mobile-first-indexing-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { h: "What Mobile-First Indexing Means", d: "Since 2019, Google primarily crawls and indexes the mobile version of your website. If your desktop site has more content than your mobile site, Google only sees the mobile version - meaning all that extra desktop content is invisible for indexing purposes. Rankings are based on how your mobile pages appear to Googlebot's mobile crawler, not your desktop version. Every site launched after July 2019 is automatically mobile-first indexed." },
@@ -38,6 +52,17 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing check in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/robots-txt-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Robots.txt Guide: How to Write and Test Your Robots.txt</a></li>
+            <li><a href="/learn/robots-txt-examples" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Robots.txt Examples: WordPress, Shopify & More</a></li>
+            <li><a href="/learn/crawl-budget" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget: What It Is and How to Optimize It</a></li>
+            <li><a href="/learn/google-not-crawling-my-site" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Not Crawling My Site? Here Are the Fixes</a></li>
+            <li><a href="/learn/crawl-errors-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Errors: Types, Causes, and How to Fix Each One</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

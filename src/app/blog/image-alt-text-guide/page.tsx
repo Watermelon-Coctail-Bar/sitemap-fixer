@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Image Alt Text Guide: How to Write Alt Text That Boosts SEO | SitemapFixer',
+  title: 'Image Alt Text: How to Write Alt Text for SEO',
   description: "Alt text serves both accessibility and SEO. Here is how to write effective alt text that helps Google understand your images and improves your search visibility.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/image-alt-text-guide' },
+  openGraph: {
+    title: 'Image Alt Text: How to Write Alt Text for SEO',
+    description: 'Alt text serves both accessibility and SEO. Here is how to write effective alt text that helps Google understand your images and improves your search visibility.',
+    url: 'https://sitemapfixer.com/blog/image-alt-text-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const rules = [
   { t: "What alt text does", d: "Alt text (the alt attribute on img tags) serves two purposes: it describes images to screen readers for accessibility, and it tells Google what an image shows - since Google cannot see images the way humans do. Google uses alt text as a primary signal for image search rankings and as supporting keyword context for the surrounding page content. Every image on every indexed page should have descriptive alt text." },
@@ -35,7 +49,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your site for technical SEO issues</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap and indexing analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/page-title-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Title Optimization: Write Tags That Rank</a></li>
+            <li><a href="/blog/meta-description-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Description Optimization: Write Click-Worthy Copy</a></li>
+            <li><a href="/blog/meta-tags-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Meta Tags Guide: Title, Description & Robots Tags</a></li>
+            <li><a href="/blog/heading-tags-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Heading Tags SEO: How H1-H3 Affect Rankings</a></li>
+            <li><a href="/blog/on-page-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>On-Page SEO Checklist: Optimize Before Publishing</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

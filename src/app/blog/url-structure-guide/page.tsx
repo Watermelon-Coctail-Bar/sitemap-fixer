@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'URL Structure SEO: How to Create SEO-Friendly URLs | SitemapFixer',
+  title: 'URL Structure SEO: How to Create SEO-Friendly URLs',
   description: "URL structure affects crawlability, click-through rate, and indexing. Here is how to create URLs that help both search engines and users understand your content.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/url-structure-guide' },
+  openGraph: {
+    title: 'URL Structure SEO: How to Create SEO-Friendly URLs',
+    description: 'URL structure affects crawlability, click-through rate, and indexing. Here is how to create URLs that help both search engines and users understand your content.',
+    url: 'https://sitemapfixer.com/blog/url-structure-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const rules = [
   { t: "Keep URLs short and descriptive", d: "Shorter URLs with clear words outperform long strings of numbers and parameters in both click-through rate and rankings. Compare: sitemapfixer.com/blog/how-to-fix-a-sitemap vs sitemapfixer.com/blog/post?id=1247&category=seo&tag=sitemap. The first is readable, shareable, and self-explanatory. Target URLs under 5-7 words with hyphens between words (not underscores - Google treats underscores as word connectors, not separators)." },
@@ -37,7 +51,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Check your sitemap URL patterns</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects inconsistencies and parameter URLs</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/ecommerce-seo-tips" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Ecommerce SEO: Get Product Pages to Rank</a></li>
+            <li><a href="/blog/social-media-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Social Media SEO: Do Social Signals Matter?</a></li>
+            <li><a href="/blog/mobile-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO Guide: Optimize Your Site for Mobile Search</a></li>
+            <li><a href="/blog/video-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Rank Videos on Google and YouTube</a></li>
+            <li><a href="/blog/canonical-url-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical URL: What It Is and How to Set It Correctly</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

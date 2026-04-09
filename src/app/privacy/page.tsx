@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Privacy Policy | SitemapFixer',
-  description: 'Privacy policy for SitemapFixer - how we collect, use, and protect your data.',
+  title: 'Privacy Policy',
+  description: 'Privacy policy for SitemapFixer. Learn how we collect, use, store, and protect your data when you use our AI-powered sitemap checker and SEO tools.',
   alternates: { canonical: 'https://sitemapfixer.com/privacy' },
+  openGraph: {
+    title: 'Privacy Policy',
+    description: 'Privacy policy for SitemapFixer. Learn how we collect, use, store, and protect your data when you use our AI-powered sitemap checker and SEO tools.',
+    url: 'https://sitemapfixer.com/privacy',
+    type: 'website',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 export default function PrivacyPage() {
   return (

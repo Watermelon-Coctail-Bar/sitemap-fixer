@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Keyword Cannibalization: How to Find and Fix It | SitemapFixer',
+  title: 'Keyword Cannibalization: How to Find and Fix It',
   description: "Keyword cannibalization is when multiple pages on your site compete for the same keyword. Here is how to detect it, which pages to consolidate, and when to keep them separate.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/keyword-cannibalization' },
-  openGraph: { title: 'Keyword Cannibalization: Find and Fix Guide', url: 'https://sitemapfixer.com/blog/keyword-cannibalization', type: 'article' },
+  openGraph: { title: 'Keyword Cannibalization: Find and Fix Guide', url: 'https://sitemapfixer.com/blog/keyword-cannibalization', type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What Keyword Cannibalization Costs You", d: "When two pages on your site target the same keyword, Google has to pick one to rank. It often picks the wrong one. Link equity from external links gets split between the two pages rather than concentrated on one. Google may shuffle which page it shows in search results, causing unpredictable ranking fluctuations. The combined performance of two competing pages is almost always worse than one strong, consolidated page would be." },
@@ -37,7 +46,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Analyze your site for content duplication</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free sitemap analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/content-audit-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content Audit: How to Audit Your Site for SEO</a></li>
+            <li><a href="/blog/content-marketing-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Content Marketing SEO: Drive Organic Growth</a></li>
+            <li><a href="/blog/thin-content-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Thin Content: Find It, Fix It, Recover Rankings</a></li>
+            <li><a href="/blog/thin-content-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Thin Content: What It Is and How to Fix It</a></li>
+            <li><a href="/blog/duplicate-content-seo-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Duplicate Content SEO: How to Find and Fix It</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

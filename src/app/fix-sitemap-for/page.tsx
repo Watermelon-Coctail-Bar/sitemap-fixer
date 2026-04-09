@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Fix Sitemap by Platform - WordPress, Shopify, Next.js | SitemapFixer',
-  description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites.',
+  title: 'Fix Sitemap by Platform: WordPress, Shopify & More',
+  description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites. Step-by-step instructions to fix common XML sitemap issues on each platform.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for' },
+  openGraph: {
+    title: 'Fix Sitemap by Platform: WordPress, Shopify & More',
+    description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites. Step-by-step instructions to fix common XML sitemap issues on each platform.',
+    url: 'https://sitemapfixer.com/fix-sitemap-for',
+    type: 'website',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const PLATFORMS = [
   { slug: 'wordpress', name: 'WordPress', desc: 'Fix Yoast/Rank Math sitemap issues, exclude low-value pages.' },

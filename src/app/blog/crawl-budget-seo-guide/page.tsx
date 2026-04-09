@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Crawl Budget SEO Guide: How to Stop Google Wasting Crawls on Low-Value Pages | SitemapFixer',
+  title: 'Crawl Budget SEO: Stop Wasting Crawls on Bad Pages',
   description: "Crawl budget limits how many pages Google crawls on your site. Here is how to stop wasting it on low-value pages and ensure your important content gets crawled.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/crawl-budget-seo-guide' },
+  openGraph: {
+    title: 'Crawl Budget SEO: Stop Wasting Crawls on Bad Pages',
+    description: 'Crawl budget limits how many pages Google crawls on your site. Here is how to stop wasting it on low-value pages and ensure your important content gets crawled.',
+    url: 'https://sitemapfixer.com/blog/crawl-budget-seo-guide',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const sections = [
   { t: "What crawl budget is", d: "Crawl budget is the number of pages Googlebot crawls on your site within a given time period. It is determined by two factors: crawl rate limit (how fast Google crawls without overloading your server) and crawl demand (how much Google wants to crawl your site based on its authority and the frequency of content updates). Small sites with under 1,000 pages rarely have crawl budget problems. Large sites with tens or hundreds of thousands of pages need to manage it carefully." },
@@ -35,7 +49,18 @@ export default function Page() {
         <div style={{ fontSize: 20, fontWeight: 700, color: 'white', marginBottom: 8 }}>Audit your sitemap for crawl budget waste</div>
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free - detects low-value URL patterns in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Sitemap Free</a>
-      </div>
+  
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/blog/javascript-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>JavaScript SEO: Make JS Sites Crawlable</a></li>
+            <li><a href="/blog/https-migration-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>HTTPS Migration: Switch Without Losing Rankings</a></li>
+            <li><a href="/blog/redirect-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Redirect SEO: 301 vs 302 & Best Practices</a></li>
+            <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
+            <li><a href="/blog/pagination-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pagination SEO: Handle Page 2, 3, 4 Right</a></li>
+          </ul>
+        </div>
+    </div>
     </article>
   );
 }

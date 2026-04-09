@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'CLS Fix: How to Eliminate Cumulative Layout Shift | SitemapFixer',
+  title: 'CLS Fix: How to Eliminate Cumulative Layout Shift',
   description: "CLS measures unexpected page layout shifts during loading. Google requires a score under 0.1. Here is how to find what is causing your CLS and fix each type.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/cls-fix' },
+  openGraph: {
+    title: 'CLS Fix: How to Eliminate Cumulative Layout Shift',
+    description: 'CLS measures unexpected page layout shifts during loading. Google requires a score under 0.1. Here is how to find what is causing your CLS and fix each type.',
+    url: 'https://sitemapfixer.com/learn/cls-fix',
+    type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
+  },
 };
 const causes = [
   { t: "Images without dimensions", d: "The most common CLS cause. When an image has no width and height attributes, the browser does not reserve space for it during initial layout. When the image loads, it pushes content down. Fix: always add explicit width and height attributes to every img tag: img src=photo.jpg width=800 height=600. Modern CSS with aspect-ratio handles the visual flexibility while keeping the space reserved. In React/Next.js, use the Image component which enforces dimensions." },
@@ -43,6 +57,16 @@ export default function Page() {
         <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Free site analysis in 60 seconds</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 28px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Analyze My Site Free</a>
       </div>
+
+        <div style={{ marginTop: 48, borderTop: '1px solid #e4e4ed', paddingTop: 32 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', marginBottom: 16 }}>Related Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li><a href="/learn/lcp-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>LCP Optimization: How to Fix Largest Contentful Paint</a></li>
+            <li><a href="/learn/inp-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>INP Optimization: How to Fix Interaction to Next Paint</a></li>
+            <li><a href="/blog/core-web-vitals-fix-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals Fix: How to Pass LCP, INP, CLS</a></li>
+            <li><a href="/blog/page-speed-improvement" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed: 10 Quick Wins That Make a Difference</a></li>
+          </ul>
+        </div>
     </div>
   );
 }

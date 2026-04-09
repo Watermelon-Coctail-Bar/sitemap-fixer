@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'changefreq Misuse in Sitemap - Fix, Examples & Best Practices | SitemapFixer',
+  title: 'changefreq Misuse in Sitemap: Fix Guide',
   description: 'Is your sitemap using changefreq correctly? Setting everything to "daily" or "always" is a common mistake that hurts crawl efficiency. Learn the correct approach.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/changefreq-misuse' },
   openGraph: {
@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     description: 'Is your sitemap using changefreq correctly? Setting everything to "daily" or "always" is a common mistake that hurts crawl efficiency. Learn the correct approach.',
     url: 'https://sitemapfixer.com/sitemap-errors/changefreq-misuse',
     type: 'article',
+    images: [{
+      url: 'https://sitemapfixer.com/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool',
+    }],
+    siteName: 'SitemapFixer',
+    locale: 'en_US',
   },
 };
 
