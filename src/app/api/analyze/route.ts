@@ -6,31 +6,28 @@ import { checkUrlHealth, HealthSummary } from '@/lib/urlChecker';
 
 export const maxDuration = 60;
 
-// Simple in-memory rate limiter for free tier (resets on deploy/restart)
-const usageMap = new Map<string, { count: number; firstUsed: number }>();
 const FREE_LIMIT = 3;
-const WINDOW_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
 
-function checkFreeLimit(req: NextRequest): { allowed: boolean; count: number } {
+function checkFreeLimit(req: NextRequest): { allowed: boolean; count: number; setCookie?: string } {
   // Check if user has auth token (skip limit for authenticated users)
   const token = req.cookies.get('sf_token')?.value;
   if (token) return { allowed: true, count: 0 };
 
-  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown';
-  const now = Date.now();
-  const usage = usageMap.get(ip);
+  // Use cookie-based counting (persists across deploys)
+  const usageCookie = req.cookies.get('sf_usage')?.value;
+  let count = 0;
+  try {
+    if (usageCookie) count = parseInt(usageCookie, 10) || 0;
+  } catch { /* ignore */ }
 
-  if (!usage || now - usage.firstUsed > WINDOW_MS) {
-    usageMap.set(ip, { count: 1, firstUsed: now });
-    return { allowed: true, count: 1 };
+  if (count >= FREE_LIMIT) {
+    return { allowed: false, count };
   }
 
-  if (usage.count >= FREE_LIMIT) {
-    return { allowed: false, count: usage.count };
-  }
-
-  usage.count++;
-  return { allowed: true, count: usage.count };
+  const newCount = count + 1;
+  // Set cookie that expires in 30 days
+  const cookie = `sf_usage=${newCount}; Path=/; Max-Age=${30 * 24 * 60 * 60}; SameSite=Lax`;
+  return { allowed: true, count: newCount, setCookie: cookie };
 }
 
 export async function POST(req: NextRequest) {
@@ -41,7 +38,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Check free tier limit
-    const { allowed, count } = checkFreeLimit(req);
+    const { allowed, count, setCookie } = checkFreeLimit(req);
     if (!allowed) {
       return NextResponse.json({
         error: 'limit_reached',
@@ -112,7 +109,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Failed to parse AI response', raw: rawText }, { status: 500 });
     }
 
-    return NextResponse.json({
+    const response = NextResponse.json({
       domain,
       sitemapUrl: sitemap.sitemapSource,
       isSitemapIndex: sitemap.isSitemapIndex,
@@ -134,6 +131,12 @@ export async function POST(req: NextRequest) {
         results: healthSummary.results.filter(r => r.issue), // only send URLs with issues
       } : null,
     });
+
+    // Set usage cookie to persist across deploys
+    if (setCookie) {
+      response.headers.set('Set-Cookie', setCookie);
+    }
+    return response;
   } catch (err) {
     console.error('Analyze error:', err);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });

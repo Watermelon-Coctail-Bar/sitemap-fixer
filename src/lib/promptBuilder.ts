@@ -38,6 +38,9 @@ Rules:
 - Every "fix" must be a specific action someone can do right now, ideally with example text to copy-paste.
 - issues array is the most important part - this is what users act on first.
 - For each issue, include affectedUrls (actual URLs from the sitemap data that have this problem) and fixedUrls (the corrected version of each URL, same order). Include up to 20 affected URLs per issue. If the fix is not a URL change (e.g. add a meta tag), fixedUrls should contain the action for each URL (e.g. "add noindex tag").
+- CRITICAL: Check for duplicate URLs and keyword cannibalization (different URLs targeting the same keyword). Flag these as critical issues.
+- Check if sitemap should be split into multiple sitemaps (sitemap index) for better crawl efficiency.
+- If URL health check found noindex/canonical/404 issues, make them the TOP priority issues.
 
 Return EXACTLY this JSON (no extra keys, no comments):
 {

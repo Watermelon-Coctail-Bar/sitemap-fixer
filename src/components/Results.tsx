@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { ScoreRing } from './ScoreRing';
 
 interface Issue {
   severity: 'critical' | 'warning' | 'opportunity' | 'info';
@@ -145,7 +146,7 @@ function ClusterGroup({ cluster, urlIssues }: {
             return (
               <div key={i} style={{ display: 'flex', alignItems: 'center', padding: '5px 0', borderBottom: i < urls.length - 1 ? '1px solid rgba(0,0,0,0.04)' : 'none', gap: 8 }}>
                 {/* URL */}
-                <span style={{ width: '45%', fontSize: 12, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flexShrink: 0 }} title={url}>
+                <span style={{ width: '45%', fontSize: 12, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", wordBreak: 'break-all', flexShrink: 0, lineHeight: 1.4 }}>
                   {url.replace(/^https?:\/\/[^/]+/, '')}
                 </span>
                 {/* Issue / Fix */}
@@ -190,10 +191,12 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 20px 80px' }}>
 
-      {/* Header */}
-      <div className="anim-fade-up" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 0', borderBottom: '1px solid var(--border)', marginBottom: 16, gap: 16, flexWrap: 'wrap' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)' }}>{data.domain}</span>
+      {/* Header with Score */}
+      <div className="anim-fade-up" style={{ display: 'flex', alignItems: 'center', padding: '24px 0', borderBottom: '1px solid var(--border)', marginBottom: 16, gap: 20, flexWrap: 'wrap' }}>
+        <ScoreRing score={report.seoScore} size={80} />
+        <div style={{ flex: 1 }}>
+          <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)' }}>{data.domain}</div>
+          <div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 4 }}>{report.scoreReason}</div>
         </div>
         <button onClick={onReset} style={{ background: 'none', border: '1px solid var(--border)', borderRadius: 8, padding: '8px 16px', fontSize: 13, color: 'var(--muted)', cursor: 'pointer', fontFamily: 'inherit' }}>
           New analysis
@@ -214,7 +217,6 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
         {criticalCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#fef2f2', borderRadius: 99, padding: '5px 14px' }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#dc2626' }} /><span style={{ fontSize: 13, fontWeight: 700, color: '#dc2626' }}>{criticalCount} Error{criticalCount !== 1 ? 's' : ''}</span></span>}
         {warningCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#fffbeb', borderRadius: 99, padding: '5px 14px' }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#d97706' }} /><span style={{ fontSize: 13, fontWeight: 700, color: '#d97706' }}>{warningCount} Warning{warningCount !== 1 ? 's' : ''}</span></span>}
         {improvementCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#eff6ff', borderRadius: 99, padding: '5px 14px' }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#2563eb' }} /><span style={{ fontSize: 13, fontWeight: 700, color: '#2563eb' }}>{improvementCount} Improvement{improvementCount !== 1 ? 's' : ''}</span></span>}
-        <span style={{ fontSize: 13, color: 'var(--muted)' }}>{report.scoreReason}</span>
       </div>
 
       {/* ─── Sitemap Viewer ─── */}
@@ -266,9 +268,10 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
       {/* ─── Priority Action Plan ─── */}
       {report.topActions.length > 0 && (
         <div className="card anim-fade-up anim-fade-up-3" style={{ marginBottom: 24 }}>
-          <div className="card-header">
+          <div className="card-header" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ fontWeight: 700, fontSize: 15 }}>Priority Action Plan</span>
             <span className="tag tag-red" style={{ marginLeft: 'auto' }}>Do these first</span>
+            <Cp text={report.topActions.map((a, i) => `${i + 1}. ${a}`).join('\n')} label="Copy all" />
           </div>
           <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8, margin: 0, padding: 0 }}>
             {report.topActions.map((action, i) => (
@@ -302,7 +305,7 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
                   <tr key={i} style={{ background: i % 2 === 0 ? 'transparent' : 'var(--border-2)', borderBottom: '1px solid var(--border-2)' }}>
                     <td style={{ padding: '10px 14px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        <span className="url-chip" style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis' }}>{p.suggestedUrl}</span>
+                        <span className="url-chip" style={{ flex: 1, wordBreak: 'break-all' }}>{p.suggestedUrl}</span>
                         <Cp text={p.suggestedUrl} />
                       </div>
                     </td>
