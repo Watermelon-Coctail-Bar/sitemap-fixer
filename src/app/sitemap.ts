@@ -224,5 +224,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/learn/wordpress-sitemap', 0.7, 'monthly'),
     m('/learn/xml-sitemap-format', 0.7, 'monthly'),
     m('/learn/xml-sitemap-generator', 0.7, 'monthly'),
+    m('/learn/find-all-pages-on-a-website', 0.8, 'monthly'),
+    m('/learn/how-to-find-sitemap', 0.8, 'monthly'),
   ];
 }

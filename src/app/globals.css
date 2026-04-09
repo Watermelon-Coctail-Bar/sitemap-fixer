@@ -291,6 +291,22 @@ a {
   }
 }
 
+/* Mobile hamburger menu */
+@media (max-width: 640px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  .nav-hamburger {
+    display: block !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .nav-mobile-menu {
+    display: none !important;
+  }
+}
+
 @media (max-width: 480px) {
   footer div[style*="2.5fr"] {
     grid-template-columns: 1fr !important;
@@ -298,20 +314,6 @@ a {
 
   div[style*="repeat(4"] {
     grid-template-columns: 1fr !important;
-  }
-
-  /* Simplify nav on small screens - hide Learn/Blog, keep Sign in + Pricing */
-  nav div[style*="gap:24"] a[href="/learn"],
-  nav div[style*="gap:24"] a[href="/blog"],
-  nav div[style*="gap: 24"] a[href="/learn"],
-  nav div[style*="gap: 24"] a[href="/blog"] {
-    display: none !important;
-  }
-
-  nav div[style*="gap:24"],
-  nav div[style*="gap: 24"] {
-    gap: 12px !important;
-    font-size: 13px !important;
   }
 
   /* Fix CTA button truncation */

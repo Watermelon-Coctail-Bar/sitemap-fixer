@@ -31,6 +31,8 @@ const guides = [
       { href: '/learn/sitemap-index-file', title: 'Sitemap Index File' },
       { href: '/learn/sitemap-size-limit', title: 'Sitemap Size Limit' },
       { href: '/learn/sitemap-vs-robots-txt', title: 'Sitemap vs Robots.txt' },
+      { href: '/learn/how-to-find-sitemap', title: 'How to Find a Sitemap' },
+      { href: '/learn/find-all-pages-on-a-website', title: 'Find All Pages on a Website' },
       { href: '/learn/news-sitemap', title: 'News Sitemap' },
       { href: '/learn/image-sitemap', title: 'Image Sitemap' },
       { href: '/learn/video-seo', title: 'Video SEO' },

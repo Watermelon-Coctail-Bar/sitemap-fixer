@@ -9,7 +9,38 @@ type AppState = 'idle' | 'loading' | 'results' | 'error';
 
 function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center',gap:8,textDecoration:'none' }} aria-label="SitemapFixer - Free AI Sitemap Checker"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" role="img" aria-label="SitemapFixer logo"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg><span style={{ fontFamily:"'Instrument Serif',serif",fontSize:20,color:'var(--ink)' }}>SitemapFixer</span></a>); }
 
-function Navbar() { return (<nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}><div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}><Logo /><div style={{ display:'flex',gap:24,alignItems:'center' }}><a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a><a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a><a href="/signup?mode=login" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a><a href="/pricing" style={{ fontSize:13,color:'white',background:'#2d5be3',padding:'6px 14px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Pricing</a></div></div></nav>); }
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  return (
+    <nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}>
+      <div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}>
+        <Logo />
+        {/* Desktop nav */}
+        <div className="nav-desktop" style={{ display:'flex',gap:24,alignItems:'center' }}>
+          <a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a>
+          <a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a>
+          <a href="/signup?mode=login" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a>
+          <a href="/pricing" style={{ fontSize:13,color:'white',background:'#2d5be3',padding:'6px 14px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Pricing</a>
+        </div>
+        {/* Mobile hamburger */}
+        <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} style={{ display:'none',background:'none',border:'none',cursor:'pointer',padding:4 }} aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round">
+            {menuOpen ? <><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></> : <><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></>}
+          </svg>
+        </button>
+      </div>
+      {/* Mobile menu dropdown */}
+      {menuOpen && (
+        <div className="nav-mobile-menu" style={{ padding:'0 24px 16px',display:'flex',flexDirection:'column',gap:12,borderTop:'1px solid var(--border)' }}>
+          <a href="/learn" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Learn</a>
+          <a href="/blog" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Blog</a>
+          <a href="/signup?mode=login" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Sign in</a>
+          <a href="/pricing" style={{ fontSize:15,color:'white',background:'#2d5be3',padding:'10px 20px',borderRadius:8,textDecoration:'none',fontWeight:600,textAlign:'center' }}>Pricing</a>
+        </div>
+      )}
+    </nav>
+  );
+}
 
 function Footer() {
   return (
