@@ -10,7 +10,7 @@ const PRICE_IDS: Record<string, string | undefined> = {
 
 export async function POST(req: NextRequest) {
   try {
-    const { plan, email } = await req.json();
+    const { plan, email, coupon } = await req.json();
     const stripeKey = process.env.STRIPE_SECRET_KEY;
     if (!stripeKey) return NextResponse.json({ error: 'Payments not configured' }, { status: 503 });
 
@@ -28,6 +28,10 @@ export async function POST(req: NextRequest) {
       'metadata[plan]': plan,
     });
     if (email) params.set('customer_email', email);
+    if (coupon) {
+      params.set('discounts[0][coupon]', coupon);
+      params.delete('allow_promotion_codes'); // can't use both
+    }
 
     const res = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
