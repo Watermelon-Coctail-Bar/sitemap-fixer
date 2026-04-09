@@ -34,11 +34,12 @@ URL HEALTH CHECK (${health.checked} URLs sampled):
 - Slow (>3s): ${health.issues.slow.length > 0 ? health.issues.slow.map(s => `${s.url} (${(s.ms/1000).toFixed(1)}s)`).join(', ') : '(none)'}` : ''}
 
 Rules:
-- Reference actual URLs/slugs from the data. Never give generic advice.
-- Every "fix" must be a specific action someone can do right now, ideally with example text to copy-paste.
+- CRITICAL: affectedUrls MUST contain ACTUAL URLs copied from the SAMPLE URLs or sitemap data above. NEVER put descriptions like "URLs with mixed case found in crawl" or "duplicate TikTok pages". Put the real URL paths like "/blog/my-post" or "https://example.com/page". If you cannot find a specific URL, do not include the issue.
+- CRITICAL: fixedUrls MUST contain the EXACT corrected version of each URL. For redirects: "/blog/my-post" (the target URL). For lastmod: "add <lastmod>2025-04-01</lastmod>". For noindex: "remove noindex tag". Never put vague actions like "redirect to lowercase versions" — put the actual lowercase URL.
+- Every "fix" must be a specific action someone can do right now with exact URLs to copy-paste.
 - issues array is the most important part - this is what users act on first.
-- For each issue, include affectedUrls (actual URLs from the sitemap data that have this problem) and fixedUrls (the corrected version of each URL, same order). Include up to 20 affected URLs per issue. If the fix is not a URL change (e.g. add a meta tag), fixedUrls should contain the action for each URL (e.g. "add noindex tag").
-- CRITICAL: Check for duplicate URLs and keyword cannibalization (different URLs targeting the same keyword). Flag these as critical issues.
+- Include up to 20 affected URLs per issue.
+- Check for duplicate URLs and keyword cannibalization (different URLs targeting the same keyword). Flag these as critical issues.
 - Check if sitemap should be split into multiple sitemaps (sitemap index) for better crawl efficiency.
 - If URL health check found noindex/canonical/404 issues, make them the TOP priority issues.
 
@@ -50,19 +51,19 @@ Return EXACTLY this JSON (no extra keys, no comments):
   "issues": [
     {
       "severity": "critical",
-      "problem": "<specific problem, cite URL or count>",
-      "fix": "<exact action to take - copy-paste ready where possible>",
+      "problem": "<specific problem, cite URL count>",
+      "fix": "<exact action>",
       "effort": "5min",
-      "affectedUrls": ["<actual broken/problematic URL from sitemap>", "<another URL>"],
-      "fixedUrls": ["<corrected version of first URL>", "<corrected version of second URL>"]
+      "affectedUrls": ["/actual-url-from-sitemap", "/another-real-url"],
+      "fixedUrls": ["/corrected-url-lowercase", "/corrected-other-url"]
     },
     {
       "severity": "warning",
       "problem": "<specific problem>",
       "fix": "<specific fix>",
       "effort": "15min",
-      "affectedUrls": ["<actual URL from sitemap>"],
-      "fixedUrls": ["<corrected URL>"]
+      "affectedUrls": ["/real-url-path-from-data"],
+      "fixedUrls": ["/fixed-version-of-url"]
     }
   ],
   "topActions": [
