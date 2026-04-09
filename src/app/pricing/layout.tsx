@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Pricing Plans',
-  description: 'Simple, transparent pricing for SitemapFixer. Start free, upgrade for unlimited sitemap analyses and full SEO reports.',
+  description: 'Simple pricing for SitemapFixer. Start free with 3 analyses, then upgrade for unlimited sitemap audits, AI-powered fix reports, and multi-site monitoring.',
   alternates: { canonical: 'https://sitemapfixer.com/pricing' },
   openGraph: {
     title: 'Pricing Plans',
-    description: 'Simple, transparent pricing for SitemapFixer. Start free, upgrade for unlimited sitemap analyses and full SEO reports.',
+    description: 'Simple pricing for SitemapFixer. Start free with 3 analyses, then upgrade for unlimited sitemap audits, AI-powered fix reports, and multi-site monitoring.',
     url: 'https://sitemapfixer.com/pricing',
     type: 'website',
     images: [{ url: 'https://sitemapfixer.com/opengraph-image', width: 1200, height: 630, alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool' }],
@@ -29,7 +29,7 @@ export default function PricingLayout({ children }: { children: React.ReactNode 
             <a href="/terms" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Terms</a>
             <a href="/privacy" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Privacy</a>
           </div>
-          <span style={{ fontSize: 12, color: '#9ca3af' }}>2025 SitemapFixer</span>
+          <span style={{ fontSize: 12, color: '#9ca3af' }}>2026 SitemapFixer</span>
         </div>
       </footer>
     </>

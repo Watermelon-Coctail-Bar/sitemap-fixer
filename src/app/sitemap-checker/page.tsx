@@ -3,7 +3,7 @@ import { LandingPage } from '@/components/LandingPage';
 
 export const metadata: Metadata = {
   title: 'Sitemap Checker - Validate & Audit Your XML Sitemap',
-  description: 'Free XML sitemap checker. Check your sitemap for broken URLs, inconsistent patterns, stale pages, and missing sections. Learn how to check your sitemap and get AI-powered fixes.',
+  description: 'Free XML sitemap checker. Check your sitemap for broken URLs, stale pages, and missing sections. Get AI-powered fixes and learn how to check your sitemap.',
   keywords: 'sitemap checker, xml sitemap checker, how to check sitemap, sitemap validator, sitemap audit, check sitemap online, sitemap errors',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-checker' },
   openGraph: {

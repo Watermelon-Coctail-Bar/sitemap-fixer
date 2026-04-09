@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { LandingPage } from '@/components/LandingPage';
 export const metadata: Metadata = {
   title: 'XML Sitemap Generator - Create & Fix Your Sitemap',
-  description: 'Analyze and generate insights from your XML sitemap instantly. Get an AI-powered fix list with prioritized SEO recommendations in 60 seconds. Free, no signup required.',
+  description: 'Analyze your XML sitemap instantly. Get an AI-powered fix list with prioritized SEO recommendations in 60 seconds. Free, no signup required.',
   alternates: { canonical: 'https://sitemapfixer.com/xml-sitemap-generator' },
   openGraph: {
     title: 'XML Sitemap Generator - Create & Fix Your Sitemap',
-    description: 'Analyze and generate insights from your XML sitemap instantly. Get an AI-powered fix list with prioritized SEO recommendations in 60 seconds. Free, no signup required.',
+    description: 'Analyze your XML sitemap instantly. Get an AI-powered fix list with prioritized SEO recommendations in 60 seconds. Free, no signup required.',
     url: 'https://sitemapfixer.com/xml-sitemap-generator',
     type: 'website',
     images: [{

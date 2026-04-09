@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'What Is an XML Sitemap?',
-  description: 'An XML sitemap is a file that lists all important URLs on your website to help search engines discover and index your content. Learn what it is, how it works, and why it matters.',
+  description: 'An XML sitemap lists all important URLs on your website to help search engines discover and index your content. Learn what it is and why it matters.',
   alternates: { canonical: 'https://sitemapfixer.com/learn/what-is-an-xml-sitemap' },
   openGraph: {
     title: 'What Is an XML Sitemap?',
-    description: 'An XML sitemap is a file that lists all important URLs on your website to help search engines discover and index your content. Learn what it is, how it works, and why it matters.',
+    description: 'An XML sitemap lists all important URLs on your website to help search engines discover and index your content. Learn what it is and why it matters.',
     url: 'https://sitemapfixer.com/learn/what-is-an-xml-sitemap',
     type: 'article',
     images: [{

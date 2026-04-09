@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sign Up',
-  description: 'Create your free SitemapFixer account. Start analyzing your sitemap and fixing SEO issues in 60 seconds.',
+  description: 'Create your free SitemapFixer account. Get 3 free sitemap analyses with AI-powered SEO recommendations. No credit card required. Start fixing SEO issues now.',
   alternates: { canonical: 'https://sitemapfixer.com/signup' },
   openGraph: {
     title: 'Sign Up',
-    description: 'Create your free SitemapFixer account. Start analyzing your sitemap and fixing SEO issues in 60 seconds.',
+    description: 'Create your free SitemapFixer account. Get 3 free sitemap analyses with AI-powered SEO recommendations. No credit card required. Start fixing SEO issues now.',
     url: 'https://sitemapfixer.com/signup',
     type: 'website',
     images: [{ url: 'https://sitemapfixer.com/opengraph-image', width: 1200, height: 630, alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool' }],
@@ -28,7 +28,7 @@ export default function SignupLayout({ children }: { children: React.ReactNode }
       </nav>
       <main>{children}</main>
       <footer style={{ borderTop: '1px solid #e4e4ed', background: '#fafaf9', padding: '24px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: 12, color: '#9ca3af' }}>2025 SitemapFixer</span>
+        <span style={{ fontSize: 12, color: '#9ca3af' }}>2026 SitemapFixer</span>
         <div style={{ display: 'flex', gap: 20 }}>
           <a href="/terms" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Terms</a>
           <a href="/privacy" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Privacy</a>

@@ -27,7 +27,7 @@ export default function TermsLayout({ children }: { children: React.ReactNode })
             <a href="/blog" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Blog</a>
             <a href="/sitemap.xml" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Sitemap</a>
           </div>
-          <span style={{ fontSize: 12, color: '#9ca3af' }}>2025 SitemapFixer</span>
+          <span style={{ fontSize: 12, color: '#9ca3af' }}>2026 SitemapFixer</span>
         </div>
       </footer>
     </>

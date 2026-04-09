@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { LandingPage } from '@/components/LandingPage';
 export const metadata: Metadata = {
   title: 'Free SEO Audit - AI-Powered Site Audit in 60 Seconds',
-  description: 'Run a free AI-powered SEO audit on any website in 60 seconds. No email or credit card required. Get a prioritized fix list with actionable recommendations instantly.',
+  description: 'Run a free AI-powered SEO audit on any website in 60 seconds. No email or credit card required. Get a prioritized fix list with actionable SEO recommendations.',
   alternates: { canonical: 'https://sitemapfixer.com/free-seo-audit' },
   openGraph: {
     title: 'Free SEO Audit - AI-Powered Site Audit in 60 Seconds',
-    description: 'Run a free AI-powered SEO audit on any website in 60 seconds. No email or credit card required. Get a prioritized fix list with actionable recommendations instantly.',
+    description: 'Run a free AI-powered SEO audit on any website in 60 seconds. No email or credit card required. Get a prioritized fix list with actionable SEO recommendations.',
     url: 'https://sitemapfixer.com/free-seo-audit',
     type: 'website',
     images: [{

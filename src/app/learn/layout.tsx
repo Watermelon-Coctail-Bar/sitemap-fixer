@@ -57,7 +57,7 @@ export default function LearnLayout({ children }: { children: React.ReactNode })
           </div>
         </div>
         <div style={{ borderTop: '1px solid #e4e4ed', padding: '20px 24px', maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <span style={{ fontSize: 12, color: '#9ca3af' }}>2025 SitemapFixer – Built for SEOs who want answers, not reports</span>
+          <span style={{ fontSize: 12, color: '#9ca3af' }}>2026 SitemapFixer – Built for SEOs who want answers, not reports</span>
           <a href="/sitemap.xml" style={{ fontSize: 12, color: '#9ca3af', textDecoration: 'none' }}>Sitemap</a>
         </div>
       </footer>

@@ -3,7 +3,7 @@ import { LandingPage } from '@/components/LandingPage';
 
 export const metadata: Metadata = {
   title: 'Sitemap Finder - Find Any Website\'s Sitemap',
-  description: 'Find the sitemap of any website instantly. Enter a domain to discover its sitemap URL, check /sitemap.xml, robots.txt, and 20+ common paths. See all pages on a website and get SEO recommendations.',
+  description: 'Find the sitemap of any website instantly. Enter a domain to check /sitemap.xml, robots.txt, and 20+ common paths. See all pages and get SEO recommendations.',
   keywords: 'sitemap finder, how to find sitemap of a website, how to see the sitemap of a website, find all pages on a website, find sitemap, sitemap url finder',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-finder' },
   openGraph: {
