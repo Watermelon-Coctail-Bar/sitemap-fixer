@@ -18,7 +18,7 @@ interface AnalysisResult {
   staleCount: number;
   orphanCount: number;
   noLastmodCount: number;
-  clusters: Array<{ label: string; prefix: string; count: number }>;
+  clusters: Array<{ label: string; prefix: string; count: number; urls?: string[] }>;
   report: {
     seoScore: number;
     scoreReason: string;
@@ -33,250 +33,192 @@ interface AnalysisResult {
   };
 }
 
-const SEV_CONFIG = {
-  critical:    { label: 'Critical',    color: '#dc2626', bg: '#fef2f2', border: '#fecaca', dot: '#dc2626' },
-  warning:     { label: 'Warning',     color: '#d97706', bg: '#fffbeb', border: '#fde68a', dot: '#d97706' },
-  opportunity: { label: 'Improvement', color: '#2563eb', bg: '#eff6ff', border: '#bfdbfe', dot: '#2563eb' },
-  info:        { label: 'Info',        color: '#6b7280', bg: '#f9fafb', border: '#e5e7eb', dot: '#9ca3af' },
+const SEV = {
+  critical:    { label: 'Error',       color: '#dc2626', bg: '#fef2f2', dot: '#dc2626' },
+  warning:     { label: 'Warning',     color: '#d97706', bg: '#fffbeb', dot: '#d97706' },
+  opportunity: { label: 'Improvement', color: '#2563eb', bg: '#eff6ff', dot: '#2563eb' },
+  info:        { label: 'Info',        color: '#6b7280', bg: '#f9fafb', dot: '#9ca3af' },
 };
 
-const EFFORT_LABEL: Record<string, string> = { low: '< 30 min', medium: '1-4 hrs', high: 'Days' };
-const EFFORT_COLOR: Record<string, string> = { low: '#16a34a', medium: '#d97706', high: '#dc2626' };
+const EFFORT: Record<string, { label: string; color: string }> = {
+  low: { label: '< 30 min', color: '#16a34a' },
+  medium: { label: '1-4 hrs', color: '#d97706' },
+  high: { label: 'Days', color: '#dc2626' },
+};
 
-type Tab = 'critical' | 'warning' | 'opportunity' | 'all';
-
-function CopyButton({ text, label }: { text: string; label?: string }) {
-  const [copied, setCopied] = useState(false);
+/* ─── Copy Button ─── */
+function Cp({ text, label }: { text: string; label?: string }) {
+  const [ok, set] = useState(false);
   return (
     <button
-      onClick={(e) => { e.stopPropagation(); navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 1800); }}
-      style={{ background: 'none', border: '1px solid var(--border)', borderRadius: 5, padding: '2px 8px', fontSize: 11, color: copied ? '#16a34a' : 'var(--muted)', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'all 0.15s', flexShrink: 0 }}
+      onClick={e => { e.stopPropagation(); navigator.clipboard.writeText(text); set(true); setTimeout(() => set(false), 1500); }}
+      style={{ background: 'none', border: '1px solid var(--border)', borderRadius: 5, padding: '2px 8px', fontSize: 11, color: ok ? '#16a34a' : 'var(--muted)', cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0 }}
     >
-      {copied ? 'Copied' : (label || 'Copy')}
+      {ok ? '✓' : (label || 'Copy')}
     </button>
   );
 }
 
-function SitemapBar({ sitemapUrl, totalUrls }: { sitemapUrl: string; totalUrls: number }) {
-  const [editing, setEditing] = useState(false);
-  const [url, setUrl] = useState(sitemapUrl);
-
-  return (
-    <div style={{ background: '#0a0a0f', borderRadius: 10, padding: '10px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 16 }}>
-      {editing ? (
-        <input
-          value={url}
-          onChange={e => setUrl(e.target.value)}
-          onBlur={() => setEditing(false)}
-          onKeyDown={e => e.key === 'Enter' && setEditing(false)}
-          autoFocus
-          style={{ flex: 1, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 6, padding: '4px 10px', fontSize: 13, color: 'white', fontFamily: "'DM Mono', monospace", outline: 'none' }}
-        />
-      ) : (
-        <a href={url} target="_blank" rel="noopener noreferrer" style={{ flex: 1, fontSize: 13, color: '#93c5fd', fontFamily: "'DM Mono', monospace", textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-          {url}
-        </a>
-      )}
-      <button onClick={() => setEditing(!editing)} style={{ background: 'rgba(255,255,255,0.1)', border: 'none', borderRadius: 6, padding: '4px 10px', fontSize: 11, color: '#9ca3af', cursor: 'pointer' }}>
-        {editing ? 'Done' : 'Edit URL'}
-      </button>
-      <CopyButton text={url} />
-      <span style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600 }}>{totalUrls.toLocaleString()} URLs</span>
-    </div>
-  );
+/* ─── Build URL → issue map ─── */
+function buildUrlIssueMap(issues: Issue[]) {
+  const map = new Map<string, { severity: string; fix: string; fixedUrl?: string; effort: string }>();
+  for (const issue of issues) {
+    if (!issue.affectedUrls) continue;
+    issue.affectedUrls.forEach((url, i) => {
+      // Keep highest severity per URL
+      const existing = map.get(url);
+      const sevOrder = { critical: 0, warning: 1, opportunity: 2, info: 3 };
+      const newSev = sevOrder[issue.severity] ?? 3;
+      const existSev = existing ? sevOrder[existing.severity as keyof typeof sevOrder] ?? 3 : 99;
+      if (newSev < existSev) {
+        map.set(url, {
+          severity: issue.severity,
+          fix: issue.fix,
+          fixedUrl: issue.fixedUrls?.[i],
+          effort: issue.effort,
+        });
+      } else if (!existing) {
+        map.set(url, {
+          severity: issue.severity,
+          fix: issue.fix,
+          fixedUrl: issue.fixedUrls?.[i],
+          effort: issue.effort,
+        });
+      }
+    });
+  }
+  return map;
 }
 
-function PillBadge({ count, label, color, bg }: { count: number; label: string; color: string; bg: string }) {
-  if (count === 0) return null;
-  return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: bg, borderRadius: 99, padding: '5px 14px' }}>
-      <span style={{ width: 7, height: 7, borderRadius: '50%', background: color, display: 'inline-block' }} />
-      <span style={{ fontSize: 13, fontWeight: 700, color }}>{count} {label}</span>
-    </div>
-  );
-}
-
-function IssueRow({ issue }: { issue: Issue }) {
+/* ─── Cluster Group ─── */
+function ClusterGroup({ cluster, urlIssues }: {
+  cluster: { label: string; prefix: string; count: number; urls?: string[] };
+  urlIssues: Map<string, { severity: string; fix: string; fixedUrl?: string; effort: string }>;
+}) {
   const [expanded, setExpanded] = useState(false);
-  const sev = SEV_CONFIG[issue.severity] || SEV_CONFIG.info;
-  const urls = issue.affectedUrls || [];
-  const fixes = issue.fixedUrls || [];
+  const urls = cluster.urls || [];
+  const issueCount = urls.filter(u => urlIssues.has(u)).length;
 
   return (
     <div style={{ borderBottom: '1px solid var(--border-2)' }}>
+      {/* Cluster header */}
       <div
-        onClick={() => urls.length > 0 && setExpanded(!expanded)}
-        style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, cursor: urls.length > 0 ? 'pointer' : 'default' }}
+        onClick={() => setExpanded(!expanded)}
+        style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 16px', cursor: 'pointer', background: expanded ? 'var(--border-2)' : 'transparent' }}
       >
-        {/* Left: Problem */}
-        <div style={{ padding: '14px 16px', borderRight: '1px solid var(--border-2)' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: sev.bg, border: `1px solid ${sev.border}`, borderRadius: 6, padding: '2px 8px', whiteSpace: 'nowrap', flexShrink: 0 }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: sev.dot, display: 'inline-block' }} />
-              <span style={{ fontSize: 10, fontWeight: 700, color: sev.color }}>{sev.label}</span>
-            </div>
-            <span style={{ fontSize: 13, color: 'var(--ink)', lineHeight: 1.6 }}>{issue.problem}</span>
+        <span style={{ fontSize: 11, color: 'var(--muted)', transform: expanded ? 'rotate(90deg)' : 'none', transition: 'transform 0.15s' }}>▶</span>
+        <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", flex: 1 }}>{cluster.prefix}</span>
+        <span style={{ fontSize: 12, color: 'var(--muted)' }}>{cluster.count} URLs</span>
+        {issueCount > 0 && (
+          <span style={{ fontSize: 11, fontWeight: 600, color: '#dc2626', background: '#fef2f2', borderRadius: 99, padding: '2px 8px' }}>
+            {issueCount} issue{issueCount !== 1 ? 's' : ''}
+          </span>
+        )}
+      </div>
+
+      {/* Expanded URL list */}
+      {expanded && urls.length > 0 && (
+        <div style={{ padding: '0 16px 8px' }}>
+          {/* Column headers */}
+          <div style={{ display: 'flex', padding: '6px 0', borderBottom: '1px solid var(--border)', marginBottom: 4 }}>
+            <span style={{ width: '45%', fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>URL</span>
+            <span style={{ flex: 1, fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Issue / Fix</span>
           </div>
-          {urls.length > 0 && (
-            <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 6, marginLeft: 0 }}>
-              {expanded ? '- Hide' : `${urls.length} URL${urls.length !== 1 ? 's' : ''} affected - click to show`}
+          {urls.map((url, i) => {
+            const issue = urlIssues.get(url);
+            const sev = issue ? SEV[issue.severity as keyof typeof SEV] || SEV.info : null;
+            const eff = issue ? EFFORT[issue.effort] : null;
+            return (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', padding: '5px 0', borderBottom: i < urls.length - 1 ? '1px solid rgba(0,0,0,0.04)' : 'none', gap: 8 }}>
+                {/* URL */}
+                <span style={{ width: '45%', fontSize: 12, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flexShrink: 0 }} title={url}>
+                  {url.replace(/^https?:\/\/[^/]+/, '')}
+                </span>
+                {/* Issue / Fix */}
+                <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 6, overflow: 'hidden', minWidth: 0 }}>
+                  {issue ? (
+                    <>
+                      <span style={{ width: 6, height: 6, borderRadius: '50%', background: sev!.dot, flexShrink: 0 }} />
+                      <span style={{ fontSize: 12, color: sev!.color, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={issue.fixedUrl || issue.fix}>
+                        {issue.fixedUrl || issue.fix}
+                      </span>
+                      {eff && <span style={{ fontSize: 9, fontWeight: 600, color: eff.color, background: 'var(--border-2)', borderRadius: 4, padding: '1px 5px', flexShrink: 0 }}>{eff.label}</span>}
+                    </>
+                  ) : (
+                    <span style={{ fontSize: 12, color: '#16a34a' }}>✓ OK</span>
+                  )}
+                </div>
+                {/* Copy */}
+                <Cp text={url} />
+              </div>
+            );
+          })}
+          {cluster.count > urls.length && (
+            <div style={{ fontSize: 11, color: 'var(--muted)', padding: '8px 0', textAlign: 'center' }}>
+              + {cluster.count - urls.length} more URLs in this section
             </div>
           )}
-        </div>
-        {/* Right: Fix */}
-        <div style={{ padding: '14px 16px', display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-          <span style={{ fontSize: 13, color: '#16a34a', lineHeight: 1.6, flex: 1 }}>{issue.fix}</span>
-          <CopyButton text={issue.fix} />
-          <span style={{ fontSize: 10, fontWeight: 600, color: EFFORT_COLOR[issue.effort] || 'var(--muted)', background: 'var(--border-2)', borderRadius: 5, padding: '3px 8px', whiteSpace: 'nowrap', flexShrink: 0 }}>
-            {EFFORT_LABEL[issue.effort] || issue.effort}
-          </span>
-        </div>
-      </div>
-      {/* Expanded URLs: old -> new pairs */}
-      {expanded && urls.length > 0 && (
-        <div style={{ background: 'var(--border-2)', padding: '12px 16px' }}>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginBottom: 8 }}>
-            <CopyButton text={urls.join('\n')} label={`Copy all ${urls.length} URLs`} />
-            {fixes.length > 0 && <CopyButton text={urls.map((u, i) => `${u} -> ${fixes[i] || ''}`).join('\n')} label="Copy all pairs" />}
-          </div>
-          {/* Column headers */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr auto', gap: 8, marginBottom: 6, padding: '0 0 6px', borderBottom: '1px solid var(--border)' }}>
-            <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Current URL</span>
-            <span />
-            <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Fixed URL / Action</span>
-            <span />
-          </div>
-          {urls.map((u, i) => (
-            <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr auto', gap: 8, alignItems: 'center', padding: '5px 0', borderBottom: i < urls.length - 1 ? '1px solid rgba(0,0,0,0.04)' : 'none' }}>
-              <span style={{ fontSize: 12, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={u}>{u}</span>
-              <CopyButton text={u} />
-              <span style={{ fontSize: 12, color: '#16a34a', fontFamily: "'DM Mono', monospace", overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={fixes[i] || ''}>{fixes[i] || '--'}</span>
-              {fixes[i] && <CopyButton text={fixes[i]} />}
-            </div>
-          ))}
         </div>
       )}
     </div>
   );
 }
 
+/* ─── Main Results ─── */
 export function Results({ data, onReset }: { data: AnalysisResult; onReset: () => void }) {
-  const { report, totalUrls, sitemapUrl } = data;
+  const { report, totalUrls, sitemapUrl, clusters } = data;
   const issues = report.issues || [];
   const criticalCount = issues.filter(i => i.severity === 'critical').length;
   const warningCount = issues.filter(i => i.severity === 'warning').length;
   const improvementCount = issues.filter(i => i.severity === 'opportunity').length;
-  const [activeTab, setActiveTab] = useState<Tab>('all');
-
-  const filtered = activeTab === 'all' ? issues : issues.filter(i => i.severity === activeTab);
-
-  const tabs: { key: Tab; label: string; count: number }[] = [
-    { key: 'all', label: 'All', count: issues.length },
-    { key: 'critical', label: 'Errors', count: criticalCount },
-    { key: 'warning', label: 'Warnings', count: warningCount },
-    { key: 'opportunity', label: 'Improvements', count: improvementCount },
-  ];
+  const urlIssues = buildUrlIssueMap(issues);
 
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 20px 80px' }}>
 
-      {/* Header: domain + New analysis button */}
+      {/* Header */}
       <div className="anim-fade-up" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 0', borderBottom: '1px solid var(--border)', marginBottom: 16, gap: 16, flexWrap: 'wrap' }}>
-        <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)' }}>{data.domain}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <span style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)' }}>{data.domain}</span>
+        </div>
         <button onClick={onReset} style={{ background: 'none', border: '1px solid var(--border)', borderRadius: 8, padding: '8px 16px', fontSize: 13, color: 'var(--muted)', cursor: 'pointer', fontFamily: 'inherit' }}>
           New analysis
         </button>
       </div>
 
-      {/* Dark bar: sitemap URL, edit, copy, URL count */}
-      <SitemapBar sitemapUrl={sitemapUrl} totalUrls={totalUrls} />
-
-      {/* Pills row */}
-      <div className="anim-fade-up anim-fade-up-1" style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
-        <PillBadge count={criticalCount} label="Errors" color="#dc2626" bg="#fef2f2" />
-        <PillBadge count={warningCount} label="Warnings" color="#d97706" bg="#fffbeb" />
-        <PillBadge count={improvementCount} label="Improvements" color="#2563eb" bg="#eff6ff" />
-        {report.summary && (
-          <span style={{ fontSize: 13, color: 'var(--muted)', marginLeft: 4 }}>{report.summary}</span>
-        )}
+      {/* Sitemap bar */}
+      <div className="anim-fade-up" style={{ background: '#0a0a0f', borderRadius: 10, padding: '10px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 16 }}>
+        <a href={sitemapUrl} target="_blank" rel="noopener noreferrer" style={{ flex: 1, fontSize: 13, color: '#93c5fd', fontFamily: "'DM Mono', monospace", textDecoration: 'none', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          {sitemapUrl}
+        </a>
+        <Cp text={sitemapUrl} />
+        <span style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600 }}>{totalUrls.toLocaleString()} URLs</span>
       </div>
 
-      {/* Tabbed two-column table */}
-      {issues.length > 0 && (
+      {/* Issue pills */}
+      <div className="anim-fade-up anim-fade-up-1" style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
+        {criticalCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#fef2f2', borderRadius: 99, padding: '5px 14px' }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#dc2626' }} /><span style={{ fontSize: 13, fontWeight: 700, color: '#dc2626' }}>{criticalCount} Error{criticalCount !== 1 ? 's' : ''}</span></span>}
+        {warningCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#fffbeb', borderRadius: 99, padding: '5px 14px' }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#d97706' }} /><span style={{ fontSize: 13, fontWeight: 700, color: '#d97706' }}>{warningCount} Warning{warningCount !== 1 ? 's' : ''}</span></span>}
+        {improvementCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#eff6ff', borderRadius: 99, padding: '5px 14px' }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#2563eb' }} /><span style={{ fontSize: 13, fontWeight: 700, color: '#2563eb' }}>{improvementCount} Improvement{improvementCount !== 1 ? 's' : ''}</span></span>}
+        <span style={{ fontSize: 13, color: 'var(--muted)' }}>{report.scoreReason}</span>
+      </div>
+
+      {/* ─── Sitemap Viewer ─── */}
+      {clusters.length > 0 && (
         <div className="card anim-fade-up anim-fade-up-2" style={{ marginBottom: 24 }}>
-          {/* Tabs */}
-          <div style={{ display: 'flex', gap: 0, borderBottom: '2px solid var(--border)' }}>
-            {tabs.map(t => (
-              <button
-                key={t.key}
-                onClick={() => setActiveTab(t.key)}
-                style={{
-                  background: 'none', border: 'none', borderBottom: activeTab === t.key ? '2px solid var(--accent)' : '2px solid transparent',
-                  padding: '10px 18px', fontSize: 13, fontWeight: activeTab === t.key ? 700 : 400,
-                  color: activeTab === t.key ? 'var(--ink)' : 'var(--muted)', cursor: 'pointer', marginBottom: -2,
-                }}
-              >
-                {t.label} ({t.count})
-              </button>
-            ))}
+          <div className="card-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <span style={{ fontWeight: 700, fontSize: 15 }}>Sitemap</span>
+            <span style={{ fontSize: 12, color: 'var(--muted)' }}>Click a section to inspect URLs</span>
           </div>
-          {/* Column headers */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderBottom: '1px solid var(--border)' }}>
-            <div style={{ padding: '8px 16px', fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', borderRight: '1px solid var(--border-2)' }}>Problem</div>
-            <div style={{ padding: '8px 16px', fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Fix</div>
-          </div>
-          {/* Rows */}
-          {filtered.map((issue, i) => (
-            <IssueRow key={i} issue={issue} />
+          {clusters.map((cluster, i) => (
+            <ClusterGroup key={i} cluster={cluster} urlIssues={urlIssues} />
           ))}
-          {filtered.length === 0 && (
-            <div style={{ padding: '24px 16px', textAlign: 'center', fontSize: 13, color: 'var(--muted)' }}>No issues in this category.</div>
-          )}
         </div>
       )}
 
-      {/* Missing Pages table */}
-      {report.missingPages.length > 0 && (
-        <div className="card anim-fade-up anim-fade-up-3" style={{ marginBottom: 24 }}>
-          <div className="card-header">
-            <span style={{ fontWeight: 700, fontSize: 15 }}>Missing Pages</span>
-            <span className="tag tag-blue" style={{ marginLeft: 'auto' }}>Traffic opportunity</span>
-          </div>
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
-              <thead>
-                <tr>
-                  {['Suggested URL', 'Suggested Title'].map(h => (
-                    <th key={h} style={{ textAlign: 'left', padding: '8px 14px', fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', borderBottom: '1px solid var(--border)' }}>{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {report.missingPages.map((p, i) => (
-                  <tr key={i} style={{ background: i % 2 === 0 ? 'transparent' : 'var(--border-2)', borderBottom: '1px solid var(--border-2)' }}>
-                    <td style={{ padding: '10px 14px' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        <span className="url-chip" style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis' }}>{p.suggestedUrl}</span>
-                        <CopyButton text={p.suggestedUrl} />
-                      </div>
-                    </td>
-                    <td style={{ padding: '10px 14px' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        <span style={{ fontWeight: 500, color: 'var(--ink)', lineHeight: 1.4, flex: 1 }}>{p.suggestedTitle}</span>
-                        <CopyButton text={p.suggestedTitle} />
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {/* Priority Action Plan */}
+      {/* ─── Priority Action Plan ─── */}
       {report.topActions.length > 0 && (
-        <div className="card anim-fade-up anim-fade-up-4" style={{ marginBottom: 20 }}>
+        <div className="card anim-fade-up anim-fade-up-3" style={{ marginBottom: 24 }}>
           <div className="card-header">
             <span style={{ fontWeight: 700, fontSize: 15 }}>Priority Action Plan</span>
             <span className="tag tag-red" style={{ marginLeft: 'auto' }}>Do these first</span>
@@ -286,10 +228,48 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
               <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '12px 16px', background: i === 0 ? 'var(--accent-light)' : 'var(--border-2)', borderRadius: 8, border: i === 0 ? '1px solid rgba(45,91,227,0.2)' : '1px solid transparent' }}>
                 <span style={{ width: 22, height: 22, borderRadius: '50%', background: i === 0 ? 'var(--accent)' : 'var(--border)', color: i === 0 ? 'white' : 'var(--muted)', fontSize: 11, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>{i + 1}</span>
                 <span style={{ fontSize: 13, color: 'var(--ink)', lineHeight: 1.6, flex: 1 }}>{action}</span>
-                <CopyButton text={action} />
+                <Cp text={action} />
               </li>
             ))}
           </ol>
+        </div>
+      )}
+
+      {/* ─── Missing Pages ─── */}
+      {report.missingPages.length > 0 && (
+        <div className="card anim-fade-up anim-fade-up-4" style={{ marginBottom: 24 }}>
+          <div className="card-header">
+            <span style={{ fontWeight: 700, fontSize: 15 }}>Missing Pages</span>
+            <span className="tag tag-blue" style={{ marginLeft: 'auto' }}>Traffic opportunity</span>
+          </div>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left', padding: '8px 14px', fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', borderBottom: '1px solid var(--border)' }}>Suggested URL</th>
+                  <th style={{ textAlign: 'left', padding: '8px 14px', fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', borderBottom: '1px solid var(--border)' }}>Suggested Title</th>
+                </tr>
+              </thead>
+              <tbody>
+                {report.missingPages.map((p, i) => (
+                  <tr key={i} style={{ background: i % 2 === 0 ? 'transparent' : 'var(--border-2)', borderBottom: '1px solid var(--border-2)' }}>
+                    <td style={{ padding: '10px 14px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        <span className="url-chip" style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis' }}>{p.suggestedUrl}</span>
+                        <Cp text={p.suggestedUrl} />
+                      </div>
+                    </td>
+                    <td style={{ padding: '10px 14px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        <span style={{ fontWeight: 500, color: 'var(--ink)', lineHeight: 1.4, flex: 1 }}>{p.suggestedTitle}</span>
+                        <Cp text={p.suggestedTitle} />
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>

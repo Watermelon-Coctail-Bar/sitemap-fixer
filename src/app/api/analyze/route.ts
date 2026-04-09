@@ -107,7 +107,12 @@ export async function POST(req: NextRequest) {
       sitemapUrl: sitemap.sitemapSource,
       isSitemapIndex: sitemap.isSitemapIndex,
       totalUrls: sitemap.urls.length,
-      clusters: analysis.clusters.slice(0, 8),
+      clusters: analysis.clusters.slice(0, 8).map(c => ({
+        label: c.label,
+        prefix: c.prefix,
+        count: c.count,
+        urls: c.urls.slice(0, 20),
+      })),
       staleCount: analysis.stalePages.length,
       orphanCount: analysis.orphanLike.length,
       noLastmodCount: analysis.noLastmod,
