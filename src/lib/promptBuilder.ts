@@ -52,7 +52,7 @@ Return EXACTLY this JSON (no extra keys, no comments):
       "severity": "critical",
       "problem": "<specific problem, cite URL or count>",
       "fix": "<exact action to take - copy-paste ready where possible>",
-      "effort": "low",
+      "effort": "5min",
       "affectedUrls": ["<actual broken/problematic URL from sitemap>", "<another URL>"],
       "fixedUrls": ["<corrected version of first URL>", "<corrected version of second URL>"]
     },
@@ -60,7 +60,7 @@ Return EXACTLY this JSON (no extra keys, no comments):
       "severity": "warning",
       "problem": "<specific problem>",
       "fix": "<specific fix>",
-      "effort": "medium",
+      "effort": "15min",
       "affectedUrls": ["<actual URL from sitemap>"],
       "fixedUrls": ["<corrected URL>"]
     }
@@ -100,6 +100,7 @@ Return EXACTLY this JSON (no extra keys, no comments):
 }
 
 For issues severity: "critical" = blocking indexing or major ranking impact. "warning" = losing traffic. "opportunity" = easy wins. "info" = good to know.
-For effort: "low" = under 30 minutes, "medium" = 1-4 hours, "high" = days.
-Include 3-7 issues total covering the most important problems found.`;
+For effort: "5min" = trivial one-line change, "15min" = simple fix, "30min" = moderate work, "1hr" = significant effort. Most sitemap fixes are 5-15 minutes. Do NOT overestimate.
+Include 3-7 issues total covering the most important problems found.
+IMPORTANT: Each topAction MUST correspond to one of the issues. The topActions array should be ordered to match the issues array priority. Each action must reference specific URL counts or patterns so the user understands exactly what it covers.`;
 }
