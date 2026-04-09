@@ -300,10 +300,37 @@ a {
     grid-template-columns: 1fr !important;
   }
 
+  /* Simplify nav on small screens - hide Learn/Blog, keep Sign in + Pricing */
+  nav div[style*="gap:24"] a[href="/learn"],
+  nav div[style*="gap:24"] a[href="/blog"],
+  nav div[style*="gap: 24"] a[href="/learn"],
+  nav div[style*="gap: 24"] a[href="/blog"] {
+    display: none !important;
+  }
+
   nav div[style*="gap:24"],
   nav div[style*="gap: 24"] {
-    gap: 8px !important;
-    font-size: 12px !important;
+    gap: 12px !important;
+    font-size: 13px !important;
+  }
+
+  /* Fix CTA button truncation */
+  form button[type="submit"] {
+    font-size: 13px !important;
+    padding: 12px 16px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Stack form on very small screens */
+  form[style*="gap: 10"],
+  form[style*="gap:10"] {
+    flex-direction: column !important;
+    padding: 12px !important;
+  }
+
+  form[style*="gap: 10"] button,
+  form[style*="gap:10"] button {
+    width: 100% !important;
   }
 }
 

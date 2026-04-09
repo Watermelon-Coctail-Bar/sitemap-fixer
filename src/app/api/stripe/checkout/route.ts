@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const PRICE_IDS: Record<string, string | undefined> = {
-  weekly: process.env.STRIPE_WEEKLY_PRICE_ID,
+  starter: process.env.STRIPE_STARTER_PRICE_ID || process.env.STRIPE_MONTHLY_PRICE_ID,
+  pro: process.env.STRIPE_PRO_PRICE_ID || process.env.STRIPE_MONTHLY_PRICE_ID,
+  agency: process.env.STRIPE_AGENCY_PRICE_ID,
   monthly: process.env.STRIPE_MONTHLY_PRICE_ID,
   yearly: process.env.STRIPE_YEARLY_PRICE_ID,
 };
@@ -20,7 +22,7 @@ export async function POST(req: NextRequest) {
       'mode': 'subscription',
       'line_items[0][price]': priceId,
       'line_items[0][quantity]': '1',
-      'success_url': origin + '/pricing?checkout=success',
+      'success_url': origin + '/checkout-success',
       'cancel_url': origin + '/pricing',
       'allow_promotion_codes': 'true',
       'metadata[plan]': plan,

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Shopify SEO: Optimize Your Store for Google',
-  description: "Shopify has SEO limitations built in. Here is what you can control, what you cannot, and the highest-impact optimizations for ranking your Shopify store in Google.",
+  description: "Shopify has SEO limitations built in. Learn what you can control and the highest-impact optimizations for ranking your Shopify store in Google.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/shopify-seo' },
   openGraph: {
     title: 'Shopify SEO: Optimize Your Store for Google',
-    description: 'Shopify has SEO limitations built in. Here is what you can control, what you cannot, and the highest-impact optimizations for ranking your Shopify store in Google.',
+    description: 'Shopify has SEO limitations built in. Learn what you can control and the highest-impact optimizations for ranking your Shopify store in Google.',
     url: 'https://sitemapfixer.com/learn/shopify-seo',
     type: 'article',
     images: [{

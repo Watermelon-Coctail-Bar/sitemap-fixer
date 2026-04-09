@@ -19,8 +19,8 @@ function BlogNav() {
         <div style={{ display:'flex',gap:24,alignItems:'center' }}>
           <a href="/learn" style={{ fontSize:14,color:'#3d3d4f',textDecoration:'none' }}>Learn</a>
           <a href="/blog" style={{ fontSize:14,color:'#2d5be3',fontWeight:600,textDecoration:'none' }}>Blog</a>
-          <a href="/pricing" style={{ fontSize:14,color:'#3d3d4f',textDecoration:'none' }}>Pricing</a>
-          <a href="/" style={{ background:'#2d5be3',color:'white',padding:'8px 18px',borderRadius:8,fontSize:14,fontWeight:600,textDecoration:'none' }}>Free Audit</a>
+          <a href="/signup?mode=login" style={{ fontSize:14,color:'#3d3d4f',textDecoration:'none' }}>Sign in</a>
+          <a href="/pricing" style={{ fontSize:13,color:'white',background:'#2d5be3',padding:'6px 14px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Pricing</a>
         </div>
       </div>
     </nav>

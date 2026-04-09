@@ -20,11 +20,10 @@ export default function LearnLayout({ children }: { children: React.ReactNode })
           <span style={{ fontWeight: 600, fontSize: 17, color: '#0a0a0f', letterSpacing: '-0.02em' }}>SitemapFixer</span>
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
-          <a href="/sitemap-finder" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sitemap Finder</a>
-          <a href="/sitemap-checker" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sitemap Checker</a>
           <a href="/learn" style={{ fontSize: 14, color: '#2d5be3', fontWeight: 600, textDecoration: 'none' }}>Learn</a>
-          <a href="/pricing" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Pricing</a>
-          <a href="/" style={{ background: '#2d5be3', color: 'white', padding: '8px 18px', borderRadius: 8, fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>Free Audit</a>
+          <a href="/blog" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Blog</a>
+          <a href="/signup?mode=login" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sign in</a>
+          <a href="/pricing" style={{ fontSize: 13, color: 'white', background: '#2d5be3', padding: '6px 14px', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Pricing</a>
         </div>
       </nav>
       <main>{children}</main>

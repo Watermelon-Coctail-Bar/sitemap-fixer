@@ -16,8 +16,8 @@ export async function GET(req: NextRequest) {
 
     const user = await res.json();
 
-    // Check subscription status
-    const subRes = await fetch(`${supabaseUrl}/rest/v1/subscriptions?user_id=eq.${user.id}&select=plan,status&limit=1`, {
+    // Check subscription status - query by email (webhook stores by email, not user_id)
+    const subRes = await fetch(`${supabaseUrl}/rest/v1/subscriptions?email=eq.${encodeURIComponent(user.email)}&select=plan,status&order=created_at.desc&limit=1`, {
       headers: { 'apikey': supabaseKey, 'Authorization': `Bearer ${supabaseKey}`, 'Accept': 'application/json' },
     });
     const subs = subRes.ok ? await subRes.json() : [];

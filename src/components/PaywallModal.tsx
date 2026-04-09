@@ -7,14 +7,24 @@ interface PaywallModalProps {
 }
 
 const PLANS = [
-  { id: 'monthly', name: 'Monthly', originalPrice: 13.50, price: 9.45, discount: 30, period: 'month', popular: true },
-  { id: 'yearly', name: 'Yearly', originalPrice: 70, price: 42, discount: 40, period: 'year', popular: false },
+  { id: 'starter', name: 'Starter', originalPrice: 15, price: 9, discount: 40, period: 'month', popular: false },
+  { id: 'pro', name: 'Pro', originalPrice: 35, price: 19, discount: 46, period: 'month', popular: true },
 ];
 
 function MiniCountdown() {
-  const [s, setS] = useState(1800);
+  const [s, setS] = useState(() => {
+    if (typeof window === 'undefined') return 1800;
+    const stored = sessionStorage.getItem('sf_countdown_end');
+    if (stored) {
+      const remaining = Math.max(0, Math.floor((parseInt(stored) - Date.now()) / 1000));
+      return remaining > 0 ? remaining : 1800;
+    }
+    const end = Date.now() + 1800 * 1000;
+    sessionStorage.setItem('sf_countdown_end', String(end));
+    return 1800;
+  });
   useEffect(() => {
-    const t = setInterval(() => setS(p => p > 0 ? p - 1 : 1800), 1000);
+    const t = setInterval(() => setS(p => p > 0 ? p - 1 : 0), 1000);
     return () => clearInterval(t);
   }, []);
   const m = Math.floor(s / 60), sec = s % 60;

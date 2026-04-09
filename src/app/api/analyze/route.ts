@@ -5,11 +5,48 @@ import { buildSEOPrompt } from '@/lib/promptBuilder';
 
 export const maxDuration = 60;
 
+// Simple in-memory rate limiter for free tier (resets on deploy/restart)
+const usageMap = new Map<string, { count: number; firstUsed: number }>();
+const FREE_LIMIT = 3;
+const WINDOW_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+
+function checkFreeLimit(req: NextRequest): { allowed: boolean; count: number } {
+  // Check if user has auth token (skip limit for authenticated users)
+  const token = req.cookies.get('sf_token')?.value;
+  if (token) return { allowed: true, count: 0 };
+
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown';
+  const now = Date.now();
+  const usage = usageMap.get(ip);
+
+  if (!usage || now - usage.firstUsed > WINDOW_MS) {
+    usageMap.set(ip, { count: 1, firstUsed: now });
+    return { allowed: true, count: 1 };
+  }
+
+  if (usage.count >= FREE_LIMIT) {
+    return { allowed: false, count: usage.count };
+  }
+
+  usage.count++;
+  return { allowed: true, count: usage.count };
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { domain } = await req.json();
     if (!domain || typeof domain !== 'string') {
       return NextResponse.json({ error: 'Domain is required' }, { status: 400 });
+    }
+
+    // Check free tier limit
+    const { allowed, count } = checkFreeLimit(req);
+    if (!allowed) {
+      return NextResponse.json({
+        error: 'limit_reached',
+        message: 'You have used your 3 free analyses. Create an account and upgrade to continue.',
+        count,
+      }, { status: 429 });
     }
 
     // Step 1: Discover and parse sitemap

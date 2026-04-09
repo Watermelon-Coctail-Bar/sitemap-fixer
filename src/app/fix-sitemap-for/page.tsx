@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Fix Sitemap by Platform: WordPress, Shopify & More',
-  description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites. Step-by-step instructions to fix common XML sitemap issues on each platform.',
+  description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites. Step-by-step instructions to fix common sitemap issues.',
   alternates: { canonical: 'https://sitemapfixer.com/fix-sitemap-for' },
   openGraph: {
     title: 'Fix Sitemap by Platform: WordPress, Shopify & More',
-    description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites. Step-by-step instructions to fix common XML sitemap issues on each platform.',
+    description: 'Platform-specific sitemap fix guides for WordPress, Shopify, Next.js, e-commerce, and large sites. Step-by-step instructions to fix common sitemap issues.',
     url: 'https://sitemapfixer.com/fix-sitemap-for',
     type: 'website',
     images: [{
