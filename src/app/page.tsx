@@ -20,7 +20,7 @@ function Navbar() {
           <a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a>
           <a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a>
           <a href="/signup?mode=login" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a>
-          <a href="/pricing" style={{ fontSize:13,color:'white',background:'#2d5be3',padding:'6px 14px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Pricing</a>
+          <a href="/pricing" style={{ fontSize:13,color:'white',background:'linear-gradient(135deg,#2d5be3,#1d4ed8)',padding:'8px 18px',borderRadius:8,textDecoration:'none',fontWeight:700,boxShadow:'0 2px 8px rgba(45,91,227,0.3)',transition:'transform 0.15s' }}>View Pricing →</a>
         </div>
         {/* Mobile hamburger */}
         <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} style={{ display:'none',background:'none',border:'none',cursor:'pointer',padding:4 }} aria-label="Menu">
@@ -35,7 +35,7 @@ function Navbar() {
           <a href="/learn" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Learn</a>
           <a href="/blog" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Blog</a>
           <a href="/signup?mode=login" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Sign in</a>
-          <a href="/pricing" style={{ fontSize:15,color:'white',background:'#2d5be3',padding:'10px 20px',borderRadius:8,textDecoration:'none',fontWeight:600,textAlign:'center' }}>Pricing</a>
+          <a href="/pricing" style={{ fontSize:15,color:'white',background:'linear-gradient(135deg,#2d5be3,#1d4ed8)',padding:'10px 20px',borderRadius:8,textDecoration:'none',fontWeight:700,textAlign:'center' }}>View Pricing →</a>
         </div>
       )}
     </nav>

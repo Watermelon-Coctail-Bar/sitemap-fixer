@@ -73,6 +73,18 @@ function humanFix(fix: string): string {
   if (lower.includes('keep as primary') || lower === 'keep as primary') return '';
   if (lower.startsWith('add to ')) return fix;
   if (lower.startsWith('add noindex')) return 'Should have noindex tag';
+  // Strip full URLs to relative paths
+  if (fix.match(/^https?:\/\//)) {
+    try { return '→ ' + new URL(fix).pathname; } catch { /* fallback */ }
+  }
+  // 301 redirect suggestions
+  if (lower.includes('301 redirect to') || lower.includes('redirect to')) {
+    const target = fix.replace(/.*redirect to\s*/i, '').trim();
+    if (target.match(/^https?:\/\//)) {
+      try { return '→ redirect to ' + new URL(target).pathname; } catch { /* fallback */ }
+    }
+    return '→ redirect to ' + target;
+  }
   return fix;
 }
 
@@ -146,7 +158,7 @@ function ClusterGroup({ cluster, urlIssues, filter, forceExpand }: {
         style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 16px', cursor: 'pointer', background: expanded ? 'var(--border-2)' : 'transparent' }}
       >
         <span style={{ fontSize: 11, color: 'var(--muted)', transform: expanded ? 'rotate(90deg)' : 'none', transition: 'transform 0.15s' }}>▶</span>
-        <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", flex: 1 }}>{cluster.prefix}</span>
+        <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)', fontFamily: "'DM Mono', monospace", flex: 1 }}>{cluster.prefix || cluster.label || '/'}</span>
         <span style={{ fontSize: 12, color: 'var(--muted)' }}>{cluster.count} URLs</span>
         {issueCount > 0 && (
           <span style={{ fontSize: 11, fontWeight: 600, color: '#dc2626', background: '#fef2f2', borderRadius: 99, padding: '2px 8px' }}>
@@ -396,9 +408,6 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
           <div className="card-header" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ fontWeight: 700, fontSize: 15 }}>Action Plan</span>
             <span style={{ fontSize: 12, color: 'var(--muted)', marginLeft: 4 }}>{checked.size}/{report.topActions.length} done</span>
-            <div style={{ marginLeft: 'auto', display: 'flex', gap: 6 }}>
-              <Cp text="" label="Copy all" />
-            </div>
           </div>
           {/* Override the Copy all to use our custom format */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '0' }}>

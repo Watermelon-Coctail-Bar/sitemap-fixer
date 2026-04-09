@@ -82,14 +82,18 @@ export function LandingPage({ variant }: LandingPageProps) {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--paper)' }}>
       {/* Nav */}
-      <nav style={{ borderBottom: '1px solid var(--border)', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: 960, margin: '0 auto' }}>
-        <a href="/" style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: 'var(--ink)', textDecoration: 'none' }}>SitemapFixer</a>
-        <div style={{ display: 'flex', gap: 24 }}>
-          <a href="/sitemap-finder" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Finder</a>
-          <a href="/sitemap-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Sitemap Checker</a>
-          <a href="/website-seo-checker" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>SEO Checker</a>
-          <a href="/free-seo-audit" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>Free Audit</a>
-          <a href="/xml-sitemap-generator" style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>XML Generator</a>
+      <nav style={{ borderBottom: '1px solid var(--border)', background: 'rgba(250,250,249,0.85)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg>
+            <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: 20, color: 'var(--ink)' }}>SitemapFixer</span>
+          </a>
+          <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+            <a href="/learn" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Learn</a>
+            <a href="/blog" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Blog</a>
+            <a href="/signup?mode=login" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Sign in</a>
+            <a href="/pricing" style={{ fontSize: 13, color: 'white', background: '#2d5be3', padding: '6px 14px', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Pricing</a>
+          </div>
         </div>
       </nav>
 
@@ -129,6 +133,25 @@ export function LandingPage({ variant }: LandingPageProps) {
           <Results data={results as any} onReset={reset} />
         )}
       </main>
+
+      {appState === 'idle' && (
+        <footer style={{ borderTop: '1px solid var(--border)', background: '#fafaf9', padding: '40px 24px 24px' }}>
+          <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg>
+              <span style={{ fontWeight: 600, fontSize: 14, color: '#0a0a0f' }}>SitemapFixer</span>
+            </div>
+            <div style={{ display: 'flex', gap: 24 }}>
+              <a href="/learn" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Learn</a>
+              <a href="/blog" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Blog</a>
+              <a href="/pricing" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Pricing</a>
+              <a href="/terms" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Terms</a>
+              <a href="/privacy" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Privacy</a>
+            </div>
+            <span style={{ fontSize: 12, color: '#9ca3af' }}>2026 SitemapFixer</span>
+          </div>
+        </footer>
+      )}
     </div>
   );
 }
