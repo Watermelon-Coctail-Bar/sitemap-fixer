@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sign Up',
@@ -27,13 +28,7 @@ export default function SignupLayout({ children }: { children: React.ReactNode }
         </div>
       </nav>
       <main>{children}</main>
-      <footer style={{ borderTop: '1px solid #e4e4ed', background: '#fafaf9', padding: '24px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: 12, color: '#9ca3af' }}>2026 SitemapFixer</span>
-        <div style={{ display: 'flex', gap: 20 }}>
-          <a href="/terms" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Terms</a>
-          <a href="/privacy" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Privacy</a>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

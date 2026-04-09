@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Hero } from './Hero';
 import { Loading } from './Loading';
+import { Footer } from './Footer';
 import { Results } from './Results';
 
 type Variant = 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'xml-sitemap-generator' | 'free-seo-audit';
@@ -92,7 +93,8 @@ export function LandingPage({ variant }: LandingPageProps) {
             <a href="/learn" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Learn</a>
             <a href="/blog" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Blog</a>
             <a href="/signup?mode=login" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Sign in</a>
-            <a href="/pricing" style={{ fontSize: 13, color: 'white', background: '#2d5be3', padding: '6px 14px', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Pricing</a>
+            <a href="/pricing" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Pricing</a>
+            <a href="/" style={{ fontSize: 13, color: 'white', background: '#0a0a0f', padding: '7px 16px', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Try Free</a>
           </div>
         </div>
       </nav>
@@ -134,24 +136,7 @@ export function LandingPage({ variant }: LandingPageProps) {
         )}
       </main>
 
-      {appState === 'idle' && (
-        <footer style={{ borderTop: '1px solid var(--border)', background: '#fafaf9', padding: '40px 24px 24px' }}>
-          <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg>
-              <span style={{ fontWeight: 600, fontSize: 14, color: '#0a0a0f' }}>SitemapFixer</span>
-            </div>
-            <div style={{ display: 'flex', gap: 24 }}>
-              <a href="/learn" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Learn</a>
-              <a href="/blog" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Blog</a>
-              <a href="/pricing" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Pricing</a>
-              <a href="/terms" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Terms</a>
-              <a href="/privacy" style={{ fontSize: 13, color: '#6b6b7d', textDecoration: 'none' }}>Privacy</a>
-            </div>
-            <span style={{ fontSize: 12, color: '#9ca3af' }}>2026 SitemapFixer</span>
-          </div>
-        </footer>
-      )}
+      {appState === 'idle' && <Footer />}
     </div>
   );
 }

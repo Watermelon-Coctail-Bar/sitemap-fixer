@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero';
 import { Loading } from '@/components/Loading';
 import { Results } from '@/components/Results';
 import { PaywallModal } from '@/components/PaywallModal';
+import { Footer as SharedFooter } from '@/components/Footer';
 
 type AppState = 'idle' | 'loading' | 'results' | 'error';
 
@@ -20,7 +21,8 @@ function Navbar() {
           <a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a>
           <a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a>
           <a href="/signup?mode=login" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a>
-          <a href="/pricing" style={{ fontSize:13,color:'white',background:'linear-gradient(135deg,#2d5be3,#1d4ed8)',padding:'8px 18px',borderRadius:8,textDecoration:'none',fontWeight:700,boxShadow:'0 2px 8px rgba(45,91,227,0.3)',transition:'transform 0.15s' }}>View Pricing →</a>
+          <a href="/pricing" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Pricing</a>
+          <a href="/#" onClick={(e) => { e.preventDefault(); document.querySelector('input')?.focus(); }} style={{ fontSize:13,color:'white',background:'#0a0a0f',padding:'7px 16px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Try Free</a>
         </div>
         {/* Mobile hamburger */}
         <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} style={{ display:'none',background:'none',border:'none',cursor:'pointer',padding:4 }} aria-label="Menu">
@@ -35,7 +37,8 @@ function Navbar() {
           <a href="/learn" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Learn</a>
           <a href="/blog" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Blog</a>
           <a href="/signup?mode=login" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Sign in</a>
-          <a href="/pricing" style={{ fontSize:15,color:'white',background:'linear-gradient(135deg,#2d5be3,#1d4ed8)',padding:'10px 20px',borderRadius:8,textDecoration:'none',fontWeight:700,textAlign:'center' }}>View Pricing →</a>
+          <a href="/pricing" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Pricing</a>
+          <a href="/" style={{ fontSize:15,color:'white',background:'#0a0a0f',padding:'10px 20px',borderRadius:8,textDecoration:'none',fontWeight:600,textAlign:'center' }}>Try Free</a>
         </div>
       )}
     </nav>
@@ -200,7 +203,7 @@ function ContactCTA() {
                                                                                                                                                                                                                                                                                                                                                                                                                                                 {state === 'error' && (<div style={{ maxWidth:540,margin:'80px auto',padding:'0 24px',textAlign:'center' }}><div style={{ fontSize:40,marginBottom:20 }}>🔍</div><h2 style={{ fontSize:24,fontWeight:700,color:'var(--ink)',marginBottom:12 }}>Sitemap not found</h2><p style={{ fontSize:15,color:'var(--muted)',lineHeight:1.6,marginBottom:32 }}>{error}</p><button onClick={reset} className="cta-btn">Try another domain</button></div>)}
                                                                                                                                                                                                                                                                                                                                                                                                                                                         {state === 'results' && results && (<Results data={results as any} onReset={reset} />)}
                                                                                                                                                                                                                                                                                                                                                                                                                                                               </main>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {state === 'idle' && <Footer />}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {state === 'idle' && <SharedFooter />}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                           {showPaywall && <PaywallModal domain={paywallDomain} onClose={() => setShowPaywall(false)} />}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </div>
                                                                                                                                                                                                                                                                                                                                                                                                   );
