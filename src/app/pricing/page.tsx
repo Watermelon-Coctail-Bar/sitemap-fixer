@@ -59,7 +59,7 @@ const MONTHLY: Plan[] = [
                                                                                                                               const timer = setTimeout(() => {
                                                                                                                                 setShowDiscount(true);
                                                                                                                                 sessionStorage.setItem('sf_discount_shown', '1');
-                                                                                                                              }, 15000);
+                                                                                                                              }, 10000);
                                                                                                                               return () => clearTimeout(timer);
                                                                                                                             }, []);
 
