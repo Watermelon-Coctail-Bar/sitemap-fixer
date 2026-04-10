@@ -6,26 +6,62 @@ import { checkUrlHealth, HealthSummary } from '@/lib/urlChecker';
 
 export const maxDuration = 60;
 
-const FREE_LIMIT = 3;
+const FREE_UNREGISTERED_LIMIT = 3; // unregistered: 3 analyses via cookie (but results are paywalled)
 
-function checkFreeLimit(req: NextRequest): { allowed: boolean; count: number; setCookie?: string } {
-  // Check if user has auth token (skip limit for authenticated users)
+async function checkFreeLimit(req: NextRequest): Promise<{ allowed: boolean; count: number; setCookie?: string; isPro?: boolean }> {
   const token = req.cookies.get('sf_token')?.value;
-  if (token) return { allowed: true, count: 0 };
 
-  // Use cookie-based counting (persists across deploys)
+  if (token) {
+    // Authenticated user — check if Pro
+    const supabaseUrl = process.env.SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (supabaseUrl && supabaseKey) {
+      try {
+        const userRes = await fetch(`${supabaseUrl}/auth/v1/user`, {
+          headers: { 'apikey': supabaseKey, 'Authorization': `Bearer ${token}` },
+        });
+        if (userRes.ok) {
+          const user = await userRes.json();
+          // Check subscription
+          const subRes = await fetch(`${supabaseUrl}/rest/v1/subscriptions?email=eq.${encodeURIComponent(user.email)}&select=plan,status&order=created_at.desc&limit=1`, {
+            headers: { 'apikey': supabaseKey, 'Authorization': `Bearer ${supabaseKey}`, 'Accept': 'application/json' },
+          });
+          const subs = subRes.ok ? await subRes.json() : [];
+          const isPro = subs[0]?.status === 'active';
+          if (isPro) return { allowed: true, count: 0, isPro: true };
+
+          // Free registered user: 1 per month
+          // Check how many analyses this month
+          const now = new Date();
+          const monthStart = new Date(now.getFullYear(), now.getMonth(), 1).toISOString();
+          const historyRes = await fetch(
+            `${supabaseUrl}/rest/v1/analysis_history?user_id=eq.${user.id}&created_at=gte.${monthStart}&select=id`,
+            { headers: { 'apikey': supabaseKey, 'Authorization': `Bearer ${supabaseKey}`, 'Accept': 'application/json' } }
+          );
+          const history = historyRes.ok ? await historyRes.json() : [];
+          if (history.length >= 1) {
+            return { allowed: false, count: history.length };
+          }
+          return { allowed: true, count: history.length };
+        }
+      } catch { /* fallthrough to cookie-based */ }
+    }
+    // Token exists but couldn't verify — allow anyway
+    return { allowed: true, count: 0 };
+  }
+
+  // Unregistered: cookie-based counting
   const usageCookie = req.cookies.get('sf_usage')?.value;
   let count = 0;
   try {
     if (usageCookie) count = parseInt(usageCookie, 10) || 0;
   } catch { /* ignore */ }
 
-  if (count >= FREE_LIMIT) {
+  if (count >= FREE_UNREGISTERED_LIMIT) {
     return { allowed: false, count };
   }
 
   const newCount = count + 1;
-  // Set cookie that expires in 30 days
   const cookie = `sf_usage=${newCount}; Path=/; Max-Age=${30 * 24 * 60 * 60}; SameSite=Lax`;
   return { allowed: true, count: newCount, setCookie: cookie };
 }
@@ -38,11 +74,15 @@ export async function POST(req: NextRequest) {
     }
 
     // Check free tier limit
-    const { allowed, count, setCookie } = checkFreeLimit(req);
+    const { allowed, count, setCookie } = await checkFreeLimit(req);
     if (!allowed) {
+      const token = req.cookies.get('sf_token')?.value;
+      const message = token
+        ? "You've used your free analysis this month. Upgrade to Pro for unlimited analyses."
+        : "You've used your free analyses. Create an account to get 1 free analysis per month, or upgrade to Pro for unlimited.";
       return NextResponse.json({
         error: 'limit_reached',
-        message: 'You have used your 3 free analyses. Create an account and upgrade to continue.',
+        message,
         count,
       }, { status: 429 });
     }

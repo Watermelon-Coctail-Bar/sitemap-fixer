@@ -6,15 +6,31 @@ interface UserData {
   subscription: { plan?: string; status?: string; isPro: boolean };
 }
 
+interface HistoryItem {
+  id: string;
+  domain: string;
+  seo_score: number;
+  total_urls: number;
+  critical_count: number;
+  warning_count: number;
+  created_at: string;
+}
+
 export default function DashboardPage() {
   const [data, setData] = useState<UserData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [history, setHistory] = useState<HistoryItem[]>([]);
 
   useEffect(() => {
     fetch('/api/auth/me')
       .then(r => r.json())
       .then(d => { setData(d); setLoading(false); })
       .catch(() => { setLoading(false); });
+
+    fetch('/api/history')
+      .then(r => r.json())
+      .then(d => { if (d.history) setHistory(d.history); })
+      .catch(() => {});
   }, []);
 
   // Not authenticated — redirect to signup
@@ -121,6 +137,63 @@ export default function DashboardPage() {
               </div>
             </a>
           </div>
+        </div>
+
+        {/* Analysis History */}
+        <div style={{ background: 'white', border: '1px solid #e4e4ed', borderRadius: 16, padding: '32px', marginBottom: 24, boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
+            <h2 style={{ fontSize: 18, fontWeight: 700, color: '#0a0a0f', margin: 0 }}>Recent Analyses</h2>
+            <span style={{ fontSize: 12, color: '#9ca3af' }}>{history.length} total</span>
+          </div>
+          {history.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '24px 0' }}>
+              <p style={{ fontSize: 14, color: '#9ca3af', marginBottom: 12 }}>No analyses yet</p>
+              <a href="/" style={{ fontSize: 13, color: '#2d5be3', textDecoration: 'none', fontWeight: 600 }}>
+                Run your first analysis →
+              </a>
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+              {history.map((item, i) => {
+                const scoreColor = item.seo_score >= 80 ? '#16a34a' : item.seo_score >= 50 ? '#d97706' : '#dc2626';
+                const date = new Date(item.created_at);
+                const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                const timeStr = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+                return (
+                  <div key={item.id || i} style={{
+                    display: 'flex', alignItems: 'center', gap: 16, padding: '14px 0',
+                    borderBottom: i < history.length - 1 ? '1px solid #f3f4f6' : 'none',
+                  }}>
+                    {/* Score circle */}
+                    <div style={{
+                      width: 40, height: 40, borderRadius: '50%',
+                      border: `3px solid ${scoreColor}`,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: 13, fontWeight: 700, color: scoreColor, flexShrink: 0,
+                    }}>
+                      {item.seo_score}
+                    </div>
+                    {/* Domain + meta */}
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: '#0a0a0f', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {item.domain}
+                      </div>
+                      <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 2, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                        <span>{item.total_urls} URLs</span>
+                        {item.critical_count > 0 && <span style={{ color: '#dc2626' }}>{item.critical_count} errors</span>}
+                        {item.warning_count > 0 && <span style={{ color: '#d97706' }}>{item.warning_count} warnings</span>}
+                      </div>
+                    </div>
+                    {/* Date */}
+                    <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                      <div style={{ fontSize: 12, color: '#6b7280' }}>{dateStr}</div>
+                      <div style={{ fontSize: 11, color: '#9ca3af' }}>{timeStr}</div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Account */}
