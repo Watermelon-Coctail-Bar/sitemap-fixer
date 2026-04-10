@@ -116,37 +116,41 @@ export async function POST(req: NextRequest) {
     // Step 3: Build prompt and call Claude API (include health data)
     const prompt = buildSEOPrompt(domain, analysis, sitemap.sitemapSource, healthSummary);
 
-    const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY || '',
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 2000,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    });
-
-    if (!aiRes.ok) {
-      const errText = await aiRes.text();
-      console.error('Claude API error:', errText);
-      return NextResponse.json({ error: 'AI analysis failed', detail: errText }, { status: 500 });
-    }
-
-    const aiData = await aiRes.json();
-    const rawText = aiData.content?.[0]?.text || '';
-
+    // Call Claude API with retry on parse failure
     let seoReport;
-    try {
-      // Strip any accidental markdown fences
-      const cleaned = rawText.replace(/```json|```/g, '').trim();
-      seoReport = JSON.parse(cleaned);
-    } catch {
-      console.error('Failed to parse AI JSON:', rawText);
-      return NextResponse.json({ error: 'Failed to parse AI response', raw: rawText }, { status: 500 });
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': process.env.ANTHROPIC_API_KEY || '',
+          'anthropic-version': '2023-06-01',
+        },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 2000,
+          messages: [{ role: 'user', content: prompt }],
+        }),
+      });
+
+      if (!aiRes.ok) {
+        const errText = await aiRes.text();
+        console.error('Claude API error:', errText);
+        if (attempt === 1) return NextResponse.json({ error: 'AI analysis failed', detail: errText }, { status: 500 });
+        continue;
+      }
+
+      const aiData = await aiRes.json();
+      const rawText = aiData.content?.[0]?.text || '';
+
+      try {
+        const cleaned = rawText.replace(/```json|```/g, '').trim();
+        seoReport = JSON.parse(cleaned);
+        break; // success
+      } catch {
+        console.error(`Failed to parse AI JSON (attempt ${attempt + 1}):`, rawText.substring(0, 200));
+        if (attempt === 1) return NextResponse.json({ error: 'Failed to parse AI response', raw: rawText }, { status: 500 });
+      }
     }
 
     const response = NextResponse.json({
