@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ScoreRing } from './ScoreRing';
 
 interface Issue {
@@ -275,6 +275,41 @@ function ActionItem({ action, index, issue, checked, onToggle, note, onNote, dom
   );
 }
 
+/* ─── Locked Overlay for free users ─── */
+function LockedOverlay({ children, label }: { children: React.ReactNode; label?: string }) {
+  return (
+    <div style={{ position: 'relative', overflow: 'hidden' }}>
+      <div style={{ filter: 'blur(5px)', pointerEvents: 'none', userSelect: 'none', opacity: 0.5 }}>
+        {children}
+      </div>
+      <div style={{
+        position: 'absolute', inset: 0,
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+        background: 'rgba(250,250,249,0.6)', backdropFilter: 'blur(2px)',
+        borderRadius: 16, gap: 12,
+      }}>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <span style={{ fontSize: 14, fontWeight: 600, color: '#374151' }}>{label || 'Upgrade to unlock'}</span>
+        <a
+          href="/pricing"
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 6,
+            padding: '10px 24px', background: '#2d5be3', color: 'white',
+            borderRadius: 10, fontSize: 14, fontWeight: 700,
+            textDecoration: 'none', border: 'none', cursor: 'pointer',
+            boxShadow: '0 2px 8px rgba(45,91,227,0.3)',
+          }}
+        >
+          Unlock with Pro
+        </a>
+      </div>
+    </div>
+  );
+}
+
 /* ─── Main Results ─── */
 export function Results({ data, onReset }: { data: AnalysisResult; onReset: () => void }) {
   const { report, totalUrls, sitemapUrl, clusters } = data;
@@ -287,6 +322,14 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
   const [filter, setFilter] = useState<string | null>(null);
   const [checked, setChecked] = useState<Set<number>>(new Set());
   const [notes, setNotes] = useState<Record<number, string>>({});
+  const [isPro, setIsPro] = useState<boolean | null>(null); // null = loading
+
+  useEffect(() => {
+    fetch('/api/auth/me')
+      .then(r => r.json())
+      .then(d => setIsPro(d?.subscription?.isPro === true))
+      .catch(() => setIsPro(false));
+  }, []);
 
   const toggleCheck = (i: number) => {
     const next = new Set(checked);
@@ -430,7 +473,23 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
       )}
 
       {/* ─── Priority Action Plan (interactive checklist) ─── */}
-      {report.topActions.length > 0 && (
+      {report.topActions.length > 0 && (isPro === false ? (
+        <LockedOverlay label="Action Plan — Pro only">
+          <div className="card anim-fade-up anim-fade-up-3" style={{ marginBottom: 24 }}>
+            <div className="card-header" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontWeight: 700, fontSize: 15 }}>Action Plan</span>
+              <span style={{ fontSize: 12, color: 'var(--muted)', marginLeft: 4 }}>0/{report.topActions.length} done</span>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '0' }}>
+              {report.topActions.slice(0, 4).map((action, i) => (
+                <div key={i} style={{ padding: '12px 16px', background: 'var(--border-2)', borderRadius: 8 }}>
+                  <span style={{ fontSize: 13, color: 'var(--ink)' }}>{action}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </LockedOverlay>
+      ) : (
         <div className="card anim-fade-up anim-fade-up-3" style={{ marginBottom: 24 }}>
           <div className="card-header" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ fontWeight: 700, fontSize: 15 }}>Action Plan</span>
@@ -462,10 +521,26 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
             </button>
           </div>
         </div>
-      )}
+      ))}
 
       {/* ─── Missing Pages ─── */}
-      {report.missingPages.length > 0 && !filter && (
+      {report.missingPages.length > 0 && !filter && (isPro === false ? (
+        <LockedOverlay label="Missing Pages — Pro only">
+          <div className="card anim-fade-up anim-fade-up-4" style={{ marginBottom: 24 }}>
+            <div className="card-header" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontWeight: 700, fontSize: 15 }}>Missing Pages</span>
+              <span className="tag tag-blue" style={{ marginLeft: 'auto' }}>Traffic opportunity</span>
+            </div>
+            <div style={{ padding: '16px' }}>
+              {report.missingPages.slice(0, 3).map((p, i) => (
+                <div key={i} style={{ padding: '8px 0', borderBottom: '1px solid var(--border-2)' }}>
+                  <span style={{ fontSize: 13, color: 'var(--ink)' }}>{p.suggestedUrl}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </LockedOverlay>
+      ) : (
         <div className="card anim-fade-up anim-fade-up-4" style={{ marginBottom: 24 }}>
           <div className="card-header" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ fontWeight: 700, fontSize: 15 }}>Missing Pages</span>
@@ -498,7 +573,7 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
             </table>
           </div>
         </div>
-      )}
+      ))}
     </div>
   );
 }
