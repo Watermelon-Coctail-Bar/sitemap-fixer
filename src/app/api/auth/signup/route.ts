@@ -43,6 +43,13 @@ export async function POST(req: NextRequest) {
         maxAge: 60 * 60 * 24 * 7, // 7 days
         path: '/',
       });
+      response.cookies.set('sf_logged_in', '1', {
+        httpOnly: false,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24 * 7,
+        path: '/',
+      });
     }
     return response;
   } catch (e) {
