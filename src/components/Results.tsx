@@ -376,26 +376,20 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
         <span style={{ fontSize: 12, color: '#9ca3af', fontWeight: 600 }}>{totalUrls.toLocaleString()} URLs</span>
       </div>
 
-      {/* Clickable filter pills */}
+      {/* Clickable filter pills — always show all three */}
       <div className="anim-fade-up anim-fade-up-1" style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
-        {criticalCount > 0 && (
-          <button onClick={() => toggleFilter('critical')} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: filter === 'critical' ? '#dc2626' : '#fef2f2', borderRadius: 99, padding: '5px 14px', border: 'none', cursor: 'pointer' }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: filter === 'critical' ? 'white' : '#dc2626' }} />
-            <span style={{ fontSize: 13, fontWeight: 700, color: filter === 'critical' ? 'white' : '#dc2626' }}>{criticalCount} Error{criticalCount !== 1 ? 's' : ''}</span>
-          </button>
-        )}
-        {warningCount > 0 && (
-          <button onClick={() => toggleFilter('warning')} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: filter === 'warning' ? '#d97706' : '#fffbeb', borderRadius: 99, padding: '5px 14px', border: 'none', cursor: 'pointer' }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: filter === 'warning' ? 'white' : '#d97706' }} />
-            <span style={{ fontSize: 13, fontWeight: 700, color: filter === 'warning' ? 'white' : '#d97706' }}>{warningCount} Warning{warningCount !== 1 ? 's' : ''}</span>
-          </button>
-        )}
-        {improvementCount > 0 && (
-          <button onClick={() => toggleFilter('opportunity')} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: filter === 'opportunity' ? '#2563eb' : '#eff6ff', borderRadius: 99, padding: '5px 14px', border: 'none', cursor: 'pointer' }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: filter === 'opportunity' ? 'white' : '#2563eb' }} />
-            <span style={{ fontSize: 13, fontWeight: 700, color: filter === 'opportunity' ? 'white' : '#2563eb' }}>{improvementCount} Improvement{improvementCount !== 1 ? 's' : ''}</span>
-          </button>
-        )}
+        <button onClick={() => criticalCount > 0 ? toggleFilter('critical') : undefined} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: filter === 'critical' ? '#dc2626' : criticalCount > 0 ? '#fef2f2' : '#f3f4f6', borderRadius: 99, padding: '5px 14px', border: 'none', cursor: criticalCount > 0 ? 'pointer' : 'default', opacity: criticalCount === 0 ? 0.7 : 1 }}>
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: filter === 'critical' ? 'white' : criticalCount > 0 ? '#dc2626' : '#9ca3af' }} />
+          <span style={{ fontSize: 13, fontWeight: 700, color: filter === 'critical' ? 'white' : criticalCount > 0 ? '#dc2626' : '#9ca3af' }}>{criticalCount} Error{criticalCount !== 1 ? 's' : ''}</span>
+        </button>
+        <button onClick={() => warningCount > 0 ? toggleFilter('warning') : undefined} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: filter === 'warning' ? '#d97706' : warningCount > 0 ? '#fffbeb' : '#f3f4f6', borderRadius: 99, padding: '5px 14px', border: 'none', cursor: warningCount > 0 ? 'pointer' : 'default', opacity: warningCount === 0 ? 0.7 : 1 }}>
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: filter === 'warning' ? 'white' : warningCount > 0 ? '#d97706' : '#9ca3af' }} />
+          <span style={{ fontSize: 13, fontWeight: 700, color: filter === 'warning' ? 'white' : warningCount > 0 ? '#d97706' : '#9ca3af' }}>{warningCount} Warning{warningCount !== 1 ? 's' : ''}</span>
+        </button>
+        <button onClick={() => improvementCount > 0 ? toggleFilter('opportunity') : undefined} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: filter === 'opportunity' ? '#2563eb' : improvementCount > 0 ? '#eff6ff' : '#f3f4f6', borderRadius: 99, padding: '5px 14px', border: 'none', cursor: improvementCount > 0 ? 'pointer' : 'default', opacity: improvementCount === 0 ? 0.7 : 1 }}>
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: filter === 'opportunity' ? 'white' : improvementCount > 0 ? '#2563eb' : '#9ca3af' }} />
+          <span style={{ fontSize: 13, fontWeight: 700, color: filter === 'opportunity' ? 'white' : improvementCount > 0 ? '#2563eb' : '#9ca3af' }}>{improvementCount} Improvement{improvementCount !== 1 ? 's' : ''}</span>
+        </button>
         {filter && (
           <button onClick={() => setFilter(null)} style={{ fontSize: 12, color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>
             Clear filter
