@@ -413,32 +413,42 @@ export function Results({ data, onReset }: { data: AnalysisResult; onReset: () =
           {clusters.map((cluster, i) => (
             <ClusterGroup key={i} cluster={cluster} urlIssues={urlIssues} filter={filter} forceExpand={!!filter} />
           ))}
-          {/* When filter active but no URLs in sampled clusters match, show affected URLs from the issues directly */}
+          {/* When filter active, always show affected URLs from the matching issues */}
           {filter && (() => {
             const matchingIssues = issues.filter(iss => iss.severity === filter);
-            const clusterUrls = new Set(clusters.flatMap(c => c.urls || []));
-            const unmatchedUrls = matchingIssues.flatMap(iss => (iss.affectedUrls || []).filter(u => !clusterUrls.has(u)));
-            if (unmatchedUrls.length === 0 && !clusters.some(c => (c.urls || []).some(u => { const issue = urlIssues.get(u); return issue && issue.severity === filter; }))) {
+            if (matchingIssues.length === 0) {
               return (
-                <div style={{ padding: '20px 16px' }}>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>Affected URLs (not in sampled clusters)</div>
-                  {matchingIssues.map((iss, ii) => (
-                    <div key={ii} style={{ marginBottom: 12 }}>
-                      <div style={{ fontSize: 12, color: SEV[iss.severity]?.color || '#6b7280', marginBottom: 4 }}>{iss.problem}</div>
-                      {(iss.affectedUrls || []).map((url, ui) => (
-                        <div key={ui} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 0', borderLeft: `3px solid ${SEV[iss.severity]?.dot || '#6b7280'}`, paddingLeft: 8 }}>
-                          <span style={{ fontSize: 12, fontFamily: "'DM Mono', monospace", color: 'var(--ink)', wordBreak: 'break-all', flex: 1 }}>{url.replace(/^https?:\/\/[^/]+/, '')}</span>
-                          {iss.fixedUrls?.[ui] && <span style={{ fontSize: 12, color: '#16a34a' }}>→ {humanFix(iss.fixedUrls[ui])}</span>}
-                          <Cp text={url} />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                  {matchingIssues.length === 0 && <div style={{ fontSize: 13, color: 'var(--muted)' }}>No {filter} issues found in analyzed URLs.</div>}
+                <div style={{ padding: '20px 16px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 13, color: 'var(--muted)' }}>No {SEV[filter]?.label?.toLowerCase() || filter} issues found in analyzed URLs.</div>
                 </div>
               );
             }
-            return null;
+            return (
+              <div style={{ padding: '16px' }}>
+                {matchingIssues.map((iss, ii) => (
+                  <div key={ii} style={{ marginBottom: ii < matchingIssues.length - 1 ? 16 : 0 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+                      <span style={{ width: 7, height: 7, borderRadius: '50%', background: SEV[iss.severity]?.dot || '#6b7280', flexShrink: 0 }} />
+                      <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)' }}>{iss.problem}</span>
+                    </div>
+                    {iss.fix && <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 8, paddingLeft: 15 }}>Fix: {iss.fix}</div>}
+                    {(iss.affectedUrls || []).length > 0 ? (
+                      <div style={{ paddingLeft: 15 }}>
+                        {(iss.affectedUrls || []).map((url, ui) => (
+                          <div key={ui} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 0', borderLeft: `3px solid ${SEV[iss.severity]?.dot || '#6b7280'}`, paddingLeft: 8 }}>
+                            <span style={{ fontSize: 12, fontFamily: "'DM Mono', monospace", color: 'var(--ink)', wordBreak: 'break-all', flex: 1 }}>{url.replace(/^https?:\/\/[^/]+/, '')}</span>
+                            {iss.fixedUrls?.[ui] && <span style={{ fontSize: 12, color: '#16a34a' }}>→ {humanFix(iss.fixedUrls[ui])}</span>}
+                            <Cp text={url} />
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div style={{ fontSize: 12, color: 'var(--muted)', paddingLeft: 15 }}>No specific URLs identified — applies to overall sitemap structure.</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            );
           })()}
         </div>
       )}
