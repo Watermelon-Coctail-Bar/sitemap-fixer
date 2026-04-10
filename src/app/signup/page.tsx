@@ -7,6 +7,9 @@ export default function SignupPage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('mode') === 'login') setMode('login');
+    if (params.get('error') === 'google_unavailable') setError('Google sign-in is not available yet. Please use email and password.');
+    if (params.get('error') === 'auth_failed') setError('Authentication failed. Please try again.');
+    if (params.get('error') === 'no_token') setError('Authentication failed. Please try again.');
   }, []);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
