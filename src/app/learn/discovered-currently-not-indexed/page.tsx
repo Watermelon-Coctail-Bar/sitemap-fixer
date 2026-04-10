@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: "Discovered Not Indexed: Why It Happens & Fixes | SitemapFixer",
+  title: "Discovered Not Indexed: Why It Happens & Fixes",
   description: "Discovered - currently not indexed means Google knows your page exists but has not crawled it yet. Here is why this happens and exactly how to fix it.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/discovered-currently-not-indexed' },
   openGraph: {
