@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Hero } from '@/components/Hero';
 import { Loading } from '@/components/Loading';
 import { Results } from '@/components/Results';
@@ -12,6 +12,10 @@ function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    fetch('/api/auth/me').then(r => { if (r.ok) return r.json(); throw 0; }).then(d => { if (d?.user) setIsLoggedIn(true); }).catch(() => {});
+  }, []);
   return (
     <nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}>
       <div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}>
@@ -20,7 +24,11 @@ function Navbar() {
         <div className="nav-desktop" style={{ display:'flex',gap:24,alignItems:'center' }}>
           <a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a>
           <a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a>
-          <a href="/signup?mode=login" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a>
+          {isLoggedIn ? (
+            <a href="/dashboard" style={{ fontSize:14,color:'var(--accent)',textDecoration:'none',fontWeight:600 }}>Dashboard</a>
+          ) : (
+            <a href="/signup?mode=login" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a>
+          )}
           <a href="/pricing" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Pricing</a>
           <a href="/#" onClick={(e) => { e.preventDefault(); document.querySelector('input')?.focus(); }} style={{ fontSize:13,color:'white',background:'#0a0a0f',padding:'7px 16px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Try Free</a>
         </div>
@@ -36,7 +44,11 @@ function Navbar() {
         <div className="nav-mobile-menu" style={{ padding:'0 24px 16px',display:'flex',flexDirection:'column',gap:12,borderTop:'1px solid var(--border)' }}>
           <a href="/learn" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Learn</a>
           <a href="/blog" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Blog</a>
-          <a href="/signup?mode=login" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Sign in</a>
+          {isLoggedIn ? (
+            <a href="/dashboard" style={{ fontSize:15,color:'var(--accent)',textDecoration:'none',padding:'8px 0',fontWeight:600 }}>Dashboard</a>
+          ) : (
+            <a href="/signup?mode=login" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Sign in</a>
+          )}
           <a href="/pricing" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Pricing</a>
           <a href="/" style={{ fontSize:15,color:'white',background:'#0a0a0f',padding:'10px 20px',borderRadius:8,textDecoration:'none',fontWeight:600,textAlign:'center' }}>Try Free</a>
         </div>
@@ -63,7 +75,7 @@ function Footer() {
           </div>
           <div>
             <div style={{ fontSize:11,fontWeight:700,color:'var(--ink)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:16 }}>Learn</div>
-            {[['What is an XML Sitemap','/learn/what-is-an-xml-sitemap'],['Crawled Not Indexed Fix','/learn/crawled-currently-not-indexed'],['Why Pages Not Indexed','/learn/why-pages-not-indexed'],['How to Create a Sitemap','/learn/how-to-create-a-sitemap'],['Sitemap Best Practices','/learn/sitemap-best-practices']].map(([l,h])=>(
+            {[['What is an XML Sitemap','/learn/what-is-an-xml-sitemap'],['Fix Crawled Currently Not Indexed','/learn/crawled-currently-not-indexed'],['Why Pages Not Indexed','/learn/why-pages-not-indexed'],['How to Create a Sitemap','/learn/how-to-create-a-sitemap'],['Sitemap Best Practices','/learn/sitemap-best-practices']].map(([l,h])=>(
               <a key={h} href={h} style={{ display:'block',fontSize:13,color:'var(--muted)',textDecoration:'none',marginBottom:10,transition:'color 0.15s' }}>{l}</a>
             ))}
           </div>
@@ -86,7 +98,7 @@ function Footer() {
   );
 }
 
-function Features() { const items = [{ icon:'🔍',title:'Sitemap Finder',desc:'How to find the sitemap of a website? Enter any domain. We check /sitemap.xml, robots.txt, and 20+ common paths.' },{ icon:'🤖',title:'Crawled Not Indexed Fix',desc:'How to fix crawled but not indexed? We find exactly why Google crawled currently not indexed your pages and give you the fix.' },{ icon:'📊',title:'XML Sitemap Validator',desc:'How to check your sitemap? Our XML sitemap checker validates for errors, broken URLs, and inconsistencies.' },{ icon:'⚡',title:'Under 60 Seconds',desc:'Full AI report, free, no signup.' },{ icon:'🗺️',title:'All Sitemap Formats',desc:'WordPress, Shopify, Next.js - all work.' },{ icon:'🎯',title:'Find All Pages on a Website',desc:'See every URL on any website via its sitemap. Detect orphan pages and missing content gaps.' }]; return (<section style={{ maxWidth:960,margin:'0 auto',padding:'80px 24px' }}><div style={{ textAlign:'center',marginBottom:56 }}><h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'var(--ink)',marginBottom:14 }}>Why SitemapFixer?</h2><p style={{ fontSize:16,color:'var(--muted)',maxWidth:480,margin:'0 auto' }}>Most SEO tools give scores. We give a specific action plan.</p></div><div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:24 }}>{items.map(item=>(<div key={item.title} style={{ background:'white',border:'1px solid var(--border)',borderRadius:14,padding:'28px 24px' }}><div style={{ fontSize:28,marginBottom:14 }}>{item.icon}</div><div style={{ fontSize:15,fontWeight:700,color:'var(--ink)',marginBottom:8 }}>{item.title}</div><div style={{ fontSize:13,color:'var(--muted)',lineHeight:1.65 }}>{item.desc}</div></div>))}</div></section>); }
+function Features() { const items = [{ icon:'🔍',title:'Sitemap Finder & Checker',desc:'Find all pages on a website instantly. Enter any domain — we check /sitemap.xml, robots.txt, and 20+ common paths. The fastest way to find a sitemap and see all pages.' },{ icon:'🤖',title:'Fix Crawled Currently Not Indexed',desc:'How to fix crawled - currently not indexed? We identify exactly why Google crawled but not indexed your pages and provide the exact crawled currently not indexed fix.' },{ icon:'📊',title:'XML Sitemap Checker & Validator',desc:'Verify your sitemap for errors. Our XML sitemap checker validates for broken URLs, redirects, and inconsistencies that hurt webpage indexing.' },{ icon:'⚡',title:'Under 60 Seconds',desc:'Full AI analysis — no signup required. Fix site indexing issues fast.' },{ icon:'🗺️',title:'All Sitemap Formats',desc:'WordPress, Shopify, Next.js — works with any sitemap format.' },{ icon:'🎯',title:'Find All Pages on a Website',desc:'List all pages on a website, find all subpages, and see all pages of a website online. Detect orphan pages and missing content gaps that hurt indexing.' }]; return (<section style={{ maxWidth:960,margin:'0 auto',padding:'80px 24px' }}><div style={{ textAlign:'center',marginBottom:56 }}><h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'var(--ink)',marginBottom:14 }}>Why SitemapFixer?</h2><p style={{ fontSize:16,color:'var(--muted)',maxWidth:480,margin:'0 auto' }}>Most SEO tools give scores. We give a specific action plan.</p></div><div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:24 }}>{items.map(item=>(<div key={item.title} style={{ background:'white',border:'1px solid var(--border)',borderRadius:14,padding:'28px 24px' }}><div style={{ fontSize:28,marginBottom:14 }}>{item.icon}</div><div style={{ fontSize:15,fontWeight:700,color:'var(--ink)',marginBottom:8 }}>{item.title}</div><div style={{ fontSize:13,color:'var(--muted)',lineHeight:1.65 }}>{item.desc}</div></div>))}</div></section>); }
 
 function HowItWorks() { const steps = [{ num:'1',title:'Enter your domain',desc:'Type any domain. No sitemap URL needed.' },{ num:'2',title:'We find your sitemap',desc:'We locate it, fetch every URL, and cluster them.' },{ num:'3',title:'AI generates your plan',desc:'Claude produces specific, ranked recommendations.' },{ num:'4',title:'Fix and grow',desc:'Create missing pages, fix patterns, build links.' }]; return (<section style={{ background:'white',borderTop:'1px solid var(--border)',borderBottom:'1px solid var(--border)' }}><div style={{ maxWidth:960,margin:'0 auto',padding:'80px 24px' }}><h2 style={{ fontFamily:"'Instrument Serif',serif",fontSize:36,color:'var(--ink)',marginBottom:56,textAlign:'center' }}>How it works</h2><div style={{ display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:32 }}>{steps.map(s=>(<div key={s.num} style={{ textAlign:'center' }}><div style={{ width:44,height:44,borderRadius:'50%',background:'var(--ink)',color:'white',fontSize:18,fontWeight:700,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 18px' }}>{s.num}</div><div style={{ fontSize:15,fontWeight:700,color:'var(--ink)',marginBottom:8 }}>{s.title}</div><div style={{ fontSize:13,color:'var(--muted)',lineHeight:1.65 }}>{s.desc}</div></div>))}</div></div></section>); }
 
@@ -124,12 +136,12 @@ function Testimonials() {
                                                                                                                                                                                                                                             }
 
 const FAQ_ITEMS = [
-  { q: 'Is SitemapFixer really free?', a: 'Yes. You get 3 full AI-powered sitemap analyses for free, no credit card required. Upgrade only when you need unlimited analyses.' },
-  { q: 'How do I find the sitemap of a website?', a: 'Enter any domain in SitemapFixer. We check 20+ common sitemap locations including /sitemap.xml, /sitemap_index.xml, and references in robots.txt to find all pages on a website. Works with WordPress, Shopify, Next.js, and any platform.' },
-  { q: 'What does the AI analysis include?', a: 'A prioritized list of SEO issues with specific fixes, missing page suggestions, a priority action plan, and affected URLs you can copy-paste directly.' },
-  { q: 'Why are my pages not indexed by Google?', a: 'Common reasons include broken sitemaps, noindex tags, crawl budget issues, duplicate content, and orphan pages. Our tool identifies the exact cause for your site.' },
-  { q: 'How do I fix "Crawled - Currently Not Indexed"?', a: 'This Google Search Console status means Google crawled your page but chose not to index it. Common fixes include improving content quality, fixing thin content, removing duplicate pages, and strengthening internal links. SitemapFixer identifies the specific cause for each affected URL.' },
-  { q: 'How is this different from Screaming Frog or Ahrefs?', a: 'Those tools require setup and expertise to interpret. SitemapFixer gives you a specific, ranked action plan in 60 seconds -- no crawling, no configuration.' },
+  { q: 'Is SitemapFixer really free?', a: 'Yes. You get a free AI-powered sitemap analysis with no credit card required. Create a free account for 1 full analysis per month, or upgrade to Pro for unlimited analyses and full results.' },
+  { q: 'How do I find all pages on a website?', a: 'Enter any domain in SitemapFixer. We check 20+ common sitemap locations including /sitemap.xml, /sitemap_index.xml, and robots.txt to find all pages on a website. You can also find all subpages of a website and list all pages on a website. Works with WordPress, Shopify, Next.js, and any platform.' },
+  { q: 'How do I fix "Crawled - Currently Not Indexed"?', a: 'The crawled currently not indexed fix starts with identifying why Google crawled but not indexed your page. Common causes: thin content, duplicate pages, or poor internal linking. SitemapFixer scans your sitemap and identifies the exact crawled - currently not indexed cause for each affected URL, so you know how to fix crawled currently not indexed pages fast.' },
+  { q: 'What is the difference between crawled not indexed and discovered not indexed?', a: '"Crawled - currently not indexed" means Google visited your page but chose not to index it, usually a quality signal. "Discovered - currently not indexed" means Google found the URL but has not crawled it yet. Both are webpage indexing issues that SitemapFixer helps you diagnose and fix.' },
+  { q: 'How do I verify my sitemap?', a: 'Use our free XML sitemap checker to verify your sitemap. We validate the sitemap format, check for broken URLs, redirects, noindex conflicts, and canonical mismatches. The fastest way to check your sitemap for errors that hurt site indexing.' },
+  { q: 'How is this different from Screaming Frog or Ahrefs?', a: 'Those tools require setup and expertise to interpret. SitemapFixer gives you a specific, ranked action plan in 60 seconds — no crawling, no configuration. Perfect for quickly diagnosing crawled but not indexed issues and sitemap errors.' },
 ];
 
 function FAQ() {

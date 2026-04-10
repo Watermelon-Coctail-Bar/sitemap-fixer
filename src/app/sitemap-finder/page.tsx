@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { LandingPage } from '@/components/LandingPage';
 
 export const metadata: Metadata = {
-  title: 'Sitemap Finder - Find Any Website\'s Sitemap',
-  description: 'Find the sitemap of any website instantly. Enter a domain to check /sitemap.xml, robots.txt, and 20+ common paths. See all pages and get SEO recommendations.',
-  keywords: 'sitemap finder, how to find sitemap of a website, how to see the sitemap of a website, find all pages on a website, find sitemap, sitemap url finder',
+  title: 'Sitemap Finder - Find All Pages on a Website Free',
+  description: 'Find the sitemap of any website instantly. See all pages on a website, list all subpages, and find all pages on a website online. Checks /sitemap.xml, robots.txt, and 20+ paths.',
+  keywords: 'sitemap finder, find all pages on a website, find all pages on a website online, how to find sitemap of a website, how to see the sitemap of a website, how to see sitemap, how to find a sitemap, find all subpages of a website, list all pages on a website, see all pages of a website, page finder',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-finder' },
   openGraph: {
-    title: 'Sitemap Finder - Find Any Website\'s Sitemap',
-    description: 'Enter any domain and find its sitemap in seconds. Checks /sitemap.xml, robots.txt, and common paths. Then get AI-powered SEO recommendations.',
+    title: 'Sitemap Finder - Find All Pages on a Website Free',
+    description: 'Find the sitemap of any website. See all pages, list all subpages, and find all pages on a website online. Checks /sitemap.xml, robots.txt, and 20+ common paths.',
     url: 'https://sitemapfixer.com/sitemap-finder',
     type: 'website',
     images: [{

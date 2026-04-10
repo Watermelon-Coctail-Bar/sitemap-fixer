@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Technical SEO Guides',
-  description: 'Free technical SEO guides covering sitemaps, indexing, Core Web Vitals, robots.txt, canonical tags, and more. Learn SEO from the experts.',
+  title: 'SEO Guides: Fix Crawled Currently Not Indexed, Sitemap Errors & More',
+  description: 'Free technical SEO guides. Learn how to fix crawled - currently not indexed, verify your sitemap, fix webpage indexing issues, and solve site indexing problems.',
   alternates: { canonical: 'https://sitemapfixer.com/learn' },
   openGraph: { title: 'SEO Learning Center', description: 'Free technical SEO guides.', url: 'https://sitemapfixer.com/learn', type: 'website',
     images: [{

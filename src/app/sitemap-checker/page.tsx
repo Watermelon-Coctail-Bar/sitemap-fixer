@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { LandingPage } from '@/components/LandingPage';
 
 export const metadata: Metadata = {
-  title: 'Sitemap Checker - Validate & Audit Your XML Sitemap',
-  description: 'Free XML sitemap checker. Check your sitemap for broken URLs, stale pages, and missing sections. Get AI-powered fixes and learn how to check your sitemap.',
-  keywords: 'sitemap checker, xml sitemap checker, how to check sitemap, sitemap validator, sitemap audit, check sitemap online, sitemap errors',
+  title: 'Sitemap Checker - Free XML Sitemap Checker & Validator',
+  description: 'Free XML sitemap checker and validator. Check your sitemap for broken URLs, crawled but not indexed pages, and stale content. Verify sitemap health and get AI-powered fixes.',
+  keywords: 'sitemap checker, xml sitemap checker, how to check sitemap, verify sitemap, sitemap validator, check sitemap online, sitemap audit, sitemap errors, crawled but not indexed, webpage indexing',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-checker' },
   openGraph: {
-    title: 'Sitemap Checker - Validate & Audit Your XML Sitemap',
-    description: 'Check your sitemap for issues: broken URLs, inconsistent patterns, stale pages, and missing sections. Get exact fixes powered by AI.',
+    title: 'Sitemap Checker - Free XML Sitemap Checker & Validator',
+    description: 'Free XML sitemap checker. Verify your sitemap for broken URLs, crawled but not indexed pages, and stale content. Get AI-powered SEO fixes.',
     url: 'https://sitemapfixer.com/sitemap-checker',
     type: 'website',
     images: [{

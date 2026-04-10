@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { LandingPage } from '@/components/LandingPage';
 
 export const metadata: Metadata = {
-  title: 'Website SEO Checker - AI-Powered Audit',
-  description: 'Stop guessing what\'s wrong with your SEO. Enter your domain and get a prioritized action plan based on your actual site structure - not generic advice.',
-  keywords: 'website seo checker, seo audit tool, seo analysis, site seo checker, free seo checker',
+  title: 'Website SEO Checker - Fix Crawled Not Indexed & Site Indexing Issues',
+  description: 'Free website SEO checker. Find crawled currently not indexed pages, webpage indexing issues, and site indexing problems. Get a prioritized fix list in 60 seconds.',
+  keywords: 'website seo checker, site indexing, webpage indexing, crawled currently not indexed, crawled but not indexed, seo audit tool, free seo checker, google crawled but not indexed',
   alternates: { canonical: 'https://sitemapfixer.com/website-seo-checker' },
   openGraph: {
-    title: 'Website SEO Checker - AI-Powered Audit',
-    description: 'Stop guessing what\'s wrong with your SEO. Enter your domain and get a prioritized action plan based on your actual site structure - not generic advice.',
+    title: 'Website SEO Checker - Fix Crawled Not Indexed & Site Indexing Issues',
+    description: 'Free website SEO checker. Find crawled currently not indexed pages, webpage indexing issues, and site indexing problems. Get an AI-powered fix list in 60 seconds.',
     url: 'https://sitemapfixer.com/website-seo-checker',
     type: 'website',
     images: [{
