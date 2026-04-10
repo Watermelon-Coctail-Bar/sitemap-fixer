@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Payment Successful',
@@ -42,6 +43,8 @@ export default function CheckoutSuccess() {
           </p>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
