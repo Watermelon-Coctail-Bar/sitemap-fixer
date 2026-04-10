@@ -1,10 +1,11 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Hero } from '@/components/Hero';
 import { Loading } from '@/components/Loading';
 import { Results } from '@/components/Results';
 import { PaywallModal } from '@/components/PaywallModal';
 import { Footer as SharedFooter } from '@/components/Footer';
+import { AuthLink } from '@/components/AuthLink';
 
 type AppState = 'idle' | 'loading' | 'results' | 'error';
 
@@ -12,10 +13,6 @@ function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  useEffect(() => {
-    fetch('/api/auth/me').then(r => { if (r.ok) return r.json(); throw 0; }).then(d => { if (d?.user) setIsLoggedIn(true); }).catch(() => {});
-  }, []);
   return (
     <nav style={{ borderBottom:'1px solid var(--border)',background:'rgba(250,250,249,0.85)',backdropFilter:'blur(12px)',position:'sticky',top:0,zIndex:100 }}>
       <div style={{ maxWidth:960,margin:'0 auto',padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between' }}>
@@ -24,11 +21,7 @@ function Navbar() {
         <div className="nav-desktop" style={{ display:'flex',gap:24,alignItems:'center' }}>
           <a href="/learn" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Learn</a>
           <a href="/blog" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Blog</a>
-          {isLoggedIn ? (
-            <a href="/dashboard" style={{ fontSize:14,color:'var(--accent)',textDecoration:'none',fontWeight:600 }}>Dashboard</a>
-          ) : (
-            <a href="/signup?mode=login" style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }}>Sign in</a>
-          )}
+          <AuthLink style={{ fontSize:14,color:'var(--muted)',textDecoration:'none' }} />
           <a href="/pricing" style={{ fontSize:13,color:'var(--muted)',textDecoration:'none' }}>Pricing</a>
           <a href="/#" onClick={(e) => { e.preventDefault(); document.querySelector('input')?.focus(); }} style={{ fontSize:13,color:'white',background:'#0a0a0f',padding:'7px 16px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Try Free</a>
         </div>
@@ -44,11 +37,7 @@ function Navbar() {
         <div className="nav-mobile-menu" style={{ padding:'0 24px 16px',display:'flex',flexDirection:'column',gap:12,borderTop:'1px solid var(--border)' }}>
           <a href="/learn" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Learn</a>
           <a href="/blog" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Blog</a>
-          {isLoggedIn ? (
-            <a href="/dashboard" style={{ fontSize:15,color:'var(--accent)',textDecoration:'none',padding:'8px 0',fontWeight:600 }}>Dashboard</a>
-          ) : (
-            <a href="/signup?mode=login" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Sign in</a>
-          )}
+          <AuthLink style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }} />
           <a href="/pricing" style={{ fontSize:15,color:'var(--ink)',textDecoration:'none',padding:'8px 0' }}>Pricing</a>
           <a href="/" style={{ fontSize:15,color:'white',background:'#0a0a0f',padding:'10px 20px',borderRadius:8,textDecoration:'none',fontWeight:600,textAlign:'center' }}>Try Free</a>
         </div>

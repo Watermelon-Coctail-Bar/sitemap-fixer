@@ -1,4 +1,5 @@
 import { Footer } from '@/components/Footer';
+import { AuthLink } from '@/components/AuthLink';
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -23,7 +24,7 @@ export default function LearnLayout({ children }: { children: React.ReactNode })
         <div style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
           <a href="/learn" style={{ fontSize: 14, color: '#2d5be3', fontWeight: 600, textDecoration: 'none' }}>Learn</a>
           <a href="/blog" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Blog</a>
-          <a href="/signup?mode=login" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sign in</a>
+          <AuthLink style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }} />
           <a href="/pricing" style={{ fontSize: 13, color: 'white', background: '#2d5be3', padding: '6px 14px', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Pricing</a>
         </div>
       </nav>

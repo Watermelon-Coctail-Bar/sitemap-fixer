@@ -1,4 +1,5 @@
 import { Footer } from '@/components/Footer';
+import { AuthLink } from '@/components/AuthLink';
 import React from 'react';
 
 const breadcrumbSchema = { '@context':'https://schema.org', '@type':'BreadcrumbList', itemListElement:[{ '@type':'ListItem', position:1, name:'Home', item:'https://sitemapfixer.com' },{ '@type':'ListItem', position:2, name:'Blog', item:'https://sitemapfixer.com/blog' }] };
@@ -20,7 +21,7 @@ function BlogNav() {
         <div style={{ display:'flex',gap:24,alignItems:'center' }}>
           <a href="/learn" style={{ fontSize:14,color:'#3d3d4f',textDecoration:'none' }}>Learn</a>
           <a href="/blog" style={{ fontSize:14,color:'#2d5be3',fontWeight:600,textDecoration:'none' }}>Blog</a>
-          <a href="/signup?mode=login" style={{ fontSize:14,color:'#3d3d4f',textDecoration:'none' }}>Sign in</a>
+          <AuthLink style={{ fontSize:14,color:'#3d3d4f',textDecoration:'none' }} />
           <a href="/pricing" style={{ fontSize:13,color:'white',background:'#2d5be3',padding:'6px 14px',borderRadius:8,textDecoration:'none',fontWeight:600 }}>Pricing</a>
         </div>
       </div>

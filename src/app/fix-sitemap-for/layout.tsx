@@ -1,4 +1,5 @@
 import { Footer } from '@/components/Footer';
+import { AuthLink } from '@/components/AuthLink';
 export default function SitemapErrorsLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
@@ -11,7 +12,7 @@ export default function SitemapErrorsLayout({ children }: { children: React.Reac
           <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
             <a href="/learn" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Learn</a>
             <a href="/blog" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Blog</a>
-            <a href="/signup?mode=login" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Sign in</a>
+            <AuthLink style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }} />
             <a href="/pricing" style={{ fontSize: 14, color: '#3d3d4f', textDecoration: 'none' }}>Pricing</a>
             <a href="/" style={{ fontSize: 13, color: 'white', background: '#0a0a0f', padding: '8px 18px', borderRadius: 8, textDecoration: 'none', fontWeight: 700 }}>Try Free</a>
           </div>

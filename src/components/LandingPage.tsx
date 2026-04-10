@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Hero } from './Hero';
 import { Loading } from './Loading';
+import { AuthLink } from './AuthLink';
 import { Footer } from './Footer';
 import { Results } from './Results';
 
@@ -92,7 +93,7 @@ export function LandingPage({ variant }: LandingPageProps) {
           <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
             <a href="/learn" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Learn</a>
             <a href="/blog" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Blog</a>
-            <a href="/signup?mode=login" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Sign in</a>
+            <AuthLink style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }} />
             <a href="/pricing" style={{ fontSize: 14, color: 'var(--muted)', textDecoration: 'none' }}>Pricing</a>
             <a href="/" style={{ fontSize: 13, color: 'white', background: '#0a0a0f', padding: '7px 16px', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Try Free</a>
           </div>
