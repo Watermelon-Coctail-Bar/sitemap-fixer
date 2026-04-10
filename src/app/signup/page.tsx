@@ -28,8 +28,8 @@ export default function SignupPage() {
       });
       const data = await res.json();
       if (!res.ok) { setError(data.error || 'Something went wrong.'); return; }
-      setSuccess(mode === 'signup' ? 'Account created! Check your email to verify.' : 'Logged in successfully!');
-      if (mode === 'login') setTimeout(() => window.location.href = '/dashboard', 1000);
+      setSuccess(mode === 'signup' ? 'Account created! Redirecting...' : 'Logged in! Redirecting...');
+      setTimeout(() => window.location.href = '/dashboard', 1000);
     } catch { setError('Network error. Please try again.'); }
     finally { setLoading(false); }
   }
