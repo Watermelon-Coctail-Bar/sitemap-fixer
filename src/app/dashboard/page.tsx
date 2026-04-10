@@ -90,7 +90,7 @@ export default function DashboardPage() {
             </div>
             <div>
               <div style={{ fontSize: 12, color: '#9ca3af', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Analyses</div>
-              <div style={{ fontSize: 16, fontWeight: 600, color: '#0a0a0f' }}>{isPro ? 'Unlimited' : '3 per month'}</div>
+              <div style={{ fontSize: 16, fontWeight: 600, color: '#0a0a0f' }}>{isPro ? 'Unlimited' : '1 per month'}</div>
             </div>
           </div>
 
