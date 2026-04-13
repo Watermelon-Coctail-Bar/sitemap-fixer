@@ -30,7 +30,8 @@ export default function Page() {
         <a href="/blog" style={{ color: '#2d5be3', textDecoration: 'none' }}>Blog</a>{' / '}
         <span>Core Web Vitals Fix Guide</span>
       </nav>
-      <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>April 2025 · 9 min read</div>
+      <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Core Web Vitals Fix: How to Pass LCP, INP, CLS","description":"Failing Core Web Vitals hurts your Google rankings. This guide walks through the diagnosis and fixes for all three metrics: LCP, INP, and CLS, in priority order.","url":"https://sitemapfixer.com/blog/core-web-vitals-fix-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/core-web-vitals-fix-guide"}}' }} />April 2025 · 9 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Core Web Vitals Fix Guide: Pass LCP, INP, and CLS</h1>
       <div style={{ display: 'flex', gap: 10, marginBottom: 32, flexWrap: 'wrap' }}>
         {[['LCP', 'under 2.5s'], ['INP', 'under 200ms'], ['CLS', 'under 0.1']].map(([m, t]) => (

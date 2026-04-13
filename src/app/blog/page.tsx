@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Blog - Fix Crawled Currently Not Indexed, Sitemap Errors & SEO Tips',
-  description: 'Expert guides on fixing crawled - currently not indexed pages, XML sitemap errors, webpage indexing issues, and technical SEO. Free articles from the SitemapFixer team.',
+  title: 'SEO Blog: Technical Guides & Tips',
+  description: 'Expert guides on fixing indexing issues, XML sitemap errors, and technical SEO. Free articles from the SitemapFixer team.',
   alternates: { canonical: 'https://sitemapfixer.com/blog' },
   openGraph: {
-    title: 'Blog - Fix Crawled Currently Not Indexed, Sitemap Errors & SEO Tips',
-    description: 'Expert guides on fixing crawled - currently not indexed pages, XML sitemap errors, webpage indexing issues, and technical SEO. Free articles from the SitemapFixer team.',
+    title: 'SEO Blog: Technical Guides & Tips',
+    description: 'Expert guides on fixing indexing issues, XML sitemap errors, and technical SEO. Free articles from the SitemapFixer team.',
     url: 'https://sitemapfixer.com/blog',
     type: 'website',
     images: [{

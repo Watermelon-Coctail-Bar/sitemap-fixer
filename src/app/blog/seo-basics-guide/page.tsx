@@ -33,7 +33,8 @@ export default function Page() {
         <a href="/blog" style={{ color: '#2d5be3', textDecoration: 'none' }}>Blog</a>{' / '}
         <span>SEO Basics Guide</span>
       </nav>
-      <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>April 2025 · 6 min read</div>
+      <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Basics: A Beginner","description":"SEO basics explained simply - what it is, how it works, and the fundamental concepts every website owner needs to understand before diving into tactics.","url":"https://sitemapfixer.com/blog/seo-basics-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-basics-guide"}}' }} />April 2025 · 6 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>SEO Basics: What It Is and How It Works</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Start with your technical foundation - free</span>
@@ -60,7 +61,8 @@ export default function Page() {
             <li><a href="/blog/featured-snippets-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Featured Snippets: Win Position Zero in Google</a></li>
             <li><a href="/blog/eeat-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>E-E-A-T Guide: Build Expertise, Authority, and Trust</a></li>
             <li><a href="/blog/seo-for-bloggers" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Bloggers: Get Your Posts Ranked on Google</a></li>
-          </ul>
+          
+            <li><a href="/learn/seo-glossary" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Glossary: 50 Essential SEO Terms Defined</a></li></ul>
         </div>
     </div>
     </article>

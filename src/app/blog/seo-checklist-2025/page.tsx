@@ -28,7 +28,8 @@ export default function Page() {
         <a href="/blog" style={{ color: '#2d5be3', textDecoration: 'none' }}>Blog</a>{' / '}
         <span>SEO Checklist 2025</span>
       </nav>
-      <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>April 2025 · 10 min read</div>
+      <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Checklist 2025: Complete Technical & Content Audit","description":"A complete 2025 SEO checklist covering technical, on-page, content, and off-page factors. Use this to audit any site and prioritize what to fix first.","url":"https://sitemapfixer.com/blog/seo-checklist-2025","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-checklist-2025"}}' }} />April 2025 · 10 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>SEO Checklist 2025: Complete Audit for Any Website</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Automate the technical checks - free</span>
@@ -63,7 +64,8 @@ export default function Page() {
             <li><a href="/blog/seo-audit-tools" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Tools: Best Tools for a Complete SEO Audit</a></li>
             <li><a href="/blog/seo-mistakes-beginners" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>10 SEO Mistakes Beginners Make (and How to Fix Them)</a></li>
             <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
-          </ul>
+          
+            <li><a href="/blog/competitor-seo-analysis" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Competitor SEO Analysis: How to Find and Close the Gaps</a></li></ul>
         </div>
     </div>
     </article>

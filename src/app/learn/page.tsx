@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SEO Guides: Fix Crawled Currently Not Indexed, Sitemap Errors & More',
-  description: 'Free technical SEO guides. Learn how to fix crawled - currently not indexed, verify your sitemap, fix webpage indexing issues, and solve site indexing problems.',
+  title: 'SEO Guides & Tutorials',
+  description: 'Free technical SEO guides. Learn how to fix indexing issues, verify your sitemap, optimize crawl budget, and solve common SEO problems.',
   alternates: { canonical: 'https://sitemapfixer.com/learn' },
-  openGraph: { title: 'SEO Learning Center', description: 'Free technical SEO guides.', url: 'https://sitemapfixer.com/learn', type: 'website',
+  openGraph: { title: 'SEO Guides & Tutorials', description: 'Free technical SEO guides. Learn how to fix indexing issues, verify your sitemap, optimize crawl budget, and solve common SEO problems.', url: 'https://sitemapfixer.com/learn', type: 'website',
     images: [{
       url: 'https://sitemapfixer.com/opengraph-image',
       width: 1200,

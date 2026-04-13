@@ -7,6 +7,31 @@ import { PaywallModal } from '@/components/PaywallModal';
 import { Footer as SharedFooter } from '@/components/Footer';
 import { AuthLink } from '@/components/AuthLink';
 
+const softwareSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'SitemapFixer',
+  url: 'https://sitemapfixer.com',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  description: 'AI-powered sitemap checker and SEO fix tool. Fix crawled currently not indexed, find all pages on a website, verify sitemap, and get actionable fixes in 60 seconds.',
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '127' },
+});
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Is SitemapFixer really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Create a free account and get 1 full AI-powered sitemap analysis per month with no credit card required. Upgrade to Pro for unlimited analyses.' } },
+    { '@type': 'Question', name: 'How do I find all pages on a website?', acceptedAnswer: { '@type': 'Answer', text: 'Enter any domain in SitemapFixer. We check 20+ common sitemap locations including /sitemap.xml, /sitemap_index.xml, and robots.txt to find all pages on a website. You can list all pages on a website, find all subpages, and see all pages of a website online.' } },
+    { '@type': 'Question', name: 'How do I fix Crawled - Currently Not Indexed?', acceptedAnswer: { '@type': 'Answer', text: 'The crawled currently not indexed fix starts with identifying why Google crawled but not indexed your page. Common causes include thin content, duplicate pages, or poor internal linking. SitemapFixer identifies the exact cause for each affected URL so you know how to fix crawled currently not indexed pages.' } },
+    { '@type': 'Question', name: 'What is the difference between crawled not indexed and discovered not indexed?', acceptedAnswer: { '@type': 'Answer', text: 'Crawled - currently not indexed means Google visited your page but chose not to index it. Discovered - currently not indexed means Google found the URL but has not crawled it yet. Both are webpage indexing issues that SitemapFixer helps diagnose.' } },
+    { '@type': 'Question', name: 'How do I verify my sitemap?', acceptedAnswer: { '@type': 'Answer', text: 'Use our free XML sitemap checker to verify your sitemap. We validate the format, check for broken URLs, redirects, noindex conflicts, and canonical mismatches. The fastest way to check your sitemap for errors that hurt site indexing.' } },
+    { '@type': 'Question', name: 'How is this different from Screaming Frog or Ahrefs?', acceptedAnswer: { '@type': 'Answer', text: 'Those tools require setup and expertise to interpret. SitemapFixer gives you a specific, ranked action plan in 60 seconds — no crawling, no configuration. Perfect for quickly diagnosing crawled but not indexed issues and sitemap errors.' } },
+  ],
+});
+
 type AppState = 'idle' | 'loading' | 'results' | 'error';
 
 function Logo() { return (<a href="/" style={{ display:'flex',alignItems:'center',gap:8,textDecoration:'none' }} aria-label="SitemapFixer - Free AI Sitemap Checker"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" role="img" aria-label="SitemapFixer logo"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg><span style={{ fontFamily:"'Instrument Serif',serif",fontSize:20,color:'var(--ink)' }}>SitemapFixer</span></a>); }
@@ -197,6 +222,8 @@ function ContactCTA() {
 
                                                                                                                                                                                                                                                                                                                                                                                                   return (
                                                                                                                                                                                                                                                                                                                                                                                                         <div style={{ minHeight:'100vh',background:'var(--paper)' }}>
+                                                                                                                                                                                                                                                                                                                                                                                                              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: softwareSchema }} />
+                                                                                                                                                                                                                                                                                                                                                                                                              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />
                                                                                                                                                                                                                                                                                                                                                                                                                 <Navbar />
                                                                                                                                                                                                                                                                                                                                                                                                                       <main>
                                                                                                                                                                                                                                                                                                                                                                                                                                 {state === 'idle' && (<><Hero onSubmit={handleAnalyze} loading={false} variant="default" /><Features /><HowItWorks /><Testimonials /><FAQ /><ContactCTA /><BlogSection /></>)}

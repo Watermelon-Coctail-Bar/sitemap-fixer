@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Crawl Budget: What It Is and How to Optimize It","description":"Crawl budget determines how many pages Google crawls on your site. Learn what crawl budget is, why it matters, and how to optimize it for better indexing.","url":"https://sitemapfixer.com/learn/crawl-budget","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/crawl-budget"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
@@ -60,7 +61,8 @@ export default function Page() {
             <li><a href="/learn/google-not-crawling-my-site" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Not Crawling My Site? Here Are the Fixes</a></li>
             <li><a href="/learn/crawl-errors-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Errors: Types, Causes, and How to Fix Each One</a></li>
             <li><a href="/learn/mobile-first-indexing-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile-First Indexing: How to Prepare Your Site</a></li>
-          </ul>
+          
+            <li><a href="/blog/robots-txt-disallow-all" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Robots.txt Disallow All: Avoid Blocking Your Site</a></li></ul>
         </div>
     </div>
   );
