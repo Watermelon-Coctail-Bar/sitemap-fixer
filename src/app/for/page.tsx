@@ -132,7 +132,7 @@ export default function Page() {
 
       <div style={{ background: '#0a0a0f', borderRadius: 12, padding: '32px', textAlign: 'center', marginTop: 48 }}>
         <div style={{ fontSize: 22, fontWeight: 700, color: 'white', marginBottom: 8 }}>Start with a free audit</div>
-        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Full sitemap report in 60 seconds, no signup required.</div>
+        <div style={{ color: '#9999aa', marginBottom: 20, fontSize: 14 }}>Full sitemap report in 60 seconds, no credit card needed.</div>
         <a href="/" style={{ background: 'white', color: '#0a0a0f', padding: '14px 32px', borderRadius: 8, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
           Analyze My Sitemap Free
         </a>

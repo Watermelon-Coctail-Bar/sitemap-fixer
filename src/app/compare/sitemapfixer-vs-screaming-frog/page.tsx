@@ -82,7 +82,7 @@ export default function Page() {
         <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '20px 24px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 4 }}>Try SitemapFixer free</div>
-            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Full sitemap audit in 60 seconds - no signup required</div>
+            <div style={{ fontSize: 13, color: '#6b6b7d' }}>Full sitemap audit in 60 seconds - no credit card needed</div>
           </div>
           <a href="/" style={{ background: '#0a0a0f', color: 'white', padding: '12px 24px', borderRadius: 8, textDecoration: 'none', fontWeight: 600, fontSize: 14, whiteSpace: 'nowrap' }}>
             Analyze My Sitemap

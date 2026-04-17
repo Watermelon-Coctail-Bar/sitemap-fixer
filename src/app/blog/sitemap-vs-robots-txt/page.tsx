@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sitemap vs Robots.txt: How They Work Together',
   description: "Sitemaps and robots.txt serve opposite purposes. One tells Google what to crawl, the other what not to. How each works and how to use both.",
-  alternates: { canonical: 'https://sitemapfixer.com/blog/sitemap-vs-robots-txt' },
+  alternates: { canonical: 'https://sitemapfixer.com/learn/sitemap-vs-robots-txt' },
   openGraph: { title: 'Sitemap vs Robots.txt Explained', description: 'Two critical SEO files, opposite purposes. Here is how each one works.', url: 'https://sitemapfixer.com/blog/sitemap-vs-robots-txt', type: 'article',
     images: [{
       url: 'https://sitemapfixer.com/opengraph-image',

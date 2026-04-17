@@ -2,11 +2,12 @@ import { Footer } from '@/components/Footer';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sign Up',
-  description: 'Create your free SitemapFixer account. Get 3 free sitemap analyses with AI-powered SEO recommendations. No credit card required. Start fixing SEO issues now.',
+  description: 'Create your free SitemapFixer account. 1 AI-powered sitemap analysis per month. No credit card required.',
   alternates: { canonical: 'https://sitemapfixer.com/signup' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Sign Up',
-    description: 'Create your free SitemapFixer account. Get 3 free sitemap analyses with AI-powered SEO recommendations. No credit card required. Start fixing SEO issues now.',
+    description: 'Create your free SitemapFixer account. 1 AI-powered sitemap analysis per month. No credit card required.',
     url: 'https://sitemapfixer.com/signup',
     type: 'website',
     images: [{ url: 'https://sitemapfixer.com/opengraph-image', width: 1200, height: 630, alt: 'SitemapFixer - AI Sitemap Checker and SEO Fix Tool' }],

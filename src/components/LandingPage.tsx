@@ -26,7 +26,7 @@ const FAQ: Record<Variant, Array<{ q: string; a: string }>> = {
     { q: 'How many URLs can you analyze?', a: 'Up to 500 URLs on the free tier, parsing across multiple child sitemaps automatically.' },
   ],
   'free-seo-audit': [
-    { q: 'Is it really free?', a: 'Yes. No email, no credit card, no signup required. Enter your domain and get the full analysis instantly.' },
+    { q: 'Is it really free?', a: 'Yes. No credit card needed. Enter your domain and get the full analysis instantly.' },
     { q: 'What does the audit cover?', a: 'Site structure, content gaps, missing high-value pages, internal linking opportunities, stale content, and URL pattern issues.' },
     { q: "How is this different from other free SEO tools?", a: "Most tools give you generic scores. We give you specific pages to create, fix, and link - based on your actual site, not industry averages." },
   ],

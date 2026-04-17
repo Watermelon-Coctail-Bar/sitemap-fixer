@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Sitemap Checker: Validate and Fix Your XML Sitemap', description: 'Use a sitemap checker to find errors in your XML sitemap. Learn what to check, common issues found, and how to fix them fast.', alternates: { canonical: 'https://sitemapfixer.com/learn/sitemap-checker' }, openGraph: { title: 'Sitemap Checker: Validate and Fix Your XML Sitemap', description: 'Use a sitemap checker to find errors in your XML sitemap. Learn what to check, common issues found, and how to fix them fast.', url: 'https://sitemapfixer.com/learn/sitemap-checker', type: 'article',
+export const metadata: Metadata = { title: 'Sitemap Checker: Validate and Fix Your XML Sitemap', description: 'Use a sitemap checker to find errors in your XML sitemap. Learn what to check, common issues found, and how to fix them fast.', alternates: { canonical: 'https://sitemapfixer.com/sitemap-checker' }, openGraph: { title: 'Sitemap Checker: Validate and Fix Your XML Sitemap', description: 'Use a sitemap checker to find errors in your XML sitemap. Learn what to check, common issues found, and how to fix them fast.', url: 'https://sitemapfixer.com/learn/sitemap-checker', type: 'article',
     images: [{
       url: 'https://sitemapfixer.com/opengraph-image',
       width: 1200,

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'XML Sitemap Generator: Create Your Sitemap Free',
   description: 'Generate a valid XML sitemap for any website free. Learn how XML sitemap generators work, what to include, and how to submit to Google.',
-  alternates: { canonical: 'https://sitemapfixer.com/learn/xml-sitemap-generator' },
+  alternates: { canonical: 'https://sitemapfixer.com/xml-sitemap-generator' },
   openGraph: { title: 'XML Sitemap Generator Guide', description: 'How to generate and submit an XML sitemap free.', url: 'https://sitemapfixer.com/learn/xml-sitemap-generator', type: 'article',
     images: [{
       url: 'https://sitemapfixer.com/opengraph-image',
