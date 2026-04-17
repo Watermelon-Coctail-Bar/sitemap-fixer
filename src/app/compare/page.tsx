@@ -52,6 +52,11 @@ const comparisons = [
     title: 'Free vs Paid Sitemap Tools',
     description: 'When free sitemap tools are enough, and when paying actually pays off. An honest breakdown.',
   },
+  {
+    href: '/compare/screaming-frog-vs-ahrefs',
+    title: 'Screaming Frog vs Ahrefs',
+    description: 'Different tools, different jobs. When to use each, when you need both, and honest pricing breakdown.',
+  },
 ];
 
 export default function Page() {

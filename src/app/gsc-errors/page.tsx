@@ -34,6 +34,7 @@ const ERRORS = [
   { slug: 'blocked-by-robots-txt', title: 'Blocked by robots.txt', desc: 'Your robots.txt file disallows Googlebot from crawling the URL, so it cannot be indexed with content.' },
   { slug: 'blocked-unauthorized-401', title: 'Blocked due to unauthorized request (401)', desc: 'Server returned 401 Unauthorized. Googlebot cannot authenticate, so the page never gets fetched.' },
   { slug: 'blocked-forbidden-403', title: 'Blocked due to access forbidden (403)', desc: 'Server returned 403 Forbidden. Typically a firewall, WAF, or permission issue blocking Googlebot.' },
+  { slug: 'indexed-though-blocked-by-robots-txt', title: 'Indexed, though blocked by robots.txt', desc: 'Google indexed the URL anyway because of external links, even though it could not crawl the content.' },
 ];
 
 export default function GscErrorsIndex() {

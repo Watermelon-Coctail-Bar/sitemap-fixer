@@ -39,6 +39,7 @@ const PLATFORMS = [
   { slug: 'rails', name: 'Ruby on Rails', desc: 'sitemap_generator gem, lastmod updates, deploys.' },
   { slug: 'drupal', name: 'Drupal', desc: 'Simple XML Sitemap module, content types, taxonomies.' },
   { slug: 'bigcommerce', name: 'BigCommerce', desc: 'Product variants, category filters, sitemap index.' },
+  { slug: 'joomla', name: 'Joomla', desc: 'OSMap/JSitemap extensions, multi-language, component URLs.' },
 ];
 export default function PlatformsIndex() {
   return (

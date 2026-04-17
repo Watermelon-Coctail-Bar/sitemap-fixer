@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     r('/fix-sitemap-for/rails'),
     r('/fix-sitemap-for/drupal'),
     r('/fix-sitemap-for/bigcommerce'),
+    r('/fix-sitemap-for/joomla'),
     // Sitemap-errors hub
     m('/sitemap-errors'),
     m('/sitemap-errors/changefreq-misuse'),
@@ -77,6 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     r('/gsc-errors/blocked-by-robots-txt'),
     r('/gsc-errors/blocked-unauthorized-401'),
     r('/gsc-errors/blocked-forbidden-403'),
+    r('/gsc-errors/indexed-though-blocked-by-robots-txt'),
     // Compare hub
     r('/compare'),
     r('/compare/sitemapfixer-vs-screaming-frog'),
@@ -85,6 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     r('/compare/best-xml-sitemap-generators'),
     r('/compare/best-sitemap-tools-wordpress'),
     r('/compare/free-vs-paid-sitemap-tools'),
+    r('/compare/screaming-frog-vs-ahrefs'),
     // Use-case hub
     r('/for'),
     r('/for/agencies'),
@@ -285,5 +288,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/learn/xml-sitemap-format'),
     m('/learn/find-all-pages-on-a-website'),
     m('/learn/how-to-find-sitemap'),
+    // April 2026 Tier-1 keyword-driven learn pages
+    r('/learn/hreflang-canonical-relationship'),
+    r('/learn/canonical-redirect-guide'),
+    r('/learn/canonical-error-fix'),
+    r('/learn/canonical-noindex-relationship'),
+    r('/learn/how-to-add-canonical-tag-in-html'),
+    r('/learn/wordpress-robots-txt-guide'),
+    r('/learn/video-sitemap-guide'),
+    r('/learn/image-sitemap-guide'),
+    r('/learn/sitemap-priority-guide'),
   ];
 }
