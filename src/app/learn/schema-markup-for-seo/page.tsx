@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Schema Markup for SEO: Rich Results Guide',
-  description: "Schema markup tells Google what your content means, not just what it says. Here is how to implement JSON-LD for articles, products, FAQs, and reviews to earn rich results.",
+  description: "Schema markup tells Google what your content means, not just what it says. How to implement JSON-LD for articles, products, FAQs, and reviews.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/schema-markup-for-seo' },
   openGraph: {
     title: 'Schema Markup for SEO: Rich Results Guide',
-    description: 'Schema markup tells Google what your content means, not just what it says. Here is how to implement JSON-LD for articles, products, FAQs, and reviews to earn rich results.',
+    description: 'Schema markup tells Google what your content means, not just what it says. How to implement JSON-LD for articles, products, and FAQs.',
     url: 'https://sitemapfixer.com/learn/schema-markup-for-seo',
     type: 'article',
     images: [{
@@ -73,7 +73,8 @@ export default function Page() {
             <li><a href="/learn/video-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Get Videos to Rank in Google</a></li>
             <li><a href="/learn/anchor-text-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Anchor Text SEO: Types & Best Practices</a></li>
           
-            <li><a href="/learn/product-page-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Product Page SEO: Rank Ecommerce Pages in Google</a></li></ul>
+            <li><a href="/learn/product-page-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Product Page SEO: Rank Ecommerce Pages in Google</a></li>
+            <li><a href="/learn/schema-errors-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Fix Schema Markup Errors in Google Search Console</a></li></ul>
         </div>
     </div>
   );

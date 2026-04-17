@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Duplicate Content SEO: How to Find and Fix It',
-  description: "Duplicate content confuses Google about which page to rank and dilutes your authority. Here is how to find it, which fixes to use (canonical vs 301 vs noindex), and when each applies.",
+  description: "Duplicate content confuses Google about which page to rank. How to find it, which fixes to use (canonical vs 301 vs noindex), and when each applies.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/duplicate-content-seo-fix' },
   openGraph: { title: 'Duplicate Content SEO: Find and Fix Guide', description: 'How to identify duplicate content and choose the right fix: canonical, 301, or noindex.', url: 'https://sitemapfixer.com/blog/duplicate-content-seo-fix', type: 'article',
     images: [{

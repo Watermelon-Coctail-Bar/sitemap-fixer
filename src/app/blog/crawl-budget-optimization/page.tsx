@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Crawl Budget Optimization: Get More Crawl Value',
-  description: "Crawl budget limits how many pages Google crawls per day. Here is how to diagnose crawl budget problems and fix them so Google spends time on your important pages.",
+  description: "Crawl budget limits how many pages Google crawls per day. How to diagnose crawl budget problems and fix them so Google prioritizes important pages.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/crawl-budget-optimization' },
   openGraph: { title: 'Crawl Budget Optimization Guide', description: 'How to make Google crawl your best pages first.', url: 'https://sitemapfixer.com/blog/crawl-budget-optimization', type: 'article',
     images: [{

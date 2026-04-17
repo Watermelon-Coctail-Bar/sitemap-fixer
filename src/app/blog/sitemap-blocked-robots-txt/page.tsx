@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sitemap Blocked by Robots.txt: How to Find and Fix It',
-  description: "If your sitemap contains URLs blocked by robots.txt, Google reports errors and may not index those pages. Here is how to find the conflict and fix it in 10 minutes.",
+  description: "If your sitemap contains URLs blocked by robots.txt, Google reports errors and may skip those pages. How to find the conflict and fix it quickly.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/sitemap-blocked-robots-txt' },
   openGraph: { title: 'Sitemap Blocked by Robots.txt: Fix It Fast', description: 'Find and fix the robots.txt conflict causing sitemap errors in Google Search Console.', url: 'https://sitemapfixer.com/blog/sitemap-blocked-robots-txt', type: 'article',
     images: [{

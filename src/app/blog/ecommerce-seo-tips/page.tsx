@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Ecommerce SEO: Get Product Pages to Rank',
-  description: "Ecommerce SEO has unique challenges - product pages, category pages, faceted navigation, and duplicate content. Here are the most impactful fixes for online stores.",
+  description: "Ecommerce SEO has unique challenges - product pages, category pages, faceted navigation, and duplicate content. The most impactful fixes.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/ecommerce-seo-tips' },
   openGraph: {
     title: 'Ecommerce SEO: Get Product Pages to Rank',
-    description: 'Ecommerce SEO has unique challenges - product pages, category pages, faceted navigation, and duplicate content. Here are the most impactful fixes for online stores.',
+    description: 'Ecommerce SEO has unique challenges - product pages, category pages, faceted navigation, and duplicate content. The most impactful fixes.',
     url: 'https://sitemapfixer.com/blog/ecommerce-seo-tips',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>Ecommerce SEO Tips</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Ecommerce SEO: Get Product Pages to Rank","description":"Ecommerce SEO has unique challenges - product pages, category pages, faceted navigation, and duplicate content. Here are the most impactful fixes for online stores.","url":"https://sitemapfixer.com/blog/ecommerce-seo-tips","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/ecommerce-seo-tips"}}' }} />April 2025 · 8 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Ecommerce SEO: Get Product Pages to Rank","description":"Ecommerce SEO has unique challenges - product pages, category pages, faceted navigation, and duplicate content. The most impactful fixes.","url":"https://sitemapfixer.com/blog/ecommerce-seo-tips","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/ecommerce-seo-tips"}}' }} />April 2025 · 8 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Ecommerce SEO Tips: Get Product Pages Ranking on Google</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your store sitemap and indexing free</span>

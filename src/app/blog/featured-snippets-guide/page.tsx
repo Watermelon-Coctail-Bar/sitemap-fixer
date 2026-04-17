@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Featured Snippets: Win Position Zero in Google',
-  description: "Featured snippets appear above all organic results and drive significant click-through rates. Here is how to structure content to win featured snippet positions.",
+  description: "Featured snippets appear above all organic results and drive significant CTR. How to structure content to win featured snippet positions.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/featured-snippets-guide' },
   openGraph: {
     title: 'Featured Snippets: Win Position Zero in Google',
-    description: 'Featured snippets appear above all organic results and drive significant click-through rates. Here is how to structure content to win featured snippet positions.',
+    description: 'Featured snippets appear above all organic results and drive significant click-through. How to structure content to win them.',
     url: 'https://sitemapfixer.com/blog/featured-snippets-guide',
     type: 'article',
     images: [{
@@ -33,7 +33,7 @@ export default function Page() {
         <span>Featured Snippets Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Featured Snippets: Win Position Zero in Google","description":"Featured snippets appear above all organic results and drive significant click-through rates. Here is how to structure content to win featured snippet positions.","url":"https://sitemapfixer.com/blog/featured-snippets-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/featured-snippets-guide"}}' }} />April 2025 · 6 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Featured Snippets: Win Position Zero in Google","description":"Featured snippets appear above all organic results and drive significant click-through. How to structure content to win them.","url":"https://sitemapfixer.com/blog/featured-snippets-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/featured-snippets-guide"}}' }} />April 2025 · 6 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Featured Snippets Guide: Win Position Zero in Google</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Ensure your site is indexable for snippets - free</span>

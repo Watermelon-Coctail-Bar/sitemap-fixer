@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Google Ranking Drop: Diagnose and Recover',
-  description: "A sudden drop in Google rankings has specific causes. Here is how to diagnose which of the 7 most common causes hit your site and the recovery steps for each.",
+  description: "A sudden drop in Google rankings has specific causes. How to diagnose which of the 7 most common causes hit your site and the recovery steps.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/google-ranking-drop' },
   openGraph: { title: 'Google Ranking Drop: 7 Causes and Recovery Steps', url: 'https://sitemapfixer.com/blog/google-ranking-drop', type: 'article',
     images: [{

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Google Algorithm Updates: History & Impact',
-  description: "Google runs thousands of algorithm updates per year. Here are the major named updates, what each targeted, and how to build a site that survives future updates.",
+  description: "Google runs thousands of algorithm updates per year. The major named updates, what each targeted, and how to build a site that survives them.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/google-algorithm-updates' },
   openGraph: {
     title: 'Google Algorithm Updates: History & Impact',
@@ -72,7 +72,8 @@ export default function Page() {
             <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
             <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
           
-            <li><a href="/learn/eeat-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>E-E-A-T SEO: Build Expertise and Trust</a></li></ul>
+            <li><a href="/learn/eeat-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>E-E-A-T SEO: Build Expertise and Trust</a></li>
+            <li><a href="/learn/google-penalty" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Penalty: How to Identify and Recover From One</a></li></ul>
         </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Page Title Optimization: Write Tags That Rank',
-  description: "Title tags are the single most important on-page SEO element. Here is how to write title tags that rank for target keywords and earn clicks from search results.",
+  description: "Title tags are the single most important on-page SEO element. How to write title tags that rank for target keywords and earn clicks from SERPs.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/page-title-optimization' },
   openGraph: {
     title: 'Page Title Optimization: Write Tags That Rank',

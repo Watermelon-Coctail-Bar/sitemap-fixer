@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Wix SEO: How to Optimize Your Wix Website for Google',
-  description: "Wix has improved its SEO significantly. Here is how to use Wix SEO Wiz, configure your sitemap, add structured data, and get the most from Wix for Google rankings.",
+  description: "Wix has improved its SEO significantly. How to use Wix SEO Wiz, configure your sitemap, add structured data, and maximize Google rankings.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/wix-seo' },
   openGraph: {
     title: 'Wix SEO: How to Optimize Your Wix Website for Google',
-    description: 'Wix has improved its SEO significantly. Here is how to use Wix SEO Wiz, configure your sitemap, add structured data, and get the most from Wix for Google rankings.',
+    description: 'Wix has improved its SEO significantly. How to use Wix SEO Wiz, configure your sitemap, and add structured data for Google rankings.',
     url: 'https://sitemapfixer.com/learn/wix-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Wix SEO: How to Optimize Your Wix Website for Google","description":"Wix has improved its SEO significantly. Here is how to use Wix SEO Wiz, configure your sitemap, add structured data, and get the most from Wix for Google rankings.","url":"https://sitemapfixer.com/learn/wix-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/wix-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Wix SEO: How to Optimize Your Wix Website for Google","description":"Wix has improved its SEO significantly. How to use Wix SEO Wiz, configure your sitemap, and add structured data for Google rankings.","url":"https://sitemapfixer.com/learn/wix-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/wix-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

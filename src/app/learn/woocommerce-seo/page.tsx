@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'WooCommerce SEO: Optimize Your Store',
-  description: "WooCommerce gives you full control over your store SEO. Here is how to configure your sitemap, product schema, faceted navigation, and common WooCommerce SEO issues.",
+  description: "WooCommerce gives you full control over store SEO. How to configure your sitemap, product schema, faceted navigation, and fix common SEO issues.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/woocommerce-seo' },
   openGraph: {
     title: 'WooCommerce SEO: Optimize Your Store',
-    description: 'WooCommerce gives you full control over your store SEO. Here is how to configure your sitemap, product schema, faceted navigation, and common WooCommerce SEO issues.',
+    description: 'WooCommerce gives you full control over your store SEO. How to configure your sitemap, product schema, and faceted navigation.',
     url: 'https://sitemapfixer.com/learn/woocommerce-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"WooCommerce SEO: Optimize Your Store","description":"WooCommerce gives you full control over your store SEO. Here is how to configure your sitemap, product schema, faceted navigation, and common WooCommerce SEO issues.","url":"https://sitemapfixer.com/learn/woocommerce-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/woocommerce-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"WooCommerce SEO: Optimize Your Store","description":"WooCommerce gives you full control over your store SEO. How to configure your sitemap, product schema, and faceted navigation.","url":"https://sitemapfixer.com/learn/woocommerce-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/woocommerce-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

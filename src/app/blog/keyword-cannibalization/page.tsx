@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Keyword Cannibalization: How to Find and Fix It',
-  description: "Keyword cannibalization is when multiple pages on your site compete for the same keyword. Here is how to detect it, which pages to consolidate, and when to keep them separate.",
+  description: "Keyword cannibalization is when multiple pages compete for the same keyword. How to detect it, which pages to consolidate, and when to keep them.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/keyword-cannibalization' },
   openGraph: { title: 'Keyword Cannibalization: Find and Fix Guide', url: 'https://sitemapfixer.com/blog/keyword-cannibalization', type: 'article',
     images: [{

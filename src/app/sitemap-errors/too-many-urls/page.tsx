@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Too Many URLs in Sitemap: Fix Guide',
-  description: 'Is your sitemap too large? Google recommends a maximum of 50,000 URLs per sitemap file. Learn how to split, optimize, and prioritize your sitemap correctly.',
+  description: 'Is your sitemap too large? Google recommends a max of 50,000 URLs per sitemap file. How to split, optimize, and prioritize your sitemap.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/too-many-urls' },
   openGraph: {
     title: 'Too Many URLs in Sitemap - Fix & Best Practices',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'WordPress Sitemap: Setup, Fix, and Submit Guide',
-  description: 'Everything about WordPress sitemaps - how to enable them with Yoast, RankMath, or built-in WordPress, fix common errors, and submit to Google Search Console.',
+  description: 'Everything about WordPress sitemaps - how to enable them with Yoast, RankMath, or built-in WordPress, fix errors, and submit to Search Console.',
   alternates: { canonical: 'https://sitemapfixer.com/learn/wordpress-sitemap' },
   openGraph: { title: 'WordPress Sitemap Guide', description: 'How to set up, fix, and submit your WordPress sitemap.', url: 'https://sitemapfixer.com/learn/wordpress-sitemap', type: 'article',
     images: [{

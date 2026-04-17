@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'International SEO: Target Multiple Countries',
-  description: "International SEO helps Google show the right language version to the right users. Here is how to implement hreflang, choose URL structures, and avoid common mistakes.",
+  description: "International SEO helps Google show the right language version to the right users. How to implement hreflang, choose URL structures, and avoid errors.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/international-seo-guide' },
   openGraph: {
     title: 'International SEO: Target Multiple Countries',
-    description: 'International SEO helps Google show the right language version to the right users. Here is how to implement hreflang, choose URL structures, and avoid common mistakes.',
+    description: 'International SEO helps Google show the right language version to users. How to implement hreflang and choose URL structures.',
     url: 'https://sitemapfixer.com/blog/international-seo-guide',
     type: 'article',
     images: [{
@@ -32,7 +32,7 @@ export default function Page() {
         <span>International SEO Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"International SEO: Target Multiple Countries","description":"International SEO helps Google show the right language version to the right users. Here is how to implement hreflang, choose URL structures, and avoid common mistakes.","url":"https://sitemapfixer.com/blog/international-seo-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/international-seo-guide"}}' }} />April 2025 · 6 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"International SEO: Target Multiple Countries","description":"International SEO helps Google show the right language version to users. How to implement hreflang and choose URL structures.","url":"https://sitemapfixer.com/blog/international-seo-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/international-seo-guide"}}' }} />April 2025 · 6 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>International SEO Guide: Target Multiple Countries and Languages</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your international sitemap free</span>

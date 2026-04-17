@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'B2B SEO: How to Generate Leads from Organic Search',
-  description: "B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords mean your content and keyword strategy must be different.",
+  description: "B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords change your approach.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/b2b-seo' },
   openGraph: {
     title: 'B2B SEO: How to Generate Leads from Organic Search',
-    description: 'B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords mean your content and keyword strategy must be different.',
+    description: 'B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords shape it.',
     url: 'https://sitemapfixer.com/learn/b2b-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"B2B SEO: How to Generate Leads from Organic Search","description":"B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords mean your content and keyword strategy must be different.","url":"https://sitemapfixer.com/learn/b2b-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/b2b-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"B2B SEO: How to Generate Leads from Organic Search","description":"B2B SEO requires a different strategy than B2C. Longer sales cycles, niche audiences, and low-volume high-intent keywords shape it.","url":"https://sitemapfixer.com/learn/b2b-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/b2b-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

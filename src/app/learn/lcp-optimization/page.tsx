@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'LCP Optimization: How to Fix Largest Contentful Paint',
-  description: "LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. Here is how to diagnose your LCP element and the most effective fixes.",
+  description: "LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. How to diagnose your LCP element and the best fixes.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/lcp-optimization' },
   openGraph: {
     title: 'LCP Optimization: How to Fix Largest Contentful Paint',
-    description: 'LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. Here is how to diagnose your LCP element and the most effective fixes.',
+    description: 'LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. How to diagnose it and the most effective fixes.',
     url: 'https://sitemapfixer.com/learn/lcp-optimization',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const steps = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"LCP Optimization: How to Fix Largest Contentful Paint","description":"LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. Here is how to diagnose your LCP element and the most effective fixes.","url":"https://sitemapfixer.com/learn/lcp-optimization","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/lcp-optimization"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"LCP Optimization: How to Fix Largest Contentful Paint","description":"LCP measures how fast the largest visible element loads. Google requires under 2.5 seconds. How to diagnose it and the most effective fixes.","url":"https://sitemapfixer.com/learn/lcp-optimization","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/lcp-optimization"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

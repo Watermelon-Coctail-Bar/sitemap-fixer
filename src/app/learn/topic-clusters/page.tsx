@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Topic Clusters: How to Build Topical Authority for SEO',
-  description: "Topic clusters help you build topical authority - the quality that makes Google trust your site as an expert source. Here is how to build them and why they outperform isolated posts.",
+  description: "Topic clusters help build topical authority - the quality that makes Google trust your site as an expert source. How to build them effectively.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/topic-clusters' },
   openGraph: {
     title: 'Topic Clusters: How to Build Topical Authority for SEO',
-    description: 'Topic clusters help you build topical authority - the quality that makes Google trust your site as an expert source. Here is how to build them and why they outperform isolated posts.',
+    description: 'Topic clusters help you build topical authority - the quality that makes Google trust your site as an expert source. How to build them.',
     url: 'https://sitemapfixer.com/learn/topic-clusters',
     type: 'article',
     images: [{
@@ -28,7 +28,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Topic Clusters: How to Build Topical Authority for SEO","description":"Topic clusters help you build topical authority - the quality that makes Google trust your site as an expert source. Here is how to build them and why they outperform isolated posts.","url":"https://sitemapfixer.com/learn/topic-clusters","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/topic-clusters"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Topic Clusters: How to Build Topical Authority for SEO","description":"Topic clusters help you build topical authority - the quality that makes Google trust your site as an expert source. How to build them.","url":"https://sitemapfixer.com/learn/topic-clusters","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/topic-clusters"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

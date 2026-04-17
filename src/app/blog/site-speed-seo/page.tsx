@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Site Speed SEO: How Speed Affects Rankings',
-  description: "Page speed is a confirmed Google ranking factor and affects both rankings and conversion rates. Here is how site speed impacts SEO and the most impactful fixes.",
+  description: "Page speed is a confirmed Google ranking factor that affects both rankings and conversions. How site speed impacts SEO and the most impactful fixes.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/site-speed-seo' },
   openGraph: {
     title: 'Site Speed SEO: How Speed Affects Rankings',

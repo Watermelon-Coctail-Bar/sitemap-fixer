@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Astro Sitemap: Using @astrojs/sitemap Integration',
-  description: "Astro has an official sitemap integration. Here is how to install it, configure your site URL, exclude pages, and handle dynamic routes for complete sitemap coverage.",
+  description: "Astro has an official sitemap integration. How to install it, configure your site URL, exclude pages, and handle dynamic routes for full coverage.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/astro-sitemap' },
   openGraph: {
     title: 'Astro Sitemap: Using @astrojs/sitemap Integration',
-    description: 'Astro has an official sitemap integration. Here is how to install it, configure your site URL, exclude pages, and handle dynamic routes for complete sitemap coverage.',
+    description: 'Astro has an official sitemap integration. How to install it, configure your site URL, exclude pages, and handle dynamic routes.',
     url: 'https://sitemapfixer.com/learn/astro-sitemap',
     type: 'article',
     images: [{
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Astro Sitemap: Using @astrojs/sitemap Integration","description":"Astro has an official sitemap integration. Here is how to install it, configure your site URL, exclude pages, and handle dynamic routes for complete sitemap coverage.","url":"https://sitemapfixer.com/learn/astro-sitemap","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/astro-sitemap"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Astro Sitemap: Using @astrojs/sitemap Integration","description":"Astro has an official sitemap integration. How to install it, configure your site URL, exclude pages, and handle dynamic routes.","url":"https://sitemapfixer.com/learn/astro-sitemap","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/astro-sitemap"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

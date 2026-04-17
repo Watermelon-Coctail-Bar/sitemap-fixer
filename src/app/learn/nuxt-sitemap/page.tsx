@@ -78,7 +78,8 @@ export default function Page() {
             <li><a href="/learn/squarespace-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Squarespace Sitemap: How It Works and Common Fixes</a></li>
             <li><a href="/learn/webflow-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Webflow Sitemap: How It Works and How to Submit It</a></li>
           
-            <li><a href="/learn/astro-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Astro Sitemap: Using @astrojs/sitemap Integration</a></li></ul>
+            <li><a href="/learn/astro-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Astro Sitemap: Using @astrojs/sitemap Integration</a></li>
+            <li><a href="/fix-sitemap-for/nuxt" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Fix Sitemap for Nuxt</a></li></ul>
         </div>
     </div>
   );

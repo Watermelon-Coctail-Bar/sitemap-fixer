@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Site Migration SEO: Move Without Losing Rankings',
-  description: "Site migrations - domain changes, URL restructures, CMS switches - are one of the riskiest SEO operations. Here is the step-by-step process to migrate without losing traffic.",
+  description: "Site migrations - domain changes, URL restructures, CMS switches - are risky for SEO. The step-by-step process to migrate without losing traffic.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/site-migration-seo' },
   openGraph: {
     title: 'Site Migration SEO: Move Without Losing Rankings',
-    description: 'Site migrations - domain changes, URL restructures, CMS switches - are one of the riskiest SEO operations. Here is the step-by-step process to migrate without losing traffic.',
+    description: 'Site migrations - domain changes, URL restructures, CMS switches - are one of the riskiest SEO operations. The step-by-step process.',
     url: 'https://sitemapfixer.com/learn/site-migration-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const steps = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Site Migration SEO: Move Without Losing Rankings","description":"Site migrations - domain changes, URL restructures, CMS switches - are one of the riskiest SEO operations. Here is the step-by-step process to migrate without losing traffic.","url":"https://sitemapfixer.com/learn/site-migration-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/site-migration-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Site Migration SEO: Move Without Losing Rankings","description":"Site migrations - domain changes, URL restructures, CMS switches - are one of the riskiest SEO operations. The step-by-step process.","url":"https://sitemapfixer.com/learn/site-migration-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/site-migration-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

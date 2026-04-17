@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'News Sitemap: Google News Sitemaps for Publishers',
-  description: "A Google News sitemap helps news publishers get articles indexed in Google News and Google Discover within minutes. Here is the format, requirements, and submission process.",
+  description: "A Google News sitemap helps publishers get articles indexed in Google News and Discover within minutes. The format, requirements, and submission.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/news-sitemap' },
   openGraph: {
     title: 'News Sitemap: Google News Sitemaps for Publishers',
-    description: 'A Google News sitemap helps news publishers get articles indexed in Google News and Google Discover within minutes. Here is the format, requirements, and submission process.',
+    description: 'A Google News sitemap helps news publishers get articles indexed in Google News and Discover within minutes. Format and requirements.',
     url: 'https://sitemapfixer.com/learn/news-sitemap',
     type: 'article',
     images: [{
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"News Sitemap: Google News Sitemaps for Publishers","description":"A Google News sitemap helps news publishers get articles indexed in Google News and Google Discover within minutes. Here is the format, requirements, and submission process.","url":"https://sitemapfixer.com/learn/news-sitemap","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/news-sitemap"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"News Sitemap: Google News Sitemaps for Publishers","description":"A Google News sitemap helps news publishers get articles indexed in Google News and Discover within minutes. Format and requirements.","url":"https://sitemapfixer.com/learn/news-sitemap","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/news-sitemap"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Link Equity Guide: How PageRank Flows Through Your Site',
-  description: "Link equity (PageRank) flows through internal and external links. Here is how to maximize authority distribution across your site to boost rankings for important pages.",
+  description: "Link equity (PageRank) flows through internal and external links. How to maximize authority distribution across your site to boost key page rankings.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/link-equity-guide' },
   openGraph: {
     title: 'Link Equity Guide: How PageRank Flows Through Your Site',
-    description: 'Link equity (PageRank) flows through internal and external links. Here is how to maximize authority distribution across your site to boost rankings for important pages.',
+    description: 'Link equity (PageRank) flows through internal and external links. How to maximize authority distribution to boost rankings.',
     url: 'https://sitemapfixer.com/blog/link-equity-guide',
     type: 'article',
     images: [{
@@ -32,7 +32,7 @@ export default function Page() {
         <span>Link Equity Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Link Equity Guide: How PageRank Flows Through Your Site","description":"Link equity (PageRank) flows through internal and external links. Here is how to maximize authority distribution across your site to boost rankings for important pages.","url":"https://sitemapfixer.com/blog/link-equity-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/link-equity-guide"}}' }} />April 2025 · 5 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Link Equity Guide: How PageRank Flows Through Your Site","description":"Link equity (PageRank) flows through internal and external links. How to maximize authority distribution to boost rankings.","url":"https://sitemapfixer.com/blog/link-equity-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/link-equity-guide"}}' }} />April 2025 · 5 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Link Equity Guide: Maximize PageRank Flow Across Your Site</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Analyze your site structure and links free</span>

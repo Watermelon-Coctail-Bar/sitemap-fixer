@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Orphan Pages in Sitemap: Fix Guide',
-  description: 'Orphan pages have no internal links - they rely entirely on your sitemap for discovery. Learn how to detect orphan pages and fix your internal linking structure.',
+  description: 'Orphan pages have no internal links - they rely entirely on your sitemap for discovery. How to detect orphan pages and fix your internal linking.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/orphan-pages' },
   openGraph: {
     title: 'Orphan Pages in Sitemap - Fix & Best Practices',
-    description: 'Orphan pages have no internal links - they rely entirely on your sitemap for discovery. Learn how to detect orphan pages and fix your internal linking structure.',
+    description: 'Orphan pages have no internal links - they rely entirely on your sitemap for discovery. Learn how to detect and fix them.',
     url: 'https://sitemapfixer.com/sitemap-errors/orphan-pages',
     type: 'article',
     images: [{

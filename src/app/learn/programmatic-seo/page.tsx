@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Programmatic SEO: Scale Content That Ranks',
-  description: "Programmatic SEO generates hundreds or thousands of pages from data. Done right it drives massive traffic. Done wrong it triggers thin content penalties. Here is how to do it right.",
+  description: "Programmatic SEO generates hundreds of pages from data. Done right it drives massive traffic. Done wrong it triggers penalties. How to do it right.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/programmatic-seo' },
   openGraph: {
     title: 'Programmatic SEO: Scale Content That Ranks',
-    description: 'Programmatic SEO generates hundreds or thousands of pages from data. Done right it drives massive traffic. Done wrong it triggers thin content penalties. Here is how to do it right.',
+    description: 'Programmatic SEO generates hundreds or thousands of pages from data. Done right it drives massive traffic, done wrong it triggers penalties.',
     url: 'https://sitemapfixer.com/learn/programmatic-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Programmatic SEO: Scale Content That Ranks","description":"Programmatic SEO generates hundreds or thousands of pages from data. Done right it drives massive traffic. Done wrong it triggers thin content penalties. Here is how to do it right.","url":"https://sitemapfixer.com/learn/programmatic-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/programmatic-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Programmatic SEO: Scale Content That Ranks","description":"Programmatic SEO generates hundreds or thousands of pages from data. Done right it drives massive traffic, done wrong it triggers penalties.","url":"https://sitemapfixer.com/learn/programmatic-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/programmatic-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

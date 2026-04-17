@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Mobile SEO Guide: Optimize Your Site for Mobile Search',
-  description: "Google uses the mobile version of your site for ranking. Here is how to optimize for mobile SEO including viewport, speed, usability, and mobile-first indexing.",
+  description: "Google uses the mobile version of your site for ranking. How to optimize for mobile SEO including viewport, speed, usability, and mobile indexing.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/mobile-seo-guide' },
   openGraph: {
     title: 'Mobile SEO Guide: Optimize Your Site for Mobile Search',

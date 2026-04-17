@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Canonical URL: What It Is and How to Set It Correctly',
-  description: "Canonical URLs tell Google which version of a page to index. Misusing them is one of the most common causes of duplicate content. Here is exactly how they work and how to use them.",
+  description: "Canonical URLs tell Google which page version to index. Misusing them causes duplicate content. How they work and how to implement them correctly.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/canonical-url-guide' },
   openGraph: { title: 'Canonical URL Guide: How to Use rel=canonical Correctly', url: 'https://sitemapfixer.com/blog/canonical-url-guide', type: 'article',
     images: [{

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'CLS Fix: How to Eliminate Cumulative Layout Shift',
-  description: "CLS measures unexpected page layout shifts during loading. Google requires a score under 0.1. Here is how to find what is causing your CLS and fix each type.",
+  description: "CLS measures unexpected layout shifts during loading. Google requires a score under 0.1. How to find what causes your CLS and fix each type.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/cls-fix' },
   openGraph: {
     title: 'CLS Fix: How to Eliminate Cumulative Layout Shift',

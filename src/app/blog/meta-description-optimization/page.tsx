@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Meta Description Optimization: Write Click-Worthy Copy',
-  description: "Meta descriptions are your billboard in search results. Here is how to write meta descriptions that improve click-through rates and drive more organic traffic.",
+  description: "Meta descriptions are your billboard in search results. How to write meta descriptions that improve click-through rates and drive more traffic.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/meta-description-optimization' },
   openGraph: {
     title: 'Meta Description Optimization: Write Click-Worthy Copy',

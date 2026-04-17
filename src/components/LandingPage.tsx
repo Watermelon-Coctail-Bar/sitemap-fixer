@@ -7,7 +7,7 @@ import { AuthLink } from './AuthLink';
 import { Footer } from './Footer';
 import { Results } from './Results';
 
-type Variant = 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'xml-sitemap-generator' | 'free-seo-audit';
+type Variant = 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'xml-sitemap-generator' | 'free-seo-audit' | 'robots-txt-checker' | 'meta-tag-checker' | 'canonical-checker' | 'hreflang-tester';
 
 const FAQ: Record<Variant, Array<{ q: string; a: string }>> = {
   'sitemap-finder': [
@@ -34,6 +34,26 @@ const FAQ: Record<Variant, Array<{ q: string; a: string }>> = {
     { q: 'What makes this different from Ahrefs or SEMrush?', a: 'We analyze your actual site structure and give domain-specific recommendations - not generic metrics and scores.' },
     { q: 'How does the AI analysis work?', a: 'We pass your URL structure, clusters, and page dates to Claude AI, which generates recommendations specific to your site patterns.' },
     { q: 'Is it free?', a: 'The core analysis is free. Full reports, monitoring, and history are part of our Pro plan.' },
+  ],
+  'robots-txt-checker': [
+    { q: 'What does the robots.txt checker analyze?', a: 'We fetch your robots.txt, validate its syntax, check each Disallow rule against your actual sitemap URLs, and flag pages accidentally blocked from crawling.' },
+    { q: 'Can I check robots.txt without a sitemap?', a: 'Yes. Enter your domain and we parse the robots.txt directly. We also cross-check against your sitemap if one exists to catch conflicts.' },
+    { q: 'Will it detect conflicts with my sitemap?', a: 'Yes. If your sitemap lists URLs that robots.txt blocks, we highlight every conflict - one of the most common SEO mistakes we find.' },
+  ],
+  'meta-tag-checker': [
+    { q: 'What meta tags do you check?', a: 'Title, meta description, canonical, robots (noindex/nofollow), Open Graph, Twitter Cards, and hreflang - across all pages in your sitemap.' },
+    { q: 'Do you check every page?', a: 'Up to 500 pages on the free tier. We analyze meta tag patterns across your whole site, not just a sample.' },
+    { q: 'Can I find pages with missing meta descriptions?', a: 'Yes. We flag every page missing a meta description, every duplicate title, and every canonical mismatch - with a ranked fix list.' },
+  ],
+  'canonical-checker': [
+    { q: 'What does the canonical tag checker do?', a: 'We verify that every page in your sitemap has a correct canonical tag pointing to itself - the #1 source of duplicate content penalties.' },
+    { q: 'How do you detect canonical conflicts?', a: 'We flag pages with canonical tags pointing to other URLs, canonical chains, protocol mismatches (HTTP vs HTTPS), and trailing slash inconsistencies.' },
+    { q: 'Why are canonical tags important for SEO?', a: 'Google uses canonical tags to pick which version of a page to index. Wrong canonicals cause the wrong page to rank or no page to rank at all.' },
+  ],
+  'hreflang-tester': [
+    { q: 'What does the hreflang tester check?', a: 'We verify hreflang tags across your international pages: return-link validation, language/region codes, x-default setup, and sitemap-level hreflang.' },
+    { q: 'Can I use it for multi-regional sites?', a: 'Yes. We handle country-language combos (en-us, en-gb, de-de, etc.), detect missing return tags, and flag conflicting signals between HTML and sitemap.' },
+    { q: 'What hreflang errors are most common?', a: 'Missing self-reference, no return link (asymmetric hreflang), wrong language codes, pointing to 404 pages, and missing x-default.' },
   ],
 };
 

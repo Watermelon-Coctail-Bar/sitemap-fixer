@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Google Search Operators for SEO Research',
-  description: "Google search operators let you run advanced searches that reveal SEO insights about any site. Here are the operators SEOs use most and what each one shows you.",
+  description: "Google search operators let you run advanced searches that reveal SEO insights about any site. The operators SEOs use most and what each shows.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/google-search-operators' },
   openGraph: {
     title: 'Google Search Operators for SEO Research',

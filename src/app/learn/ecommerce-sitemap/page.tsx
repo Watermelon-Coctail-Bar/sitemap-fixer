@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Ecommerce Sitemap: Structure for Max Indexing',
-  description: "Ecommerce sites have unique sitemap challenges - faceted navigation, variants, seasonal products, and large catalogs. Here is how to handle each one correctly.",
+  description: "Ecommerce sites have unique sitemap challenges - faceted navigation, variants, seasonal products, and large catalogs. How to handle each.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/ecommerce-sitemap' },
   openGraph: {
     title: 'Ecommerce Sitemap: Structure for Max Indexing',

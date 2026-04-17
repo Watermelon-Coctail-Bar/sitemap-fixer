@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Core Web Vitals Fix: How to Pass LCP, INP, CLS',
-  description: "Failing Core Web Vitals hurts your Google rankings. This guide walks through the diagnosis and fixes for all three metrics: LCP, INP, and CLS, in priority order.",
+  description: "Failing Core Web Vitals hurts Google rankings. Diagnosis and fixes for all three metrics: LCP, INP, and CLS, in priority order.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/core-web-vitals-fix-guide' },
   openGraph: { title: 'Core Web Vitals Fix Guide 2025', description: 'Step-by-step fixes for LCP, INP, and CLS - the three metrics that affect Google rankings.', url: 'https://sitemapfixer.com/blog/core-web-vitals-fix-guide', type: 'article',
     images: [{

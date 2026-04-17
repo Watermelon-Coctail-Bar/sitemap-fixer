@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'SEO Audit Tools: Best Tools for a Complete SEO Audit',
-  description: "An SEO audit needs the right tools. Here are the best tools for auditing technical SEO, on-page quality, backlinks, and Core Web Vitals - with free options for each.",
+  description: "An SEO audit needs the right tools. The best tools for auditing technical SEO, on-page quality, backlinks, and Core Web Vitals - with free options.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-audit-tools' },
   openGraph: {
     title: 'SEO Audit Tools: Best Tools for a Complete SEO Audit',
-    description: 'An SEO audit needs the right tools. Here are the best tools for auditing technical SEO, on-page quality, backlinks, and Core Web Vitals - with free options for each.',
+    description: 'An SEO audit needs the right tools. The best tools for auditing technical SEO, on-page, backlinks, and Core Web Vitals.',
     url: 'https://sitemapfixer.com/blog/seo-audit-tools',
     type: 'article',
     images: [{
@@ -32,7 +32,7 @@ export default function Page() {
         <span>SEO Audit Tools</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Audit Tools: Best Tools for a Complete SEO Audit","description":"An SEO audit needs the right tools. Here are the best tools for auditing technical SEO, on-page quality, backlinks, and Core Web Vitals - with free options for each.","url":"https://sitemapfixer.com/blog/seo-audit-tools","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-audit-tools"}}' }} />April 2025 · 5 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Audit Tools: Best Tools for a Complete SEO Audit","description":"An SEO audit needs the right tools. The best tools for auditing technical SEO, on-page, backlinks, and Core Web Vitals.","url":"https://sitemapfixer.com/blog/seo-audit-tools","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-audit-tools"}}' }} />April 2025 · 5 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>SEO Audit Tools: Best Tools for a Complete Site Audit</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Start your audit with SitemapFixer - free</span>

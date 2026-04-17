@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Link Building SEO: Strategies That Work in 2025',
-  description: "Backlinks remain one of the strongest Google ranking signals. Here are the link building strategies that actually work, what to avoid, and how to assess link quality.",
+  description: "Backlinks remain one of the strongest Google ranking signals. Learn the link building strategies that work, what to avoid, and how to assess quality.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/link-building-seo' },
   openGraph: {
     title: 'Link Building SEO: Strategies That Work in 2025',
-    description: 'Backlinks remain one of the strongest Google ranking signals. Here are the link building strategies that actually work, what to avoid, and how to assess link quality.',
+    description: 'Backlinks remain one of the strongest Google ranking signals. The link building strategies that work, what to avoid, and link quality.',
     url: 'https://sitemapfixer.com/learn/link-building-seo',
     type: 'article',
     images: [{
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Link Building SEO: Strategies That Work in 2025","description":"Backlinks remain one of the strongest Google ranking signals. Here are the link building strategies that actually work, what to avoid, and how to assess link quality.","url":"https://sitemapfixer.com/learn/link-building-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/link-building-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Link Building SEO: Strategies That Work in 2025","description":"Backlinks remain one of the strongest Google ranking signals. The link building strategies that work, what to avoid, and link quality.","url":"https://sitemapfixer.com/learn/link-building-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/link-building-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

@@ -15,7 +15,7 @@ const softwareSchema = JSON.stringify({
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  description: 'AI-powered sitemap checker and SEO fix tool. Fix crawled currently not indexed, find all pages on a website, verify sitemap, and get actionable fixes in 60 seconds.',
+  description: 'AI-powered sitemap checker and SEO fix tool. Fix crawled not indexed pages, find all pages on a website, verify sitemap, and get fixes fast.',
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '127' },
 });
 

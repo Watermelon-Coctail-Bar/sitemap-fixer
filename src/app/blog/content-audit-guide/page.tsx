@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Content Audit: How to Audit Your Site for SEO',
-  description: "A content audit identifies which pages to keep, update, consolidate, or remove. Here is a step-by-step process for auditing your site content to improve SEO performance.",
+  description: "A content audit identifies which pages to keep, update, consolidate, or remove. A step-by-step process for auditing site content to improve SEO.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/content-audit-guide' },
   openGraph: {
     title: 'Content Audit: How to Audit Your Site for SEO',
-    description: 'A content audit identifies which pages to keep, update, consolidate, or remove. Here is a step-by-step process for auditing your site content to improve SEO performance.',
+    description: 'A content audit identifies which pages to keep, update, consolidate, or remove. A step-by-step process to improve SEO performance.',
     url: 'https://sitemapfixer.com/blog/content-audit-guide',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>Content Audit Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Content Audit: How to Audit Your Site for SEO","description":"A content audit identifies which pages to keep, update, consolidate, or remove. Here is a step-by-step process for auditing your site content to improve SEO performance.","url":"https://sitemapfixer.com/blog/content-audit-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/content-audit-guide"}}' }} />April 2025 · 8 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Content Audit: How to Audit Your Site for SEO","description":"A content audit identifies which pages to keep, update, consolidate, or remove. A step-by-step process to improve SEO performance.","url":"https://sitemapfixer.com/blog/content-audit-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/content-audit-guide"}}' }} />April 2025 · 8 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Content Audit Guide: Keep, Update, Consolidate, or Remove</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Start with your sitemap - check it free</span>

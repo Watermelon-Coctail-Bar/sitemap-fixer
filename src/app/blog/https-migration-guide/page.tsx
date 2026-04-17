@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'HTTPS Migration: Switch Without Losing Rankings',
-  description: "Migrating from HTTP to HTTPS is an SEO-critical change. Do it wrong and you lose rankings. Here is the step-by-step HTTPS migration process that preserves your organic traffic.",
+  description: "Migrating from HTTP to HTTPS is SEO-critical. Do it wrong and you lose rankings. The step-by-step HTTPS migration process that preserves traffic.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/https-migration-guide' },
   openGraph: {
     title: 'HTTPS Migration: Switch Without Losing Rankings',
-    description: 'Migrating from HTTP to HTTPS is an SEO-critical change. Do it wrong and you lose rankings. Here is the step-by-step HTTPS migration process that preserves your organic traffic.',
+    description: 'Migrating from HTTP to HTTPS is an SEO-critical change. The step-by-step HTTPS migration process that preserves your organic traffic.',
     url: 'https://sitemapfixer.com/blog/https-migration-guide',
     type: 'article',
     images: [{
@@ -35,7 +35,7 @@ export default function Page() {
         <span>HTTPS Migration Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"HTTPS Migration: Switch Without Losing Rankings","description":"Migrating from HTTP to HTTPS is an SEO-critical change. Do it wrong and you lose rankings. Here is the step-by-step HTTPS migration process that preserves your organic traffic.","url":"https://sitemapfixer.com/blog/https-migration-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/https-migration-guide"}}' }} />April 2025 · 7 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"HTTPS Migration: Switch Without Losing Rankings","description":"Migrating from HTTP to HTTPS is an SEO-critical change. The step-by-step HTTPS migration process that preserves your organic traffic.","url":"https://sitemapfixer.com/blog/https-migration-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/https-migration-guide"}}' }} />April 2025 · 7 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>HTTPS Migration Guide: Move to SSL Without Losing Rankings</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Validate your HTTPS sitemap configuration free</span>
@@ -63,7 +63,8 @@ export default function Page() {
             <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
             <li><a href="/blog/pagination-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pagination SEO: Handle Page 2, 3, 4 Right</a></li>
           
-            <li><a href="/learn/https-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>HTTPS SEO: Why It Matters and How to Migrate Correctly</a></li></ul>
+            <li><a href="/learn/https-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>HTTPS SEO: Why It Matters and How to Migrate Correctly</a></li>
+            <li><a href="/learn/ssl-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SSL Certificates and SEO: What You Need to Know</a></li></ul>
         </div>
     </div>
     </article>

@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'SitemapFixer - Fix Crawled Currently Not Indexed | Free Sitemap Checker',
+    default: 'Free Sitemap Checker — Fix Crawled Not Indexed',
     template: '%s | SitemapFixer',
   },
   description: 'Free AI sitemap checker. Fix crawled - currently not indexed pages in Google Search Console. Verify sitemap errors and get an SEO fix list in 60 seconds.',

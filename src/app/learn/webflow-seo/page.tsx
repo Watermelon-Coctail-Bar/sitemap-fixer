@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Webflow SEO: Optimize for Google',
-  description: "Webflow gives designers strong SEO control. Here is how to configure meta tags, sitemap, structured data, and page speed in Webflow to maximize Google rankings.",
+  description: "Webflow gives designers strong SEO control. How to configure meta tags, sitemap, structured data, and page speed to maximize Google rankings.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/webflow-seo' },
   openGraph: {
     title: 'Webflow SEO: Optimize for Google',

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Redirect SEO: 301 vs 302 & Best Practices',
-  description: "Redirects affect crawl budget, link equity, and indexing. Here is how 301 and 302 redirects work for SEO, how to avoid redirect chains, and common redirect mistakes.",
+  description: "Redirects affect crawl budget, link equity, and indexing. How 301 and 302 redirects work for SEO, how to avoid chains, and common mistakes.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/redirect-seo-guide' },
   openGraph: {
     title: 'Redirect SEO: 301 vs 302 & Best Practices',
-    description: 'Redirects affect crawl budget, link equity, and indexing. Here is how 301 and 302 redirects work for SEO, how to avoid redirect chains, and common redirect mistakes.',
+    description: 'Redirects affect crawl budget, link equity, and indexing. How 301 and 302 redirects work for SEO and how to avoid redirect chains.',
     url: 'https://sitemapfixer.com/blog/redirect-seo-guide',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>Redirect SEO Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Redirect SEO: 301 vs 302 & Best Practices","description":"Redirects affect crawl budget, link equity, and indexing. Here is how 301 and 302 redirects work for SEO, how to avoid redirect chains, and common redirect mistakes.","url":"https://sitemapfixer.com/blog/redirect-seo-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/redirect-seo-guide"}}' }} />April 2025 · 7 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Redirect SEO: 301 vs 302 & Best Practices","description":"Redirects affect crawl budget, link equity, and indexing. How 301 and 302 redirects work for SEO and how to avoid redirect chains.","url":"https://sitemapfixer.com/blog/redirect-seo-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/redirect-seo-guide"}}' }} />April 2025 · 7 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Redirect SEO Guide: 301 vs 302, Chains, and Best Practices</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Find redirect issues in your sitemap free</span>
@@ -62,7 +62,8 @@ export default function Page() {
             <li><a href="/blog/crawl-budget-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Crawl Budget Optimization: Get More Crawl Value</a></li>
             <li><a href="/blog/pagination-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Pagination SEO: Handle Page 2, 3, 4 Right</a></li>
           
-            <li><a href="/learn/redirect-chains" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Redirect Chains: How They Hurt SEO and How to Fix Them</a></li></ul>
+            <li><a href="/learn/redirect-chains" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Redirect Chains: How They Hurt SEO and How to Fix Them</a></li>
+            <li><a href="/learn/301-vs-302-redirects" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>301 vs 302 Redirects: When to Use Each for SEO</a></li></ul>
         </div>
     </div>
     </article>

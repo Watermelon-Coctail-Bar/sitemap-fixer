@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Link Building: Earn Backlinks That Move Rankings',
-  description: "Backlinks remain the strongest off-page ranking signal. Here are the link building strategies that work in 2025 - focused on earning links rather than buying or manipulating them.",
+  description: "Backlinks remain the strongest off-page ranking signal. Link building strategies that work - focused on earning links rather than buying them.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/link-building-guide' },
   openGraph: {
     title: 'Link Building: Earn Backlinks That Move Rankings',
-    description: 'Backlinks remain the strongest off-page ranking signal. Here are the link building strategies that work in 2025 - focused on earning links rather than buying or manipulating them.',
+    description: 'Backlinks remain the strongest off-page ranking signal. The link building strategies that work in 2025 - focused on earning links.',
     url: 'https://sitemapfixer.com/blog/link-building-guide',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>Link Building Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Link Building: Earn Backlinks That Move Rankings","description":"Backlinks remain the strongest off-page ranking signal. Here are the link building strategies that work in 2025 - focused on earning links rather than buying or manipulating them.","url":"https://sitemapfixer.com/blog/link-building-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/link-building-guide"}}' }} />April 2025 · 8 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Link Building: Earn Backlinks That Move Rankings","description":"Backlinks remain the strongest off-page ranking signal. The link building strategies that work in 2025 - focused on earning links.","url":"https://sitemapfixer.com/blog/link-building-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/link-building-guide"}}' }} />April 2025 · 8 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Link Building Guide: Earn Backlinks That Move Rankings</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Build the technical foundation first - free</span>

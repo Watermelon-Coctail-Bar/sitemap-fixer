@@ -1,8 +1,8 @@
 export function Footer() {
   return (
     <footer style={{ borderTop: '1px solid #e4e4ed', background: 'linear-gradient(180deg, #fafaf9 0%, #f0f0f6 100%)', padding: '64px 24px 32px' }}>
-      <div style={{ maxWidth: 960, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2.5fr 1fr 1fr 1fr', gap: 40, marginBottom: 48 }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr', gap: 32, marginBottom: 48 }}>
           <div>
             <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#0a0a0f"/><path d="M7 9h14M7 14h10M7 19h12" stroke="white" strokeWidth="2" strokeLinecap="round"/><circle cx="21" cy="19" r="3" fill="#2d5be3"/></svg>
@@ -10,27 +10,64 @@ export function Footer() {
             </a>
             <p style={{ fontSize: 13, color: '#6b6b7d', lineHeight: 1.7, marginTop: 14, maxWidth: 260 }}>AI-powered sitemap analysis. Find your sitemap, fix your SEO.</p>
             <a href="mailto:support@sitemapfixer.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: '#2d5be3', textDecoration: 'none', marginTop: 16, fontWeight: 500 }}>support@sitemapfixer.com</a>
+            <a href="/signup" style={{ display: 'inline-block', fontSize: 13, color: '#0a0a0f', background: 'transparent', border: '1px solid #e4e4ed', padding: '8px 14px', borderRadius: 8, textDecoration: 'none', marginTop: 20, fontWeight: 600 }}>Sign up free</a>
           </div>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#0a0a0f', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>Tools</div>
-            {[['Sitemap Finder', '/sitemap-finder'], ['XML Sitemap Checker', '/sitemap-checker'], ['SEO Checker', '/website-seo-checker'], ['Free SEO Audit', '/free-seo-audit'], ['Sitemap Validator', '/learn/sitemap-validator']].map(([l, h]) => (
+            {[
+              ['Sitemap Finder', '/sitemap-finder'],
+              ['XML Sitemap Checker', '/sitemap-checker'],
+              ['XML Sitemap Generator', '/xml-sitemap-generator'],
+              ['SEO Checker', '/website-seo-checker'],
+              ['Free SEO Audit', '/free-seo-audit'],
+              ['Robots.txt Checker', '/robots-txt-checker'],
+              ['Meta Tag Checker', '/meta-tag-checker'],
+              ['Canonical Checker', '/canonical-checker'],
+              ['Hreflang Tester', '/hreflang-tester'],
+            ].map(([l, h]) => (
+              <a key={h} href={h} style={{ display: 'block', fontSize: 13, color: '#6b6b7d', textDecoration: 'none', marginBottom: 10 }}>{l}</a>
+            ))}
+          </div>
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 700, color: '#0a0a0f', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>Fix Guides</div>
+            {[
+              ['Sitemap Errors', '/sitemap-errors'],
+              ['GSC Indexing Errors', '/gsc-errors'],
+              ['Fix by Platform', '/fix-sitemap-for'],
+              ['Compare Tools', '/compare'],
+              ['For Your Team', '/for'],
+            ].map(([l, h]) => (
               <a key={h} href={h} style={{ display: 'block', fontSize: 13, color: '#6b6b7d', textDecoration: 'none', marginBottom: 10 }}>{l}</a>
             ))}
           </div>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#0a0a0f', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>Learn</div>
-            {[['What is an XML Sitemap', '/learn/what-is-an-xml-sitemap'], ['Crawled Not Indexed Fix', '/learn/crawled-currently-not-indexed'], ['Why Pages Not Indexed', '/learn/why-pages-not-indexed'], ['How to Create a Sitemap', '/learn/how-to-create-a-sitemap'], ['Sitemap Best Practices', '/learn/sitemap-best-practices']].map(([l, h]) => (
+            {[
+              ['What is an XML Sitemap', '/learn/what-is-an-xml-sitemap'],
+              ['Crawled Not Indexed Fix', '/learn/crawled-currently-not-indexed'],
+              ['Why Pages Not Indexed', '/learn/why-pages-not-indexed'],
+              ['How to Create a Sitemap', '/learn/how-to-create-a-sitemap'],
+              ['Sitemap Best Practices', '/learn/sitemap-best-practices'],
+              ['Sitemap Validator', '/learn/sitemap-validator'],
+            ].map(([l, h]) => (
               <a key={h} href={h} style={{ display: 'block', fontSize: 13, color: '#6b6b7d', textDecoration: 'none', marginBottom: 10 }}>{l}</a>
             ))}
           </div>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#0a0a0f', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>Resources</div>
-            {[['Blog', '/blog'], ['Pricing', '/pricing'], ['Terms', '/terms'], ['Privacy', '/privacy']].map(([l, h]) => (
+            {[
+              ['Blog', '/blog'],
+              ['Learn Center', '/learn'],
+              ['Pricing', '/pricing'],
+              ['Sign up', '/signup'],
+              ['Terms', '/terms'],
+              ['Privacy', '/privacy'],
+            ].map(([l, h]) => (
               <a key={h} href={h} style={{ display: 'block', fontSize: 13, color: '#6b6b7d', textDecoration: 'none', marginBottom: 10 }}>{l}</a>
             ))}
           </div>
         </div>
-        <div style={{ borderTop: '1px solid #e4e4ed', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ borderTop: '1px solid #e4e4ed', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <p style={{ fontSize: 12, color: '#9999aa' }}>2026 SitemapFixer. All rights reserved.</p>
           <div style={{ display: 'flex', gap: 20 }}>
             <a href="/sitemap.xml" style={{ fontSize: 12, color: '#9999aa', textDecoration: 'none' }}>Sitemap</a>

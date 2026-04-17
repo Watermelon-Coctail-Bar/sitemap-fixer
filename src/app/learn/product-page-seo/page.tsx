@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Product Page SEO: Rank Ecommerce Pages in Google',
-  description: "Product pages are the highest-value SEO real estate on ecommerce sites. Here is how to write titles, descriptions, structured data, and content that ranks and converts.",
+  description: "Product pages are the highest-value SEO real estate on ecommerce sites. How to write titles, descriptions, structured data, and convert visitors.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/product-page-seo' },
   openGraph: {
     title: 'Product Page SEO: Rank Ecommerce Pages in Google',
-    description: 'Product pages are the highest-value SEO real estate on ecommerce sites. Here is how to write titles, descriptions, structured data, and content that ranks and converts.',
+    description: 'Product pages are the highest-value SEO real estate on ecommerce sites. How to write titles, descriptions, and schema that convert.',
     url: 'https://sitemapfixer.com/learn/product-page-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Product Page SEO: Rank Ecommerce Pages in Google","description":"Product pages are the highest-value SEO real estate on ecommerce sites. Here is how to write titles, descriptions, structured data, and content that ranks and converts.","url":"https://sitemapfixer.com/learn/product-page-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/product-page-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Product Page SEO: Rank Ecommerce Pages in Google","description":"Product pages are the highest-value SEO real estate on ecommerce sites. How to write titles, descriptions, and schema that convert.","url":"https://sitemapfixer.com/learn/product-page-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/product-page-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'SaaS SEO: How to Drive Signups from Organic Search',
-  description: "SaaS SEO has unique characteristics - long buying cycles, comparison keywords, and product-led content. Here is the strategy that works for software companies.",
+  description: "SaaS SEO has unique characteristics - long buying cycles, comparison keywords, and product-led content. The strategy that works for software.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/saas-seo' },
   openGraph: {
     title: 'SaaS SEO: How to Drive Signups from Organic Search',
@@ -63,7 +63,9 @@ export default function Page() {
             <li><a href="/learn/local-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Local SEO: How to Rank in Google Maps and Local Search</a></li>
             <li><a href="/learn/mobile-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Mobile SEO: Mobile-First Indexing and How to Pass It</a></li>
           
-            <li><a href="/learn/b2b-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>B2B SEO: How to Generate Leads from Organic Search</a></li></ul>
+            <li><a href="/learn/b2b-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>B2B SEO: How to Generate Leads from Organic Search</a></li>
+            <li><a href="/learn/seo-for-startups" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Startups: Where to Focus First</a></li>
+            <li><a href="/blog/seo-for-startups-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Startups Guide: Minimum Viable SEO Strategy</a></li></ul>
         </div>
     </div>
   );

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Mobile SEO: Mobile-First Indexing and How to Pass It',
-  description: "Google uses the mobile version of your site for indexing. Here is what mobile-first indexing means, how to check your mobile SEO, and the most common issues to fix.",
+  description: "Google uses the mobile version of your site for indexing. Learn what mobile-first indexing means, how to check mobile SEO, and common fixes.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/mobile-seo' },
   openGraph: {
     title: 'Mobile SEO: Mobile-First Indexing and How to Pass It',
-    description: 'Google uses the mobile version of your site for indexing. Here is what mobile-first indexing means, how to check your mobile SEO, and the most common issues to fix.',
+    description: 'Google uses the mobile version of your site for indexing. What mobile-first indexing means and the most common issues to fix.',
     url: 'https://sitemapfixer.com/learn/mobile-seo',
     type: 'article',
     images: [{
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Mobile SEO: Mobile-First Indexing and How to Pass It","description":"Google uses the mobile version of your site for indexing. Here is what mobile-first indexing means, how to check your mobile SEO, and the most common issues to fix.","url":"https://sitemapfixer.com/learn/mobile-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/mobile-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Mobile SEO: Mobile-First Indexing and How to Pass It","description":"Google uses the mobile version of your site for indexing. What mobile-first indexing means and the most common issues to fix.","url":"https://sitemapfixer.com/learn/mobile-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/mobile-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

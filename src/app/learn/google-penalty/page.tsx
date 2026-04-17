@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Google Penalty: Identify, Fix, and Recover',
-  description: "A Google penalty can drop your site dramatically in search rankings. Here is how to tell if you have one, what causes them, and the step-by-step recovery process.",
+  description: "A Google penalty can drop your site dramatically in search rankings. How to tell if you have one, what causes them, and the recovery process.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/google-penalty' },
   openGraph: {
     title: 'Google Penalty: Identify, Fix, and Recover',
-    description: 'A Google penalty can drop your site dramatically in search rankings. Here is how to tell if you have one, what causes them, and the step-by-step recovery process.',
+    description: 'A Google penalty can drop your site dramatically in search rankings. How to tell if you have one, what causes them, and how to recover.',
     url: 'https://sitemapfixer.com/learn/google-penalty',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Google Penalty: Identify, Fix, and Recover","description":"A Google penalty can drop your site dramatically in search rankings. Here is how to tell if you have one, what causes them, and the step-by-step recovery process.","url":"https://sitemapfixer.com/learn/google-penalty","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/google-penalty"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Google Penalty: Identify, Fix, and Recover","description":"A Google penalty can drop your site dramatically in search rankings. How to tell if you have one, what causes them, and how to recover.","url":"https://sitemapfixer.com/learn/google-penalty","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/google-penalty"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Website Speed Test: Best Free Performance Tools',
-  description: "These are the best free tools to test your website speed and Core Web Vitals. Each tool measures different things - here is which to use and what each result means.",
+  description: "The best free tools to test your website speed and Core Web Vitals. Each tool measures different things - which to use and what results mean.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/website-speed-test-tools' },
   openGraph: {
     title: 'Website Speed Test: Best Free Performance Tools',
-    description: 'These are the best free tools to test your website speed and Core Web Vitals. Each tool measures different things - here is which to use and what each result means.',
+    description: 'The best free tools to test your website speed and Core Web Vitals. Which to use for what, and what each result means.',
     url: 'https://sitemapfixer.com/blog/website-speed-test-tools',
     type: 'article',
     images: [{
@@ -35,7 +35,7 @@ export default function Page() {
         <span>Website Speed Test Tools</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Website Speed Test: Best Free Performance Tools","description":"These are the best free tools to test your website speed and Core Web Vitals. Each tool measures different things - here is which to use and what each result means.","url":"https://sitemapfixer.com/blog/website-speed-test-tools","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/website-speed-test-tools"}}' }} />April 2025 · 6 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Website Speed Test: Best Free Performance Tools","description":"The best free tools to test your website speed and Core Web Vitals. Which to use for what, and what each result means.","url":"https://sitemapfixer.com/blog/website-speed-test-tools","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/website-speed-test-tools"}}' }} />April 2025 · 6 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Website Speed Test Tools: Best Free Options for 2025</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Get your Core Web Vitals analyzed free</span>

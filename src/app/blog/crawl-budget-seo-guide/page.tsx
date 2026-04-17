@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Crawl Budget SEO: Stop Wasting Crawls on Bad Pages',
-  description: "Crawl budget limits how many pages Google crawls on your site. Here is how to stop wasting it on low-value pages and ensure your important content gets crawled.",
+  description: "Crawl budget limits how many pages Google crawls on your site. How to stop wasting it on low-value pages and ensure important content gets crawled.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/crawl-budget-seo-guide' },
   openGraph: {
     title: 'Crawl Budget SEO: Stop Wasting Crawls on Bad Pages',

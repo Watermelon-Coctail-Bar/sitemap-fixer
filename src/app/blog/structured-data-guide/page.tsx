@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Structured Data: Add Schema Markup',
-  description: "Structured data helps Google understand your content and generate rich results. Here is how to implement the most valuable schema types and validate them correctly.",
+  description: "Structured data helps Google understand your content and generate rich results. How to implement the most valuable schema types and validate them.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/structured-data-guide' },
   openGraph: {
     title: 'Structured Data: Add Schema Markup',
-    description: 'Structured data helps Google understand your content and generate rich results. Here is how to implement the most valuable schema types and validate them correctly.',
+    description: 'Structured data helps Google understand your content and generate rich results. How to implement the most valuable schema types.',
     url: 'https://sitemapfixer.com/blog/structured-data-guide',
     type: 'article',
     images: [{
@@ -35,7 +35,7 @@ export default function Page() {
         <span>Structured Data Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Structured Data: Add Schema Markup","description":"Structured data helps Google understand your content and generate rich results. Here is how to implement the most valuable schema types and validate them correctly.","url":"https://sitemapfixer.com/blog/structured-data-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/structured-data-guide"}}' }} />April 2025 · 7 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Structured Data: Add Schema Markup","description":"Structured data helps Google understand your content and generate rich results. How to implement the most valuable schema types.","url":"https://sitemapfixer.com/blog/structured-data-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/structured-data-guide"}}' }} />April 2025 · 7 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Structured Data Guide: Add Schema Markup and Earn Rich Results</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your site technical SEO free</span>

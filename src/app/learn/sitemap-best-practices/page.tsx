@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'XML Sitemap Best Practices',
-  description: 'The complete guide to XML sitemap best practices in 2025. Learn what to include, what to exclude, how to structure your sitemap, and how to maximize crawl efficiency.',
+  description: 'The complete guide to XML sitemap best practices. Learn what to include, exclude, how to structure your sitemap, and maximize crawl efficiency.',
   alternates: { canonical: 'https://sitemapfixer.com/learn/sitemap-best-practices' },
   openGraph: {
     title: 'XML Sitemap Best Practices',
-    description: 'The complete guide to XML sitemap best practices in 2025. Learn what to include, what to exclude, how to structure your sitemap, and how to maximize crawl efficiency.',
+    description: 'The complete guide to XML sitemap best practices in 2025. What to include, what to exclude, and how to maximize crawl efficiency.',
     url: 'https://sitemapfixer.com/learn/sitemap-best-practices',
     type: 'article',
     images: [{
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"XML Sitemap Best Practices","description":"The complete guide to XML sitemap best practices in 2025. Learn what to include, what to exclude, how to structure your sitemap, and how to maximize crawl efficiency.","url":"https://sitemapfixer.com/learn/sitemap-best-practices","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/sitemap-best-practices"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"XML Sitemap Best Practices","description":"The complete guide to XML sitemap best practices in 2025. What to include, what to exclude, and how to maximize crawl efficiency.","url":"https://sitemapfixer.com/learn/sitemap-best-practices","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/sitemap-best-practices"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
         {'  '}

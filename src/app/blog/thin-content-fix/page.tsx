@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Thin Content: Find It, Fix It, Recover Rankings',
-  description: "Thin content pages drag down your entire site in Google's quality assessment. Here is how to identify thin pages, which ones to fix vs remove, and how to recover.",
+  description: "Thin content pages drag down your entire site in Google's quality assessment. How to identify thin pages, which to fix vs remove, and how to recover.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/thin-content-fix' },
   openGraph: { title: 'Thin Content Fix: Identify, Remove, and Recover', url: 'https://sitemapfixer.com/blog/thin-content-fix', type: 'article',
     images: [{

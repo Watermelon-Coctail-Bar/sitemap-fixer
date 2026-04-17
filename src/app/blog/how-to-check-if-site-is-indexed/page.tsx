@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'How to Check If Your Website Is Indexed by Google',
-  description: "There are 5 ways to check if Google has indexed your pages. Here is each method, what it tells you, and what to do if important pages are missing from Google's index.",
+  description: "There are 5 ways to check if Google has indexed your pages. Each method, what it tells you, and what to do if important pages are missing.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/how-to-check-if-site-is-indexed' },
   openGraph: { title: 'How to Check If Your Website Is Indexed by Google', description: '5 methods to check Google indexing status and what to do about missing pages.', url: 'https://sitemapfixer.com/blog/how-to-check-if-site-is-indexed', type: 'article',
     images: [{

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'JavaScript SEO: Make JS Sites Crawlable',
-  description: "JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. Here is how JavaScript SEO works and how to fix common rendering problems.",
+  description: "JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. How JavaScript SEO works and how to fix problems.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/javascript-seo-guide' },
   openGraph: {
     title: 'JavaScript SEO: Make JS Sites Crawlable',
-    description: 'JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. Here is how JavaScript SEO works and how to fix common rendering problems.',
+    description: 'JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. How to fix common rendering problems.',
     url: 'https://sitemapfixer.com/blog/javascript-seo-guide',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>JavaScript SEO Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"JavaScript SEO: Make JS Sites Crawlable","description":"JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. Here is how JavaScript SEO works and how to fix common rendering problems.","url":"https://sitemapfixer.com/blog/javascript-seo-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/javascript-seo-guide"}}' }} />April 2025 · 7 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"JavaScript SEO: Make JS Sites Crawlable","description":"JavaScript-heavy sites can have serious SEO issues if content is not accessible to Googlebot. How to fix common rendering problems.","url":"https://sitemapfixer.com/blog/javascript-seo-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/javascript-seo-guide"}}' }} />April 2025 · 7 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>JavaScript SEO Guide: Make JS Sites Crawlable</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your site is fully indexable - free</span>

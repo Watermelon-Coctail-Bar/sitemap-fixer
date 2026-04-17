@@ -27,6 +27,17 @@ const ERRORS = [
   { slug: 'orphan-pages', title: 'Orphan Pages', desc: 'Pages in your sitemap with zero internal links - invisible to PageRank.' },
   { slug: 'incorrect-priority', title: 'Incorrect Priority', desc: 'All pages set to 1.0 - a meaningless signal Google ignores.' },
   { slug: 'changefreq-misuse', title: 'changefreq Misuse', desc: 'Everything set to daily when pages rarely change - reduces crawler trust.' },
+  { slug: '4xx-5xx-urls', title: '4xx / 5xx URLs', desc: 'Dead or broken pages in your sitemap returning HTTP errors to Googlebot.' },
+  { slug: 'blocked-by-robots-txt', title: 'Blocked by robots.txt', desc: 'Sitemap URLs that robots.txt disallows - contradictory signals to Google.' },
+  { slug: 'non-canonical-urls', title: 'Non-Canonical URLs', desc: 'Sitemap listing non-canonical URL variants instead of the canonical version.' },
+  { slug: 'noindex-urls', title: 'URLs with noindex', desc: 'Pages in your sitemap that also carry a noindex tag - wasted crawl budget.' },
+  { slug: 'mixed-content', title: 'Mixed Content (HTTP in HTTPS)', desc: 'HTTP URLs in an HTTPS sitemap - causes protocol mismatches and redirects.' },
+  { slug: 'missing-lastmod', title: 'Missing lastmod', desc: 'Pages without lastmod tags - Google has no signal for freshness or re-crawl priority.' },
+  { slug: 'invalid-xml-syntax', title: 'Invalid XML Syntax', desc: 'Malformed XML that breaks parsers - entire sitemap gets rejected.' },
+  { slug: 'sitemap-too-large', title: 'Sitemap Too Large', desc: 'Sitemap exceeds 50MB uncompressed or 50,000 URLs - Google ignores overflow.' },
+  { slug: 'utf8-encoding-issues', title: 'UTF-8 Encoding Issues', desc: 'Non-UTF-8 characters breaking XML parsers and causing sitemap rejection.' },
+  { slug: 'trailing-slash-inconsistency', title: 'Trailing Slash Inconsistency', desc: 'Mix of /page and /page/ URLs - creates duplicate content signals.' },
+  { slug: 'gzip-encoding-errors', title: 'Gzip Encoding Errors', desc: '.gz sitemap served with wrong Content-Type or corrupted - crawlers cannot read it.' },
 ];
 
 export default function SitemapErrorsIndex() {

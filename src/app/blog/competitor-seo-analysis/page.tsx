@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Competitor SEO Analysis: How to Find and Close the Gaps',
-  description: "Competitor SEO analysis reveals exactly what is working for your rivals. Here is how to analyze competitor keywords, backlinks, and content to find opportunities to outrank them.",
+  description: "Competitor SEO analysis reveals what is working for your rivals. How to analyze competitor keywords, backlinks, and content to find opportunities.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/competitor-seo-analysis' },
   openGraph: {
     title: 'Competitor SEO Analysis: How to Find and Close the Gaps',
-    description: 'Competitor SEO analysis reveals exactly what is working for your rivals. Here is how to analyze competitor keywords, backlinks, and content to find opportunities to outrank them.',
+    description: 'Competitor SEO analysis reveals exactly what is working for your rivals. How to analyze competitor keywords, backlinks, and content.',
     url: 'https://sitemapfixer.com/blog/competitor-seo-analysis',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>Competitor SEO Analysis</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Competitor SEO Analysis: How to Find and Close the Gaps","description":"Competitor SEO analysis reveals exactly what is working for your rivals. Here is how to analyze competitor keywords, backlinks, and content to find opportunities to outrank them.","url":"https://sitemapfixer.com/blog/competitor-seo-analysis","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/competitor-seo-analysis"}}' }} />April 2025 · 8 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Competitor SEO Analysis: How to Find and Close the Gaps","description":"Competitor SEO analysis reveals exactly what is working for your rivals. How to analyze competitor keywords, backlinks, and content.","url":"https://sitemapfixer.com/blog/competitor-seo-analysis","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/competitor-seo-analysis"}}' }} />April 2025 · 8 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Competitor SEO Analysis: Find and Close the Gaps</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your technical foundation free</span>
@@ -61,6 +61,7 @@ export default function Page() {
             <li><a href="/blog/featured-snippets-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Featured Snippets: Win Position Zero in Google</a></li>
             <li><a href="/blog/eeat-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>E-E-A-T Guide: Build Expertise, Authority, and Trust</a></li>
             <li><a href="/blog/seo-for-bloggers" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Bloggers: Get Your Posts Ranked on Google</a></li>
+            <li><a href="/learn/seo-reporting" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Reporting: Dashboards and KPIs That Matter</a></li>
           </ul>
         </div>
     </div>

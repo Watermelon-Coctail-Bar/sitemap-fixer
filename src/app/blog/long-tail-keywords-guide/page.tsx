@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Long-Tail Keywords: Find and Rank for Queries',
-  description: "Long-tail keywords have lower volume but higher intent and lower competition. Here is how to find them, target them, and build organic traffic that converts.",
+  description: "Long-tail keywords have lower volume but higher intent and lower competition. How to find them, target them, and build traffic that converts.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/long-tail-keywords-guide' },
   openGraph: {
     title: 'Long-Tail Keywords: Find and Rank for Queries',

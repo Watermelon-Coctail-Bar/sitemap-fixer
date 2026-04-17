@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Technical SEO Audit: Find and Fix Every Issue',
-  description: "A technical SEO audit finds the issues preventing your site from ranking. Here is a step-by-step process covering crawlability, indexing, speed, and structured data.",
+  description: "A technical SEO audit finds issues preventing your site from ranking. Step-by-step process covering crawlability, indexing, speed, and schema.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/technical-seo-audit-guide' },
   openGraph: {
     title: 'Technical SEO Audit: Find and Fix Every Issue',
-    description: 'A technical SEO audit finds the issues preventing your site from ranking. Here is a step-by-step process covering crawlability, indexing, speed, and structured data.',
+    description: 'A technical SEO audit finds the issues preventing your site from ranking. A step-by-step process covering crawlability, indexing, and speed.',
     url: 'https://sitemapfixer.com/blog/technical-seo-audit-guide',
     type: 'article',
     images: [{
@@ -35,7 +35,7 @@ export default function Page() {
         <span>Technical SEO Audit Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Technical SEO Audit: Find and Fix Every Issue","description":"A technical SEO audit finds the issues preventing your site from ranking. Here is a step-by-step process covering crawlability, indexing, speed, and structured data.","url":"https://sitemapfixer.com/blog/technical-seo-audit-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/technical-seo-audit-guide"}}' }} />April 2025 · 10 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Technical SEO Audit: Find and Fix Every Issue","description":"A technical SEO audit finds the issues preventing your site from ranking. A step-by-step process covering crawlability, indexing, and speed.","url":"https://sitemapfixer.com/blog/technical-seo-audit-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/technical-seo-audit-guide"}}' }} />April 2025 · 10 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Technical SEO Audit Guide: Find Every Issue in 6 Steps</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Automate steps 1-2 free with SitemapFixer</span>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Pagination SEO: Handle Paginated Content Right',
-  description: "Pagination creates multiple pages for the same content - blog archives, product listings, search results. Here is the correct SEO approach and what to avoid.",
+  description: "Pagination creates multiple pages for the same content - blog archives, product listings, search results. The correct SEO approach for pagination.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/pagination-seo' },
   openGraph: {
     title: 'Pagination SEO: Handle Paginated Content Right',

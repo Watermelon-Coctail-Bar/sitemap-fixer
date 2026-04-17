@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: "Crawled - Currently Not Indexed: How to Fix (2026 Guide)",
-  description: "How to fix crawled - currently not indexed in Google Search Console. Step-by-step guide for crawled but not indexed, crawled currently not indexed fix, and page is not indexed issues.",
+  title: "Crawled - Currently Not Indexed: How to Fix",
+  description: "How to fix crawled - currently not indexed in Google Search Console. Step-by-step guide for crawled but not indexed and page indexing issues.",
   keywords: 'crawled - currently not indexed, crawled currently not indexed, crawled but not indexed, how to fix crawled - currently not indexed, crawled currently not indexed fix, crawled not indexed, google crawled but not indexed, page is not indexed crawled currently not indexed, how to fix crawled but not indexed, discovered - currently not indexed, crawled - currently not indexed fix',
   alternates: { canonical: 'https://sitemapfixer.com/learn/crawled-currently-not-indexed' },
   openGraph: {
     title: 'Crawled - Currently Not Indexed: How to Fix (2026 Guide)',
-    description: 'How to fix crawled - currently not indexed. Step-by-step crawled currently not indexed fix for Google Search Console. Works for crawled but not indexed and discovered not indexed too.',
+    description: 'How to fix crawled - currently not indexed. Step-by-step fix for Google Search Console, also covers discovered not indexed.',
     url: 'https://sitemapfixer.com/learn/crawled-currently-not-indexed',
     type: 'article',
     images: [{
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Crawled - Currently Not Indexed: How to Fix (2026 Guide)","description":"How to fix crawled - currently not indexed in Google Search Console. Step-by-step guide for crawled but not indexed, crawled currently not indexed fix, and page is not indexed issues.","url":"https://sitemapfixer.com/learn/crawled-currently-not-indexed","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/crawled-currently-not-indexed"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Crawled - Currently Not Indexed: How to Fix","description":"How to fix crawled - currently not indexed in Google Search Console. Step-by-step guide for crawled but not indexed, crawled currently not indexed fix, and page is not indexed issues.","url":"https://sitemapfixer.com/learn/crawled-currently-not-indexed","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/crawled-currently-not-indexed"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

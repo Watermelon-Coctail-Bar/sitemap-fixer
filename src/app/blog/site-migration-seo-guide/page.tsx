@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Site Migration SEO: Move Without Losing Rankings',
-  description: "Site migrations are one of the most common causes of major ranking drops. Here is the pre and post-migration SEO checklist that protects your organic traffic.",
+  description: "Site migrations are one of the most common causes of ranking drops. The pre and post-migration SEO checklist that protects your organic traffic.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/site-migration-seo-guide' },
   openGraph: {
     title: 'Site Migration SEO: Move Without Losing Rankings',

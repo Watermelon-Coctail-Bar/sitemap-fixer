@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'XML Sitemap Submission: Submit to Google & Bing',
-  description: "Submitting your sitemap helps Google and Bing discover and index your pages faster. Here is how to submit to Google Search Console and Bing Webmaster Tools.",
+  description: "Submitting your sitemap helps Google and Bing discover and index pages faster. How to submit to Google Search Console and Bing Webmaster Tools.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/xml-sitemap-submission' },
   openGraph: {
     title: 'XML Sitemap Submission: Submit to Google & Bing',

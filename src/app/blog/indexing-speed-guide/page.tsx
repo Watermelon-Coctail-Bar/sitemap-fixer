@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Indexing Speed: Get Pages Indexed Faster',
-  description: "New pages can take days or weeks to appear in Google. Here is how to speed up indexing using sitemaps, URL inspection, internal links, and crawl budget optimization.",
+  description: "New pages can take days or weeks to appear in Google. How to speed up indexing using sitemaps, URL inspection, internal links, and crawl budget.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/indexing-speed-guide' },
   openGraph: {
     title: 'Indexing Speed: Get Pages Indexed Faster',
-    description: 'New pages can take days or weeks to appear in Google. Here is how to speed up indexing using sitemaps, URL inspection, internal links, and crawl budget optimization.',
+    description: 'New pages can take days or weeks to appear in Google. How to speed up indexing using sitemaps, URL inspection, and internal links.',
     url: 'https://sitemapfixer.com/blog/indexing-speed-guide',
     type: 'article',
     images: [{
@@ -35,7 +35,7 @@ export default function Page() {
         <span>Indexing Speed Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Indexing Speed: Get Pages Indexed Faster","description":"New pages can take days or weeks to appear in Google. Here is how to speed up indexing using sitemaps, URL inspection, internal links, and crawl budget optimization.","url":"https://sitemapfixer.com/blog/indexing-speed-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/indexing-speed-guide"}}' }} />April 2025 · 7 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Indexing Speed: Get Pages Indexed Faster","description":"New pages can take days or weeks to appear in Google. How to speed up indexing using sitemaps, URL inspection, and internal links.","url":"https://sitemapfixer.com/blog/indexing-speed-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/indexing-speed-guide"}}' }} />April 2025 · 7 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Indexing Speed Guide: Get Pages into Google Faster</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Submit your sitemap and check indexing free</span>

@@ -75,7 +75,8 @@ export default function Page() {
             <li><a href="/learn/squarespace-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Squarespace Sitemap: How It Works and Common Fixes</a></li>
             <li><a href="/learn/webflow-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Webflow Sitemap: How It Works and How to Submit It</a></li>
           
-            <li><a href="/learn/drupal-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Drupal Sitemap: XML Sitemap Module Setup Guide</a></li></ul>
+            <li><a href="/learn/drupal-sitemap" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Drupal Sitemap: XML Sitemap Module Setup Guide</a></li>
+            <li><a href="/fix-sitemap-for/rails" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Fix Sitemap for Ruby on Rails</a></li></ul>
         </div>
     </div>
   );

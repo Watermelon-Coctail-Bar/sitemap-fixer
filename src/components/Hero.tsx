@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-interface HeroProps { onSubmit: (domain: string) => void; loading: boolean; variant?: 'default' | 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'xml-sitemap-generator' | 'free-seo-audit'; }
+interface HeroProps { onSubmit: (domain: string) => void; loading: boolean; variant?: 'default' | 'sitemap-finder' | 'sitemap-checker' | 'website-seo-checker' | 'xml-sitemap-generator' | 'free-seo-audit' | 'robots-txt-checker' | 'meta-tag-checker' | 'canonical-checker' | 'hreflang-tester'; }
 
 const COPY = {
   default: { eyebrow: 'Free Sitemap Checker & Indexing Fix', headline: 'Your pages are crawled\nbut not indexed. Fix it.', sub: 'Crawled — currently not indexed? Our AI sitemap checker finds exactly why Google won\'t index your pages and gives you a prioritized fix list in 60 seconds.', cta: 'Analyze My Site Free', placeholder: 'yourdomain.com' },
@@ -10,6 +10,10 @@ const COPY = {
         'xml-sitemap-generator': { eyebrow: 'XML Sitemap Generator', headline: 'Analyze your sitemap.\nGet exact fixes.', sub: 'Enter your domain — we find your XML sitemap, parse every URL, check for crawled currently not indexed issues, and generate an AI-powered action plan.', cta: 'Analyze Sitemap', placeholder: 'yourdomain.com' },
           'free-seo-audit': { eyebrow: 'Free SEO Audit', headline: 'Your free SEO audit\nin 60 seconds.', sub: 'No forms. No email required. Find crawled but not indexed pages, sitemap errors, and webpage indexing issues. Get a prioritized fix list based on your actual site structure.', cta: 'Run Free Audit', placeholder: 'yourdomain.com' },
             'website-seo-checker': { eyebrow: 'Website SEO Checker', headline: 'Your site has SEO\ngaps. Find them.', sub: 'Stop guessing what is wrong with your SEO. Find crawled currently not indexed pages, verify your sitemap, and get a prioritized action plan from our AI.', cta: 'Check SEO', placeholder: 'yourdomain.com' },
+            'robots-txt-checker': { eyebrow: 'Robots.txt Checker', headline: 'Check your robots.txt.\nFind blocking errors.', sub: 'Free robots.txt validator. We parse your robots.txt, validate its syntax, and cross-check every Disallow rule against your sitemap to find URLs you are accidentally blocking.', cta: 'Check Robots.txt', placeholder: 'yourdomain.com' },
+            'meta-tag-checker': { eyebrow: 'Meta Tag Checker', headline: 'Check your meta tags.\nAcross every page.', sub: 'Free meta tag checker. We scan every page in your sitemap and flag missing meta descriptions, duplicate titles, broken canonicals, and Open Graph issues - with a ranked fix list.', cta: 'Check Meta Tags', placeholder: 'yourdomain.com' },
+            'canonical-checker': { eyebrow: 'Canonical Tag Checker', headline: 'Check every canonical.\nFix duplicate content.', sub: 'Free canonical tag checker. We verify the canonical tag on every page in your sitemap, detect chains, protocol mismatches, and conflicting canonicals that hurt SEO.', cta: 'Check Canonicals', placeholder: 'yourdomain.com' },
+            'hreflang-tester': { eyebrow: 'Hreflang Tester', headline: 'Test your hreflang.\nCatch every error.', sub: 'Free hreflang tester for international SEO. Validate return links, detect missing x-default, flag wrong language codes, and fix asymmetric hreflang across your multi-regional site.', cta: 'Test Hreflang', placeholder: 'yourdomain.com' },
             };
 
             const EXAMPLES = ['stripe.com', 'linear.app', 'vercel.com', 'notion.so'];

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Local Citations: Build NAP Consistency for SEO',
-  description: "Local citations are mentions of your business name, address, and phone number across the web. Here is how to build and audit citations for local SEO rankings.",
+  description: "Local citations are mentions of your business name, address, and phone number across the web. How to build and audit citations for local SEO.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/local-citations-guide' },
   openGraph: {
     title: 'Local Citations: Build NAP Consistency for SEO',

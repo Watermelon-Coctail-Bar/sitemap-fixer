@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Social Media SEO: Do Social Signals Matter?',
-  description: "Social media does not directly boost rankings but creates powerful indirect SEO effects. Here is how social media and SEO work together to drive organic growth.",
+  description: "Social media does not directly boost rankings but creates powerful indirect SEO effects. How social media and SEO work together for organic growth.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/social-media-seo' },
   openGraph: {
     title: 'Social Media SEO: Do Social Signals Matter?',

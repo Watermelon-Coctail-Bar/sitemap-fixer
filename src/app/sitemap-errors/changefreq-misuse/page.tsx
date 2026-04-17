@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'changefreq Misuse in Sitemap: Fix Guide',
-  description: 'Is your sitemap using changefreq correctly? Setting everything to "daily" or "always" is a common mistake that hurts crawl efficiency. Learn the correct approach.',
+  description: 'Is your sitemap using changefreq correctly? Setting everything to "daily" or "always" hurts crawl efficiency. Learn the correct approach.',
   alternates: { canonical: 'https://sitemapfixer.com/sitemap-errors/changefreq-misuse' },
   openGraph: {
     title: 'changefreq Misuse in Sitemap - Fix & Best Practices',

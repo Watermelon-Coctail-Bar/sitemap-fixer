@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'SEO Audit Checklist: 25 Checks to Run on Any Website',
-  description: "A complete SEO audit checklist covering technical, on-page, and off-page factors. Run these 25 checks to find what is hurting your rankings and get a prioritized fix list.",
+  description: "A complete SEO audit checklist covering technical, on-page, and off-page factors. Run these 25 checks to find what is hurting your rankings.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/seo-audit-checklist' },
   openGraph: {
     title: 'SEO Audit Checklist: 25 Checks to Run on Any Website',
-    description: 'A complete SEO audit checklist covering technical, on-page, and off-page factors. Run these 25 checks to find what is hurting your rankings and get a prioritized fix list.',
+    description: 'A complete SEO audit checklist covering technical, on-page, and off-page factors. Run these 25 checks to find ranking issues.',
     url: 'https://sitemapfixer.com/learn/seo-audit-checklist',
     type: 'article',
     images: [{
@@ -68,7 +68,7 @@ const categories = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Audit Checklist: 25 Checks to Run on Any Website","description":"A complete SEO audit checklist covering technical, on-page, and off-page factors. Run these 25 checks to find what is hurting your rankings and get a prioritized fix list.","url":"https://sitemapfixer.com/learn/seo-audit-checklist","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/seo-audit-checklist"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Audit Checklist: 25 Checks to Run on Any Website","description":"A complete SEO audit checklist covering technical, on-page, and off-page factors. Run these 25 checks to find ranking issues.","url":"https://sitemapfixer.com/learn/seo-audit-checklist","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/seo-audit-checklist"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

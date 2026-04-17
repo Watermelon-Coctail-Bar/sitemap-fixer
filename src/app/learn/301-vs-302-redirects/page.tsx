@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '301 vs 302 Redirects: When to Use Each',
-  description: "301 is permanent, 302 is temporary. Using the wrong one costs you PageRank and confuses Google. Here is when to use each type and what happens to SEO value.",
+  description: "301 is permanent, 302 is temporary. Using the wrong one costs you PageRank and confuses Google. When to use each type and what happens to SEO.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/301-vs-302-redirects' },
   openGraph: {
     title: '301 vs 302 Redirects: When to Use Each',

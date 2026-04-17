@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Next.js Sitemap: App Router and Pages Router',
-  description: "How to generate an XML sitemap in Next.js using the built-in sitemap.ts file (App Router) or the next-sitemap package (Pages Router). With working code examples.",
+  description: "How to generate an XML sitemap in Next.js using the built-in sitemap.ts file (App Router) or the next-sitemap package. With working code examples.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/nextjs-sitemap' },
   openGraph: {
     title: 'Next.js Sitemap: App Router and Pages Router',
-    description: 'How to generate an XML sitemap in Next.js using the built-in sitemap.ts file (App Router) or the next-sitemap package (Pages Router). With working code examples.',
+    description: 'How to generate an XML sitemap in Next.js using the built-in sitemap.ts file (App Router) or the next-sitemap package (Pages Router).',
     url: 'https://sitemapfixer.com/learn/nextjs-sitemap',
     type: 'article',
     images: [{
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Next.js Sitemap: App Router and Pages Router","description":"How to generate an XML sitemap in Next.js using the built-in sitemap.ts file (App Router) or the next-sitemap package (Pages Router). With working code examples.","url":"https://sitemapfixer.com/learn/nextjs-sitemap","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/nextjs-sitemap"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Next.js Sitemap: App Router and Pages Router","description":"How to generate an XML sitemap in Next.js using the built-in sitemap.ts file (App Router) or the next-sitemap package (Pages Router).","url":"https://sitemapfixer.com/learn/nextjs-sitemap","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/nextjs-sitemap"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

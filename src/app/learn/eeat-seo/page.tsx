@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'E-E-A-T SEO: Build Expertise and Trust',
-  description: "Google's E-E-A-T framework evaluates the quality of content creators and websites. Here is what it means, how it affects rankings, and practical ways to improve your E-E-A-T signals.",
+  description: "Google's E-E-A-T framework evaluates content quality. What it means, how it affects rankings, and practical ways to improve your E-E-A-T signals.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/eeat-seo' },
   openGraph: {
     title: 'E-E-A-T SEO: Build Expertise and Trust',

@@ -65,7 +65,8 @@ export default function Page() {
             <li><a href="/learn/page-speed-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed Optimization: Make Your Site Faster</a></li>
             <li><a href="/learn/internal-linking" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Internal Linking for SEO: Complete Strategy Guide</a></li>
           
-            <li><a href="/learn/podcast-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Podcast SEO: How to Get Your Podcast Found in Search</a></li></ul>
+            <li><a href="/learn/podcast-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Podcast SEO: How to Get Your Podcast Found in Search</a></li>
+            <li><a href="/learn/schema-errors-fix" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How to Fix Schema Markup Errors in Google Search Console</a></li></ul>
         </div>
     </div>
   );

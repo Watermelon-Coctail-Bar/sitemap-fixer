@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Podcast SEO: How to Get Your Podcast Found in Search',
-  description: "Podcast SEO means ranking your episodes in Google Search, Apple Podcasts, and Spotify. Here is how show notes, transcripts, and structured data maximize your discoverability.",
+  description: "Podcast SEO means ranking your episodes in Google Search, Apple Podcasts, and Spotify. How show notes, transcripts, and structured data help.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/podcast-seo' },
   openGraph: {
     title: 'Podcast SEO: How to Get Your Podcast Found in Search',
-    description: 'Podcast SEO means ranking your episodes in Google Search, Apple Podcasts, and Spotify. Here is how show notes, transcripts, and structured data maximize your discoverability.',
+    description: 'Podcast SEO means ranking your episodes in Google Search, Apple Podcasts, and Spotify. How show notes, transcripts, and schema help.',
     url: 'https://sitemapfixer.com/learn/podcast-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Podcast SEO: How to Get Your Podcast Found in Search","description":"Podcast SEO means ranking your episodes in Google Search, Apple Podcasts, and Spotify. Here is how show notes, transcripts, and structured data maximize your discoverability.","url":"https://sitemapfixer.com/learn/podcast-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/podcast-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Podcast SEO: How to Get Your Podcast Found in Search","description":"Podcast SEO means ranking your episodes in Google Search, Apple Podcasts, and Spotify. How show notes, transcripts, and schema help.","url":"https://sitemapfixer.com/learn/podcast-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/podcast-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

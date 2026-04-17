@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Mobile-First Indexing: How to Prepare Your Site',
-  description: "Google uses the mobile version of your site for indexing and ranking. Here is what mobile-first indexing means for your SEO and the exact checks to run on your site.",
+  description: "Google uses the mobile version of your site for indexing and ranking. What mobile-first indexing means for SEO and the checks to run on your site.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/mobile-first-indexing-guide' },
   openGraph: {
     title: 'Mobile-First Indexing: How to Prepare Your Site',
-    description: 'Google uses the mobile version of your site for indexing and ranking. Here is what mobile-first indexing means for your SEO and the exact checks to run on your site.',
+    description: 'Google uses the mobile version of your site for indexing and ranking. What mobile-first indexing means and checks to run on your site.',
     url: 'https://sitemapfixer.com/learn/mobile-first-indexing-guide',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Mobile-First Indexing: How to Prepare Your Site","description":"Google uses the mobile version of your site for indexing and ranking. Here is what mobile-first indexing means for your SEO and the exact checks to run on your site.","url":"https://sitemapfixer.com/learn/mobile-first-indexing-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/mobile-first-indexing-guide"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Mobile-First Indexing: How to Prepare Your Site","description":"Google uses the mobile version of your site for indexing and ranking. What mobile-first indexing means and checks to run on your site.","url":"https://sitemapfixer.com/learn/mobile-first-indexing-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/mobile-first-indexing-guide"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

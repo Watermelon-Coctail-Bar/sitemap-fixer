@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Meta Descriptions: How to Write Them for SEO',
-  description: "Meta descriptions don't directly affect rankings but they determine whether users click your result. Here is how to write them, how long they should be, and what Google does with them.",
+  description: "Meta descriptions don't directly affect rankings but determine whether users click. How to write them, ideal length, and what Google does with them.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/meta-description-seo' },
   openGraph: {
     title: 'Meta Descriptions: How to Write Them for SEO',

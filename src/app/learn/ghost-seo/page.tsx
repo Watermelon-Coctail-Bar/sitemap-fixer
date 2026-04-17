@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Ghost SEO: Optimize Your Publication',
-  description: "Ghost is built with SEO in mind. Here is how to configure Ghost meta tags, use its automatic sitemap, set up structured data, and optimize for Google rankings.",
+  description: "Ghost is built with SEO in mind. How to configure Ghost meta tags, use its automatic sitemap, set up structured data, and optimize for Google.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/ghost-seo' },
   openGraph: {
     title: 'Ghost SEO: Optimize Your Publication',

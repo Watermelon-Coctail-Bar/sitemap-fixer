@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Google Core Update Recovery: Recover Rankings',
-  description: "A Google core update dropped your rankings. Here is how to diagnose exactly what was targeted, fix it, and recover - plus realistic timelines for what to expect.",
+  description: "A Google core update dropped your rankings. How to diagnose what was targeted, fix it, and recover - plus realistic timelines for recovery.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/google-core-update-recovery' },
   openGraph: {
     title: 'Google Core Update Recovery: Recover Rankings',
-    description: 'A Google core update dropped your rankings. Here is how to diagnose exactly what was targeted, fix it, and recover - plus realistic timelines for what to expect.',
+    description: 'A Google core update dropped your rankings. How to diagnose what was targeted, fix it, and recover - with realistic timelines.',
     url: 'https://sitemapfixer.com/blog/google-core-update-recovery',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>Google Core Update Recovery</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Google Core Update Recovery: Recover Rankings","description":"A Google core update dropped your rankings. Here is how to diagnose exactly what was targeted, fix it, and recover - plus realistic timelines for what to expect.","url":"https://sitemapfixer.com/blog/google-core-update-recovery","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/google-core-update-recovery"}}' }} />April 2025 · 8 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Google Core Update Recovery: Recover Rankings","description":"A Google core update dropped your rankings. How to diagnose what was targeted, fix it, and recover - with realistic timelines.","url":"https://sitemapfixer.com/blog/google-core-update-recovery","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/google-core-update-recovery"}}' }} />April 2025 · 8 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Google Core Update Recovery: A Step-by-Step Guide</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your site health and indexing free</span>
@@ -62,7 +62,8 @@ export default function Page() {
             <li><a href="/learn/technical-seo-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Technical SEO Checklist 2025</a></li>
             <li><a href="/learn/seo-audit-checklist" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO Audit Checklist: 25 Checks to Run on Any Website</a></li>
           
-            <li><a href="/learn/google-algorithm-updates" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Algorithm Updates: History & Impact</a></li></ul>
+            <li><a href="/learn/google-algorithm-updates" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Algorithm Updates: History & Impact</a></li>
+            <li><a href="/learn/google-penalty" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Google Penalty: How to Identify and Recover From One</a></li></ul>
         </div>
     </div>
     </article>

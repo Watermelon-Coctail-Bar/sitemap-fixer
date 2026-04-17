@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Internal Linking Strategy: Build Site Authority',
-  description: "Internal links pass authority, help Google discover content, and guide users to conversion pages. Here is the exact internal linking strategy that maximizes all three.",
+  description: "Internal links pass authority, help Google discover content, and guide users to conversion pages. The exact internal linking strategy for all three.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/internal-linking-strategy' },
   openGraph: { title: 'Internal Linking Strategy Guide', description: 'Build authority with strategic internal links across your site.', url: 'https://sitemapfixer.com/blog/internal-linking-strategy', type: 'article',
     images: [{

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'SEO for Bloggers: Get Your Posts Ranked on Google',
-  description: "Blog SEO turns your writing into organic traffic. Here is the essential SEO process for every blog post - from keyword research to optimization to promotion.",
+  description: "Blog SEO turns your writing into organic traffic. The essential SEO process for every blog post - from keyword research to optimization.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-for-bloggers' },
   openGraph: {
     title: 'SEO for Bloggers: Get Your Posts Ranked on Google',

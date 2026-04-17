@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'SEO ROI: How to Measure Return on SEO Investment',
-  description: "SEO ROI is measurable but requires connecting rankings to revenue. Here is how to calculate SEO return on investment and set realistic expectations for stakeholders.",
+  description: "SEO ROI is measurable but requires connecting rankings to revenue. How to calculate SEO return on investment and set expectations for stakeholders.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-roi-calculation' },
   openGraph: {
     title: 'SEO ROI: How to Measure Return on SEO Investment',
-    description: 'SEO ROI is measurable but requires connecting rankings to revenue. Here is how to calculate SEO return on investment and set realistic expectations for stakeholders.',
+    description: 'SEO ROI is measurable but requires connecting rankings to revenue. How to calculate SEO return on investment for stakeholders.',
     url: 'https://sitemapfixer.com/blog/seo-roi-calculation',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>SEO ROI Calculation</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO ROI: How to Measure Return on SEO Investment","description":"SEO ROI is measurable but requires connecting rankings to revenue. Here is how to calculate SEO return on investment and set realistic expectations for stakeholders.","url":"https://sitemapfixer.com/blog/seo-roi-calculation","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-roi-calculation"}}' }} />April 2025 · 7 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO ROI: How to Measure Return on SEO Investment","description":"SEO ROI is measurable but requires connecting rankings to revenue. How to calculate SEO return on investment for stakeholders.","url":"https://sitemapfixer.com/blog/seo-roi-calculation","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-roi-calculation"}}' }} />April 2025 · 7 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>SEO ROI Calculation: How to Measure Your SEO Return</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your technical SEO foundation free</span>

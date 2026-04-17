@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'International SEO: Target Multiple Countries',
-  description: "International SEO ensures Google shows the right version of your site to users in different countries. Here is how hreflang, ccTLDs, subdirectories, and subdomains each work.",
+  description: "International SEO ensures Google shows the right version of your site to users in different countries. How hreflang, ccTLDs, and subdirectories work.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/international-seo' },
   openGraph: {
     title: 'International SEO: Target Multiple Countries',
-    description: 'International SEO ensures Google shows the right version of your site to users in different countries. Here is how hreflang, ccTLDs, subdirectories, and subdomains each work.',
+    description: 'International SEO ensures Google shows the right version of your site to users in different countries. How hreflang and ccTLDs work.',
     url: 'https://sitemapfixer.com/learn/international-seo',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"International SEO: Target Multiple Countries","description":"International SEO ensures Google shows the right version of your site to users in different countries. Here is how hreflang, ccTLDs, subdirectories, and subdomains each work.","url":"https://sitemapfixer.com/learn/international-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/international-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"International SEO: Target Multiple Countries","description":"International SEO ensures Google shows the right version of your site to users in different countries. How hreflang and ccTLDs work.","url":"https://sitemapfixer.com/learn/international-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/international-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}

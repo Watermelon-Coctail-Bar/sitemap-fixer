@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'SEO for Startups: Minimum Viable SEO Strategy',
-  description: "Startups have limited resources. This is the minimum viable SEO strategy for new sites - what to prioritize in the first 6 months to build organic traction without wasting effort.",
+  description: "Startups have limited resources. The minimum viable SEO strategy for new sites - what to prioritize in the first 6 months to build organic traction.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-for-startups-guide' },
   openGraph: {
     title: 'SEO for Startups: Minimum Viable SEO Strategy',
-    description: 'Startups have limited resources. This is the minimum viable SEO strategy for new sites - what to prioritize in the first 6 months to build organic traction without wasting effort.',
+    description: 'Startups have limited resources. The minimum viable SEO strategy for new sites - what to prioritize in the first 6 months.',
     url: 'https://sitemapfixer.com/blog/seo-for-startups-guide',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>SEO for Startups</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO for Startups: Minimum Viable SEO Strategy","description":"Startups have limited resources. This is the minimum viable SEO strategy for new sites - what to prioritize in the first 6 months to build organic traction without wasting effort.","url":"https://sitemapfixer.com/blog/seo-for-startups-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-for-startups-guide"}}' }} />April 2025 · 8 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO for Startups: Minimum Viable SEO Strategy","description":"Startups have limited resources. The minimum viable SEO strategy for new sites - what to prioritize in the first 6 months.","url":"https://sitemapfixer.com/blog/seo-for-startups-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-for-startups-guide"}}' }} />April 2025 · 8 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>SEO for Startups: Minimum Viable Strategy for New Sites</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Start with your technical foundation - free</span>
@@ -63,7 +63,9 @@ export default function Page() {
             <li><a href="/blog/video-seo-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Video SEO: Rank Videos on Google and YouTube</a></li>
             <li><a href="/blog/canonical-url-guide" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Canonical URL: What It Is and How to Set It Correctly</a></li>
           
-            <li><a href="/blog/how-long-does-seo-take" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How Long Does SEO Take? An Honest Timeline</a></li></ul>
+            <li><a href="/blog/how-long-does-seo-take" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>How Long Does SEO Take? An Honest Timeline</a></li>
+            <li><a href="/learn/seo-for-startups" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SEO for Startups: Where to Focus First</a></li>
+            <li><a href="/learn/saas-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SaaS SEO: How to Drive Signups from Organic Search</a></li></ul>
         </div>
     </div>
     </article>

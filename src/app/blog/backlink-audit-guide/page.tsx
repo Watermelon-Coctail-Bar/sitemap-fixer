@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Backlink Audit: Evaluate and Clean Your Links',
-  description: "A backlink audit identifies your valuable links and harmful ones. Here is how to audit your link profile, disavow toxic links, and use link data to improve your SEO.",
+  description: "A backlink audit identifies your valuable links and harmful ones. How to audit your link profile, disavow toxic links, and improve your SEO.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/backlink-audit-guide' },
   openGraph: {
     title: 'Backlink Audit: Evaluate and Clean Your Links',
-    description: 'A backlink audit identifies your valuable links and harmful ones. Here is how to audit your link profile, disavow toxic links, and use link data to improve your SEO.',
+    description: 'A backlink audit identifies your valuable links and harmful ones. How to audit your link profile, disavow toxic links, and improve SEO.',
     url: 'https://sitemapfixer.com/blog/backlink-audit-guide',
     type: 'article',
     images: [{
@@ -34,7 +34,7 @@ export default function Page() {
         <span>Backlink Audit Guide</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Backlink Audit: Evaluate and Clean Your Links","description":"A backlink audit identifies your valuable links and harmful ones. Here is how to audit your link profile, disavow toxic links, and use link data to improve your SEO.","url":"https://sitemapfixer.com/blog/backlink-audit-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/backlink-audit-guide"}}' }} />April 2025 · 7 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Backlink Audit: Evaluate and Clean Your Links","description":"A backlink audit identifies your valuable links and harmful ones. How to audit your link profile, disavow toxic links, and improve SEO.","url":"https://sitemapfixer.com/blog/backlink-audit-guide","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/backlink-audit-guide"}}' }} />April 2025 · 7 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Backlink Audit Guide: Evaluate and Clean Your Link Profile</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your technical SEO alongside links - free</span>

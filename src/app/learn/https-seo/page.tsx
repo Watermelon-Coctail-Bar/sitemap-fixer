@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'HTTPS SEO: Why It Matters and How to Migrate Correctly',
-  description: "HTTPS is a confirmed Google ranking signal. Here is how HTTPS affects SEO, how to migrate from HTTP to HTTPS without losing rankings, and common migration mistakes.",
+  description: "HTTPS is a confirmed Google ranking signal. How HTTPS affects SEO, how to migrate from HTTP without losing rankings, and common migration mistakes.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/https-seo' },
   openGraph: {
     title: 'HTTPS SEO: Why It Matters and How to Migrate Correctly',
-    description: 'HTTPS is a confirmed Google ranking signal. Here is how HTTPS affects SEO, how to migrate from HTTP to HTTPS without losing rankings, and common migration mistakes.',
+    description: 'HTTPS is a confirmed Google ranking signal. How it affects SEO, how to migrate from HTTP without losing rankings, and common mistakes.',
     url: 'https://sitemapfixer.com/learn/https-seo',
     type: 'article',
     images: [{
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"HTTPS SEO: Why It Matters and How to Migrate Correctly","description":"HTTPS is a confirmed Google ranking signal. Here is how HTTPS affects SEO, how to migrate from HTTP to HTTPS without losing rankings, and common migration mistakes.","url":"https://sitemapfixer.com/learn/https-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/https-seo"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"HTTPS SEO: Why It Matters and How to Migrate Correctly","description":"HTTPS is a confirmed Google ranking signal. How it affects SEO, how to migrate from HTTP without losing rankings, and common mistakes.","url":"https://sitemapfixer.com/learn/https-seo","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/https-seo"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
@@ -61,7 +61,8 @@ export default function Page() {
             <li><a href="/learn/core-web-vitals" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Core Web Vitals: LCP, INP, CLS Explained</a></li>
             <li><a href="/learn/page-speed-optimization" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Page Speed Optimization: Make Your Site Faster</a></li>
           
-            <li><a href="/learn/site-migration-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Site Migration SEO: Move Without Losing Rankings</a></li></ul>
+            <li><a href="/learn/site-migration-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>Site Migration SEO: Move Without Losing Rankings</a></li>
+            <li><a href="/learn/ssl-seo" style={{ color: '#2d5be3', textDecoration: 'none', fontSize: 14, lineHeight: 1.8 }}>SSL Certificates and SEO: What You Need to Know</a></li></ul>
         </div>
     </div>
   );

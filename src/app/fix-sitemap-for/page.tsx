@@ -24,6 +24,21 @@ const PLATFORMS = [
   { slug: 'nextjs', name: 'Next.js', desc: 'sitemap.ts, dynamic routes, App Router setup.' },
   { slug: 'ecommerce', name: 'E-commerce', desc: 'Product variants, faceted nav, out-of-stock pages.' },
   { slug: 'large-sites', name: 'Large Sites', desc: 'Sitemap indexes, crawl budget, enterprise scale.' },
+  { slug: 'webflow', name: 'Webflow', desc: 'CMS collections, pagination, staging subdomain leaks.' },
+  { slug: 'squarespace', name: 'Squarespace', desc: 'Auto-sitemap at /sitemap.xml, customization limits.' },
+  { slug: 'wix', name: 'Wix', desc: 'Dynamic content, member pages, locale duplication.' },
+  { slug: 'ghost', name: 'Ghost', desc: 'RSS/AMP variants, author/tag page bloat.' },
+  { slug: 'magento', name: 'Magento', desc: 'Catalog URLs, layered nav, multi-store sitemaps.' },
+  { slug: 'framer', name: 'Framer', desc: 'CMS items, dynamic pages, locale handling.' },
+  { slug: 'hugo', name: 'Hugo', desc: 'config.toml sitemap setup, taxonomies, sections.' },
+  { slug: 'astro', name: 'Astro', desc: '@astrojs/sitemap integration, i18n, dynamic routes.' },
+  { slug: 'nuxt', name: 'Nuxt', desc: '@nuxtjs/sitemap module, dynamic routes, i18n.' },
+  { slug: 'gatsby', name: 'Gatsby', desc: 'gatsby-plugin-sitemap, exclude patterns, GraphQL nodes.' },
+  { slug: 'django', name: 'Django', desc: 'django.contrib.sitemaps, pagination, custom views.' },
+  { slug: 'laravel', name: 'Laravel', desc: 'spatie/laravel-sitemap, Eloquent queries, scheduling.' },
+  { slug: 'rails', name: 'Ruby on Rails', desc: 'sitemap_generator gem, lastmod updates, deploys.' },
+  { slug: 'drupal', name: 'Drupal', desc: 'Simple XML Sitemap module, content types, taxonomies.' },
+  { slug: 'bigcommerce', name: 'BigCommerce', desc: 'Product variants, category filters, sitemap index.' },
 ];
 export default function PlatformsIndex() {
   return (

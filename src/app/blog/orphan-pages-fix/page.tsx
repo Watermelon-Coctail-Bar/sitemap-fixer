@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Orphan Pages: What They Are and How to Fix Them',
-  description: "Orphan pages have no internal links pointing to them. Google rarely discovers them, they rank poorly, and they waste crawl budget. Here is how to find and fix all orphan pages.",
+  description: "Orphan pages have no internal links. Google rarely discovers them and they rank poorly. How to find and fix all orphan pages on your site.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/orphan-pages-fix' },
   openGraph: {
     title: 'Orphan Pages: What They Are and How to Fix Them',
-    description: 'Orphan pages have no internal links pointing to them. Google rarely discovers them, they rank poorly, and they waste crawl budget. Here is how to find and fix all orphan pages.',
+    description: 'Orphan pages have no internal links pointing to them. Google rarely discovers them, they rank poorly, and they waste crawl budget.',
     url: 'https://sitemapfixer.com/blog/orphan-pages-fix',
     type: 'article',
     images: [{
@@ -33,7 +33,7 @@ export default function Page() {
         <span>Orphan Pages Fix</span>
       </nav>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Orphan Pages: What They Are and How to Fix Them","description":"Orphan pages have no internal links pointing to them. Google rarely discovers them, they rank poorly, and they waste crawl budget. Here is how to find and fix all orphan pages.","url":"https://sitemapfixer.com/blog/orphan-pages-fix","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/orphan-pages-fix"}}' }} />April 2025 · 6 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Orphan Pages: What They Are and How to Fix Them","description":"Orphan pages have no internal links pointing to them. Google rarely discovers them, they rank poorly, and they waste crawl budget.","url":"https://sitemapfixer.com/blog/orphan-pages-fix","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/orphan-pages-fix"}}' }} />April 2025 · 6 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Orphan Pages: Find Them and Fix Them</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Check your sitemap for orphan page patterns free</span>
