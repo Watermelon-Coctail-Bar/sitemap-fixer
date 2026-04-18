@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blocked by robots.txt in Google Search Console: Fix Guide',
-  description: 'The "Blocked by robots.txt" status in Google Search Console means your robots.txt file is stopping Googlebot from crawling the URL. Learn how to audit and fix robots.txt rules.',
+  description: 'The "Blocked by robots.txt" status in GSC means your robots.txt file is stopping Googlebot from crawling the URL. How to audit and fix robots.txt.',
   keywords: 'blocked by robots.txt, robots.txt error, gsc robots.txt blocked, fix robots.txt, googlebot disallow, robots.txt directive',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/blocked-by-robots-txt' },
   openGraph: {
     title: 'Blocked by robots.txt - GSC Indexing Status Explained',
-    description: 'The "Blocked by robots.txt" status in Google Search Console means your robots.txt file is stopping Googlebot from crawling the URL. Learn how to audit and fix robots.txt rules.',
+    description: 'The "Blocked by robots.txt" status in GSC means your robots.txt file is stopping Googlebot from crawling the URL. How to audit and fix robots.txt.',
     url: 'https://sitemapfixer.com/gsc-errors/blocked-by-robots-txt',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Blocked by robots.txt in Google Search Console: Fix Guide', description: 'The "Blocked by robots.txt" status in Google Search Console means your robots.txt file is stopping Googlebot from crawling the URL. Learn how to audit and fix robots.txt rules.', url: 'https://sitemapfixer.com/gsc-errors/blocked-by-robots-txt', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/blocked-by-robots-txt' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Blocked by robots.txt in Google Search Console: Fix Guide', description: 'The "Blocked by robots.txt" status in GSC means your robots.txt file is stopping Googlebot from crawling the URL. How to audit and fix robots.txt.', url: 'https://sitemapfixer.com/gsc-errors/blocked-by-robots-txt', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/blocked-by-robots-txt' } }),
         }}
       />
       <script

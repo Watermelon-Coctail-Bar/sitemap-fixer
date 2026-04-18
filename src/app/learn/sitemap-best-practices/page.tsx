@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'XML Sitemap Best Practices',
+  title: 'XML Sitemap Best Practices for SEO (2026)',
   description: 'The complete guide to XML sitemap best practices. Learn what to include, exclude, how to structure your sitemap, and maximize crawl efficiency.',
   alternates: { canonical: 'https://sitemapfixer.com/learn/sitemap-best-practices' },
   openGraph: {
-    title: 'XML Sitemap Best Practices',
+    title: 'XML Sitemap Best Practices for SEO (2026)',
     description: 'The complete guide to XML sitemap best practices in 2025. What to include, what to exclude, and how to maximize crawl efficiency.',
     url: 'https://sitemapfixer.com/learn/sitemap-best-practices',
     type: 'article',

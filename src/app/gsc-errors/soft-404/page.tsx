@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Soft 404 in Google Search Console: What It Means & How to Fix',
-  description: 'The "Soft 404" status in Google Search Console means a page returns 200 OK but looks like a not-found or empty page. Learn what triggers soft 404s and how to fix them.',
+  title: 'Soft 404 in Google Search Console: How to Fix',
+  description: 'The "Soft 404" status in GSC means a page returns 200 OK but looks like a not-found or empty page. What triggers soft 404s and how to fix them.',
   keywords: 'soft 404, soft 404 error, google soft 404, gsc soft 404, empty page indexing, thin page 404',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/soft-404' },
   openGraph: {
     title: 'Soft 404 - GSC Indexing Status Explained',
-    description: 'The "Soft 404" status in Google Search Console means a page returns 200 OK but looks like a not-found or empty page. Learn what triggers soft 404s and how to fix them.',
+    description: 'The "Soft 404" status in GSC means a page returns 200 OK but looks like a not-found or empty page. What triggers soft 404s and how to fix them.',
     url: 'https://sitemapfixer.com/gsc-errors/soft-404',
     type: 'article',
     images: [{
@@ -29,13 +29,13 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Soft 404 in Google Search Console: What It Means & How to Fix', description: 'The "Soft 404" status in Google Search Console means a page returns 200 OK but looks like a not-found or empty page. Learn what triggers soft 404s and how to fix them.', url: 'https://sitemapfixer.com/gsc-errors/soft-404', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/soft-404' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Soft 404 in Google Search Console: How to Fix', description: 'The "Soft 404" status in GSC means a page returns 200 OK but looks like a not-found or empty page. What triggers soft 404s and how to fix them.', url: 'https://sitemapfixer.com/gsc-errors/soft-404', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/soft-404' } }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'GSC Errors', item: 'https://sitemapfixer.com/gsc-errors' }, { '@type': 'ListItem', position: 3, name: 'Soft 404 in Google Search Console: What It Means & How to Fix', item: 'https://sitemapfixer.com/gsc-errors/soft-404' }] }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'GSC Errors', item: 'https://sitemapfixer.com/gsc-errors' }, { '@type': 'ListItem', position: 3, name: 'Soft 404 in Google Search Console: How to Fix', item: 'https://sitemapfixer.com/gsc-errors/soft-404' }] }),
         }}
       />
 

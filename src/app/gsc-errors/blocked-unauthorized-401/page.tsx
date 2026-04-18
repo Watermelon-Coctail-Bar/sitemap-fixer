@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blocked Due to Unauthorized Request (401): GSC Fix Guide',
-  description: 'The "Blocked due to unauthorized request (401)" status in Google Search Console means your server is requiring authentication. Learn how to diagnose and remove 401 blocks for public pages.',
+  description: 'The "Blocked due to unauthorized request (401)" status in GSC means your server requires authentication. How to diagnose and remove 401 blocks.',
   keywords: 'blocked due to unauthorized request, 401 error google search console, gsc 401 error, http basic auth google, 401 unauthorized fix',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/blocked-unauthorized-401' },
   openGraph: {
     title: 'Blocked due to unauthorized request (401) - GSC Status',
-    description: 'The "Blocked due to unauthorized request (401)" status in Google Search Console means your server is requiring authentication. Learn how to diagnose and remove 401 blocks for public pages.',
+    description: 'The "Blocked due to unauthorized request (401)" status in GSC means your server requires authentication. How to diagnose and remove 401 blocks.',
     url: 'https://sitemapfixer.com/gsc-errors/blocked-unauthorized-401',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Blocked Due to Unauthorized Request (401): GSC Fix Guide', description: 'The "Blocked due to unauthorized request (401)" status in Google Search Console means your server is requiring authentication. Learn how to diagnose and remove 401 blocks for public pages.', url: 'https://sitemapfixer.com/gsc-errors/blocked-unauthorized-401', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/blocked-unauthorized-401' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Blocked Due to Unauthorized Request (401): GSC Fix Guide', description: 'The "Blocked due to unauthorized request (401)" status in GSC means your server requires authentication. How to diagnose and remove 401 blocks.', url: 'https://sitemapfixer.com/gsc-errors/blocked-unauthorized-401', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/blocked-unauthorized-401' } }),
         }}
       />
       <script

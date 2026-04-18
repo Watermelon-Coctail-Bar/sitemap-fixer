@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SitemapFixer for News Publishers - Google News & Top Stories',
+  title: 'SitemapFixer for News Publishers & Google News',
   description: 'News publishers use SitemapFixer to validate the news sitemap protocol, protect freshness signals, and improve Google News indexing.',
   keywords: 'news sitemap, google news sitemap, top stories indexing, news sitemap protocol, hourly recrawl, freshness signal sitemap, publisher sitemap audit',
   alternates: { canonical: 'https://sitemapfixer.com/for/news-publishers' },
   openGraph: {
-    title: 'SitemapFixer for News Publishers - Google News & Top Stories',
+    title: 'SitemapFixer for News Publishers & Google News',
     description: 'News publishers use SitemapFixer to validate the news sitemap protocol, protect freshness signals, and improve Google News indexing.',
     url: 'https://sitemapfixer.com/for/news-publishers',
     type: 'article',
@@ -29,13 +29,13 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer for News Publishers - Google News & Top Stories', description: 'News publishers use SitemapFixer to validate the news sitemap protocol, protect freshness signals, and improve Google News indexing.', url: 'https://sitemapfixer.com/for/news-publishers', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/for/news-publishers' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer for News Publishers & Google News', description: 'News publishers use SitemapFixer to validate the news sitemap protocol, protect freshness signals, and improve Google News indexing.', url: 'https://sitemapfixer.com/for/news-publishers', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/for/news-publishers' } }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'For', item: 'https://sitemapfixer.com/for' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer for News Publishers - Google News & Top Stories', item: 'https://sitemapfixer.com/for/news-publishers' }] }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'For', item: 'https://sitemapfixer.com/for' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer for News Publishers & Google News', item: 'https://sitemapfixer.com/for/news-publishers' }] }),
         }}
       />
 

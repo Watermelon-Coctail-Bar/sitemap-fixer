@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Discovered - Currently Not Indexed: GSC Fix Guide',
-  description: 'The "Discovered - currently not indexed" status in Google Search Console means Google knows about your URL but has not crawled it yet. Learn what triggers this and how to get pages crawled.',
+  description: 'The "Discovered - currently not indexed" status in GSC means Google knows your URL but has not crawled it yet. What triggers it and how to fix.',
   keywords: 'discovered currently not indexed, gsc discovered not indexed, google not crawling pages, crawl budget issue, google indexing delay',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/discovered-not-indexed' },
   openGraph: {
     title: 'Discovered - Currently Not Indexed: GSC Fix Guide',
-    description: 'The "Discovered - currently not indexed" status in Google Search Console means Google knows about your URL but has not crawled it yet. Learn what triggers this and how to get pages crawled.',
+    description: 'The "Discovered - currently not indexed" status in GSC means Google knows your URL but has not crawled it yet. What triggers it and how to fix.',
     url: 'https://sitemapfixer.com/gsc-errors/discovered-not-indexed',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Discovered - Currently Not Indexed: GSC Fix Guide', description: 'The "Discovered - currently not indexed" status in Google Search Console means Google knows about your URL but has not crawled it yet. Learn what triggers this and how to get pages crawled.', url: 'https://sitemapfixer.com/gsc-errors/discovered-not-indexed', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/discovered-not-indexed' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Discovered - Currently Not Indexed: GSC Fix Guide', description: 'The "Discovered - currently not indexed" status in GSC means Google knows your URL but has not crawled it yet. What triggers it and how to fix.', url: 'https://sitemapfixer.com/gsc-errors/discovered-not-indexed', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/discovered-not-indexed' } }),
         }}
       />
       <script

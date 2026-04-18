@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Duplicate Without User-Selected Canonical: GSC Fix Guide',
-  description: 'The "Duplicate without user-selected canonical" status in Google Search Console means you have duplicate content and no canonical tag - Google picked its own. Here is how to fix it.',
+  description: 'The "Duplicate without user-selected canonical" status in GSC means you have duplicate content and no canonical tag - Google picked its own. Fix it.',
   keywords: 'duplicate without user-selected canonical, google selected canonical, duplicate content gsc, canonical tag missing, fix duplicate pages',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/duplicate-without-canonical' },
   openGraph: {
     title: 'Duplicate Without User-Selected Canonical - GSC Fix',
-    description: 'The "Duplicate without user-selected canonical" status in Google Search Console means you have duplicate content and no canonical tag - Google picked its own. Here is how to fix it.',
+    description: 'The "Duplicate without user-selected canonical" status in GSC means you have duplicate content and no canonical tag - Google picked its own. Fix it.',
     url: 'https://sitemapfixer.com/gsc-errors/duplicate-without-canonical',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Duplicate Without User-Selected Canonical: GSC Fix Guide', description: 'The "Duplicate without user-selected canonical" status in Google Search Console means you have duplicate content and no canonical tag - Google picked its own. Here is how to fix it.', url: 'https://sitemapfixer.com/gsc-errors/duplicate-without-canonical', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/duplicate-without-canonical' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Duplicate Without User-Selected Canonical: GSC Fix Guide', description: 'The "Duplicate without user-selected canonical" status in GSC means you have duplicate content and no canonical tag - Google picked its own. Fix it.', url: 'https://sitemapfixer.com/gsc-errors/duplicate-without-canonical', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/duplicate-without-canonical' } }),
         }}
       />
       <script

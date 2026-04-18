@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Not Found (404) in Google Search Console: Fix Guide',
-  description: 'The "Not found (404)" status in Google Search Console means Google requested a URL and the server returned a 404. Learn when 404s are harmful, when they are fine, and how to fix them.',
+  description: 'The "Not found (404)" status in GSC means Google requested a URL and the server returned 404. When 404s hurt, when they are fine, and how to fix.',
   keywords: 'not found 404, 404 error google search console, gsc 404 error, fix 404 errors, soft 404 vs 404',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/not-found-404' },
   openGraph: {
     title: 'Not Found (404) - GSC Indexing Status Explained',
-    description: 'The "Not found (404)" status in Google Search Console means Google requested a URL and the server returned a 404. Learn when 404s are harmful, when they are fine, and how to fix them.',
+    description: 'The "Not found (404)" status in GSC means Google requested a URL and the server returned 404. When 404s hurt, when they are fine, and how to fix.',
     url: 'https://sitemapfixer.com/gsc-errors/not-found-404',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Not Found (404) in Google Search Console: Fix Guide', description: 'The "Not found (404)" status in Google Search Console means Google requested a URL and the server returned a 404. Learn when 404s are harmful, when they are fine, and how to fix them.', url: 'https://sitemapfixer.com/gsc-errors/not-found-404', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/not-found-404' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Not Found (404) in Google Search Console: Fix Guide', description: 'The "Not found (404)" status in GSC means Google requested a URL and the server returned 404. When 404s hurt, when they are fine, and how to fix.', url: 'https://sitemapfixer.com/gsc-errors/not-found-404', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/not-found-404' } }),
         }}
       />
       <script

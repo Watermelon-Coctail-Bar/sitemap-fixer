@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Page with redirect in GSC: What It Means & How to Fix',
-  description: 'The "Page with redirect" status in Google Search Console means the URL is a redirect and Google excludes it from the index. Learn when this is fine, when it is not, and exactly how to clean up your redirects.',
+  description: 'The "Page with redirect" status in GSC means the URL is a redirect and Google excludes it from the index. Causes, when it is fine, and how to fix.',
   keywords: 'page with redirect, google search console, page with redirect meaning, fix page with redirect, gsc redirect error, page indexing redirect',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/page-with-redirect' },
   openGraph: {
     title: 'Page with redirect - GSC Indexing Status Explained',
-    description: 'The "Page with redirect" status in Google Search Console means the URL is a redirect and Google excludes it from the index. Learn when this is fine, when it is not, and exactly how to clean up your redirects.',
+    description: 'The "Page with redirect" status in GSC means the URL is a redirect and Google excludes it from the index. Causes, when it is fine, and how to fix.',
     url: 'https://sitemapfixer.com/gsc-errors/page-with-redirect',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Page with redirect in GSC: What It Means & How to Fix', description: 'The "Page with redirect" status in Google Search Console means the URL is a redirect and Google excludes it from the index. Learn when this is fine, when it is not, and exactly how to clean up your redirects.', url: 'https://sitemapfixer.com/gsc-errors/page-with-redirect', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/page-with-redirect' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Page with redirect in GSC: What It Means & How to Fix', description: 'The "Page with redirect" status in GSC means the URL is a redirect and Google excludes it from the index. Causes, when it is fine, and how to fix.', url: 'https://sitemapfixer.com/gsc-errors/page-with-redirect', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/page-with-redirect' } }),
         }}
       />
       <script

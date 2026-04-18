@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SitemapFixer for SaaS Companies - Programmatic SEO & Docs',
+  title: 'SitemapFixer for SaaS: Programmatic SEO & Docs',
   description: 'SaaS teams use SitemapFixer to manage programmatic SEO pages, docs, changelog sitemaps, and marketing URLs without bloating the sitemap.',
   keywords: 'saas sitemap tool, programmatic seo sitemap, docs sitemap, changelog seo, feature pages sitemap, product led growth seo, saas technical seo',
   alternates: { canonical: 'https://sitemapfixer.com/for/saas' },
   openGraph: {
-    title: 'SitemapFixer for SaaS Companies - Programmatic SEO & Docs',
+    title: 'SitemapFixer for SaaS: Programmatic SEO & Docs',
     description: 'SaaS teams use SitemapFixer to manage programmatic SEO pages, docs, changelog sitemaps, and marketing URLs without bloating the sitemap.',
     url: 'https://sitemapfixer.com/for/saas',
     type: 'article',
@@ -29,13 +29,13 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer for SaaS Companies - Programmatic SEO & Docs', description: 'SaaS teams use SitemapFixer to manage programmatic SEO pages, docs, changelog sitemaps, and marketing URLs without bloating the sitemap.', url: 'https://sitemapfixer.com/for/saas', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/for/saas' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer for SaaS: Programmatic SEO & Docs', description: 'SaaS teams use SitemapFixer to manage programmatic SEO pages, docs, changelog sitemaps, and marketing URLs without bloating the sitemap.', url: 'https://sitemapfixer.com/for/saas', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/for/saas' } }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'For', item: 'https://sitemapfixer.com/for' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer for SaaS Companies - Programmatic SEO & Docs', item: 'https://sitemapfixer.com/for/saas' }] }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'For', item: 'https://sitemapfixer.com/for' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer for SaaS: Programmatic SEO & Docs', item: 'https://sitemapfixer.com/for/saas' }] }),
         }}
       />
 

@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blocked Due to Access Forbidden (403): GSC Fix Guide',
-  description: 'The "Blocked due to access forbidden (403)" status in Google Search Console means your server forbade Googlebot from fetching the page. Learn how to find and fix the firewall rule blocking Google.',
+  description: 'The "Blocked due to access forbidden (403)" status in GSC means your server forbade Googlebot. Find and fix the firewall or WAF rule blocking Google.',
   keywords: 'blocked due to access forbidden, 403 error google search console, gsc 403 forbidden, cloudflare block googlebot, waf blocking google',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403' },
   openGraph: {
     title: 'Blocked due to access forbidden (403) - GSC Status',
-    description: 'The "Blocked due to access forbidden (403)" status in Google Search Console means your server forbade Googlebot from fetching the page. Learn how to find and fix the firewall rule blocking Google.',
+    description: 'The "Blocked due to access forbidden (403)" status in GSC means your server forbade Googlebot. Find and fix the firewall or WAF rule blocking Google.',
     url: 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Blocked Due to Access Forbidden (403): GSC Fix Guide', description: 'The "Blocked due to access forbidden (403)" status in Google Search Console means your server forbade Googlebot from fetching the page. Learn how to find and fix the firewall rule blocking Google.', url: 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Blocked Due to Access Forbidden (403): GSC Fix Guide', description: 'The "Blocked due to access forbidden (403)" status in GSC means your server forbade Googlebot. Find and fix the firewall or WAF rule blocking Google.', url: 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403' } }),
         }}
       />
       <script

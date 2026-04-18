@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Crawled - Currently Not Indexed: GSC Fix Guide',
-  description: 'The "Crawled - currently not indexed" status means Google fetched your page but chose not to index it - almost always a content quality problem. Learn the exact diagnostic and fix steps.',
+  description: 'The "Crawled - currently not indexed" status means Google fetched your page but chose not to index it - almost always a content quality issue.',
   keywords: 'crawled currently not indexed, gsc crawled not indexed, google decided not to index, content quality indexing, thin content google',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/crawled-not-indexed' },
   openGraph: {
     title: 'Crawled - Currently Not Indexed: GSC Fix Guide',
-    description: 'The "Crawled - currently not indexed" status means Google fetched your page but chose not to index it - almost always a content quality problem. Learn the exact diagnostic and fix steps.',
+    description: 'The "Crawled - currently not indexed" status means Google fetched your page but chose not to index it - almost always a content quality issue.',
     url: 'https://sitemapfixer.com/gsc-errors/crawled-not-indexed',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Crawled - Currently Not Indexed: GSC Fix Guide', description: 'The "Crawled - currently not indexed" status means Google fetched your page but chose not to index it - almost always a content quality problem. Learn the exact diagnostic and fix steps.', url: 'https://sitemapfixer.com/gsc-errors/crawled-not-indexed', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/crawled-not-indexed' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Crawled - Currently Not Indexed: GSC Fix Guide', description: 'The "Crawled - currently not indexed" status means Google fetched your page but chose not to index it - almost always a content quality issue.', url: 'https://sitemapfixer.com/gsc-errors/crawled-not-indexed', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/crawled-not-indexed' } }),
         }}
       />
       <script

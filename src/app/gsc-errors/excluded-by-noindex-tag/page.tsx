@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Excluded by noindex tag in GSC: What It Means & How to Fix',
-  description: 'The "Excluded by noindex tag" status in Google Search Console means a meta robots or X-Robots-Tag header is telling Google not to index the page. Learn how to find and remove the tag.',
+  title: 'Excluded by noindex tag in GSC: How to Fix',
+  description: 'The "Excluded by noindex tag" status in GSC means a meta robots or X-Robots-Tag header is telling Google not to index the page. How to find and fix.',
   keywords: 'excluded by noindex tag, gsc noindex, meta noindex, x-robots-tag, remove noindex, google search console noindex error',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag' },
   openGraph: {
     title: 'Excluded by noindex tag - GSC Indexing Status Explained',
-    description: 'The "Excluded by noindex tag" status in Google Search Console means a meta robots or X-Robots-Tag header is telling Google not to index the page. Learn how to find and remove the tag.',
+    description: 'The "Excluded by noindex tag" status in GSC means a meta robots or X-Robots-Tag header is telling Google not to index the page. How to find and fix.',
     url: 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag',
     type: 'article',
     images: [{
@@ -29,13 +29,13 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Excluded by noindex tag in GSC: What It Means & How to Fix', description: 'The "Excluded by noindex tag" status in Google Search Console means a meta robots or X-Robots-Tag header is telling Google not to index the page. Learn how to find and remove the tag.', url: 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Excluded by noindex tag in GSC: How to Fix', description: 'The "Excluded by noindex tag" status in GSC means a meta robots or X-Robots-Tag header is telling Google not to index the page. How to find and fix.', url: 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag' } }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'GSC Errors', item: 'https://sitemapfixer.com/gsc-errors' }, { '@type': 'ListItem', position: 3, name: 'Excluded by noindex tag in GSC: What It Means & How to Fix', item: 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag' }] }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'GSC Errors', item: 'https://sitemapfixer.com/gsc-errors' }, { '@type': 'ListItem', position: 3, name: 'Excluded by noindex tag in GSC: How to Fix', item: 'https://sitemapfixer.com/gsc-errors/excluded-by-noindex-tag' }] }),
         }}
       />
 

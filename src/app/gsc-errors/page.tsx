@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Google Search Console Indexing Errors - Fix Guide',
-  description: 'Browse every Google Search Console indexing error and "Page indexing" status: noindex, canonical, 404, 5xx, robots.txt, Discovered - currently not indexed, and more. Learn how to diagnose and fix each one.',
+  description: 'Browse every Google Search Console indexing error and "Page indexing" status: noindex, canonical, 404, 5xx, robots.txt, and more. Diagnose and fix each.',
   keywords: 'google search console errors, gsc indexing errors, page indexing report, why is my page not indexed, crawled currently not indexed, discovered currently not indexed',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors' },
   openGraph: {
     title: 'Google Search Console Indexing Errors - Fix Guide',
-    description: 'Browse every Google Search Console indexing error and "Page indexing" status: noindex, canonical, 404, 5xx, robots.txt, Discovered - currently not indexed, and more. Learn how to diagnose and fix each one.',
+    description: 'Browse every Google Search Console indexing error and "Page indexing" status: noindex, canonical, 404, 5xx, robots.txt, and more. Diagnose and fix each.',
     url: 'https://sitemapfixer.com/gsc-errors',
     type: 'website',
     images: [{

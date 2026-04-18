@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Laravel Sitemap: Using spatie/laravel-sitemap',
-  description: "How to add an XML sitemap to a Laravel application using the spatie/laravel-sitemap package. Includes dynamic generation and Google submission.",
+  description: "Laravel XML sitemap setup with spatie/laravel-sitemap. Generate sitemaps from Eloquent queries, schedule rebuilds, and submit to Google Search Console.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/laravel-sitemap' },
   openGraph: {
     title: 'Laravel Sitemap: Using spatie/laravel-sitemap',
-    description: 'How to add an XML sitemap to a Laravel application using the spatie/laravel-sitemap package. Includes dynamic generation, caching, and submission to Google.',
+    description: 'Laravel XML sitemap setup with spatie/laravel-sitemap. Generate sitemaps from Eloquent queries, schedule rebuilds, and submit to Google Search Console.',
     url: 'https://sitemapfixer.com/learn/laravel-sitemap',
     type: 'article',
     images: [{

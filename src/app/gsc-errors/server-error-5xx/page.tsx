@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Server Error (5xx) in Google Search Console: Fix Guide',
-  description: 'The "Server error (5xx)" status in Google Search Console means your server returned a 500, 502, 503 or similar error when Googlebot tried to crawl. Learn how to diagnose and fix 5xx errors.',
+  description: 'The "Server error (5xx)" status in GSC means your server returned 500, 502, 503 or similar when Googlebot crawled. How to diagnose and fix 5xx errors.',
   keywords: 'server error 5xx, 500 error google search console, 502 bad gateway, 503 service unavailable, gsc server error fix',
   alternates: { canonical: 'https://sitemapfixer.com/gsc-errors/server-error-5xx' },
   openGraph: {
     title: 'Server Error (5xx) - GSC Indexing Status Explained',
-    description: 'The "Server error (5xx)" status in Google Search Console means your server returned a 500, 502, 503 or similar error when Googlebot tried to crawl. Learn how to diagnose and fix 5xx errors.',
+    description: 'The "Server error (5xx)" status in GSC means your server returned 500, 502, 503 or similar when Googlebot crawled. How to diagnose and fix 5xx errors.',
     url: 'https://sitemapfixer.com/gsc-errors/server-error-5xx',
     type: 'article',
     images: [{
@@ -29,7 +29,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Server Error (5xx) in Google Search Console: Fix Guide', description: 'The "Server error (5xx)" status in Google Search Console means your server returned a 500, 502, 503 or similar error when Googlebot tried to crawl. Learn how to diagnose and fix 5xx errors.', url: 'https://sitemapfixer.com/gsc-errors/server-error-5xx', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/server-error-5xx' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Server Error (5xx) in Google Search Console: Fix Guide', description: 'The "Server error (5xx)" status in GSC means your server returned 500, 502, 503 or similar when Googlebot crawled. How to diagnose and fix 5xx errors.', url: 'https://sitemapfixer.com/gsc-errors/server-error-5xx', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/server-error-5xx' } }),
         }}
       />
       <script

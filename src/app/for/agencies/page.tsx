@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SitemapFixer for SEO Agencies - Audit Client Sitemaps at Scale',
+  title: 'SitemapFixer for SEO Agencies: Audit at Scale',
   description: 'SEO agencies use SitemapFixer to audit client sitemaps in minutes, add findings to pitch decks, and turn recurring sitemap health into a retainer deliverable.',
   keywords: 'sitemap tool for agencies, seo agency sitemap audit, white label sitemap report, client sitemap audit, sitemap audit deliverable, pitch deck sitemap',
   alternates: { canonical: 'https://sitemapfixer.com/for/agencies' },
   openGraph: {
-    title: 'SitemapFixer for SEO Agencies - Audit Client Sitemaps at Scale',
+    title: 'SitemapFixer for SEO Agencies: Audit at Scale',
     description: 'SEO agencies use SitemapFixer to audit client sitemaps in minutes, add findings to pitch decks, and turn recurring sitemap health into a retainer deliverable.',
     url: 'https://sitemapfixer.com/for/agencies',
     type: 'article',
@@ -29,13 +29,13 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer for SEO Agencies - Audit Client Sitemaps at Scale', description: 'SEO agencies use SitemapFixer to audit client sitemaps in minutes, add findings to pitch decks, and turn recurring sitemap health into a retainer deliverable.', url: 'https://sitemapfixer.com/for/agencies', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/for/agencies' } }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer for SEO Agencies: Audit at Scale', description: 'SEO agencies use SitemapFixer to audit client sitemaps in minutes, add findings to pitch decks, and turn recurring sitemap health into a retainer deliverable.', url: 'https://sitemapfixer.com/for/agencies', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/for/agencies' } }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'For', item: 'https://sitemapfixer.com/for' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer for SEO Agencies - Audit Client Sitemaps at Scale', item: 'https://sitemapfixer.com/for/agencies' }] }),
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'For', item: 'https://sitemapfixer.com/for' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer for SEO Agencies: Audit at Scale', item: 'https://sitemapfixer.com/for/agencies' }] }),
         }}
       />
 
