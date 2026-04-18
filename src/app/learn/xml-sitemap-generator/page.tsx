@@ -17,12 +17,13 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"XML Sitemap Generator: Create Your Sitemap Free","description":"Generate a valid XML sitemap for any website free. Learn how XML sitemap generators work, what to include, and how to submit to Google.","url":"https://sitemapfixer.com/learn/xml-sitemap-generator","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/xml-sitemap-generator"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"XML Sitemap Generator: Create Your Sitemap Free","description":"Generate a valid XML sitemap for any website free. Learn how XML sitemap generators work, what to include, and how to submit to Google.","url":"https://sitemapfixer.com/learn/xml-sitemap-generator","author":{"@type":"Person","name":"Arnoldas Arny","url":"https://sitemapfixer.com/about"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/xml-sitemap-generator"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
         <span>XML Sitemap Generator</span>
       </nav>
+      <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>XML Sitemap Generator: How to Create and Submit Your Sitemap</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Analyze your sitemap free</span>

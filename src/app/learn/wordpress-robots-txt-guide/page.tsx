@@ -33,6 +33,7 @@ export default function Page() {
           <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{'  /  '}
           <span>WordPress Robots.txt Guide</span>
         </nav>
+        <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
 
         <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>WordPress Robots.txt: The Complete Guide</h1>
 
@@ -113,6 +114,81 @@ Sitemap: https://yourdomain.com/sitemap_index.xml</pre>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Testing robots.txt in Google Search Console</h2>
         <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
           Open Search Console and use the <em>Settings &gt; robots.txt</em> report to see the latest fetched version, timestamp, and any parsing errors. You can also use the URL Inspection tool on a specific page - it will tell you if a URL is blocked by robots.txt. After editing, click "Request a recrawl" so Google picks up the new file within a few hours instead of days.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>How the virtual robots.txt actually works</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          When a bot requests yourdomain.com/robots.txt, WordPress intercepts the request through its rewrite rules. The <code>do_robots()</code> function in <code>wp-includes/functions.php</code> generates the response on the fly, then fires the <code>do_robotstxt</code> action hook. This matters because you can modify the virtual file without ever touching the filesystem - just hook into it from <code>functions.php</code> or a small must-use plugin:
+        </p>
+        <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>{`// Add to functions.php - extends the virtual robots.txt
+add_filter('robots_txt', function ($output, $public) {
+    if ('1' != $public) return $output;
+
+    $extra = "Disallow: /?s=\n";
+    $extra .= "Disallow: /search/\n";
+    $extra .= "Disallow: /wp-login.php\n";
+    $extra .= "Disallow: /xmlrpc.php\n";
+    $extra .= "Sitemap: " . home_url('/sitemap.xml') . "\n";
+
+    return $output . $extra;
+}, 10, 2);`}</pre>
+        </div>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          I prefer this approach over a physical file on sites where I want the rules version-controlled with the code. The catch: if the site is marked as discouraging search engines (Settings &gt; Reading), WordPress forces <code>Disallow: /</code> regardless of any filter. Check that setting first if your rules &quot;don&apos;t work.&quot;
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>A real case: the 47-entry duplicate sitemap mess</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          I audited a WordPress site last month that had robots.txt listing 47 different Sitemap lines. Each SEO plugin they&apos;d tried over the years (Yoast, then Rank Math, then SEOPress, then back to Yoast) had left its own entry. Every plugin switch added a new sitemap URL without removing the old ones.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Google was hitting 40+ nonexistent sitemap URLs on every crawl, wasting crawl budget. In GSC, the Sitemaps report showed 12 sitemaps as &quot;Couldn&apos;t fetch,&quot; which was dragging down trust in the legitimate ones. We deleted the physical robots.txt, switched to the filter-based approach above, and GSC quietly cleaned up within a week.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          If you&apos;ve switched SEO plugins more than once, <code>curl https://yoursite.com/robots.txt</code> right now. I bet you&apos;ll find leftovers.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Plugin-specific gotchas</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>Yoast.</strong> Yoast&apos;s file editor writes a physical robots.txt to the root. If you&apos;ve previously been using a filter hook or the virtual file, Yoast silently overrides them. To go back, delete the physical file - Yoast doesn&apos;t give you a &quot;reset&quot; button.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>Rank Math.</strong> Rank Math keeps the file virtual unless a physical one exists. Edits happen in the database via wp_options. Useful on managed hosts where file editing is locked, but confusing if you&apos;re also FTP&apos;ing up a real file - the real file wins and Rank Math&apos;s database edits do nothing.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          <strong>All in One SEO.</strong> The visual rule builder is nice, but it aggressively adds its own preamble and sitemap declaration. Auditing sites that use it, I regularly find the Sitemap: line pointing to <code>/sitemap.xml</code> when the actual sitemap is at <code>/sitemap_index.xml</code>. Double-check the output at <code>/robots.txt</code> after any change.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Edge cases you&apos;ll eventually hit</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>Multisite.</strong> Each subsite needs its own robots.txt. WordPress multisite generates separate virtual files per subdomain or subdirectory. Don&apos;t upload a single physical robots.txt to the network root - it&apos;ll override every site&apos;s virtual file with the same rules.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>Staging environments.</strong> WP Engine, Kinsta, and SiteGround staging sites often ship with <code>Disallow: /</code> to prevent accidental indexing. When you push staging to production, <em>check robots.txt first</em>. I&apos;ve seen six-figure traffic drops because someone cloned a blocked staging file to live.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>WooCommerce.</strong> Don&apos;t block <code>/cart/</code>, <code>/checkout/</code>, or <code>/my-account/</code>. These pages carry noindex already, but Google needs to reach them to render product pages that reference cart state. Blocking them can break structured data rendering on products.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          <strong>CDN caching.</strong> Cloudflare and similar CDNs cache robots.txt for minutes or hours. After editing, purge the cached URL specifically - otherwise Google may fetch the cached version for hours after your update.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Diagnosing robots.txt issues fast</h2>
+        <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>{`# Does a physical file exist?
+curl -sI https://yoursite.com/robots.txt | grep -i server
+# If you see a filesize and no WordPress headers -> physical file
+
+# Count Sitemap: lines (should be 1-2 max)
+curl -s https://yoursite.com/robots.txt | grep -c '^Sitemap:'
+
+# Test a specific path is blocked as expected
+curl -s https://yoursite.com/robots.txt | \\
+  grep -iE 'wp-admin|uploads'`}</pre>
+        </div>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          In GSC, the Settings &gt; robots.txt report now shows the exact version Google last fetched with a timestamp. If that timestamp is older than a day and you just made a change, use the three-dot menu to request a recrawl.
         </p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, marginTop: 40 }}>Frequently Asked Questions</h2>

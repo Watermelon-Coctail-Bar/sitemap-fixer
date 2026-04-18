@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Technical SEO Tools: Best for Crawling & Auditing',
+  title: 'Best Technical SEO Tools in 2026',
   description: "The best technical SEO tools for crawling your site, auditing issues, monitoring performance, and analyzing competitors. With specific use cases.",
   alternates: { canonical: 'https://sitemapfixer.com/learn/technical-seo-tools' },
   openGraph: {
-    title: 'Technical SEO Tools: Best for Crawling & Auditing',
+    title: 'Best Technical SEO Tools in 2026',
     description: 'The best technical SEO tools for crawling your site, auditing issues, monitoring performance, and analyzing competitors.',
     url: 'https://sitemapfixer.com/learn/technical-seo-tools',
     type: 'article',
@@ -29,12 +29,13 @@ const tools = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Technical SEO Tools: Best for Crawling & Auditing","description":"The best technical SEO tools for crawling your site, auditing issues, monitoring performance, and analyzing competitors.","url":"https://sitemapfixer.com/learn/technical-seo-tools","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/technical-seo-tools"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Technical SEO Tools: Best for Crawling & Auditing","description":"The best technical SEO tools for crawling your site, auditing issues, monitoring performance, and analyzing competitors.","url":"https://sitemapfixer.com/learn/technical-seo-tools","author":{"@type":"Person","name":"Arnoldas Arny","url":"https://sitemapfixer.com/about"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/technical-seo-tools"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
         <span>Technical SEO Tools</span>
       </nav>
+      <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>Technical SEO Tools: What to Use and When</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Start your technical audit free</span>

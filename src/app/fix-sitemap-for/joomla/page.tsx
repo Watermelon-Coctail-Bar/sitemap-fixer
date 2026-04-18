@@ -116,6 +116,70 @@ https://yoursite.com/sitemap_index.xml`}</pre>
           Joomla's multi-language feature associates each article with a language, and OSMap/JSitemap can emit xhtml:link alternate entries inside each URL. Enable the "Include hreflang" option in OSMap Pro or JSitemap Pro. Verify in GSC's International Targeting report that alternate URLs are detected without errors. If your alternates are missing, check that each article has a content association set up under <em>Content &gt; Articles &gt; Associations</em>.
         </p>
 
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>What I see when I audit Joomla sitemaps</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Most Joomla sitemaps I audit fall into one of two categories: the sitemap mirrors the menu structure (so it has your About, Contact, Services menu items and maybe a dozen top articles, missing the 600 actual content pieces), or it went the other way and includes every com_content, com_k2, com_virtuemart, and com_users URL including admin panels and user profiles.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          One Joomla 4 site I looked at last month had 8,400 URLs in its sitemap. Turned out 6,200 of them were <code>/component/users/</code> profile URLs for registered commenters. Every commenter created a public profile URL, all indexed, all indexed as thin content. They&apos;d lost 40% of their organic traffic over 9 months and didn&apos;t understand why.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          Fix was to exclude <code>com_users</code> from OSMap&apos;s sitemap config, noindex the user profile view globally, and resubmit. Traffic recovered in 7 weeks. The lesson: Joomla&apos;s extensibility is great, but every component silently adds URLs to your sitemap unless you explicitly exclude them.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>OSMap-specific fix steps</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          If you&apos;re on OSMap (free or Pro), here&apos;s my usual sequence for cleaning up a broken Joomla sitemap:
+        </p>
+        <ol style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.9, marginBottom: 16, fontSize: 16 }}>
+          <li style={{ marginBottom: 8 }}>Go to <em>Components &gt; OSMap &gt; Sitemaps</em>. Most sites have a default &quot;Default Sitemap&quot; you can edit.</li>
+          <li style={{ marginBottom: 8 }}>Under &quot;Menus,&quot; select ONLY your public content menus. Uncheck &quot;User Menu,&quot; &quot;Admin Menu,&quot; and any backend or hidden menus.</li>
+          <li style={{ marginBottom: 8 }}>For each included menu item, click the item and check &quot;Change frequency&quot; and &quot;Priority&quot; - set blog to weekly/0.6, main pages to monthly/0.8. Google ignores these but Bing doesn&apos;t.</li>
+          <li style={{ marginBottom: 8 }}>Go to OSMap plugin settings (<em>System &gt; Manage &gt; Plugins</em>, search &quot;OSMap&quot;) and disable plugins for components you don&apos;t want in the sitemap.</li>
+          <li style={{ marginBottom: 8 }}>In <em>System &gt; Global Configuration &gt; SEO</em>, enable &quot;Search Engine Friendly URLs&quot; and &quot;Use URL rewriting.&quot; Without these, your sitemap is full of <code>?option=com_content&amp;view=article&amp;id=42</code> junk.</li>
+          <li style={{ marginBottom: 8 }}>Create an .htaccess-level redirect from <code>/sitemap.xml</code> to your OSMap URL so you get a clean public URL.</li>
+        </ol>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>JSitemap-specific fix steps</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          JSitemap Pro is heavier on features and lighter on sensible defaults. The &quot;automatic data source&quot; scanner is aggressive - it&apos;ll pick up every component including ones you don&apos;t want indexed.
+        </p>
+        <ol style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.9, marginBottom: 16, fontSize: 16 }}>
+          <li style={{ marginBottom: 8 }}>Go to <em>Components &gt; JSitemap &gt; Data Sources</em>.</li>
+          <li style={{ marginBottom: 8 }}>Disable the &quot;com_users,&quot; &quot;com_search,&quot; &quot;com_finder,&quot; &quot;com_mailto,&quot; and &quot;com_wrapper&quot; data sources. These add admin and utility URLs.</li>
+          <li style={{ marginBottom: 8 }}>For your content source (com_content, com_k2, or whatever CMS you use), click Edit and set &quot;Published state&quot; to Published only. Default is often &quot;all states&quot; which leaks unpublished drafts.</li>
+          <li style={{ marginBottom: 8 }}>Enable &quot;Exclude by URL pattern&quot; and add patterns like <code>/component/</code>, <code>/administrator/</code>, <code>/tag/</code> if tag pages are thin.</li>
+          <li style={{ marginBottom: 8 }}>JSitemap Pro ships with <code>/index.php/sitemap.xml</code> by default. Create an alias menu item at <code>/sitemap.xml</code> to get a clean URL.</li>
+          <li style={{ marginBottom: 8 }}>Under &quot;Settings &gt; Image sitemap&quot; and &quot;Video sitemap&quot; - enable these if you actually have images/videos worth indexing, otherwise leave them off. JSitemap will otherwise list every decorative site image.</li>
+        </ol>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Joomla-specific mistakes I keep seeing</h2>
+        <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.9, marginBottom: 32, fontSize: 16 }}>
+          <li style={{ marginBottom: 8 }}><strong>Duplicate URLs from the same article reachable through multiple menu items.</strong> Joomla uses menu aliasing - one article can live at <code>/about/team</code> and <code>/company/team</code>. Sitemap lists both. Canonical one to the other or pick a primary menu and hide the alternate.</li>
+          <li style={{ marginBottom: 8 }}><strong>Default com_content pagination.</strong> <code>?start=5</code>, <code>?start=10</code>, <code>?start=15</code>. The sitemap includes every pagination URL. Set &quot;Ignore URL parameters&quot; in OSMap/JSitemap.</li>
+          <li style={{ marginBottom: 8 }}><strong>com_search results URLs indexed.</strong> I&apos;ve seen sitemaps with 3,000+ search result URLs. Always exclude com_search.</li>
+          <li style={{ marginBottom: 8 }}><strong>K2 category page duplication.</strong> K2 creates both <code>/itemlist/category/5-news</code> and <code>/news</code> menu item URLs for the same content. Pick one via canonical, sitemap only the menu version.</li>
+          <li style={{ marginBottom: 8 }}><strong>Multi-language splitting without hreflang.</strong> English and French versions both get submitted as separate URLs with no alternate annotations. Content Associations under <em>Content &gt; Articles &gt; Associations</em> is the missing link.</li>
+          <li style={{ marginBottom: 8 }}><strong>Cache plugin caching the sitemap.</strong> JCH Optimize and System Cache can cache the sitemap XML for days. Exclude the sitemap URL from the cache or your lastmod tags lie.</li>
+        </ul>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Quick diagnosis commands</h2>
+        <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>{`# Count URLs in your Joomla sitemap
+curl -s https://yoursite.com/sitemap.xml | grep -c '<loc>'
+
+# Hunt for component leakage
+curl -s https://yoursite.com/sitemap.xml | \\
+  grep -oE '<loc>[^<]+</loc>' | \\
+  grep -iE 'component/|option=com_|administrator|index.php\\?'
+
+# Check for unpublished articles sneaking in
+# (any URL returning 404 when you GET it)`}</pre>
+        </div>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          If the second command returns results, your SEF URLs aren&apos;t fully applied or your sitemap extension is bypassing them. Fix the SEF config first, then regenerate.
+        </p>
+
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, marginTop: 40 }}>Frequently Asked Questions</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 40 }}>
           <div style={{ borderBottom: '1px solid #e4e4ed', paddingBottom: 16 }}>
@@ -128,7 +192,7 @@ https://yoursite.com/sitemap_index.xml`}</pre>
           </div>
           <div style={{ borderBottom: '1px solid #e4e4ed', paddingBottom: 16 }}>
             <div style={{ fontWeight: 600, color: '#0a0a0f', marginBottom: 8 }}>Where do I find my Joomla sitemap URL?</div>
-            <div style={{ color: '#6b6b7d', lineHeight: 1.6 }}>After installing OSMap or JSitemap, the XML sitemap is usually at yoursite.com/index.php?option=com_osmap&amp;view=xml&amp;tmpl=component&amp;id=1 or a friendlier URL like /sitemap.xml if you have enabled SEF URLs and configured the extension's menu item.</div>
+            <div style={{ color: '#6b6b7d', lineHeight: 1.6 }}>After installing OSMap or JSitemap, the XML sitemap is usually at yoursite.com/index.php?option=com_osmap&amp;view=xml&amp;tmpl=component&amp;id=1 or a friendlier URL like /sitemap.xml if you have enabled SEF URLs and configured the extension&apos;s menu item.</div>
           </div>
         </div>
 

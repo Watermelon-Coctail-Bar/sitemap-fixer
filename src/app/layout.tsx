@@ -67,6 +67,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        {/* Plausible Analytics — privacy-friendly, no cookies, no personal data */}
+        <script
+          defer
+          data-domain="sitemapfixer.com"
+          src="https://plausible.io/js/script.outbound-links.js"
+        />
       </head>
       <body className="grain">{children}</body>
     </html>

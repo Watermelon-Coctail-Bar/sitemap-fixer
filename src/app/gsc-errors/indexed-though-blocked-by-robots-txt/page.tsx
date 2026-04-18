@@ -105,6 +105,84 @@ export default function Page() {
 9. For sensitive URLs, also add HTTP auth or IP allowlisting - robots.txt is not a security control.</pre>
         </div>
 
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>The mental model most guides miss</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Here&apos;s the thing most guides get wrong about this status. Robots.txt blocks CRAWLING, not INDEXING. Those are different operations.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Crawling = fetching the page content. Indexing = adding the URL (with whatever context Google can gather) to the search index. Google can index a URL it has never fetched. It just uses the URL itself, anchor text from external links, and surrounding context on those external pages as the &quot;content.&quot;
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          This is why the status exists. Google saw enough external signals pointing to a URL to decide it&apos;s a real thing worth indexing, but your robots.txt said &quot;don&apos;t fetch the content.&quot; Google honors the fetch rule and indexes it anyway with blank content.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>A real case: 400+ /search/ URLs indexed as blanks</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          A client running a content site had <code>Disallow: /search/</code> in robots.txt to prevent Google from wasting crawl budget on internal search results. Smart move, right? Except their site had been around for 12 years, and over that time users had posted links to their internal search URLs on Reddit, Stack Exchange, old forums, and other sites.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          GSC showed 437 URLs under /search/ as &quot;Indexed, though blocked by robots.txt.&quot; Every one appeared in Google&apos;s <code>site:</code> search as a blank listing - just the URL, no title, no description. Google had inferred titles from the anchor text in external links, so the listings read things like &quot;how do i reset my password yoursite.com/search?q=reset+password&quot; - which looked spammy and auto-generated.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Fix took 10 minutes. We removed <code>Disallow: /search/</code>. Added <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex, follow&quot;&gt;</code> to the search results template. Waited 3 weeks. Google recrawled, saw the noindex, dropped all 437 URLs from the index. Then we re-added the Disallow to save crawl budget.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          The sequence matters: unblock, add noindex, wait for deindex, re-block. Reversing steps 1 and 4 keeps URLs stuck.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>When this status is actually OK to ignore</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Not every occurrence needs fixing. Cases where I tell clients to leave it alone:
+        </p>
+        <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.8, marginBottom: 16 }}>
+          <li style={{ marginBottom: 8 }}><strong>Affiliate link redirects.</strong> /go/, /out/, /link/ patterns that redirect to merchants. They&apos;re not meant to rank, and the blank listings rarely attract clicks anyway.</li>
+          <li style={{ marginBottom: 8 }}><strong>Asset URLs (JS, CSS, font files).</strong> If Google indexed <code>/assets/bundle.abc123.js</code> as a blank, it&apos;s ugly but harmless.</li>
+          <li style={{ marginBottom: 8 }}><strong>One-off URLs with a single external link.</strong> Google usually drops these eventually without intervention.</li>
+          <li style={{ marginBottom: 8 }}><strong>URLs you&apos;ve already fixed via removal request in GSC.</strong> The status can linger for weeks after the URL is actually deindexed.</li>
+        </ul>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          Fix it if the URLs are discoverable patterns (search results, filters, category archives) that a user might actually click on and be confused by.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Common mistakes when fixing this</h2>
+        <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.8, marginBottom: 32 }}>
+          <li style={{ marginBottom: 8 }}><strong>Adding noindex without removing the Disallow.</strong> Classic mistake. Google still can&apos;t crawl, so it never sees the noindex. URL stays indexed forever.</li>
+          <li style={{ marginBottom: 8 }}><strong>Using the GSC Removal tool as the only fix.</strong> Removal is temporary (90 days). Without noindex, the URL comes back.</li>
+          <li style={{ marginBottom: 8 }}><strong>Password-protecting instead of noindexing.</strong> Password protection returns 401, not noindex. Google may still keep the URL indexed with a note about auth required.</li>
+          <li style={{ marginBottom: 8 }}><strong>Expecting &quot;Request Indexing&quot; to remove a URL.</strong> Request Indexing asks Google to crawl and consider. If noindex is set, that crawl deindexes. If noindex isn&apos;t set, you just reinforced the index entry.</li>
+          <li style={{ marginBottom: 8 }}><strong>Thinking robots.txt protects sensitive URLs.</strong> It doesn&apos;t. Anyone can read robots.txt and see exactly what you&apos;re trying to hide. For real privacy, use HTTP auth or IP allowlisting.</li>
+        </ul>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>How to diagnose which URLs need fixing</h2>
+        <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>{`# Step 1: Export affected URLs from GSC
+#   Indexing > Pages > "Indexed, though blocked by robots.txt"
+#   Click the row, then Export
+
+# Step 2: Check each URL's status at scale
+while IFS= read -r url; do
+  status=$(curl -o /dev/null -s -w "%{http_code}" "$url")
+  echo "$status $url"
+done < affected_urls.txt
+
+# Step 3: For each URL, identify which Disallow rule matches
+# Use GSC > Settings > robots.txt > Open robots.txt tester
+
+# Step 4: Check backlinks pointing to the URL
+# Ahrefs/Majestic site explorer > exact URL mode`}</pre>
+        </div>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          URLs with zero external backlinks and thin internal linking are safe to leave blocked - Google drops those on its own within 6-12 months. URLs with steady inbound link equity are the ones worth actively fixing.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>The &quot;noindex in robots.txt&quot; trap</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Between 2008 and 2019, some sites used <code>Noindex:</code> as a directive inside robots.txt. It sort of worked in Google but was never part of the spec. Google officially stopped supporting it in September 2019. Many old guides still recommend it.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          If you inherited a site with <code>Noindex: /path/</code> rules in robots.txt, they&apos;re doing absolutely nothing now. Replace them with meta robots or X-Robots-Tag headers on the actual pages.
+        </p>
+
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, marginTop: 40 }}>Frequently Asked Questions</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 40 }}>
           <div style={{ borderBottom: '1px solid #e4e4ed', paddingBottom: 16 }}>

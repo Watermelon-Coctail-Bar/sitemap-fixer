@@ -33,6 +33,7 @@ export default function Page() {
           <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{'  /  '}
           <span>Image Sitemap Guide</span>
         </nav>
+        <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
 
         <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>Image Sitemap: How to Create One for SEO</h1>
 
@@ -109,6 +110,80 @@ export default function Page() {
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Submitting to Google Search Console</h2>
         <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
           If your image entries live inside your main sitemap, no extra submission is needed - Google indexes them alongside URLs. For a standalone image sitemap, open GSC <em>Indexing &gt; Sitemaps</em>, enter the path (e.g. <code>/image-sitemap.xml</code>), and click Submit. Monitor the <em>Pages</em> and <em>Performance on Search &gt; Search type: Image</em> reports to confirm indexing. Add the sitemap URL to a <code>Sitemap:</code> line in robots.txt so other crawlers find it too.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Image sitemap vs image schema vs srcset - they&apos;re not the same thing</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          I audit a lot of sites that pile all three on, thinking more is better. They do different jobs:
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>Image sitemap</strong> helps discovery. Its job is to tell Google &quot;these images exist on this URL, please crawl them.&quot; It doesn&apos;t affect ranking directly.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>ImageObject schema (JSON-LD)</strong> describes the image semantically - what it depicts, who owns it, licensing, content creator. Schema is what drives the licensable badge in Google Images and context-rich snippets.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          <strong>srcset and sizes</strong> are performance features. They help the browser pick the right resolution for the viewport. They have zero SEO effect beyond the Core Web Vitals bump from faster loads.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          Getting all three wrong in different ways is common. Getting one right usually beats doing all three half-well.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Most sites don&apos;t actually need an image sitemap</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Here&apos;s the hot take: image sitemaps rarely move rankings. Google&apos;s image crawler is good at finding <code>&lt;img&gt;</code> tags in rendered HTML. If your images load in regular img tags with alt text, on pages that are already indexed, Google finds them. I&apos;ve run controlled tests where I added image sitemap coverage to 200 posts and saw maybe 4% lift in Image search impressions. Worth it? Debatable.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Where image sitemaps earn their keep:
+        </p>
+        <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.8, marginBottom: 16 }}>
+          <li style={{ marginBottom: 8 }}><strong>Lazy-loaded images behind IntersectionObserver.</strong> Googlebot doesn&apos;t scroll. Images below the fold that require user scrolling to load can get missed.</li>
+          <li style={{ marginBottom: 8 }}><strong>CSS background-image everywhere.</strong> No <code>&lt;img&gt;</code> tag, no discovery unless you sitemap it.</li>
+          <li style={{ marginBottom: 8 }}><strong>CDN-hosted images on a domain you don&apos;t control with GSC.</strong> Sitemap is the only way to associate the image with your URL.</li>
+          <li style={{ marginBottom: 8 }}><strong>E-commerce with 100+ images per product page loaded via JS carousel.</strong> Heavy carousels often hide images from the crawler entirely.</li>
+          <li style={{ marginBottom: 8 }}><strong>Google Discover optimization.</strong> Discover loves high-quality images and image sitemaps help it find the best candidates on your site.</li>
+        </ul>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          If none of those apply - your site has normal <code>&lt;img&gt;</code> tags with alt text, loaded server-side or with native lazy loading - skip the image sitemap. Spend the time on alt text quality and filename hygiene instead.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>A real case: a travel blog and Google Discover</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          A travel blog I worked with in 2025 had ~900 posts averaging 15 high-res photos each. All lazy-loaded. Google Discover traffic was inconsistent - maybe 2k visits a month from it when the niche should&apos;ve been pulling 10x that.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          We built an image sitemap with 8-10 images per post (the hero and key destination shots, not gallery miniatures). GSC Discover traffic went from 2.1k/month to 14k/month over 10 weeks. Image search traffic doubled too.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          Worth noting: we also added ImageObject schema with <code>creator</code> and <code>copyrightHolder</code>, and fixed alt text across every included image. The sitemap was necessary but not sufficient on its own.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Common mistakes I keep running into</h2>
+        <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.8, marginBottom: 32 }}>
+          <li style={{ marginBottom: 8 }}><strong>Listing every decorative image.</strong> Icons, social share buttons, footer logos - Google throws away these entries and it dilutes trust in the meaningful ones.</li>
+          <li style={{ marginBottom: 8 }}><strong>Image URLs on a different domain than the page URL.</strong> Still works, but you lose association unless the image domain is verified in GSC.</li>
+          <li style={{ marginBottom: 8 }}><strong>Using deprecated tags.</strong> <code>image:geo_location</code> and <code>image:family_friendly</code> were killed in 2022. Remove them - they&apos;re not just ignored, they trigger sitemap parse warnings on some crawlers.</li>
+          <li style={{ marginBottom: 8 }}><strong>Listing images blocked by robots.txt.</strong> I audit sites monthly where <code>Disallow: /wp-content/uploads/</code> exists alongside an image sitemap pointing to those exact URLs. Every entry fails.</li>
+          <li style={{ marginBottom: 8 }}><strong>Same image URL on 500 different page URLs.</strong> Legal if the image legitimately appears on each, but Google often picks one canonical association and drops the rest.</li>
+        </ul>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>How to diagnose image indexing issues</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          GSC doesn&apos;t have a dedicated image indexing report. Three workarounds:
+        </p>
+        <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>{`# 1. Check impressions in Search type: Image
+#    GSC > Performance > Search type dropdown > Image
+
+# 2. Verify image is crawlable with Googlebot-Image UA
+curl -I -A "Googlebot-Image/1.0" \\
+  https://cdn.example.com/image.jpg
+
+# 3. site:example.com on images.google.com
+#    Shows a rough sample of what Google has indexed`}</pre>
+        </div>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          If none of your images show up in images.google.com for a <code>site:</code> query, something is blocking them - usually robots.txt, X-Robots-Tag, or hotlink protection that treats Googlebot-Image as abuse.
         </p>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, marginTop: 40 }}>Frequently Asked Questions</h2>

@@ -28,12 +28,13 @@ const causes = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"CLS Fix: How to Eliminate Cumulative Layout Shift","description":"CLS measures unexpected page layout shifts during loading. Google requires a score under 0.1. Here is how to find what is causing your CLS and fix each type.","url":"https://sitemapfixer.com/learn/cls-fix","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/cls-fix"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"CLS Fix: How to Eliminate Cumulative Layout Shift","description":"CLS measures unexpected page layout shifts during loading. Google requires a score under 0.1. Here is how to find what is causing your CLS and fix each type.","url":"https://sitemapfixer.com/learn/cls-fix","author":{"@type":"Person","name":"Arnoldas Arny","url":"https://sitemapfixer.com/about"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/cls-fix"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
         <span>CLS Fix</span>
       </nav>
+      <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
       <div style={{ display: 'flex', gap: 10, marginBottom: 12 }}>
         <div style={{ background: '#dcfce7', color: '#166534', fontSize: 12, fontWeight: 700, padding: '4px 10px', borderRadius: 20 }}>GOOD: under 0.1</div>
         <div style={{ background: '#fef9c3', color: '#854d0e', fontSize: 12, fontWeight: 700, padding: '4px 10px', borderRadius: 20 }}>NEEDS WORK: 0.1-0.25</div>

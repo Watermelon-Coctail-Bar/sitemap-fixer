@@ -46,12 +46,13 @@ const methods = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"How to Find All Pages on a Website","description":"Learn how to find all pages on a website using sitemaps, Google Search Console, site: operator, and crawling tools. See every URL on any site instantly.","url":"https://sitemapfixer.com/learn/find-all-pages-on-a-website","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/find-all-pages-on-a-website"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"How to Find All Pages on a Website","description":"Learn how to find all pages on a website using sitemaps, Google Search Console, site: operator, and crawling tools. See every URL on any site instantly.","url":"https://sitemapfixer.com/learn/find-all-pages-on-a-website","author":{"@type":"Person","name":"Arnoldas Arny","url":"https://sitemapfixer.com/about"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/find-all-pages-on-a-website"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
         <span>Find All Pages on a Website</span>
       </nav>
+      <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
 
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>
         How to Find All Pages on a Website

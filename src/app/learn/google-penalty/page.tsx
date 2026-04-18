@@ -29,12 +29,13 @@ const sections = [
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Google Penalty: Identify, Fix, and Recover","description":"A Google penalty can drop your site dramatically in search rankings. How to tell if you have one, what causes them, and how to recover.","url":"https://sitemapfixer.com/learn/google-penalty","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/google-penalty"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Google Penalty: Identify, Fix, and Recover","description":"A Google penalty can drop your site dramatically in search rankings. How to tell if you have one, what causes them, and how to recover.","url":"https://sitemapfixer.com/learn/google-penalty","author":{"@type":"Person","name":"Arnoldas Arny","url":"https://sitemapfixer.com/about"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/learn/google-penalty"}}' }} />
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>{' / '}
         <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{' / '}
         <span>Google Penalty</span>
       </nav>
+      <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>Google Penalty: Identify, Fix, and Recover</h1>
       <div style={{ background: '#fff3cd', border: '1px solid #ffc107', borderRadius: 12, padding: '16px 20px', marginBottom: 24 }}>
         <span style={{ fontSize: 14, color: '#856404', fontWeight: 600 }}>Check Search Console first: Security and Manual Actions shows confirmed manual penalties immediately.</span>

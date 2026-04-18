@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'SEO Checklist 2025: Complete Technical & Content Audit',
+  title: 'SEO Checklist 2026: Technical & Content Audit',
   description: "A complete 2025 SEO checklist covering technical, on-page, content, and off-page factors. Use this to audit any site and prioritize what to fix first.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/seo-checklist-2025' },
   openGraph: { title: 'SEO Checklist 2025: Complete Audit Guide', url: 'https://sitemapfixer.com/blog/seo-checklist-2025', type: 'article',
@@ -28,8 +28,9 @@ export default function Page() {
         <a href="/blog" style={{ color: '#2d5be3', textDecoration: 'none' }}>Blog</a>{' / '}
         <span>SEO Checklist 2025</span>
       </nav>
+      <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Checklist 2025: Complete Technical & Content Audit","description":"A complete 2025 SEO checklist covering technical, on-page, content, and off-page factors. Use this to audit any site and prioritize what to fix first.","url":"https://sitemapfixer.com/blog/seo-checklist-2025","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-checklist-2025"}}' }} />April 2025 · 10 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"SEO Checklist 2025: Complete Technical & Content Audit","description":"A complete 2025 SEO checklist covering technical, on-page, content, and off-page factors. Use this to audit any site and prioritize what to fix first.","url":"https://sitemapfixer.com/blog/seo-checklist-2025","author":{"@type":"Person","name":"Arnoldas Arny","url":"https://sitemapfixer.com/about"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/seo-checklist-2025"}}' }} />April 2025 · 10 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>SEO Checklist 2025: Complete Audit for Any Website</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Automate the technical checks - free</span>

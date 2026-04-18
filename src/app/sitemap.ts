@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const r = (url: string) => ({ url: base + url, lastModified: RECENT });
   return [
     m('/'), m('/pricing'),
+    m('/about'),
     m('/blog'), m('/learn'),
     m('/terms'), m('/privacy'),
     // Tools
@@ -88,6 +89,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     r('/compare/best-sitemap-tools-wordpress'),
     r('/compare/free-vs-paid-sitemap-tools'),
     r('/compare/screaming-frog-vs-ahrefs'),
+    r('/compare/ahrefs-vs-semrush'),
+    r('/compare/screaming-frog-vs-sitebulb'),
+    r('/compare/yoast-vs-rank-math'),
+    r('/compare/best-technical-seo-tools'),
+    r('/compare/free-seo-tools-2026'),
     // Use-case hub
     r('/for'),
     r('/for/agencies'),

@@ -57,6 +57,31 @@ const comparisons = [
     title: 'Screaming Frog vs Ahrefs',
     description: 'Different tools, different jobs. When to use each, when you need both, and honest pricing breakdown.',
   },
+  {
+    href: '/compare/ahrefs-vs-semrush',
+    title: 'Ahrefs vs Semrush',
+    description: 'Two heavyweights, both around $139/mo. Ahrefs wins on backlinks, Semrush on marketing breadth. Which fits you?',
+  },
+  {
+    href: '/compare/screaming-frog-vs-sitebulb',
+    title: 'Screaming Frog vs Sitebulb',
+    description: 'Two technical crawlers, very different UX. SF is faster and cheaper, Sitebulb has visual audits. Honest picks for each.',
+  },
+  {
+    href: '/compare/yoast-vs-rank-math',
+    title: 'Yoast vs Rank Math',
+    description: 'The two leading WordPress SEO plugins. Yoast is the trusted default, Rank Math ships more in the free tier. When to switch.',
+  },
+  {
+    href: '/compare/best-technical-seo-tools',
+    title: 'Best Technical SEO Tools in 2026',
+    description: '8 tools compared — Screaming Frog, Sitebulb, Lumar, JetOctopus, Ahrefs Site Audit, Semrush Site Audit, GSC, SitemapFixer.',
+  },
+  {
+    href: '/compare/free-seo-tools-2026',
+    title: 'Best Free SEO Tools in 2026',
+    description: '14 genuinely free SEO tools — from GSC to PageSpeed Insights to Schema validators. What each actually gives you.',
+  },
 ];
 
 export default function Page() {

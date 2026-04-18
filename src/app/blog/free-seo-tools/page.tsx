@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Free SEO Tools: The Best Free Tools for Every SEO Task',
+  title: 'Best Free SEO Tools in 2026 (No Credit Card)',
   description: "You do not need to pay for SEO tools to get started. The best free tools for keyword research, technical auditing, rank tracking, and link analysis.",
   alternates: { canonical: 'https://sitemapfixer.com/blog/free-seo-tools' },
   openGraph: {
-    title: 'Free SEO Tools: The Best Free Tools for Every SEO Task',
+    title: 'Best Free SEO Tools in 2026 (No Credit Card)',
     description: 'You do not need to pay for SEO tools to get started. The best free SEO tools for keyword research, auditing, and rank tracking.',
     url: 'https://sitemapfixer.com/blog/free-seo-tools',
     type: 'article',
@@ -32,8 +32,9 @@ export default function Page() {
         <a href="/blog" style={{ color: '#2d5be3', textDecoration: 'none' }}>Blog</a>{' / '}
         <span>Free SEO Tools</span>
       </nav>
+      <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
       <div style={{ fontSize: 13, color: '#9ca3af', marginBottom: 12 }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Free SEO Tools: The Best Free Tools for Every SEO Task","description":"You do not need to pay for SEO tools to get started. The best free SEO tools for keyword research, auditing, and rank tracking.","url":"https://sitemapfixer.com/blog/free-seo-tools","author":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/free-seo-tools"}}' }} />April 2025 · 5 min read</div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Article","headline":"Free SEO Tools: The Best Free Tools for Every SEO Task","description":"You do not need to pay for SEO tools to get started. The best free SEO tools for keyword research, auditing, and rank tracking.","url":"https://sitemapfixer.com/blog/free-seo-tools","author":{"@type":"Person","name":"Arnoldas Arny","url":"https://sitemapfixer.com/about"},"publisher":{"@type":"Organization","name":"SitemapFixer","url":"https://sitemapfixer.com","logo":{"@type":"ImageObject","url":"https://sitemapfixer.com/opengraph-image"}},"datePublished":"2025-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://sitemapfixer.com/blog/free-seo-tools"}}' }} />April 2025 · 5 min read</div>
       <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, lineHeight: 1.15 }}>Free SEO Tools: Best Tools for Every SEO Task</h1>
       <div style={{ background: '#eef1ff', border: '1px solid rgba(45,91,227,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ fontSize: 14, color: '#2d5be3', fontWeight: 500 }}>Start with SitemapFixer - free</span>

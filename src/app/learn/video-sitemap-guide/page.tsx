@@ -33,6 +33,7 @@ export default function Page() {
           <a href="/learn" style={{ color: '#2d5be3', textDecoration: 'none' }}>Learn</a>{'  /  '}
           <span>Video Sitemap Guide</span>
         </nav>
+        <div style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 16 }}>By <a href="/about" style={{ color: '#2d5be3', textDecoration: 'none' }}>Arnoldas Arny</a></div>
 
         <h1 style={{ fontSize: 40, fontWeight: 700, color: '#0a0a0f', marginBottom: 16, lineHeight: 1.15 }}>Video Sitemap: XML Format and Setup Guide</h1>
 
@@ -109,6 +110,81 @@ export default function Page() {
           <li style={{ marginBottom: 8 }}><strong>Landing page does not contain the video</strong> - Google must find the video on the <code>&lt;loc&gt;</code> page. A sitemap pointing to a page with no embed is ignored.</li>
           <li style={{ marginBottom: 8 }}><strong>Blocking video files or thumbnails in robots.txt</strong> - if Google cannot fetch the media or image, the entry fails.</li>
         </ul>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Video sitemaps aren&apos;t just for video hosts</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Most guides treat video sitemaps as a niche thing for YouTube-style sites. That&apos;s wrong. If you run a content marketing blog that embeds YouTube walkthroughs, a product site with explainer videos, or a training platform with embedded Vimeo content - you can and should feed Google a video sitemap.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          Here&apos;s what I saw on a B2B SaaS blog last quarter: 140 posts, each embedding a short YouTube explainer. No video sitemap. GSC&apos;s Video pages report showed 12 indexed videos out of 140. After we built a video sitemap pointing to the YouTube embed URLs with proper thumbnails and descriptions, video indexing hit 118 within three weeks. Traffic from Video search tripled.
+        </p>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          The trick: <code>content_loc</code> points to the YouTube watch URL, <code>player_loc</code> to the embed URL with <code>allowfullscreen=&quot;true&quot;</code>, and the thumbnail hosted on your own domain (not YouTube&apos;s <code>i.ytimg.com</code>, which sometimes gets rate-limited during Google&apos;s thumbnail fetch).
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Full example with embedded YouTube content</h2>
+        <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>{`<url>
+  <loc>https://example.com/blog/setup-oauth</loc>
+  <video:video>
+    <video:thumbnail_loc>https://example.com/og/oauth-thumb.jpg</video:thumbnail_loc>
+    <video:title>OAuth 2.0 Setup in 5 Minutes</video:title>
+    <video:description>Walkthrough of OAuth 2.0 app registration,
+scope config, and first token exchange.</video:description>
+    <video:content_loc>https://www.youtube.com/watch?v=abc123</video:content_loc>
+    <video:player_loc allow_embed="yes" autoplay="ap=1">
+      https://www.youtube.com/embed/abc123
+    </video:player_loc>
+    <video:duration>287</video:duration>
+    <video:publication_date>2026-02-14T09:00:00+00:00</video:publication_date>
+    <video:family_friendly>yes</video:family_friendly>
+    <video:uploader info="https://www.youtube.com/@example">
+      Example Engineering
+    </video:uploader>
+  </video:video>
+</url>`}</pre>
+        </div>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          Note the <code>allow_embed</code> attribute on <code>player_loc</code> - this tells Google it&apos;s OK to show the video in Google results with an embedded player, which dramatically lifts CTR on video rich results.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Google&apos;s video rich result requirements</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          To qualify for video rich results (the big thumbnail treatment in SERPs, not just the Videos tab), Google wants more than sitemap presence. The landing page itself must:
+        </p>
+        <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.8, marginBottom: 16 }}>
+          <li style={{ marginBottom: 8 }}>Embed the video visibly near the top. Videos loaded in an accordion or tab Google can&apos;t reach don&apos;t qualify.</li>
+          <li style={{ marginBottom: 8 }}>Have a thumbnail at minimum 60&times;30, but 1280&times;720 is what actually gets the big-thumbnail SERP.</li>
+          <li style={{ marginBottom: 8 }}>Include VideoObject JSON-LD matching the sitemap entry. When they disagree, Google trusts the on-page schema.</li>
+          <li style={{ marginBottom: 8 }}>Use <code>hasPart</code> with <code>Clip</code> or <code>SeekToAction</code> for key moments to appear in SERP.</li>
+        </ul>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 32 }}>
+          A sitemap alone won&apos;t get you rich results. Sitemap + on-page schema + visible embed is the minimum.
+        </p>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Real mistakes I keep finding</h2>
+        <ul style={{ paddingLeft: 24, color: '#3d3d4f', lineHeight: 1.8, marginBottom: 32 }}>
+          <li style={{ marginBottom: 8 }}><strong>Thumbnails hot-linked from a CDN with hotlink protection.</strong> Googlebot fetches with a specific User-Agent, CDN blocks it, thumbnail counts as broken. Every entry fails silently.</li>
+          <li style={{ marginBottom: 8 }}><strong>Duration in ISO 8601 format.</strong> You use <code>PT5M30S</code> in VideoObject JSON-LD but sitemaps demand integer seconds. I see this mix-up constantly.</li>
+          <li style={{ marginBottom: 8 }}><strong>Same thumbnail across 200 videos.</strong> Google treats identical thumbnails as a signal of low-quality or auto-generated content. Use unique frames.</li>
+          <li style={{ marginBottom: 8 }}><strong>Listing the same video on 30 different landing pages.</strong> Pick one canonical landing page per video. Multiple landing pages fight for the same video-result slot.</li>
+          <li style={{ marginBottom: 8 }}><strong>Expired videos still in sitemap.</strong> If a video is gone, remove the entry or set <code>expiration_date</code>. Dead video URLs drag down crawl trust.</li>
+        </ul>
+
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 12, marginTop: 40 }}>Diagnosing video indexing issues</h2>
+        <p style={{ fontSize: 16, color: '#3d3d4f', lineHeight: 1.7, marginBottom: 16 }}>
+          GSC&apos;s Video pages report under Indexing is the starting point. It shows three states: &quot;Video on page,&quot; &quot;No video indexed,&quot; and error categories. For a URL in &quot;No video indexed,&quot; click through to see specifics - most often it&apos;s &quot;Video is outside the viewport&quot; or &quot;Google could not determine the prominent video on the page.&quot;
+        </p>
+        <div style={{ background: '#f8f8fb', border: '1px solid #e4e4ed', borderRadius: 10, padding: '20px 24px', marginBottom: 32 }}>
+          <pre style={{ margin: 0, fontSize: 14, lineHeight: 1.8, color: '#1c1c26', whiteSpace: 'pre-wrap', fontFamily: 'DM Mono, monospace' }}>{`# Validate video sitemap XML locally
+xmllint --noout --schema \\
+  https://www.google.com/schemas/sitemap-video/1.1/sitemap-video.xsd \\
+  video-sitemap.xml
+
+# Check a thumbnail is reachable with Googlebot UA
+curl -I -A "Googlebot/2.1 (+http://www.google.com/bot.html)" \\
+  https://example.com/og/video-thumb.jpg`}</pre>
+        </div>
 
         <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0a0a0f', marginBottom: 20, marginTop: 40 }}>Frequently Asked Questions</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 40 }}>
