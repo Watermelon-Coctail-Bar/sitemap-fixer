@@ -28,6 +28,19 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Blocked Due to Access Forbidden (403): GSC Fix Guide', description: 'The "Blocked due to access forbidden (403)" status in Google Search Console means your server forbade Googlebot from fetching the page. Learn how to find and fix the firewall rule blocking Google.', url: 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403' } }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'GSC Errors', item: 'https://sitemapfixer.com/gsc-errors' }, { '@type': 'ListItem', position: 3, name: 'Blocked Due to Access Forbidden (403): GSC Fix Guide', item: 'https://sitemapfixer.com/gsc-errors/blocked-forbidden-403' }] }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>

@@ -26,6 +26,19 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Indexed, though blocked by robots.txt (GSC)', description: 'What "Indexed, though blocked by robots.txt" means in GSC, why it happens (including WordPress), and three clean ways to fix it.', url: 'https://sitemapfixer.com/gsc-errors/indexed-though-blocked-by-robots-txt', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/indexed-though-blocked-by-robots-txt' } }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'GSC Errors', item: 'https://sitemapfixer.com/gsc-errors' }, { '@type': 'ListItem', position: 3, name: 'Indexed, though blocked by robots.txt (GSC)', item: 'https://sitemapfixer.com/gsc-errors/indexed-though-blocked-by-robots-txt' }] }),
+        }}
+      />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
         <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>

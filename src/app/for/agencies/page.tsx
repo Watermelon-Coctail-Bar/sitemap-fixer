@@ -28,6 +28,19 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer for SEO Agencies - Audit Client Sitemaps at Scale', description: 'SEO agencies use SitemapFixer to audit client sitemaps in minutes, add findings to pitch decks, and turn recurring sitemap health into a retainer deliverable.', url: 'https://sitemapfixer.com/for/agencies', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/for/agencies' } }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'For', item: 'https://sitemapfixer.com/for' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer for SEO Agencies - Audit Client Sitemaps at Scale', item: 'https://sitemapfixer.com/for/agencies' }] }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>

@@ -23,6 +23,19 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Incorrect Priority in Sitemap: Fix Guide', description: 'Sitemap priority values are often misused. Learn the correct way to set priority in your XML sitemap and how it affects crawl decisions.', url: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/sitemap-errors/incorrect-priority' } }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'Sitemap Errors', item: 'https://sitemapfixer.com/sitemap-errors' }, { '@type': 'ListItem', position: 3, name: 'Incorrect Priority in Sitemap: Fix Guide', item: 'https://sitemapfixer.com/sitemap-errors/incorrect-priority' }] }),
+        }}
+      />
+
       <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>
         <a href="/" style={{ color: '#2d5be3', textDecoration: 'none' }}>Home</a>
         {' / '}

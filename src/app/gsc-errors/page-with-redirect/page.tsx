@@ -28,6 +28,19 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Page with redirect in GSC: What It Means & How to Fix', description: 'The "Page with redirect" status in Google Search Console means the URL is a redirect and Google excludes it from the index. Learn when this is fine, when it is not, and exactly how to clean up your redirects.', url: 'https://sitemapfixer.com/gsc-errors/page-with-redirect', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/gsc-errors/page-with-redirect' } }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'GSC Errors', item: 'https://sitemapfixer.com/gsc-errors' }, { '@type': 'ListItem', position: 3, name: 'Page with redirect in GSC: What It Means & How to Fix', item: 'https://sitemapfixer.com/gsc-errors/page-with-redirect' }] }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>

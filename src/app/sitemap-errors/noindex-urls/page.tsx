@@ -28,6 +28,19 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'Noindex URLs in Sitemap: Fix Guide', description: 'Find URLs with noindex meta tags or X-Robots-Tag headers listed in your sitemap. These conflicting signals waste crawl budget and confuse Google.', url: 'https://sitemapfixer.com/sitemap-errors/noindex-urls', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/sitemap-errors/noindex-urls' } }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'Sitemap Errors', item: 'https://sitemapfixer.com/sitemap-errors' }, { '@type': 'ListItem', position: 3, name: 'Noindex URLs in Sitemap: Fix Guide', item: 'https://sitemapfixer.com/sitemap-errors/noindex-urls' }] }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>

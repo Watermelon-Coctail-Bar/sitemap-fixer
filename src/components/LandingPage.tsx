@@ -61,7 +61,49 @@ interface LandingPageProps {
   variant: Variant;
 }
 
+const VARIANT_META: Record<Variant, { name: string; url: string; description: string }> = {
+  'sitemap-finder': { name: 'Sitemap Finder', url: 'https://sitemapfixer.com/sitemap-finder', description: 'Find the sitemap of any website. See all pages and subpages online.' },
+  'sitemap-checker': { name: 'XML Sitemap Checker', url: 'https://sitemapfixer.com/sitemap-checker', description: 'Free XML sitemap checker and validator. Find errors, broken URLs, and indexing issues.' },
+  'website-seo-checker': { name: 'Website SEO Checker', url: 'https://sitemapfixer.com/website-seo-checker', description: 'Free website SEO checker. Find crawled-not-indexed pages and indexing issues.' },
+  'xml-sitemap-generator': { name: 'XML Sitemap Generator', url: 'https://sitemapfixer.com/xml-sitemap-generator', description: 'Analyze your XML sitemap and get exact fixes in 60 seconds.' },
+  'free-seo-audit': { name: 'Free SEO Audit', url: 'https://sitemapfixer.com/free-seo-audit', description: 'Free AI SEO audit in 60 seconds. Find crawled-not-indexed pages and sitemap errors.' },
+  'robots-txt-checker': { name: 'Robots.txt Checker', url: 'https://sitemapfixer.com/robots-txt-checker', description: 'Free robots.txt validator. Find URLs accidentally blocked from Google.' },
+  'meta-tag-checker': { name: 'Meta Tag Checker', url: 'https://sitemapfixer.com/meta-tag-checker', description: 'Free meta tag checker. Scan every page for missing descriptions and duplicate titles.' },
+  'canonical-checker': { name: 'Canonical Tag Checker', url: 'https://sitemapfixer.com/canonical-checker', description: 'Free canonical tag checker. Verify canonicals and fix duplicate content penalties.' },
+  'hreflang-tester': { name: 'Hreflang Tester', url: 'https://sitemapfixer.com/hreflang-tester', description: 'Free hreflang tester. Validate international SEO setup across your multi-regional site.' },
+};
+
 export function LandingPage({ variant }: LandingPageProps) {
+  const meta = VARIANT_META[variant];
+  const softwareAppSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: meta.name,
+    url: meta.url,
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: meta.description,
+  });
+  const breadcrumbSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' },
+      { '@type': 'ListItem', position: 2, name: meta.name, item: meta.url },
+    ],
+  });
+  const faqForSchema = FAQ[variant];
+  const faqSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqForSchema.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+
   const [appState, setAppState] = useState<'idle' | 'loading' | 'results' | 'error'>('idle');
   const [domain, setDomain] = useState('');
   const [results, setResults] = useState<null | object>(null);
@@ -103,6 +145,9 @@ export function LandingPage({ variant }: LandingPageProps) {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--paper)' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: softwareAppSchema }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbSchema }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />
       {/* Nav */}
       <nav style={{ borderBottom: '1px solid var(--border)', background: 'rgba(250,250,249,0.85)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

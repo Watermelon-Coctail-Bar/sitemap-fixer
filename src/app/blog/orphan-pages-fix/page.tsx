@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Orphan Pages: What They Are and How to Fix Them',
   description: "Orphan pages have no internal links. Google rarely discovers them and they rank poorly. How to find and fix all orphan pages on your site.",
-  alternates: { canonical: 'https://sitemapfixer.com/blog/orphan-pages-fix' },
+  alternates: { canonical: 'https://sitemapfixer.com/learn/orphan-pages' },
   openGraph: {
     title: 'Orphan Pages: What They Are and How to Fix Them',
     description: 'Orphan pages have no internal links pointing to them. Google rarely discovers them, they rank poorly, and they waste crawl budget.',

@@ -139,7 +139,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     m('/blog/mobile-seo-guide'),
     m('/blog/noindex-fix-guide'),
     m('/blog/on-page-seo-checklist'),
-    m('/blog/orphan-pages-fix'),
     m('/blog/page-speed-improvement'),
     m('/blog/page-title-optimization'),
     m('/blog/pagination-seo-guide'),

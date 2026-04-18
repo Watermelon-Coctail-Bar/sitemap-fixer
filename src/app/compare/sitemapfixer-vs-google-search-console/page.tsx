@@ -62,6 +62,19 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'SitemapFixer vs Google Search Console: Whats the Difference?', description: 'GSC tells you which URLs Google indexed. SitemapFixer tells you whats wrong with your sitemap before Google sees it. A full comparison of both tools.', url: 'https://sitemapfixer.com/compare/sitemapfixer-vs-google-search-console', author: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com' }, publisher: { '@type': 'Organization', name: 'SitemapFixer', url: 'https://sitemapfixer.com', logo: { '@type': 'ImageObject', url: 'https://sitemapfixer.com/opengraph-image' } }, datePublished: '2026-04-17', mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sitemapfixer.com/compare/sitemapfixer-vs-google-search-console' } }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sitemapfixer.com/' }, { '@type': 'ListItem', position: 2, name: 'Compare', item: 'https://sitemapfixer.com/compare' }, { '@type': 'ListItem', position: 3, name: 'SitemapFixer vs Google Search Console: Whats the Difference?', item: 'https://sitemapfixer.com/compare/sitemapfixer-vs-google-search-console' }] }),
+        }}
+      />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px', fontFamily: 'Geist, sans-serif' }}>
         <nav style={{ fontSize: 13, color: '#6b6b7d', marginBottom: 32 }}>

@@ -4,13 +4,13 @@ import './globals.css';
 export const metadata: Metadata = {
   title: {
     default: 'Free Sitemap Checker — Fix Crawled Not Indexed',
-    template: '%s | SitemapFixer',
+    template: '%s',
   },
   description: 'Free AI sitemap checker. Fix crawled - currently not indexed pages in Google Search Console. Verify sitemap errors and get an SEO fix list in 60 seconds.',
   metadataBase: new URL('https://sitemapfixer.com'),
   alternates: { canonical: 'https://sitemapfixer.com' },
   openGraph: {
-    title: 'SitemapFixer - Fix Crawled Currently Not Indexed | Free Sitemap Checker',
+    title: 'Free Sitemap Checker — Fix Crawled Not Indexed',
     description: 'Free AI sitemap checker. Fix crawled - currently not indexed pages in Google Search Console. Find all pages on a website and get an SEO fix list in 60 seconds.',
     url: 'https://sitemapfixer.com',
     siteName: 'SitemapFixer',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: 'https://sitemapfixer.com/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'SitemapFixer - Fix Crawled Currently Not Indexed | Free Sitemap Checker',
+        alt: 'SitemapFixer — Free AI Sitemap Checker',
       },
     ],
   },
